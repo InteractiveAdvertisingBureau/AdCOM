@@ -233,7 +233,7 @@ The object BidRequest.Source describes the source of the OpenRTB 2.x bid request
 
 ### OpenRTB 3.0 and AdCOM 1.0  (Currently in Beta)
 
-The new AdCOM spec represents ad request data in OpenRTB 3.0.  Unlike OpenRTB 2.x, the "omidpn" and 'omidpv' fields will be standard fields of objects defined in the protocol (AdCOM 1.0 is currently in Beta).  As with OpenRTB 2.x, there are several possibilities for the location of these fields.
+The new AdCOM spec represents ad request data in OpenRTB 3.0.  Unlike OpenRTB 2.x, the "omidpn" and 'omidpv' fields will be extensions in the 'events' object defined in the protocol (AdCOM 1.0 is currently in Beta).  
 
 #### *Event Trackers*
 
@@ -241,26 +241,12 @@ The OMID capability of a bid request is encoded in an "events" object, making it
 
 ```
 "events" {
-  "omidpn": "MyIntegrationPartner",  
-  "omidpv": "7.1"  
   "apis": [7]  
+  "ext": {  
+ 	 "omidpn": "MyIntegrationPartner",  
+ 	 "omidpv": "7.1"  
 }
 ```
-
-#### *Same object as OpenRTB 2.x*
-
-OpenRTB 3.0 and AdCOM define many of the same objects as OpenRTB 2.x.  The partner information could be moved from the "ext" in those objects to the main object itself.
-
-```
-"app" {  
-  "omidpn": "MyIntegrationPartner",  
-  "omidpv": "7.1"  
-},  
-"events" {  
-  "apis": [7]
-}
-```
-
 
 # OM SDK Guidance
 
