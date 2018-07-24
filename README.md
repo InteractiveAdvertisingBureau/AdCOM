@@ -1,24 +1,39 @@
-# AdCOM
-Advertising Common Object Model (OpenMedia) 
+![IAB Tech Lab](https://drive.google.com/uc?id=10yoBoG5uRETSXRrnJPUDuONujvADrSG1)
+
+# **AdCOM 1.0 Beta**
+
+BETA DRAFT
+
+July 24, 2018
+
+
+#### Beta Launch
+AdCOM will have a 60-day public comment period, running through September 24, 2018. Beta testing by the IAB Tech Lab OpenRTB Working Group will be ongoing. Industry members are encouraged to actively participate throughout the beta period, and to get involved with the OpenRTB Working Group. The group will evaluate and incorporate the feedback received, as well as real world insights from beta testing, to produce final specs that will be ready for full industry adoption by the end of the year. 
+
+
+#### Executive Summary
+One of the most successful IAB standards is OpenRTB.  This protocol for conducting real-time auctions among sell-side exchanges and demand-side bidders first launched as OpenRTB v1.0 Mobile in February 2011.  Later that year, OpenRTB v2.0 was released, which provided a unified protocol for mobile, display, and video.  Due to widespread industry adoption, OpenRTB was established as an IAB standard in January 2012 with the release of version v2.1 although governance over technical content remained with the OpenRTB community.  Since then and true to its initial objective, OpenRTB has become the lingua franca of real-time programmatic advertising and entered 2018 as v2.5.
+
+During these years, programmatic advertising has become a dominant force in the industry.  However, this has also led to an increasingly complex supply chain which may increase fraud rates and other risks.  This is one of the key motivators driving OpenRTB v3.0 since the level of change needed to meet the challenges of programmatic currently and going forward could not be accomplished in a backward compatible manner (i.e., as an additional v2.x release).
+
+Combined with the OpenMedia goal of rationalizing the IAB standards portfolio, this has led to a layered approach, where OpenRTB will focus on the actual media commerce transaction (e.g., auction parameters, deals, bids, etc.) while the concepts in common with other specifications (e.g., ads, placements, users, devices, sites, publishers, etc.) will be factored into its own reusable specification.  Thus the genesis of the Advertising Common Object Model or AdCOM.
+
+In addition to providing the modularity to benefit specifications in addition to OpenRTB, AdCOM seeks to address other business challenges of programmatic advertising.  For example, publishers currently have limited ability to control the types of creatives they run on their properties due to the opaque nature in which traditional display ads are conveyed.  Many types of undesirable creatives make their way to publisher content such as overly heavy payloads, those lacking of brand safety, excessive pixel fires, and JavaScript that launches malware.
+
+These and other problematic behaviors result in poor and potentially damaging user experiences, diminished user trust, installation of ad blockers, erosion of publisher monetization, and the increased challenge for good actors on the advertiser side to reach their intended audience.  AdCOM attempts to address these challenges by supporting new and safer structured ad formats.
+
+Reusability by multiple IAB specifications positions AdCOM to leverage solutions such as this across a range of industry applications.
+
 
 #### OpenMedia
-iabtechlab.com/openmedia
+https://iabtechlab.com/openmedia 
+
+#### OpenRTB 
+https://github.com/InteractiveAdvertisingBureau/openrtb
 
 
-#### Introduction
-OpenRTB 3.0 provided the opportunity to restructure our object model to be more flexible.  Specifically the opportunity was taken to modularize what was previously OpenRTB.  The modular nature of AdCOM as a companion RTB spec also allows for a shared object model for different transactions, such as OpenRTB and OpenDirect.
-
-Further, we could address some of the business challenges in programmatic advertising.  Today, publishers and publisher platforms have little ability to control the types of creatives they run on their site due to the opaque way in which traditional display ads are transmitted.  Many types of undesirable creatives sometimes make their way to publisher pages, such as:
-Heavy payloads
-Non-brand-safe ads
-Heavy or malware javascript
-Excessive pixel fires
-
-These behaviors result in bad user experiences and the installation of ad blockers, diminishing user trust and further eroding publisher monetization.  Further, new legislation such as GDPR in the EU may prove difficult to implement in the world of traditional display.
-
-AdCOM attempts to address these challenges by allowing structured transmission of new, safer display ad formats.  
-
-AdCOM is the domain layer specification within the OpenMedia specification landscape.
+#### Contact
+For more information, or to get involved, please email openmedia@iabtechlab.com.
 
 #### About IAB Tech Lab  
 
