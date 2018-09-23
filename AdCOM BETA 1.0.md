@@ -13,7 +13,7 @@
 
 The IAB Technology Laboratory (Tech Lab) is a non-profit research and development consortium that produces and provides standards, software, and services to drive growth of an effective and sustainable global digital media ecosystem. Comprised of digital publishers and ad technology firms as well as marketers, agencies, and other companies with interests in the interactive marketing arena, IAB Tech Lab aims to enable brand and media growth via a transparent, safe, effective supply chain, simpler and more consistent measurement, and better advertising experiences for consumers, with a focus on mobile and TV/digital video channel enablement. The IAB Tech Lab portfolio includes the DigiTrust real-time standardized identity service designed to improve the digital experience for consumers, publishers, advertisers, and third-party platforms.  Board members include AppNexus, ExtremeReach, Google, GroupM, Hearst Digital Media, Integral Ad Science, Index Exchange, LinkedIn, MediaMath, Microsoft, Moat, Pandora, PubMatic, Quantcast, Telaria, The Trade Desk, and Yahoo! Japan. Established in 2014, the IAB Tech Lab is headquartered in New York City with an office in San Francisco and representation in Seattle and London.
 
-Learn more about IAB Tech Lab here: [www.iabtechlab.com](https://www.iabtechlab.com) 
+Learn more about IAB Tech Lab here: [www.iabtechlab.com](https://www.iabtechlab.com)
 
 **License**
 
@@ -306,7 +306,7 @@ This object is the root of a structure that defines in instance of advertising m
 
 ### Object:  Display <a name="object_display"></a>
 
-This object provides additional detail about an ad specifically for display ads. There are multiple attributes for specifying creative details: "banner" for simple banner images "native" for native ads, "ad" for including general markup, and "curl" for referencing general markup via URL. In any given "Display" object, only one of these attributes should be used to avoid confusion. To the extent feasible, structured objects should be favored over general markup for quality and safety issues.
+This object provides additional detail about an ad specifically for display ads. There are multiple attributes for specifying creative details: "banner" for simple banner images "native" for native ads, "adm" for including general markup, and "curl" for referencing general markup via URL. In any given "Display" object, only one of these attributes should be used to avoid confusion. To the extent feasible, structured objects should be favored over general markup for quality and safety issues.
 
 <table>
   <tr>
@@ -357,13 +357,13 @@ Note that mixing absolute and relative sizes is not recommended.</td>
     <td>adm</td>
     <td>string</td>
     <td>General display markup (e.g., HTML, AMPHTML) if not using a structured alternative (e.g., "banner", "native"). <br />
-Note that including both "ad" and "curl" is not recommended.</td>
+Note that including both "adm" and "curl" is not recommended.</td>
   </tr>
   <tr>
     <td>curl</td>
     <td>string</td>
     <td>Optional means of retrieving display markup by reference; a URL that can return HTML, AMPHTML, or a collection native "Asset" object and their subordinates). If this ad is matched to a Placement specification, the "Placement.ref" attribute indicates if this markup retrieval option is supported. <br />
-Note that including both "ad" and "curl" is not recommended.</td>
+Note that including both "adm" and "curl" is not recommended.</td>
   </tr>
   <tr>
     <td>banner</td>
@@ -742,13 +742,13 @@ This object provides additional detail about an ad specifically for video ads.
     <td>adm</td>
     <td>string</td>
     <td>Video markup (e.g., VAST). <br />
-Note that including both "ad" and "curl" is not recommended.</td>
+Note that including both "adm" and "curl" is not recommended.</td>
   </tr>
   <tr>
     <td>curl</td>
     <td>string</td>
     <td>Optional means of retrieving markup by reference; a URL that returns video markup (e.g., VAST). If this ad is matched to a Placement specification, the "Placement.ref" attribute indicates if this markup retrieval option is supported. <br />
-Note that including both "ad" and "curl" is not recommended. </td>
+Note that including both "adm" and "curl" is not recommended. </td>
   </tr>
   <tr>
     <td>ext</td>
@@ -787,13 +787,13 @@ This object provides additional detail about an ad specifically for audio ads.
     <td>adm</td>
     <td>string</td>
     <td>Audio markup (e.g., DAAST). <br />
-Note that including both "ad" and "curl" is not recommended.</td>
+Note that including both "adm" and "curl" is not recommended.</td>
   </tr>
   <tr>
     <td>curl</td>
     <td>string</td>
     <td>Optional means of retrieving markup by reference; a URL that returns audio markup (e.g., DAAST). If this ad is matched to a Placement specification, the "Placement.ref" attribute indicates if this markup retrieval option is supported. <br />
-Note that including both "ad" and "curl" is not recommended. </td>
+Note that including both "adm" and "curl" is not recommended. </td>
   </tr>
   <tr>
     <td>ext</td>
@@ -929,7 +929,7 @@ The other attributes in this object apply to all aspects and substructures of th
   <tr>
     <td>admx</td>
     <td>integer</td>
-    <td>Indicates if including markup is supported (i.e., the various "ad" attributes throughout the "Placement" structure), where 0 = no, 1 = yes.</td>
+    <td>Indicates if including markup is supported (i.e., the various "adm" attributes throughout the "Placement" structure), where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
     <td>curlx</td>
@@ -4034,41 +4034,41 @@ The following table lists the types of volume normalization modes, typically for
 
 # Appendix A:  Additional Resources <a name="appendixa_additionalresources"></a>
 
-Interactive Advertising Bureau Technology Laboratory (IAB Tech Lab)  
+Interactive Advertising Bureau Technology Laboratory (IAB Tech Lab)
 [www.iabtechlab.com](https://www.iabtechlab.com)
 
-Creative Commons / Attribution License  
+Creative Commons / Attribution License
 [creativecommons.org/licenses/by/3.0](https://creativecommons.org/licenses/by/3.0)
 
-AdCOM Project on Github  
+AdCOM Project on Github
 [https://github.com/InteractiveAdvertisingBureau/AdCOM](https://github.com/InteractiveAdvertisingBureau/AdCOM)
 
-OpenRTB v3.0 Specification  
+OpenRTB v3.0 Specification
 [https://github.com/InteractiveAdvertisingBureau/openrtb](https://github.com/InteractiveAdvertisingBureau/openrtb)
 
-IAB Resources & TAG Inventory Quality Guidelines (IQG)  
+IAB Resources & TAG Inventory Quality Guidelines (IQG)
 [www.iab.com/guidelines/taxonomy](https://www.iab.com/guidelines/taxonomy)
-[www.iab.com/guidelines/digital-video-suite](https://www.iab.com/guidelines/digital-video-suite) 
+[www.iab.com/guidelines/digital-video-suite](https://www.iab.com/guidelines/digital-video-suite)
 [www.iab.com/wp-content/uploads/2015/03/long-form-video-final.pdf](https://www.iab.com/wp-content/uploads/2015/03/long-form-video-final.pdf)
 [github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework)
 [www.tagtoday.net/iqg/guidelines](https://www.tagtoday.net/iqg/guidelines)
 
-Digital Place-Based Advertising Association (DPAA)  
+Digital Place-Based Advertising Association (DPAA)
 [dp-aa.org](https://dp-aa.org)
 
-United Nations Code for Trade & Transport Locations - UN/LOCODE"  
-[www.unece.org/cefact/locode/service/location](https://www.unece.org/cefact/locode/service/location) 
+United Nations Code for Trade & Transport Locations - UN/LOCODE"
+[www.unece.org/cefact/locode/service/location](https://www.unece.org/cefact/locode/service/location)
 
-IP Flow Anonymization Support / Truncation, Internet Engineering Task Force (IETF)  
-[tools.ietf.org/html/rfc6235#section-4.1.1](https://tools.ietf.org/html/rfc6235#section-4.1.1) 
+IP Flow Anonymization Support / Truncation, Internet Engineering Task Force (IETF)
+[tools.ietf.org/html/rfc6235#section-4.1.1](https://tools.ietf.org/html/rfc6235#section-4.1.1)
 
-MCC-MNC Codes for Mobile Carriers, Wikipedia  
-[en.wikipedia.org/wiki/Mobile_country_code](https://en.wikipedia.org/wiki/Mobile_country_code) 
+MCC-MNC Codes for Mobile Carriers, Wikipedia
+[en.wikipedia.org/wiki/Mobile_country_code](https://en.wikipedia.org/wiki/Mobile_country_code)
 
-JavaScript Object Notation (JSON)  
+JavaScript Object Notation (JSON)
 [www.json.org](http://www.json.org)
 
-Date/Time Format: ISO-8601; W3C Profile  
+Date/Time Format: ISO-8601; W3C Profile
 [www.w3.org/TR/NOTE-datetime](https://www.w3.org/TR/NOTE-datetime)
 
 # Appendix B:  Change Log <a name="appendixb_changelog"></a>
