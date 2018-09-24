@@ -4092,51 +4092,58 @@ The "context" object is the OpenRTB interface to AdCOM context objects. It can c
 This example is indicating a mobile optimized website and some basic details about the site and its publisher. The user is a female born in 1990. She is using an Apple iPhone 6S, running iOS 11.4.1, and is connected via the Verizon network. Her device (and presumably she) is currently located in Boston MA, USA, during eastern standard time.
 ```
 {
-	"openrtb": {
-		"ver": "3.0",
-		"domainspec": "adcom", "domainver": "1.0",
-		"request": {
-			...
-			"context": {
-				"regs": {
-					"gdpr": 0, "coppa": 0
-				},
-				"site": {
-					"id": "1234",
-					"name": "Awesome Example Site",
-					"domain": "examplesitedomain.com",
-					"mobile": 1,
-					"amp": 0,
-					"publisher": {
-						"id": "9876",
-						"name": "Example Publisher, Inc.",
-						"domain": "examplepubdomain.com"
-					}
-				},
-				"user": {
-					"id": "a0af45c77890045deec100acb8443baff57c",
-					"buyeruid": “fcd4282456238256034abcdef220d9aa5892",
-					"yob": 1990, "gender": "F"
-				},
-				"device": {
-					"type": 4,
-					"ifa": "8846d6fa10008bceaaf322908dfcb221",
-					"ip": "1.2.3.4",
-					"ua": "...user agent string...",
-					"make": "Apple", "model": "iPhone", "hwv": "6s",
-					"os": 13, "osv": "11.4.1",
-					"mccmnc": "310-005",
-					"geo": {
-						"type": 1,
-						"lat": 42.3601, "lon": 71.0581,
-					  "country": "USA",
-						"utcoffset": -300
-					}
-				}
-			}
-			...
-		}
-	}
+  "openrtb": {
+    "ver": "3.0",
+    "domainspec": "adcom",
+    "domainver": "1.0",
+    "request": {
+      ...
+      "context": {
+        "regs": {
+          "gdpr": 0,
+          "coppa": 0
+        },
+        "site": {
+          "id": "1234",
+          "name": "Awesome Example Site",
+          "domain": "examplesitedomain.com",
+          "mobile": 1,
+          "amp": 0,
+          "publisher": {
+            "id": "9876",
+            "name": "Example Publisher, Inc.",
+            "domain": "examplepubdomain.com"
+          }
+        },
+        "user": {
+          "id": "a0af45c77890045deec100acb8443baff57c",
+          "buyeruid": "fcd4282456238256034abcdef220d9aa5892",
+          "yob": 1990,
+          "gender": "F"
+        },
+        "device": {
+          "type": 4,
+          "ifa": "8846d6fa10008bceaaf322908dfcb221",
+          "ip": "1.2.3.4",
+          "ua": "...user agent string...",
+          "make": "Apple",
+          "model": "iPhone",
+          "hwv": "6s",
+          "os": 13,
+          "osv": "11.4.1",
+          "mccmnc": "310-005",
+          "geo": {
+            "type": 1,
+            "lat": 42.3601,
+            "lon": 71.0581,
+            "country": "USA",
+            "utcoffset": -300
+          }
+        }
+      }
+      ...
+    }
+  }
 }
 ```
 
@@ -4150,42 +4157,50 @@ This example is indicating a display placement that must be secure. Either a str
 ```
 {
   "openrtb": {
-		...
-		"request": {
-			...
-			"item": [
-				{
-					...
-					"spec": {
-						"placement": {
-							"tagid": "plc-ftr-123abc",
-							"secure": 1,
-							"display": {
-								"ctype": [ 2, 3 ],
-								"ampren": 0,
-								"instl": 0,
-								"displayfmt": [
-									{
-										"w": 320, "h": 50
-									},
-									{
-										"w": 320, "h": 250
-									}
-								],
-								"event": [
-									{
-										"type": 1, "method": 1
-									}
-								]
-							}
-						}
-					}
-					...
-				}
-			]
-			...
-		}
-	}
+    "ver": "3.0",
+    "domainspec": "adcom",
+    "domainver": "1.0",
+    "request": {
+      ...
+      "item": [
+        {
+          ...
+          "spec": {
+            "placement": {
+              "tagid": "plc-ftr-123abc",
+              "secure": 1,
+              "display": {
+                "ctype": [
+                  2,
+                  3
+                ],
+                "ampren": 0,
+                "instl": 0,
+                "displayfmt": [
+                  {
+                    "w": 320,
+                    "h": 50
+                  },
+                  {
+                    "w": 320,
+                    "h": 250
+                  }
+                ],
+                "event": [
+                  {
+                    "type": 1,
+                    "method": 1
+                  }
+                ]
+              }
+            }
+          }
+          ...
+        }
+      ]
+      ...
+    }
+  }
 }
 ```
 
@@ -4198,45 +4213,51 @@ The "media" object is the OpenRTB interface to AdCOM media objects. It contains 
 This example is indicating a secure display ad for Ford using a structured banner object with a 320x50 JPEG creative. A pixel tracker for the impression rendering event is requested.
 ```
 {
-	"openrtb": {
-		"ver": "3.0",
-		"domainspec": "adcom", "domainver": "1.0",
-		"response": {
-			...
-			"seatbid": [
-				{
-					...
-					"bid": [
-						{
-							...
-							"media": {
-								"ad": {
-									"id": "d0bcb39723af87c2bb00942afee5710e",
-									"adomain": [ "ford.com" ],
-									"cid": "campaign-xyz.123",
-									"secure": 1,
-									"display": {
-										"mime": "image/jpeg",
-										"type": 3, "w": 320, "h": 50,
-										"banner": {
-											"img": "https://somebuyer.com/creative",
-											"link: "https://somebuyer.com/click"
-										},
-										"event": [
-											{
-												"type": 1, "method": 1,
-												"url": "https://somebuyer.com/pixel"
-											}
-										]
-									}
-								}
-							}
-							...
-						}
-					]
-				}
-			]
-		}
-	}
+  "openrtb": {
+    "ver": "3.0",
+    "domainspec": "adcom",
+    "domainver": "1.0",
+    "response": {
+      ...
+      "seatbid": [
+        {
+          ...
+          "bid": [
+            {
+              ...
+              "media": {
+                "ad": {
+                  "id": "d0bcb39723af87c2bb00942afee5710e",
+                  "adomain": [
+                    "ford.com"
+                  ],
+                  "cid": "campaign-xyz.123",
+                  "secure": 1,
+                  "display": {
+                    "mime": "image/jpeg",
+                    "type": 3,
+                    "w": 320,
+                    "h": 50,
+                    "banner": {
+                      "img": "https://somebuyer.com/creative",
+                      "link": "https://somebuyer.com/click"
+                    },
+                    "event": [
+                      {
+                        "type": 1,
+                        "method": 1,
+                        "url": "https://somebuyer.com/pixel"
+                      }
+                    ]
+                  }
+                }
+              }
+              ...
+            }
+          ]
+        }
+      ]
+    }
+  }
 }
 ```
