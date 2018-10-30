@@ -2,10 +2,9 @@
 
 # **AdCOM Specification v1.0**
 
-#### BETA DRAFT
+#### Final v 1.0
 
-**July 24, 2018**
-
+**November 2018**
 
 
 **About the IAB Technology Lab**
@@ -83,11 +82,12 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Connection Types](#list_connectiontypes)
     - [List:  Content Contexts](#list_contentcontexts)
     - [List:  Creative Attributes](#list_creativeattributes)
-    - [List:  Creative Subtypes - Audio](#list_creativesubtypesaudio)
+    - [List:  Creative Subtypes - Audio/Video](#list_creativesubtypesaudiovideo)
     - [List:  Creative Subtypes - Display](#list_creativesubtypesdisplay)
-    - [List:  Creative Subtypes - Video](#list_creativesubtypesvideo)
     - [List:  Delivery Methods](#list_deliverymethods)
     - [List:  Device Types](#list_devicetypes)
+    - [List:  Display Context Types](#list_displaycontexttypes)
+    - [List:  Display Placement Types](#list_displayplacementtypes)
     - [List:  DOOH Venue Types](#list_doohvenuetypes)
     - [List:  Event Tracking Methods](#list_eventtrackingmethods)
     - [List:  Event Types](#list_eventtypes)
@@ -121,21 +121,21 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
 
 ## OpenMedia Mission <a name="openmediamission"></a>
 
-The mission of the OpenMedia project is to spur growth in programmatic marketplaces by providing open industry standards for communication between buyers of advertising and sellers of publisher inventory. There are several aspects to these standards including but not limited to real-time bidding, ad and creative management, information taxonomies, and many more.
+The mission of the OpenMedia project is to spur growth in programmatic marketplaces by providing open industry standards for communication between buyers of advertising and sellers of publisher inventory.  There are several aspects to these standards including but not limited to real-time bidding, ad and creative management, information taxonomies, and many more.
 
-Over recent years, multiple IAB standards have reached considerable levels of success in the industry. OpenMedia is the umbrella that pulls these standards into a coherent landscape and in doing so, it has become clear that there are many core concepts that are overlapping from these multiple specifications. This document presents a standard that formalizes these common concepts for reuse by other standards so that they can focus on their distinctiveness and practitioners can find it easier to build systems that use multiple aspects of OpenMedia.
+Over recent years, multiple IAB standards have reached considerable levels of success in the industry.  OpenMedia is the umbrella that pulls these standards into a coherent landscape and in doing so, it has become clear that there are many core concepts that are overlapping from these multiple specifications.  This document presents a standard that formalizes these common concepts for reuse by other standards so that they can focus on their distinctiveness and practitioners can find it easier to build systems that use multiple aspects of OpenMedia.
 
 ## AdCOM Executive Summary <a name="execsummary"></a>
 
-One of the most successful IAB standards is OpenRTB. This protocol for conducting real-time auctions among sell-side exchanges and demand-side bidders first launched as OpenRTB v1.0 Mobile in February 2011.  Later that year, OpenRTB v2.0 was released, which provided a unified protocol for mobile, display, and video. Due to widespread industry adoption, OpenRTB was established as an IAB standard in January 2012 with the release of version v2.1 although governance over technical content remained with the OpenRTB community. Since then and true to its initial objective, OpenRTB has become the *lingua franca* of real-time programmatic advertising and entered 2018 as v2.5.
+One of the most successful IAB standards is OpenRTB.  This protocol for conducting real-time auctions among sell-side exchanges and demand-side bidders first launched as OpenRTB v1.0 Mobile in February 2011.  Later that year, OpenRTB v2.0 was released, which provided a unified protocol for mobile, display, and video.  Due to widespread industry adoption, OpenRTB was established as an IAB standard in January 2012 with the release of version v2.1 although governance over technical content remained with the OpenRTB community.  Since then and true to its initial objective, OpenRTB has become the *lingua franca* of real-time programmatic advertising and entered 2018 as v2.5.
 
-During these years, programmatic advertising has become a dominant force in the industry. However, this has also led to an increasingly complex supply chain which may increase fraud rates and other risks. This is one of the key motivators driving OpenRTB v3.0 since the level of change needed to meet the challenges of programmatic currently and going forward could not be accomplished in a backward compatible manner (i.e., as an additional v2.x release).
+During these years, programmatic advertising has become a dominant force in the industry.  However, this has also led to an increasingly complex supply chain which may increase fraud rates and other risks.  This is one of the key motivators driving OpenRTB v3.0 since the level of change needed to meet the challenges of programmatic currently and going forward could not be accomplished in a backward compatible manner (i.e., as an additional v2.x release).
 
-Combined with the OpenMedia goal of rationalizing the IAB standards portfolio, this has led to a layered approach, where OpenRTB will focus on the actual media commerce transaction (e.g., auction parameters, deals, bids, etc.) while the concepts in common with other specifications (e.g., ads, placements, users, devices, sites, publishers, etc.) will be factored into its own reusable specification. Thus the genesis of the Advertising Common Object Model or AdCOM.
+Combined with the OpenMedia goal of rationalizing the IAB standards portfolio, this has led to a layered approach, where OpenRTB will focus on the actual media commerce transaction (e.g., auction parameters, deals, bids, etc.) while the concepts in common with other specifications (e.g., ads, placements, users, devices, sites, publishers, etc.) will be factored into its own reusable specification.  Thus the genesis of the Advertising Common Object Model or AdCOM.
 
-In addition to providing the modularity to benefit specifications in addition to OpenRTB, AdCOM seeks to address other business challenges of programmatic advertising. For example, publishers currently have limited ability to control the types of creatives they run on their properties due to the opaque nature in which traditional display ads are conveyed. Many types of undesirable creatives make their way to publisher content such as overly heavy payloads, those lacking of brand safety, excessive pixel fires, and JavaScript that launches malware.
+In addition to providing the modularity to benefit specifications in addition to OpenRTB, AdCOM seeks to address other business challenges of programmatic advertising.  For example, publishers currently have limited ability to control the types of creatives they run on their properties due to the opaque nature in which traditional display ads are conveyed.  Many types of undesirable creatives make their way to publisher content such as overly heavy payloads, those lacking of brand safety, excessive pixel fires, and JavaScript that launches malware.
 
-These and other problematic behaviors result in poor and potentially damaging user experiences, diminished user trust, installation of ad blockers, erosion of publisher monetization, and the increased challenge for good actors on the advertiser side to reach their intended audience. AdCOM attempts to address these challenges by supporting new and safer structured ad formats.
+These and other problematic behaviors result in poor and potentially damaging user experiences, diminished user trust, installation of ad blockers, erosion of publisher monetization, and the increased challenge for good actors on the advertiser side to reach their intended audience.  AdCOM attempts to address these challenges by supporting new and safer structured ad formats.
 
 Reusability by multiple IAB specifications positions AdCOM to leverage solutions such as this across a range of industry applications.
 
@@ -149,11 +149,11 @@ This section describes the OpenMedia specification landscape, the role AdCOM pla
 
 ## OpenMedia Layers <a name="openmedialayers"></a>
 
-To assist in reuse of objects across different specifications and to enable specifications to evolve at different paces, a layered approach is being adopted. Expressed informally, Layer-1 moves bytes among parties, Layer-2 expresses the language of these bytes, Layer-3 specifies a transaction using this language, and Layer-4 describes the concepts being transacted.
+To assist in reuse of objects across different specifications and to enable specifications to evolve at different paces, a layered approach is being adopted.  Expressed informally, Layer-1 moves bytes among parties, Layer-2 expresses the language of these bytes, Layer-3 specifies a transaction using this language, and Layer-4 describes the concepts being transacted.
 
 ![](https://drive.google.com/uc?id=1RN-UxDGvP4F1ECiVvHl7BJODBh2oi0uZ)
 
-Given this layered concept, the IAB Tech Lab has defined an overall organization of related specifications as "OpenMedia". The landscape of these specifications and how they may be organized into protocol layers is illustrated as follows.
+Given this layered concept, the IAB Tech Lab has defined an overall organization of related specifications as "OpenMedia".  The landscape of these specifications and how they may be organized into protocol layers is illustrated as follows.
 
 ![](https://drive.google.com/uc?id=1oJ7_sDwDzVKbu3vXXIifjc-Ki7LiOkvI)
 
@@ -163,21 +163,21 @@ There are a number of objects that are common to multiple transaction specificat
 
 The following points define the guiding principles underlying the AdCOM specification, some of its basic rules, and its evolution.
 
-* AdCOM is backwards compatible within minor versions (e.g. 1.x to 1.y). No breaking changes may be made within a minor revision (e.g., no removal of attributes or objects, name or type changes, or redefinition of semantics). New objects and attributes may be added and enumerated lists may be extended and thus implementers must accept these types of changes without breakage.
+* AdCOM is backwards compatible within minor versions (e.g. 1.x to 1.y).  No breaking changes may be made within a minor revision (e.g., no removal of attributes or objects, name or type changes, or redefinition of semantics).  New objects and attributes may be added and enumerated lists may be extended and thus implementers must accept these types of changes without breakage.
 
-* Object and attribute names have been made intentionally compact while still trying to balance readability. The reason for this is that in applications like OpenRTB where JSON is still widely used, these names may be transmitted in plain text extremely frequently.
+* Object and attribute names have been made intentionally compact while still trying to balance readability.  The reason for this is that in applications like OpenRTB where JSON is still widely used, these names may be transmitted in plain text extremely frequently.
 
 * When using AdCOM, transaction specifications (e.g. OpenRTB) must indicate the version of AdCOM in use and specify where and how it interfaces with AdCOM objects.
 
-* AdCOM imposes no specific representation on its objects. This document uses JSON for illustration purposes, but this is not intended to imply any representational requirement or language binding.
+* AdCOM imposes no specific representation on its objects.  This document uses JSON for illustration purposes, but this is not intended to imply any representational requirement or language binding.
 
-* All AdCOM objects may be extended as needed for vendor-specific applications. Extensions to an AdCOM object must always be placed within a subordinate "ext" object. Most enumerated lists when indicated can also be extended to include vendor-specific codes typically starting at 500.
+* All AdCOM objects may be extended as needed for vendor-specific applications.  Extensions to an AdCOM object must always be placed within a subordinate "ext" object.  Most enumerated lists when indicated can also be extended to include vendor-specific codes typically starting at 500.
 
 * The typical process of promoting a new AdCOM object, attribute, or list value into future specification versions is either when a substantial concept is discovered that is applicable to multiple transaction specifications or when vendor-specific extensions become widely adopted.
 
 # SPECIFICATION <a name="spec"></a>
 
-This section contains the detailed AdCOM domain layer specification. Unless explicitly specified otherwise, annotated as optional, or called out as a best practice, all material aspects of this section are required for AdCOM compliance.
+This section contains the detailed AdCOM domain layer specification.  Unless explicitly specified otherwise, annotated as optional, or called out as a best practice, all material aspects of this section are required for AdCOM compliance.
 
 Throughout the object specifications, attributes may be indicated as "Required" or "Recommended". Attributes are deemed *required* only if their omission would break the technical meaning of the object and is not necessarily an indicator of business value otherwise. Attributes are *recommended* when their omission would not break the object, but would dramatically diminish its value. Transaction layers in which AdCOM is used may provide additional *required* and/or *recommended* guidance specific to the application.
 
@@ -189,7 +189,7 @@ AdCOM is a collection of object classes with various relationships among them. H
 
 The Media group comprises objects that define an actual ad, including reference to its creative and metadata to enable proper rendering, restrictions compliance, event tracking, and quality auditing.
 
-The Placement group comprises objects that define the set of allowed ads and behaviors for a given placement. This might include mechanical information (e.g., sizes, supported mime types, and other rendering options), placement details and positioning, and various restrictions lists.
+The Placement group comprises objects that define the set of allowed ads and behaviors for a given placement.  This might include mechanical information (e.g., sizes, supported mime types, and other rendering options), placement details and positioning, and various restrictions lists.
 
 Finally, the Context group comprises objects that represent concepts that are interacting, presenting, enclosing, or are otherwise relating to the world in which impressions live.  These include the user, their device, their location, the ad distribution channel (e.g., site, app, digital out-of-home) with which they are interacting, the channel's publisher, its content, and any regulations that are in effect.
 
@@ -205,7 +205,7 @@ The following figure presents the objects and interrelationships in this group. 
 
 ### Object:  Ad <a name="object_ad"></a>
 
-This object is the root of a structure that defines in instance of advertising media. It includes metadata about the ad overall and sub-objects that provide additional detail specific to the type of media comprising the creative.
+This object is the root of a structure that defines in instance of advertising media.  It includes metadata about the ad overall and sub-objects that provide additional detail specific to the type of media comprising the creative.
 
 <table>
   <tr>
@@ -216,17 +216,17 @@ This object is the root of a structure that defines in instance of advertising m
   <tr>
     <td>id</td>
     <td>string; required</td>
-    <td>ID of the creative; unique at least throughout the scope of a vendor (e.g., an exchange or buying platform). Note that multiple instances of the same ad when used in transactions must have the same ID.</td>
+    <td>ID of the creative; unique at least throughout the scope of a vendor (e.g., an exchange or buying platform).  Note that multiple instances of the same ad when used in transactions must have the same ID.</td>
   </tr>
   <tr>
     <td>adomain</td>
     <td>string array; recommended</td>
-    <td>Advertiser domain; top two levels only (e.g., "ford.com"). This can be an array for the case of rotating creatives.</td>
+    <td>Advertiser domain; top two levels only (e.g., "ford.com").  This can be an array for the case of rotating creatives.</td>
   </tr>
   <tr>
     <td>bundle</td>
     <td>string array</td>
-    <td>When the product of the ad is an app, the unique ID of that app as a bundle or package name (e.g., "com.foo.mygame"). This  should NOT be an app store ID (e.g., no iTunes store IDs).  This can be an array of for the case of rotating creatives.</td>
+    <td>When the product of the ad is an app, the unique ID of that app as a bundle or package name (e.g., "com.foo.mygame").  This  should NOT be an app store ID (e.g., no iTunes store IDs).  This can be an array of for the case of rotating creatives.</td>
   </tr>
   <tr>
     <td>iurl</td>
@@ -241,60 +241,60 @@ This object is the root of a structure that defines in instance of advertising m
   <tr>
     <td>cattax</td>
     <td>integer; default 2</td>
-    <td>The taxonomy in use for the "cat" attribute.  Refer to List: Category Taxonomies.</td>
+    <td>The taxonomy in use for the "cat" attribute.  Refer to List:  Category Taxonomies.</td>
   </tr>
   <tr>
     <td>lang</td>
     <td>string</td>
-    <td>Language of the creative using ISO-639-1-alpha-2. In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated a priori. The non-standard code "xx" may also be used if the creative has no linguistic content (e.g., a banner with just a company logo).</td>
+    <td>Language of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated a priori.  The non-standard code "xx" may also be used if the creative has no linguistic content (e.g., a banner with just a company logo).</td>
   </tr>
   <tr>
     <td>attr</td>
     <td>integer array</td>
-    <td>Set of attributes describing the creative. Refer to List: Creative Attributes.</td>
+    <td>Set of attributes describing the creative.  Refer to List:  Creative Attributes.</td>
   </tr>
   <tr>
     <td>secure</td>
     <td>integer</td>
-    <td>Flag to indicate if the creative is secure (i.e., uses HTTPS for all assets and markup), where 0 = no, 1 = yes. There is no default and thus if omitted, the secure state is unknown. However, as a practical matter, the safe assumption is to treat unknown as non-secure.</td>
+    <td>Flag to indicate if the creative is secure (i.e., uses HTTPS for all assets and markup), where 0 = no, 1 = yes.  There is no default and thus if omitted, the secure state is unknown.  However, as a practical matter, the safe assumption is to treat unknown as non-secure.</td>
   </tr>
   <tr>
     <td>mrating</td>
     <td>integer</td>
-    <td>Media rating per IQG guidelines. Refer to List: Media Ratings.</td>
+    <td>Media rating per IQG guidelines.  Refer to List:  Media Ratings.</td>
   </tr>
   <tr>
     <td>init</td>
     <td>string</td>
-    <td>Date/time of the original instantiation of this ad (i.e., this object or any of its children) in the format of ISO-8601; W3C profile. Refer to www.w3.org/TR/NOTE-datetime.</td>
+    <td>Date/time of the original instantiation of this ad (i.e., this object or any of its children) in the format of ISO-8601; W3C profile.  Refer to www.w3.org/TR/NOTE-datetime.</td>
   </tr>
   <tr>
     <td>lastmod</td>
     <td>string</td>
-    <td>Date/time of most recent modification to this ad (i.e., this object or any of its children) in the format of ISO-8601; W3C profile. Refer to www.w3.org/TR/NOTE-datetime.</td>
+    <td>Date/time of most recent modification to this ad (i.e., this object or any of its children other than the "Audit" object) in the format of ISO-8601; W3C profile.  Refer to www.w3.org/TR/NOTE-datetime.</td>
   </tr>
   <tr>
     <td>display</td>
     <td>Object; required *</td>
-    <td>Media Subtype Object that indicates this is a display ad and provides additional detail as such. Refer to Object: Display. <br />
+    <td>**Media Subtype Object** that indicates this is a display ad and provides additional detail as such.  Refer to Object:  Display.
 * Required if no other media subtype object is specified.</td>
   </tr>
   <tr>
     <td>video</td>
     <td>object; required *</td>
-    <td>Media Subtype Object that indicates this is a video ad and provides additional detail as such. Refer to Object: Video. <br />
+    <td>**Media Subtype Object** that indicates this is a video ad and provides additional detail as such.  Refer to Object:  Video.
 * Required if no other media subtype object is specified.</td>
   </tr>
   <tr>
     <td>audio</td>
     <td>object; required *</td>
-    <td>Media Subtype Object that indicates this is an audio ad and provides additional detail as such. Refer to Object: Audio. <br />
+    <td>**Media Subtype Object** that indicates this is an audio ad and provides additional detail as such.  Refer to Object:  Audio.
 * Required if no other media subtype object is specified.</td>
   </tr>
   <tr>
     <td>audit</td>
     <td>object</td>
-    <td>An object depicting the audit status of the ad; typically part of a quality/safety review process. Refer to Object: Audit.</td>
+    <td>An object depicting the audit status of the ad; typically part of a quality/safety review process.  Refer to Object:  Audit.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -306,7 +306,7 @@ This object is the root of a structure that defines in instance of advertising m
 
 ### Object:  Display <a name="object_display"></a>
 
-This object provides additional detail about an ad specifically for display ads. There are multiple attributes for specifying creative details: "banner" for simple banner images "native" for native ads, "ad" for including general markup, and "curl" for referencing general markup via URL. In any given "Display" object, only one of these attributes should be used to avoid confusion. To the extent feasible, structured objects should be favored over general markup for quality and safety issues.
+This object provides additional detail about an ad specifically for display ads. There are multiple attributes for specifying creative details: "`banner`" for simple banner images "`native`" for native ads, "`adm`" for including general markup, and "`curl`" for referencing general markup via URL. In any given "`Display`" object, only one of these attributes should be used to avoid confusion. To the extent feasible, structured objects should be favored over general markup for quality and safety issues.
 
 <table>
   <tr>
@@ -322,63 +322,63 @@ This object provides additional detail about an ad specifically for display ads.
   <tr>
     <td>api</td>
     <td>integer array</td>
-    <td>API required by the ad if applicable. Refer to List: API Frameworks.</td>
+    <td>API required by the ad if applicable.  Refer to List:  API Frameworks.</td>
   </tr>
   <tr>
     <td>type</td>
     <td>integer array</td>
-    <td>Subtype of display creative. Refer to List: Creative Subtypes - Display.</td>
+    <td>Subtype of display creative.  Refer to List:  Creative Subtypes - Display.</td>
   </tr>
   <tr>
     <td>w</td>
     <td>integer</td>
-    <td>Absolute width of the creative in device independent pixels (DIPS), typically for non-native ads. <br />
+    <td>Absolute width of the creative in device independent pixels (DIPS), typically for non-native ads.
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
     <td>h</td>
     <td>integer</td>
-    <td>Absolute height of the creative in device independent pixels (DIPS), typically for non-native ads. <br />
+    <td>Absolute height of the creative in device independent pixels (DIPS), typically for non-native ads.
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
     <td>wratio</td>
     <td>integer</td>
-    <td>Relative width of the creative when expressing size as a ratio, typically for non-native ads. <br />
+    <td>Relative width of the creative when expressing size as a ratio, typically for non-native ads.
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
     <td>hratio</td>
     <td>integer</td>
-    <td>Relative height of the creative when expressing size as a ratio, typically for non-native ads. <br />
+    <td>Relative height of the creative when expressing size as a ratio, typically for non-native ads.
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
     <td>adm</td>
     <td>string</td>
-    <td>General display markup (e.g., HTML, AMPHTML) if not using a structured alternative (e.g., "banner", "native"). <br />
-Note that including both "ad" and "curl" is not recommended.</td>
+    <td>General display markup (e.g., HTML, AMPHTML) if not using a structured alternative (e.g., "banner", "native").
+Note that including both "adm" and "curl" is not recommended.</td>
   </tr>
   <tr>
     <td>curl</td>
     <td>string</td>
-    <td>Optional means of retrieving display markup by reference; a URL that can return HTML, AMPHTML, or a collection native "Asset" object and their subordinates). If this ad is matched to a Placement specification, the "Placement.ref" attribute indicates if this markup retrieval option is supported. <br />
-Note that including both "ad" and "curl" is not recommended.</td>
+    <td>Optional means of retrieving display markup by reference; a URL that can return HTML, AMPHTML, or a collection native "Asset" object and their subordinates).  If this ad is matched to a Placement specification, the "Placement.curlx" attribute indicates if this markup retrieval option is supported.
+Note that including both "adm" and "curl" is not recommended. </td>
   </tr>
   <tr>
     <td>banner</td>
     <td>object</td>
-    <td>Structured banner image object, recommended for simple banner creatives. Refer to Object: Banner.</td>
+    <td>Structured banner image object, recommended for simple banner creatives.  Refer to Object:  Banner.</td>
   </tr>
   <tr>
     <td>native</td>
     <td>object</td>
-    <td>Structured native object, recommended for native ads. Refer to Object: Native.</td>
+    <td>Structured native object, recommended for native ads.  Refer to Object:  Native.</td>
   </tr>
   <tr>
     <td>event</td>
     <td>object array</td>
-    <td>Array of events that the advertiser or buying platform wants to track. Refer to Object: Event.</td>
+    <td>Array of events that the advertiser or buying platform wants to track.  Refer to  Object:  Event.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -390,7 +390,7 @@ Note that including both "ad" and "curl" is not recommended.</td>
 
 ### Object:  Banner <a name="object_banner"></a>
 
-This object describes a basic banner creative. It is intended for display scenarios that require a simple, structured image/link pair and is more secure than allowing arbitrary HTML or JavaScript code.
+This object describes a basic banner creative.  It is intended for display scenarios that require a simple, structured image/link pair and is more secure than allowing arbitrary HTML or JavaScript code.
 
 <table>
   <tr>
@@ -406,7 +406,7 @@ This object describes a basic banner creative. It is intended for display scenar
   <tr>
     <td>link</td>
     <td>string</td>
-    <td>Destination URL if the image is activated (e.g., clicked). The attribute is not applicable in some contexts (e.g., DOOH) and its inclusion does not guarantee it will be supported.</td>
+    <td>Destination URL if the image is activated (e.g., clicked).  The attribute is not applicable in some contexts (e.g., DOOH) and its inclusion does not guarantee it will be supported.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -434,12 +434,12 @@ This object is the root of a structure that defines a native display ad.
   <tr>
     <td>link</td>
     <td>object</td>
-    <td>Default destination link for the native ad overall; used if an asset is activated (e.g., clicked) that does not specify it's own destination link. Refer to Object: LinkAsset.</td>
+    <td>Default destination link for the native ad overall; used if an asset is activated (e.g., clicked) that doesn't specify it's own destination link.  Refer to Object:  LinkAsset.</td>
   </tr>
   <tr>
     <td>asset</td>
     <td>object array</td>
-    <td>Array of assets that comprise the native ad. Refer to Object: Asset.</td>
+    <td>Array of assets that comprise the native ad.  Refer to Object:  Asset.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -451,7 +451,7 @@ This object is the root of a structure that defines a native display ad.
 
 ### Object:  Asset <a name="object_asset"></a>
 
-This object is the container for each asset comprising a native ad. Each asset is of a specific type and to reflect this, one and only one of the subtype objects (i.e., "title", "img", "video", "data") must be present; all others should be omitted.
+This object is the container for each asset comprising a native ad.  Each asset is of a specific type and to reflect this, one and only one of the subtype objects (i.e., "`title`", "`img`", "`video`", "`data`") must be present; all others should be omitted.
 
 <table>
   <tr>
@@ -472,31 +472,31 @@ This object is the container for each asset comprising a native ad. Each asset i
   <tr>
     <td>title</td>
     <td>object; required *</td>
-    <td>Asset Subtype Object that indicates this is a title asset and provides additional detail as such. Refer to Object: TitleAsset. <br />
+    <td>**Asset Subtype Object** that indicates this is a title asset and provides additional detail as such.  Refer to Object:  TitleAsset.
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
     <td>image</td>
     <td>object; required *</td>
-    <td>Asset Subtype Object that indicates this is an image asset and provides additional detail as such. Refer to Object: ImageAsset. <br />
+    <td>**Asset Subtype Object** that indicates this is an image asset and provides additional detail as such.  Refer to Object:  ImageAsset.
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
     <td>video</td>
     <td>object; required *</td>
-    <td>Asset Subtype Object that indicates this is a video asset and provides additional detail as such. Refer to Object: VideoAsset. <br />
+    <td>**Asset Subtype Object** that indicates this is a video asset and provides additional detail as such.  Refer to Object:  VideoAsset.
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
     <td>data</td>
     <td>object; required *</td>
-    <td>Asset Subtype Object that indicates this is a data asset and provides additional detail as such. Refer to Object: DataAsset. <br />
+    <td>**Asset Subtype Object** that indicates this is a data asset and provides additional detail as such.  Refer to Object:  DataAsset.
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
     <td>link</td>
     <td>object; required *</td>
-    <td>Asset Subtype Object that indicates this is a link asset and provides additional detail as such. Refer to Object: LinkAsset. <br />
+    <td>**Asset Subtype Object** that indicates this is a link asset and provides additional detail as such.  Refer to Object:  LinkAsset.
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
@@ -509,7 +509,7 @@ This object is the container for each asset comprising a native ad. Each asset i
 
 ### Object:  LinkAsset <a name="object_linkasset"></a>
 
-This object identifies the native asset as a link asset and is used to define navigation for *call-to-action* or other activations (i.e., clicks). A link asset can be independent or associated with the overall native ad (i.e., a default for all assets).
+This object identifies the native asset as a link asset and is used to define navigation for *call-to-action* or other activations (i.e., clicks).  A link asset can be independent or associated with the overall native ad (i.e., a default for all assets).
 
 <table>
   <tr>
@@ -570,7 +570,7 @@ This object identifies the native asset as a title asset, which is essentially j
 
 ### Object:  ImageAsset <a name="object_imageasset"></a>
 
-This object identifies the native asset as a image asset. Image assets are use for such elements as the actual creative images and icons.
+This object identifies the native asset as a image asset.  Image assets are use for such elements as the actual creative images and icons.
 
 <table>
   <tr>
@@ -596,7 +596,7 @@ This object identifies the native asset as a image asset. Image assets are use f
   <tr>
     <td>type</td>
     <td>integer</td>
-    <td>The type of image represented by this asset. Refer to List: Native Image Asset Types.</td>
+    <td>The type of image represented by this asset.  Refer to List:  Native Image Asset Types.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -608,7 +608,7 @@ This object identifies the native asset as a image asset. Image assets are use f
 
 ### Object:  VideoAsset <a name="object_videoasset"></a>
 
-This object identifies the native asset as a video asset. Video markup (e.g., VAST) must be either included or referenced.
+This object identifies the native asset as a video asset.  Video markup (e.g., VAST) must be either included or referenced.
 
 <table>
   <tr>
@@ -619,14 +619,14 @@ This object identifies the native asset as a video asset. Video markup (e.g., VA
   <tr>
     <td>adm</td>
     <td>string; required *</td>
-    <td>Video markup (e.g., VAST document) for the asset. <br />
-* Exactly one of "adm" and "curl" is required. Including both is not recommended.</td>
+    <td>Video markup (e.g., VAST document) for the asset.
+* Exactly one of "adm" and "curl" is required.  Including both is not recommended.  </td>
   </tr>
   <tr>
     <td>curl</td>
     <td>string; required *</td>
-    <td>A URL that returns the video markup (e.g., VAST document) for the asset.  If this ad is matched to a placement specification, the "Placement.ref" attribute indicates if this markup retrieval option is supported. <br />
-* Exactly one of "adm" and "curl" is required. Including both is not recommended.</td>
+    <td>A URL that returns the video markup (e.g., VAST document) for the asset.  If this ad is matched to a placement specification, the "Placement.curlx" attribute indicates if this markup retrieval option is supported.
+* Exactly one of "adm" and "curl" is required.  Including both is not recommended.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -638,7 +638,7 @@ This object identifies the native asset as a video asset. Video markup (e.g., VA
 
 ### Object:  DataAsset <a name="object_dataasset"></a>
 
-This object identifies the native asset as a data asset. A data asset is used for all miscellaneous elements such as brand name, ratings, stars, review count, downloads, price, counts, etc. It is purposefully generic to support native elements not currently contemplated by this specification.
+This object identifies the native asset as a data asset.  A data asset is used for all miscellaneous elements such as brand name, ratings, stars, review count, downloads, price, counts, etc.  It is purposefully generic to support native elements not currently contemplated by this specification.
 
 <table>
   <tr>
@@ -649,17 +649,17 @@ This object identifies the native asset as a data asset. A data asset is used fo
   <tr>
     <td>value</td>
     <td>string; required</td>
-    <td>A formatted string of data to be displayed (e.g., "5 stars", "3.4 stars out of 5", "$10", etc.).</td>
+    <td>A formatted string of data to be displayed (e.g., "5 stars", "3.4 stars out of 5", "$ 10", etc.).</td>
   </tr>
   <tr>
     <td>len</td>
     <td>integer</td>
-    <td>The length of the "value" contents. This length should conform to recommendations provided in List: Native Data Asset Types, where applicable.</td>
+    <td>The length of the "`value`" contents.  This length should conform to recommendations provided in List:  Native Data Asset Types, where applicable.</td>
   </tr>
   <tr>
     <td>type</td>
     <td>integer</td>
-    <td>The type of data represented by this asset. Refer to List: Native Data Asset Types.</td>
+    <td>The type of data represented by this asset.  Refer to List:  Native Data Asset Types.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -681,29 +681,29 @@ This object specifies a type of event that the advertiser or buying platform wan
   </tr>
   <tr>
     <td>type</td>
-    <td>Integer; required</td>
-    <td>Type of event to track. Refer to List: Event Types.</td>
+    <td>integer; required</td>
+    <td>Type of event to track.  Refer to List:  Event Types.</td>
   </tr>
   <tr>
     <td>method</td>
     <td>integer; required</td>
-    <td>Method of tracking requested. Refer to List: Event Tracking Methods.</td>
+    <td>Method of tracking requested.  Refer to List:  Event Tracking Methods.</td>
   </tr>
   <tr>
     <td>api</td>
     <td>integer array</td>
-    <td>The APIs being used by the tracker; only relevant when the tracking method is JavaScript. Refer to List: API Frameworks.</td>
+    <td>The APIs being used by the tracker; only relevant when the tracking method is JavaScript.  Refer to List:  API Frameworks.</td>
   </tr>
   <tr>
     <td>url</td>
     <td>string; required *</td>
-    <td>The URL of the tracking pixel or JavaScript tag, respectively. <br />
+    <td>The URL of the tracking pixel or JavaScript tag, respectively.
 * Required for Image-Pixel or JavaScript methods.</td>
   </tr>
   <tr>
     <td>cdata</td>
     <td>object (Map)</td>
-    <td>An array of key-value pairs to support vendor-specific data required for custom tracking. For example, the account number of a buyer with a tracking company might be represented as: {"acct": "123"}.</td>
+    <td>An array of key-value pairs to support vendor-specific data required for custom tracking.  For example, the account number of a buyer with a tracking company might be represented as:  {"acct": "123"}.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -731,24 +731,24 @@ This object provides additional detail about an ad specifically for video ads.
   <tr>
     <td>api</td>
     <td>integer array</td>
-    <td>API required by the ad if applicable. Refer to List: API Frameworks.</td>
+    <td>API required by the ad if applicable.  Refer to List:  API Frameworks.</td>
   </tr>
   <tr>
     <td>type</td>
     <td>integer array</td>
-    <td>Subtype of video creative. Refer to List: Creative Subtypes - Video.</td>
+    <td>Subtype of video creative.  Refer to List:  Creative Subtypes - Video.</td>
   </tr>
   <tr>
     <td>adm</td>
     <td>string</td>
-    <td>Video markup (e.g., VAST). <br />
-Note that including both "ad" and "curl" is not recommended.</td>
+    <td>Video markup (e.g., VAST).
+Note that including both "adm" and "curl" is not recommended.</td>
   </tr>
   <tr>
     <td>curl</td>
     <td>string</td>
-    <td>Optional means of retrieving markup by reference; a URL that returns video markup (e.g., VAST). If this ad is matched to a Placement specification, the "Placement.ref" attribute indicates if this markup retrieval option is supported. <br />
-Note that including both "ad" and "curl" is not recommended. </td>
+    <td>Optional means of retrieving markup by reference; a URL that returns video markup (e.g., VAST).  If this ad is matched to a Placement specification, the "Placement.curlx" attribute indicates if this markup retrieval option is supported.
+Note that including both "adm" and "curl" is not recommended. </td>
   </tr>
   <tr>
     <td>ext</td>
@@ -776,24 +776,24 @@ This object provides additional detail about an ad specifically for audio ads.
   <tr>
     <td>api</td>
     <td>integer array</td>
-    <td>API required by the ad if applicable. Refer to List: API Frameworks.</td>
+    <td>API required by the ad if applicable.  Refer to List:  API Frameworks.</td>
   </tr>
   <tr>
     <td>type</td>
     <td>integer array</td>
-    <td>Subtype of audio creative. Refer to List: Creative Subtypes - Audio.</td>
+    <td>Subtype of audio creative.  Refer to List:  Creative Subtypes - Audio.</td>
   </tr>
   <tr>
     <td>adm</td>
     <td>string</td>
-    <td>Audio markup (e.g., DAAST). <br />
-Note that including both "ad" and "curl" is not recommended.</td>
+    <td>Audio markup (e.g., DAAST).
+Note that including both "adm" and "curl" is not recommended.</td>
   </tr>
   <tr>
     <td>curl</td>
     <td>string</td>
-    <td>Optional means of retrieving markup by reference; a URL that returns audio markup (e.g., DAAST). If this ad is matched to a Placement specification, the "Placement.ref" attribute indicates if this markup retrieval option is supported. <br />
-Note that including both "ad" and "curl" is not recommended. </td>
+    <td>Optional means of retrieving markup by reference; a URL that returns audio markup (e.g., DAAST).  If this ad is matched to a Placement specification, the "Placement.curlx" attribute indicates if this markup retrieval option is supported.
+Note that including both "adm" and "curl" is not recommended. </td>
   </tr>
   <tr>
     <td>ext</td>
@@ -805,7 +805,7 @@ Note that including both "ad" and "curl" is not recommended. </td>
 
 ### Object:  Audit <a name="object_audit"></a>
 
-This objects represents the outcome of some form of review of the ad. This is typical, for example, when scanning for malware or otherwise performing ad quality reviews.
+This objects represents the outcome of some form of review of the ad.  This is typical, for example, when scanning for malware or otherwise performing ad quality reviews.
 
 <table>
   <tr>
@@ -816,7 +816,7 @@ This objects represents the outcome of some form of review of the ad. This is ty
   <tr>
     <td>status</td>
     <td>Integer</td>
-    <td>The audit status of the ad. Refer to List: Audit Status Codes.</td>
+    <td>The audit status of the ad.  Refer to List:  Audit Status Codes.</td>
   </tr>
   <tr>
     <td>feedback</td>
@@ -826,17 +826,17 @@ This objects represents the outcome of some form of review of the ad. This is ty
   <tr>
     <td>init</td>
     <td>string</td>
-    <td>Date/time of the original instantiation of this object in the format of ISO-8601; W3C profile. Refer to www.w3.org/TR/NOTE-datetime.</td>
+    <td>Date/time of the original instantiation of this object in the format of ISO-8601; W3C profile.  Refer to www.w3.org/TR/NOTE-datetime.</td>
   </tr>
   <tr>
     <td>lastmod</td>
     <td>string</td>
-    <td>Date/time of most recent modification to this object in the format of ISO-8601; W3C profile. Refer to www.w3.org/TR/NOTE-datetime.</td>
+    <td>Date/time of most recent modification to this object in the format of ISO-8601; W3C profile.  Refer to www.w3.org/TR/NOTE-datetime.</td>
   </tr>
   <tr>
     <td>corr</td>
     <td>object</td>
-    <td>Correction object wherein the auditor can specify changes to attributes of the "Ad" object or its children they believe to be proper. For example, if the original "Ad" indicated a category of "IAB3", but the auditor deems the correct category to be "IAB13", then "corr" could include a sparse "Ad" object including just the "cat" array indicating "IAB13".</td>
+    <td>Correction object wherein the auditor can specify changes to attributes of the "Ad" object or its children they believe to be proper.  For example, if the original "Ad" indicated a category of "IAB3", but the auditor deems the correct category to be "IAB13", then "corr" could include a sparse "Ad" object including just the "cat" array indicating "IAB13".</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -856,7 +856,7 @@ The following figure presents the objects and interrelationships in this group. 
 
 ### Object:  Placement <a name="object_placement"></a>
 
-This object represents the properties of a placement and the characteristics of ads permitted to be rendering within them. Placements of all types begin with this object as their root. It contains one or more subtype objects (i.e., "display", "video", "audio") that define the kinds of media permitted as well as media specific placement behaviors.
+This object represents the properties of a placement and the characteristics of ads permitted to be rendering within them.  Placements of all types begin with this object as their root.  It contains one or more subtype objects (i.e., "`display`", "`video`", "`audio`") that define the kinds of media permitted as well as media specific placement behaviors.
 
 The other attributes in this object apply to all aspects and substructures of the placement (i.e., the same block lists, language, secure status, etc. apply to all media types and native assets as applicable).
 
@@ -894,12 +894,12 @@ The other attributes in this object apply to all aspects and substructures of th
   <tr>
     <td>bcat</td>
     <td>string array</td>
-    <td>Block list of content categories using IDs from the taxonomy indicated in "catta".</td>
+    <td>Block list of content categories using IDs from the taxonomy indicated in "cattax".</td>
   </tr>
   <tr>
     <td>cattax</td>
     <td>integer; default 2</td>
-    <td>The taxonomy in use for the "bcat" attribute. Refer to List: Category Taxonomies.</td>
+    <td>The taxonomy in use for the "bcat" attribute.  Refer to List:  Category Taxonomies.</td>
   </tr>
   <tr>
     <td>badv</td>
@@ -909,27 +909,27 @@ The other attributes in this object apply to all aspects and substructures of th
   <tr>
     <td>bapp</td>
     <td>string array</td>
-    <td>Block list of apps for which ads are disallowed. These should be bundle or package names (e.g., "com.foo.mygame") and should NOT be app store IDs (e.g., not iTunes store IDs).</td>
+    <td>Block list of apps for which ads are disallowed.  These should be bundle or package names (e.g., "com.foo.mygame") and should NOT be app store IDs (e.g., not iTunes store IDs).</td>
   </tr>
   <tr>
     <td>battr</td>
     <td>integer array</td>
-    <td>Block list of creative attributes. Refer to List: Creative Attributes.</td>
+    <td>Block list of creative attributes.  Refer to List:  Creative Attributes.</td>
   </tr>
   <tr>
     <td>wlang</td>
     <td>string array</td>
-    <td>Whitelist of permitted languages of the creative using ISO-639-1-alpha-2. In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated a priori. Omission of this attribute indicates there are no restrictions.</td>
+    <td>Whitelist of permitted languages of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated a priori.  Omission of this attribute indicates there are no restrictions.</td>
   </tr>
   <tr>
     <td>secure</td>
     <td>integer</td>
-    <td>Flag to indicate if the creative is secure (i.e., uses HTTPS for all assets and markup), where 0 = no, 1 = yes. There is no default and thus if omitted, the secure state is unknown. However, as a practical matter, the safe assumption is to treat unknown as non-secure.</td>
+    <td>Flag to indicate if the creative is secure (i.e., uses HTTPS for all assets and markup), where 0 = no, 1 = yes.  There is no default and thus if omitted, the secure state is unknown.  However, as a practical matter, the safe assumption is to treat unknown as non-secure.</td>
   </tr>
   <tr>
     <td>admx</td>
     <td>integer</td>
-    <td>Indicates if including markup is supported (i.e., the various "ad" attributes throughout the "Placement" structure), where 0 = no, 1 = yes.</td>
+    <td>Indicates if including markup is supported (i.e., the various "adm" attributes throughout the "Placement" structure), where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
     <td>curlx</td>
@@ -939,19 +939,19 @@ The other attributes in this object apply to all aspects and substructures of th
   <tr>
     <td>display</td>
     <td>object; required *</td>
-    <td>Placement Subtype Object that indicates that this may be a display placement and provides additional detail related thereto. Refer to Object: DisplayPlacement. <br />
+    <td>**Placement Subtype Object** that indicates that this may be a display placement and provides additional detail related thereto.  Refer to Object:  DisplayPlacement.
 * At least one placement subtype object is required.</td>
   </tr>
   <tr>
     <td>video</td>
     <td>object; required *</td>
-    <td>Placement Subtype Object that indicates that this may be a video placement and provides additional detail related thereto.  Refer to Object: VideoPlacement. <br />
+    <td>**Placement Subtype Object** that indicates that this may be a video placement and provides additional detail related thereto.  Refer to Object:  VideoPlacement.
 * At least one placement subtype object is required.</td>
   </tr>
   <tr>
     <td>audio</td>
     <td>object; required *</td>
-    <td>Placement Subtype Object that indicates that this may be an audio placement and provides additional detail related thereto.  Refer to Object: AudioPlacement.
+    <td>**Placement Subtype Object** that indicates that this may be an audio placement and provides additional detail related thereto.  Refer to Object:  AudioPlacement.
 * At least one placement subtype object is required.</td>
   </tr>
   <tr>
@@ -964,7 +964,7 @@ The other attributes in this object apply to all aspects and substructures of th
 
 ### Object:  DisplayPlacement <a name="object_displayplacement"></a>
 
-This object signals that the placement may be a display placement. It provides additional detail about permitted display ads including simple banners, AMPHTML (i.e., Accelerated Mobile Pages), and native.
+This object signals that the placement may be a display placement.  It provides additional detail about permitted display ads including simple banners, AMPHTML (i.e., Accelerated Mobile Pages), and native.
 
 <table>
   <tr>
@@ -975,7 +975,7 @@ This object signals that the placement may be a display placement. It provides a
   <tr>
     <td>pos</td>
     <td>integer</td>
-    <td>Placement position on screen. Refer to List: Placement Positions.</td>
+    <td>Placement position on screen.  Refer to List:  Placement Positions.</td>
   </tr>
   <tr>
     <td>instl</td>
@@ -985,17 +985,17 @@ This object signals that the placement may be a display placement. It provides a
   <tr>
     <td>topframe</td>
     <td>integer</td>
-    <td>Indicates if the placement will be loaded into an iframe or not, where 0 = unfriendly iframe or unknown, 1 = top frame, friendly iframe, or SafeFrame. A value of "1" can be understood to mean that expandable ads are technically capable of being delivered.</td>
+    <td>Indicates if the placement will be loaded into an iframe or not, where 0 = unfriendly iframe or unknown, 1 = top frame,  friendly iframe, or SafeFrame.  A value of "1" can be understood to mean that expandable ads are technically capable of being delivered.</td>
   </tr>
   <tr>
     <td>ifrbust</td>
     <td>string array</td>
-    <td>Array of iframe busters supported by this placement. The meaning of strings in this attribute must be coordinated a priori among vendors.</td>
+    <td>Array of iframe busters supported by this placement.  The meaning of strings in this attribute must be coordinated a priori among vendors.</td>
   </tr>
   <tr>
     <td>clktype</td>
     <td>integer; default 1</td>
-    <td>Indicates the click type of this placement. Refer to List: Click Types.</td>
+    <td>Indicates the click type of this placement.  Refer to List:  Click Types.</td>
   </tr>
   <tr>
     <td>ampren</td>
@@ -1005,59 +1005,57 @@ This object signals that the placement may be a display placement. It provides a
   <tr>
     <td>ptype</td>
     <td>Integer; recommended</td>
-    <td>The display placement type. Refer to List: Display Placement Types.</td>
+    <td>The display placement type.  Refer to List:  Display Placement Types.</td>
   </tr>
   <tr>
     <td>context</td>
     <td>integer; recommended</td>
-    <td>The context of the placement. Refer to List: Display Context Types.</td>
+    <td>The context of the placement.  Refer to List:  Display Context Types.</td>
   </tr>
   <tr>
     <td>mime</td>
     <td>string array</td>
-    <td>Array of supported mime types (e.g., "image/jpeg", "image/gif"). If omitted, all types are assumed.</td>
+    <td>Array of supported mime types (e.g., "image/jpeg", "image/gif").  If omitted, all types are assumed.</td>
   </tr>
   <tr>
     <td>api</td>
     <td>integer array</td>
-    <td>List of supported APIs. If an API is not explicitly listed, it is assumed to be unsupported. Refer to List: API Frameworks.</td>
+    <td>List of supported APIs.  If an API is not explicitly listed, it is assumed to be unsupported.  Refer to List:  API Frameworks.</td>
   </tr>
   <tr>
     <td>ctype</td>
     <td>integer array</td>
-    <td>Creative subtypes permitted. Refer to List: Creative Subtypes - Display.</td>
+    <td>Creative subtypes permitted.  Refer to List:  Creative Subtypes - Display.</td>
   </tr>
   <tr>
     <td>w</td>
     <td>integer</td>
-    <td>Width of the placement in units specified by "unit". Note that this size applies to the placement itself; permitted creative sizes are specified elsewhere (e.g. "DisplayFormat", "ImageAssetFormat", etc.).</td>
+    <td>Width of the placement in units specified by "unit".  Note that this size applies to the placement itself; permitted creative sizes are specified elsewhere (e.g., "DisplayFormat", "ImageAssetFormat", etc.).</td>
   </tr>
   <tr>
     <td>h</td>
     <td>integer</td>
-    <td>Width of the placement in units specified by "unit". Note that this size applies to the placement itself; permitted creative sizes are specified elsewhere (e.g., "DisplayFormat", "ImageAssetFormat", etc.).</td>
+    <td>Width of the placement in units specified by "unit".  Note that this size applies to the placement itself; permitted creative sizes are specified elsewhere (e.g., "DisplayFormat", "ImageAssetFormat", etc.).</td>
   </tr>
   <tr>
     <td>unit</td>
     <td>integer; default 1</td>
-    <td>Unit of size used for placement size (i.e., "w" and "h" attributes). Refer to List: Size Units.</td>
+    <td>Unit of size used for placement size (i.e., "w" and "h" attributes).  Refer to List:  Size Units.</td>
   </tr>
   <tr>
     <td>displayfmt</td>
     <td>object array</td>
-    <td>Array of objects that govern the attributes (e.g., sizes) of a banner display placement. Refer to Object: DisplayFormat. <br />
-Note that including both "displayfmt" and nativefmt" is not recommended.</td>
+    <td>Array of objects that govern the attributes (e.g., sizes) of a banner display placement.  Refer to Object:  DisplayFormat.</td>
   </tr>
   <tr>
     <td>nativefmt</td>
     <td>object</td>
-    <td>This object specified the required and permitted assets and attributes of a native display placement. Refer to Object: NativeFormat. <br />
-Note that including both "displayfmt" and "nativefmt" is not recommended.</td>
+    <td>This object specified the required and permitted assets and attributes of a native display placement.  Refer to Object:  NativeFormat.</td>
   </tr>
   <tr>
     <td>event</td>
     <td>object array</td>
-    <td>Array of supported ad tracking events. Refer to Object: EventSpec.</td>
+    <td>Array of supported ad tracking events.  Refer to Object:  EventSpec.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -1080,31 +1078,31 @@ This object represents an allowed set of parameters for a banner display ad and 
   <tr>
     <td>w</td>
     <td>integer</td>
-    <td>Absolute width of the creative in units specified by "DisplayPlacement.unit". <br />
+    <td>Absolute width of the creative in units specified by "DisplayPlacement.unit".
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
     <td>h</td>
     <td>integer</td>
-    <td>Absolute height of the creative in units specified by "DisplayPlacement.unit". <br />
+    <td>Absolute height of the creative in units specified by "DisplayPlacement.unit".
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
     <td>wratio</td>
     <td>integer</td>
-    <td>Relative width of the creative when expressing size as a ratio. <br />
+    <td>Relative width of the creative when expressing size as a ratio.
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
     <td>hratio</td>
     <td>integer</td>
-    <td>Relative height of the creative when expressing size as a ratio. <br />
+    <td>Relative height of the creative when expressing size as a ratio.
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
     <td>expdir</td>
     <td>integer array</td>
-    <td>Directions in which the creative is permitted to expand. Refer to List: Expandable Directions.</td>
+    <td>Directions in which the creative is permitted to expand.  Refer to List:  Expandable Directions.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -1116,7 +1114,7 @@ Note that mixing absolute and relative sizes is not recommended.</td>
 
 ### Object:  NativeFormat <a name="object_nativeformat"></a>
 
-This object refines a display placement to be specifically a native display placement. It serves as the root of a structure that includes the specifications for each of the assets that comprise the native placement.
+This object refines a display placement to be specifically a native display placement.  It serves as the root of a structure that includes the specifications for each of the assets that comprise the native placement.
 
 <table>
   <tr>
@@ -1127,12 +1125,12 @@ This object refines a display placement to be specifically a native display plac
   <tr>
     <td>priv</td>
     <td>integer; default 0</td>
-    <td>Indicator of whether or not the placement supports a buyer-specific privacy note, where 0 = no, 1 = yes.</td>
+    <td>Indicator of whether or not the placement supports a buyer-specific privacy notice URL, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
     <td>asset</td>
     <td>array of objects; required</td>
-    <td>Array of objects that specify the set of native assets and their permitted formats. Refer to Object: AssetFormat.</td>
+    <td>Array of objects that specify the set of native assets and their permitted formats.  Refer to Object:  AssetFormat.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -1144,7 +1142,7 @@ This object refines a display placement to be specifically a native display plac
 
 ### Object:  AssetFormat <a name="object_assetformat"></a>
 
-This object represents the permitted specifications of a single asset of a native ad. Along with its own attributes, exactly one of the asset subtype objects must be included. All others must be omitted.
+This object represents the permitted specifications of a single asset of a native ad.  Along with its own attributes, exactly one of the asset subtype objects must be included.  All others must be omitted.
 
 <table>
   <tr>
@@ -1165,25 +1163,25 @@ This object represents the permitted specifications of a single asset of a nativ
   <tr>
     <td>title</td>
     <td>object; required *</td>
-    <td>Asset Format Subtype Object that indicates this is specifying a title asset and provides additional detail as such. Refer to Object: TitleAssetFormat. <br />
+    <td>**Asset Format Subtype Object** that indicates this is specifying a title asset and provides additional detail as such.  Refer to Object:  TitleAssetFormat.
 * Required if no other asset format subtype object is specified.</td>
   </tr>
   <tr>
     <td>img</td>
     <td>object; required *</td>
-    <td>Asset Format Subtype Object that indicates this is specifying an image asset and provides additional detail as such. Refer to Object: ImageAssetFormat. <br />
+    <td>**Asset Format Subtype Object** that indicates this is specifying an image asset and provides additional detail as such.  Refer to Object:  ImageAssetFormat.
 * Required if no other asset format subtype object is specified.</td>
   </tr>
   <tr>
     <td>video</td>
     <td>object; required *</td>
-    <td>Asset Format Subtype Object, which leverages the "VideoPlacement" object, that indicates this is specifying a video asset and provides additional detail as such. Refer to Object: VideoPlacement. <br />
+    <td>**Asset Format Subtype Object**, which leverages the "VideoPlacement" object, that indicates this is specifying a video asset and provides additional detail as such.  Refer to Object:  VideoPlacement.
 * Required if no other asset format subtype object is specified.</td>
   </tr>
   <tr>
     <td>data</td>
     <td>object; required *</td>
-    <td>Asset Format Subtype Object that indicates this is specifying a data asset and provides additional detail as such. Refer to Object: DataAssetFormat. <br />
+    <td>**Asset Format Subtype Object** that indicates this is specifying a data asset and provides additional detail as such.  Refer to Object:  DataAssetFormat.
 * Required if no other asset format subtype object is specified.</td>
   </tr>
   <tr>
@@ -1196,7 +1194,7 @@ This object represents the permitted specifications of a single asset of a nativ
 
 ### Object:  TitleAssetFormat <a name="object_titleassetformat"></a>
 
-This object is used to provide native asset format specifications for a title element. Title elements are simple strings.
+This object is used to provide native asset format specifications for a title element.  Title elements are simple strings.
 
 <table>
   <tr>
@@ -1207,7 +1205,7 @@ This object is used to provide native asset format specifications for a title el
   <tr>
     <td>len</td>
     <td>integer; required</td>
-    <td>The maximum allowed length of the title value. Recommended lengths are 25, 90, or 140.</td>
+    <td>The maximum allowed length of the title value.  Recommended lengths are 25, 90, or 140.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -1219,7 +1217,7 @@ This object is used to provide native asset format specifications for a title el
 
 ### Object:  ImageAssetFormat <a name="object_imageassetformat"></a>
 
-This object is used to provide native asset format specifications for an image element. Image elements are typically used for the actual creative image and icons.
+This object is used to provide native asset format specifications for an image element.  Image elements are typically used for the actual creative image and icons.
 
 <table>
   <tr>
@@ -1230,45 +1228,45 @@ This object is used to provide native asset format specifications for an image e
   <tr>
     <td>type</td>
     <td>integer</td>
-    <td>The type of image asset supported. Refer to List: Native Image Asset Types.</td>
+    <td>The type of image asset supported.  Refer to  List:  Native Image Asset Types.</td>
   </tr>
   <tr>
     <td>mime</td>
     <td>string array</td>
-    <td>Array of supported mime types (e.g., "image/jpeg", "image/gif"). If omitted, all types are assumed.</td>
+    <td>Array of supported mime types (e.g., "image/jpeg", "image/gif").  If omitted, all types are assumed.</td>
   </tr>
   <tr>
     <td>w</td>
     <td>integer</td>
-    <td>Absolute width of the image asset in device independent pixels (DIPS). <br />
+    <td>Absolute width of the image asset in device independent pixels (DIPS).
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
     <td>h</td>
     <td>integer</td>
-    <td>Absolute height of the image asset in device independent pixels (DIPS). <br />
+    <td>Absolute height of the image asset in device independent pixels (DIPS).
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
     <td>wmin</td>
     <td>integer</td>
-    <td>The minimum requested absolute width of the image in device independent pixels (DIPS). This option should be used for any scaling of images by the client.</td>
+    <td>The minimum requested absolute width of the image in device independent pixels (DIPS).  This option should be used for any scaling of images by the client.</td>
   </tr>
   <tr>
     <td>hmin</td>
     <td>integer</td>
-    <td>The minimum requested absolute height of the image in device independent pixels (DIPS). This option should be used for any scaling of images by the client.</td>
+    <td>The minimum requested absolute height of the image in device independent pixels (DIPS).  This option should be used for any scaling of images by the client.</td>
   </tr>
   <tr>
     <td>wratio</td>
     <td>integer</td>
-    <td>Relative width of the image asset when expressing size as a ratio. <br />
+    <td>Relative width of the image asset when expressing size as a ratio.
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
     <td>hratio</td>
     <td>integer</td>
-    <td>Relative height of the image asset when expressing size as a ratio. <br />
+    <td>Relative height of the image asset when expressing size as a ratio.
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
@@ -1281,7 +1279,7 @@ Note that mixing absolute and relative sizes is not recommended.</td>
 
 ### Object:  DataAssetFormat <a name="object_dataassetformat"></a>
 
-This object is used to provide native asset format specifications for a data element. A data asset is used for all miscellaneous elements such as brand name, ratings, stars, review count, downloads, prices, etc. It is purposefully generic to support native elements not currently contemplated by this specification.
+This object is used to provide native asset format specifications for a data element.  A data asset is used for all miscellaneous elements such as brand name, ratings, stars, review count, downloads, prices, etc.  It is purposefully generic to support native elements not currently contemplated by this specification.
 
 <table>
   <tr>
@@ -1292,7 +1290,7 @@ This object is used to provide native asset format specifications for a data ele
   <tr>
     <td>type</td>
     <td>integer; required</td>
-    <td>The type of data asset supported. Refer to List: Native Data Asset Types.</td>
+    <td>The type of data asset supported.  Refer to List:  Native Data Asset Types.</td>
   </tr>
   <tr>
     <td>len</td>
@@ -1309,7 +1307,7 @@ This object is used to provide native asset format specifications for a data ele
 
 ### Object:  EventSpec <a name="object_eventspec"></a>
 
-This object specifies a type of ad tracking event and which methods of tracking are available for it. This object may appear as an array for a given placement indicating various types of available tracking events.
+This object specifies a type of ad tracking event and which methods of tracking are available for it.  This object may appear as an array for a given placement indicating various types of available tracking events.
 
 <table>
   <tr>
@@ -1320,22 +1318,22 @@ This object specifies a type of ad tracking event and which methods of tracking 
   <tr>
     <td>type</td>
     <td>integer; required</td>
-    <td>Type of supported ad tracking event. Refer to List: Event Types.</td>
+    <td>Type of supported ad tracking event.  Refer to List:  Event Types.</td>
   </tr>
   <tr>
     <td>method</td>
     <td>integer array</td>
-    <td>Array of supported event tracking methods for this event type. Refer to List: Event Tracking Methods.</td>
+    <td>Array of supported event tracking methods for this event type.  Refer to List:  Event Tracking Methods.</td>
   </tr>
   <tr>
     <td>api</td>
     <td>integer array</td>
-    <td>Event tracking APIs available for use; only relevant for JavaScript method trackers. Refer to List: API Frameworks.</td>
+    <td>Event tracking APIs available for use; only relevant for JavaScript method trackers.  Refer to List:  API Frameworks.</td>
   </tr>
   <tr>
     <td>jstrk</td>
     <td>string array</td>
-    <td>Array of domains, top two levels only (e.g., "tracker.com"), that constitute a restriction list of JavaScript trackers. The sense of the restrictions is determined by "wjs".</td>
+    <td>Array of domains, top two levels only (e.g., "tracker.com"), that constitute a restriction list of JavaScript trackers.  The sense of the restrictions is determined by "wjs".</td>
   </tr>
   <tr>
     <td>wjs</td>
@@ -1345,7 +1343,7 @@ This object specifies a type of ad tracking event and which methods of tracking 
   <tr>
     <td>pxtrk</td>
     <td>string array</td>
-    <td>Array of domains, top two levels only (e.g., "tracker.com"), that constitute a restriction list of pixel image trackers. The sense of the restrictions is determined by "wpx".</td>
+    <td>Array of domains, top two levels only (e.g., "tracker.com"), that constitute a restriction list of pixel image trackers.  The sense of the restrictions is determined by "wpx".</td>
   </tr>
   <tr>
     <td>wpx</td>
@@ -1373,17 +1371,17 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td>ptype</td>
     <td>integer</td>
-    <td>Placement subtype. Refer to List: Placement Subtypes - Video.</td>
+    <td>Placement subtype.  Refer to List:  Placement Subtypes - Video.</td>
   </tr>
   <tr>
     <td>pos</td>
     <td>integer</td>
-    <td>Placement position on screen. Refer to List: Placement Positions.</td>
+    <td>Placement position on screen.  Refer to List:  Placement Positions.</td>
   </tr>
   <tr>
     <td>delay</td>
     <td>integer</td>
-    <td>Indicates the start delay in seconds for pre-roll, mid-roll, or post-roll placements. For additional generic values, refer to List: Start Delay Modes.</td>
+    <td>Indicates the start delay in seconds for pre-roll, mid-roll, or post-roll placements.  For additional generic values, refer to List:  Start Delay Modes.</td>
   </tr>
   <tr>
     <td>skip</td>
@@ -1403,32 +1401,32 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td>playmethod</td>
     <td>integer</td>
-    <td>Playback method in use for this placement. Refer to List: Playback Methods.</td>
+    <td>Playback method in use for this placement.  Refer to List:  Playback Methods.</td>
   </tr>
   <tr>
     <td>playend</td>
     <td>integer</td>
-    <td>The event that causes playback to end for this placement. Refer to List: Playback Cessation Modes.</td>
+    <td>The event that causes playback to end for this placement.  Refer to List:  Playback Cessation Modes.</td>
   </tr>
   <tr>
     <td>clktype</td>
     <td>integer</td>
-    <td>Indicates the click type of the placement. Refer to List: Click Types.</td>
+    <td>Indicates the click type of the placement.  Refer to List:  Click Types.</td>
   </tr>
   <tr>
     <td>mime</td>
     <td>string array; required</td>
-    <td>Array of supported mime types (e.g., "video/mp4"). If omitted, all types are assumed.</td>
+    <td>Array of supported mime types (e.g., "video/mp4").  If omitted, all types are assumed.</td>
   </tr>
   <tr>
     <td>api</td>
     <td>integer array</td>
-    <td>List of supported APIs for this placement. If an API is not explicitly listed, it is assumed to be unsupported. Refer to List: API Frameworks.</td>
+    <td>List of supported APIs for this placement.  If an API is not explicitly listed, it is assumed to be unsupported.  Refer to List:  API Frameworks.</td>
   </tr>
   <tr>
     <td>ctype</td>
     <td>integer array</td>
-    <td>Creative subtypes permitted for this placement. Refer to List: Creative Subtypes - Video.</td>
+    <td>Creative subtypes permitted for this placement.  Refer to List:  Creative Subtypes - Video.</td>
   </tr>
   <tr>
     <td>w</td>
@@ -1443,7 +1441,7 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td>unit</td>
     <td>integer; default 1</td>
-    <td>Units of size used for "w" and "h" attributes. Refer to List: Size Units.</td>
+    <td>Units of size used for "w" and "h" attributes.  Refer to List:  Size Units.</td>
   </tr>
   <tr>
     <td>mindur</td>
@@ -1458,7 +1456,7 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td>maxext</td>
     <td>Integer; default 0</td>
-    <td>Maximum extended creative duration if extension is allowed. If 0, extension is not allowed. If -1, extension is allowed and there is no time limit imposed. If greater than 0, then the value represents the number of seconds of extended play supported beyond the "maxdur" value.</td>
+    <td>Maximum extended creative duration if extension is allowed.  If 0, extension is not allowed.  If -1, extension is allowed and there is no time limit imposed.  If greater than 0, then the value represents the number of seconds of extended play supported beyond the "maxdur" value.</td>
   </tr>
   <tr>
     <td>minbitr</td>
@@ -1473,7 +1471,7 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td>delivery</td>
     <td>integer array</td>
-    <td>Array of supported creative delivery methods. If omitted, all can be assumed. Refer to List: Delivery Methods.</td>
+    <td>Array of supported creative delivery methods.  If omitted, all can be assumed.  Refer to List:  Delivery Methods.</td>
   </tr>
   <tr>
     <td>maxseq</td>
@@ -1483,7 +1481,7 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td>linear</td>
     <td>integer</td>
-    <td>Indicates if the creative must be linear, nonlinear, etc. If none specified, no restrictions are assumed. Refer to List: Linearity Modes.</td>
+    <td>Indicates if the creative must be linear, nonlinear, etc.  If none specified, no restrictions are assumed.  Refer to List:  Linearity Modes.</td>
   </tr>
   <tr>
     <td>boxing</td>
@@ -1493,12 +1491,12 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td>comp</td>
     <td>object array</td>
-    <td>Array of objects indicating that companion ads are available and providing the specifications thereof. Refer to Object: Companion.</td>
+    <td>Array of objects indicating that companion ads are available and providing the specifications thereof.  Refer to Object:  Companion.</td>
   </tr>
   <tr>
     <td>comptype</td>
     <td>integer array</td>
-    <td>Supported companion ad types; recommended if companion ads are specified in "comp". Refer to List: Companion Types.</td>
+    <td>Supported companion ad types; recommended if companion ads are specified in "comp".  Refer to List:  Companion Types.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -1521,7 +1519,7 @@ This object signals that the placement may be an audio placement and provides ad
   <tr>
     <td>delay</td>
     <td>integer</td>
-    <td>Indicates the start delay in seconds for pre-roll, mid-roll, or post-roll placements. For additional generic values, refer to List: Start Delay Modes.</td>
+    <td>Indicates the start delay in seconds for pre-roll, mid-roll, or post-roll placements.  For additional generic values, refer to List:  Start Delay Modes.</td>
   </tr>
   <tr>
     <td>skip</td>
@@ -1541,37 +1539,37 @@ This object signals that the placement may be an audio placement and provides ad
   <tr>
     <td>playmethod</td>
     <td>integer</td>
-    <td>Playback method in use for this placement. Refer to List: Playback Methods.</td>
+    <td>Playback method in use for this placement.  Refer to List:  Playback Methods.</td>
   </tr>
   <tr>
     <td>playend</td>
     <td>integer</td>
-    <td>The event that causes playback to end for this placement. Refer to List: Playback Cessation Modes.</td>
+    <td>The event that causes playback to end for this placement.  Refer to List:  Playback Cessation Modes.</td>
   </tr>
   <tr>
     <td>feed</td>
     <td>integer</td>
-    <td>Type of audio feed of this placement. Refer to List: Feed Types.</td>
+    <td>Type of audio feed of this placement.  Refer to List:  Feed Types.</td>
   </tr>
   <tr>
     <td>nvol</td>
     <td>integer</td>
-    <td>Volume normalization mode of this placement. Refer to List: Volume Normalization Modes.</td>
+    <td>Volume normalization mode of this placement.  Refer to List:  Volume Normalization Modes.</td>
   </tr>
   <tr>
     <td>mime</td>
     <td>string array; required</td>
-    <td>Array of supported mime types (e.g., "audio/mp4"). If omitted, all types are assumed.</td>
+    <td>Array of supported mime types (e.g., "audio/mp4").  If omitted, all types are assumed.</td>
   </tr>
   <tr>
     <td>api</td>
     <td>integer array</td>
-    <td>List of supported APIs for this placement. If an API is not explicitly listed, it is assumed to be unsupported. Refer to List: API Frameworks.</td>
+    <td>List of supported APIs for this placement.  If an API is not explicitly listed, it is assumed to be unsupported.  Refer to List:  API Frameworks.</td>
   </tr>
   <tr>
     <td>ctype</td>
     <td>integer array</td>
-    <td>Creative subtypes permitted for this placement. Refer to List: Creative Subtypes - Audio.</td>
+    <td>Creative subtypes permitted for this placement.  Refer to List:  Creative Subtypes - Audio.</td>
   </tr>
   <tr>
     <td>mindur</td>
@@ -1586,7 +1584,7 @@ This object signals that the placement may be an audio placement and provides ad
   <tr>
     <td>maxext</td>
     <td>integer</td>
-    <td>Maximum extended creative duration if extension is allowed. If 0, extension is not allowed. If -1, extension is allowed and there is no time limit imposed. If greater than 0, then the value represents the number of seconds of extended play supported beyond the "maxdur" value.</td>
+    <td>Maximum extended creative duration if extension is allowed.  If 0, extension is not allowed.  If -1, extension is allowed and there is no time limit imposed.  If greater than 0, then the value represents the number of seconds of extended play supported beyond the "maxdur" value.</td>
   </tr>
   <tr>
     <td>minbitr</td>
@@ -1601,7 +1599,7 @@ This object signals that the placement may be an audio placement and provides ad
   <tr>
     <td>delivery</td>
     <td>integer array</td>
-    <td>Array of supported creative delivery methods. If omitted, all can be assumed. Refer to List: Delivery Methods.</td>
+    <td>Array of supported creative delivery methods.  If omitted, all can be assumed.  Refer to List:  Delivery Methods.</td>
   </tr>
   <tr>
     <td>maxseq</td>
@@ -1611,12 +1609,12 @@ This object signals that the placement may be an audio placement and provides ad
   <tr>
     <td>comp</td>
     <td>object array</td>
-    <td>Array of objects indicating that companion ads are available and providing the specifications thereof. Refer to Object: Companion.</td>
+    <td>Array of objects indicating that companion ads are available and providing the specifications thereof.  Refer to Object:  Companion.</td>
   </tr>
   <tr>
     <td>comptype</td>
     <td>integer array</td>
-    <td>Supported companion ad types; recommended if companion ads are specified in "comp". Refer to List: Companion Types.</td>
+    <td>Supported companion ad types; recommended if companion ads are specified in "comp".  Refer to List:  Companion Types.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -1628,7 +1626,7 @@ This object signals that the placement may be an audio placement and provides ad
 
 ### Object:  Companion <a name="object_companion"></a>
 
-This object is used in video and audio placements to specify an associated or so-called *companion* display ad. Video and audio placements can specify an array of companion ads.
+This object is used in video and audio placements to specify an associated or so-called *companion* display ad.  Video and audio placements can specify an array of companion ads.
 
 <table>
   <tr>
@@ -1644,12 +1642,12 @@ This object is used in video and audio placements to specify an associated or so
   <tr>
     <td>vcm</td>
     <td>integer</td>
-    <td>Indicates the companion ad rendering mode relative to the associated video or audio ad, where 0 = concurrent, 1 = end-card. For a given placement, typically only one companion at most should be designated as an end card.</td>
+    <td>Indicates the companion ad rendering mode relative to the associated video or audio ad, where 0 = concurrent, 1 = end-card.  For a given placement, typically only one companion at most should be designated as an end card.</td>
   </tr>
   <tr>
     <td>display</td>
     <td>object</td>
-    <td>Display specification object representing the companion ad. Refer to Object: DisplayPlacement.</td>
+    <td>Display specification object representing the companion ad.  Refer to Object:  DisplayPlacement.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -1659,7 +1657,7 @@ This object is used in video and audio placements to specify an associated or so
 </table>
 
 
-## Context Objects <a name="contextobjects"></a>
+## Context Objects## Context Objects <a name="contextobjects"></a>
 
 This group of objects represent concepts that are interacting, presenting, enclosing, or are otherwise relating to the world in which impressions live. These include the user, their device, their location, the channel (e.g., site, app, digital out-of-home) with which they are interacting, the channel's publisher, its content, and any regulations that are in effect (e.g., COPPA, GDPR).
 
@@ -1669,9 +1667,9 @@ The following figure presents the objects and interrelationships in this group. 
 
 ### Abstract Class:  DistributionChannel <a name="abstract_distributionchannel"></a>
 
-A distribution channel is an abstraction of the various types of entities or channels through which ads are distributed. Examples include websites, mobile apps, and digital out-of-home (DOOH) systems. This generalized class contains those attributes and relationships that are common to all distribution channels and as such, all of its attributes and relationships are inherited by each of its derived classes.
+A distribution channel is an abstraction of the various types of entities or channels through which ads are distributed.  Examples include websites, mobile apps, and digital out-of-home (DOOH) systems.  This generalized class contains those attributes and relationships that are common to all distribution channels and as such, all of its attributes and relationships are inherited by each of its derived classes.
 
-Note: As an abstract class, a DistributionChannel is never instantiated on its own. Only objects of its derived classes are actually realized.
+Note:  As an abstract class, a DistributionChannel is never instantiated on its own.  Only objects of its derived classes are actually realized.
 
 <table>
   <tr>
@@ -1692,12 +1690,12 @@ Note: As an abstract class, a DistributionChannel is never instantiated on its o
   <tr>
     <td>pub</td>
     <td>object</td>
-    <td>Details about the publisher of the distribution channel. Refer to Object: Publisher.</td>
+    <td>Details about the publisher of the distribution channel.  Refer to  Object:  Publisher.</td>
   </tr>
   <tr>
     <td>content</td>
     <td>object</td>
-    <td>Details about the content within the distribution channel. Refer to Object: Content.</td>
+    <td>Details about the content within the distribution channel.  Refer to Object:  Content.</td>
   </tr>
 </table>
 
@@ -1706,7 +1704,7 @@ Note: As an abstract class, a DistributionChannel is never instantiated on its o
 
 *Derived from:* [DistributionChannel](#abstract_distributionchannel)
 
-This object is used to define an ad supported website, in contrast to a non-browser application, for example. As a derived class, a "Site" object inherits all "DistributionChannel" attributes and adds those defined below.
+This object is used to define an ad supported website, in contrast to a non-browser application, for example. As a derived class, a "`Site`" object inherits all "`DistributionChannel`" attributes and adds those defined below.
 
 <table>
   <tr>
@@ -1737,7 +1735,7 @@ This object is used to define an ad supported website, in contrast to a non-brow
   <tr>
     <td>cattax</td>
     <td>integer</td>
-    <td>The taxonomy in use for the "cat", "sectcat" and "pagecat" attributes. Refer to List: Category Taxonomies.</td>
+    <td>The taxonomy in use for the "cat", "sectcat" and "pagecat" attributes.  Refer to List:  Category Taxonomies.</td>
   </tr>
   <tr>
     <td>privpolicy</td>
@@ -1786,7 +1784,7 @@ This object is used to define an ad supported website, in contrast to a non-brow
 
 *Derived from:* [DistributionChannel](#abstract_distributionchannel)
 
-This object is used to define an ad supported non-browser application, in contrast to a typical website, example. As a derived class, an "App" object inherits all "DistributionChannel" attributes and adds those defined below.
+This object is used to define an ad supported non-browser application, in contrast to a typical website, example. As a derived class, an "`App`" object inherits all "`DistributionChannel`" attributes and adds those defined below.
 
 <table>
   <tr>
@@ -1817,7 +1815,7 @@ This object is used to define an ad supported non-browser application, in contra
   <tr>
     <td>cattax</td>
     <td>integer</td>
-    <td>The taxonomy in use for the "cat", "sectcat" and "pagecat" attributes. Refer to List: Category Taxonomies.</td>
+    <td>The taxonomy in use for the "cat", "sectcat" and "pagecat" attributes.  Refer to List:  Category Taxonomies.</td>
   </tr>
   <tr>
     <td>privpolicy</td>
@@ -1866,7 +1864,7 @@ This object is used to define an ad supported non-browser application, in contra
 
 *Derived from:* [DistributionChannel](#abstract_distributionchannel)
 
-This object is used to define an ad supported digital out-of-home (DOOH) experience such as a public kiosk or digital billboard. As a derived class, a "Dooh" object inherits all "DistributionChannel" attributes and adds those defined below.
+This object is used to define an ad supported digital out-of-home (DOOH) experience such as a public kiosk or digital billboard. As a derived class, a "`Dooh`" object inherits all "`DistributionChannel`" attributes and adds those defined below.
 
 <table>
   <tr>
@@ -1877,7 +1875,7 @@ This object is used to define an ad supported digital out-of-home (DOOH) experie
   <tr>
     <td>venue</td>
     <td>integer</td>
-    <td>The type of out-of-home venue. Refer to List: DOOH Venue Types.</td>
+    <td>The type of out-of-home venue.  Refer to List:  DOOH Venue Types.</td>
   </tr>
   <tr>
     <td>fixed</td>
@@ -1935,7 +1933,7 @@ This object describes the publisher of the media in which ads will be displayed.
   <tr>
     <td>cattax</td>
     <td>integer</td>
-    <td>The taxonomy in use for the "cat" attribute. Refer to List: Category Taxonomies.</td>
+    <td>The taxonomy in use for the "cat" attribute.  Refer to List:  Category Taxonomies.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -1968,16 +1966,16 @@ This object describes the content in which an impression can appear, which may b
   <tr>
     <td>title</td>
     <td>string</td>
-    <td>Content title. <br />
-Video Examples: "Search Committee" (television), "Star Wars, A New Hope" (movie), or "Endgame" (made for web). <br />
-Non-Video Example: "Why an Antarctic Glacier Is Melting So Quickly" (Time magazine article).</td>
+    <td>Content title.
+Video Examples: "Search Committee" (television), "Star Wars, A New Hope" (movie), or "Endgame" (made for web).
+Non-Video Example:  "Why an Antarctic Glacier Is Melting So Quickly" (Time magazine article).</td>
   </tr>
   <tr>
     <td>series</td>
     <td>string</td>
-    <td>Content series. <br />
-Video Examples: "The Office" (television), "Star Wars" (movie), or "Arby 'N' The Chief" (made for web). <br />
-Non-Video Example: "Ecocentric" (Time Magazine blog).</td>
+    <td>Content series.
+Video Examples: "The Office" (television), "Star Wars" (movie), or "Arby 'N' The Chief" (made for web).
+Non-Video Example:  "Ecocentric" (Time Magazine blog).</td>
   </tr>
   <tr>
     <td>season</td>
@@ -2017,17 +2015,17 @@ Non-Video Example: "Ecocentric" (Time Magazine blog).</td>
   <tr>
     <td>cattax</td>
     <td>integer</td>
-    <td>The taxonomy in use for the "cat" attribute. Refer to List: Category Taxonomies.</td>
+    <td>The taxonomy in use for the "cat" attribute.  Refer to List:  Category Taxonomies.</td>
   </tr>
   <tr>
     <td>prodq</td>
     <td>integer</td>
-    <td>Production quality. Refer to List: Production Qualities.</td>
+    <td>Production quality.  Refer to List:  Production Qualities.</td>
   </tr>
   <tr>
     <td>context</td>
     <td>integer</td>
-    <td>Type of content (game, video, text, etc.). Refer to List: Content Contexts.</td>
+    <td>Type of content (game, video, text, etc.).  Refer to List:  Content Contexts.</td>
   </tr>
   <tr>
     <td>rating</td>
@@ -2042,7 +2040,7 @@ Non-Video Example: "Ecocentric" (Time Magazine blog).</td>
   <tr>
     <td>mrating</td>
     <td>integer</td>
-    <td>Media rating per IQG guidelines. Refer to List: Media Ratings.</td>
+    <td>Media rating per IQG guidelines.  Refer to List:  Media Ratings.</td>
   </tr>
   <tr>
     <td>keywords</td>
@@ -2077,12 +2075,12 @@ Non-Video Example: "Ecocentric" (Time Magazine blog).</td>
   <tr>
     <td>producer</td>
     <td>object</td>
-    <td>Details about the content producer. Refer to Object: Producer.</td>
+    <td>Details about the content producer.  Refer to Object:  Producer.</td>
   </tr>
   <tr>
     <td>data</td>
     <td>object array</td>
-    <td>Additional user data. Each "Data" object represents a different data source. Refer to Object: Data.</td>
+    <td>Additional user data.  Each "Data" object represents a different data source.  Refer to Object:  Data.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -2094,7 +2092,7 @@ Non-Video Example: "Ecocentric" (Time Magazine blog).</td>
 
 ### Object:  Producer <a name="object_producer"></a>
 
-This object defines the producer of the content in which ad will be displayed. This is particularly useful when the content is syndicated and may be distributed through different publishers and thus when the producer and publisher are not necessarily the same entity.
+This object defines the producer of the content in which ad will be displayed.  This is particularly useful when the content is syndicated and may be distributed through different publishers and thus when the producer and publisher are not necessarily the same entity.
 
 <table>
   <tr>
@@ -2105,7 +2103,7 @@ This object defines the producer of the content in which ad will be displayed. T
   <tr>
     <td>id</td>
     <td>string, recommended</td>
-    <td>Vendor-specific unique producer identifier. Useful if content is syndicated and may be posted on a site using embed tags.</td>
+    <td>Vendor-specific unique producer identifier.  Useful if content is syndicated and may be posted on a site using embed tags.</td>
   </tr>
   <tr>
     <td>name</td>
@@ -2125,7 +2123,7 @@ This object defines the producer of the content in which ad will be displayed. T
   <tr>
     <td>cattax</td>
     <td>integer</td>
-    <td>The taxonomy in use for the "cat" attribute. Refer to List: Category Taxonomies.</td>
+    <td>The taxonomy in use for the  "cat" attribute.  Refer to List:  Category Taxonomies.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -2137,7 +2135,7 @@ This object defines the producer of the content in which ad will be displayed. T
 
 ### Object:  User <a name="object_user"></a>
 
-This object contains information known or derived about the human user of the device (i.e., the audience for advertising). The user ID is a vendor-specific artifact and may be subject to rotation or other privacy policies. However, this user ID must be stable long enough to serve reasonably as the basis for frequency capping and retargeting.
+This object contains information known or derived about the human user of the device (i.e., the audience for advertising).  The user ID is a vendor-specific artifact and may be subject to rotation or other privacy policies.  However, this user ID must be stable long enough to serve reasonably as the basis for frequency capping and retargeting.
 
 <table>
   <tr>
@@ -2148,12 +2146,12 @@ This object contains information known or derived about the human user of the de
   <tr>
     <td>id</td>
     <td>string; recommended</td>
-    <td>Vendor-specific ID for the user. At least one of "id" or "buyeruid" is strongly recommended.</td>
+    <td>Vendor-specific ID for the user.  At least one of "id" or "buyeruid" is strongly recommended.</td>
   </tr>
   <tr>
     <td>buyeruid</td>
     <td>string; recommended</td>
-    <td>Buyer-specific ID for the user as mapped by an exchange for the buyer. At least one of "id" or "buyeruid" is strongly recommended.</td>
+    <td>Buyer-specific ID for the user as mapped by an exchange for the buyer.  At least one of "id" or "buyeruid" is strongly recommended.</td>
   </tr>
   <tr>
     <td>yob</td>
@@ -2173,17 +2171,17 @@ This object contains information known or derived about the human user of the de
   <tr>
     <td>consent</td>
     <td>string</td>
-    <td>GDPR consent string if applicable, complying with the comply with the IAB standard Consent String Format in the Transparency and Consent Framework technical specifications.</td>
+    <td>GDPR consent string if applicable, complying with the comply with the IAB standard [Consent String Format](https://bit.ly/2HzD6Kg) in the [Transparency and Consent Framework](https://iabtechlab.com/gdpr-tech) technical specifications.</td>
   </tr>
   <tr>
     <td>geo</td>
     <td>object</td>
-    <td>Location of the user's home base (i.e., not necessarily their current location). Refer to Object: Geo.</td>
+    <td>Location of the user's home base (i.e., not necessarily their current location).  Refer to Object:  Geo.</td>
   </tr>
   <tr>
     <td>data</td>
     <td>object array</td>
-    <td>Additional user data. Each "Data" object represents a different data source. Refer to Object: Data.</td>
+    <td>Additional user data.  Each "Data" object represents a different data source.  Refer to Object:  Data.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -2195,7 +2193,7 @@ This object contains information known or derived about the human user of the de
 
 ### Object:  Device <a name="object_device"></a>
 
-This object provides information pertaining to the device through which the user is interacting. Device information includes its hardware, platform, location, and carrier data. The device can refer to a mobile handset, a desktop computer, set top box, or other digital device.
+This object provides information pertaining to the device through which the user is interacting.  Device information includes its hardware, platform, location, and carrier data.  The device can refer to a mobile handset, a desktop computer, set top box, or other digital device.
 
 <table>
   <tr>
@@ -2206,7 +2204,7 @@ This object provides information pertaining to the device through which the user
   <tr>
     <td>type</td>
     <td>integer</td>
-    <td>The general type of device. Refer to List: Device Types.</td>
+    <td>The general type of device.  Refer to List:  Device Types.</td>
   </tr>
   <tr>
     <td>ua</td>
@@ -2236,12 +2234,12 @@ This object provides information pertaining to the device through which the user
   <tr>
     <td>model</td>
     <td>string</td>
-    <td>Device model (e.g., "iPhone"). </td>
+    <td>Device model (e.g., "iPhone").	</td>
   </tr>
   <tr>
     <td>os</td>
     <td>integer</td>
-    <td>Device operating system. Refer to List: Operating Systems.</td>
+    <td>Device operating system.  Refer to List:  Operating Systems.</td>
   </tr>
   <tr>
     <td>osv</td>
@@ -2296,12 +2294,12 @@ This object provides information pertaining to the device through which the user
   <tr>
     <td>xff</td>
     <td>string</td>
-    <td>The value of the x-forwarded-for header.</td>
+    <td>The value of the `x-forwarded-for` header.</td>
   </tr>
   <tr>
     <td>iptr</td>
     <td>integer</td>
-    <td>Indicator of truncation of any of the IP attributes (i.e., "ip", "ipv6", "xff"), where 0 = no, 1 = yes (e.g., from 1.2.3.4 to 1.2.3.0). <br />
+    <td>Indicator of truncation of any of the IP attributes (i.e., "ip", "ipv6", "xff"), where 0 = no, 1 = yes (e.g., from 1.2.3.4 to 1.2.3.0).
 Refer to tools.ietf.org/html/rfc6235#section-4.1.1 for more information on IP truncation.</td>
   </tr>
   <tr>
@@ -2312,17 +2310,17 @@ Refer to tools.ietf.org/html/rfc6235#section-4.1.1 for more information on IP tr
   <tr>
     <td>mccmnc</td>
     <td>string</td>
-    <td>Mobile carrier as the concatenated MCC-MNC code (e.g., "310-005" identifies Verizon Wireless CDMA in the USA). Refer to en.wikipedia.org/wiki/Mobile_country_code for further information and references. Note that the dash between the MCC and MNC parts is required to remove parsing ambiguity.</td>
+    <td>Mobile carrier as the concatenated MCC-MNC code (e.g., "310-005" identifies Verizon Wireless CDMA in the USA).  Refer to en.wikipedia.org/wiki/Mobile_country_code for further information and references.  Note that the dash between the MCC and MNC parts is required to remove parsing ambiguity.</td>
   </tr>
   <tr>
     <td>mccmncsim</td>
     <td>string</td>
-    <td>MCC and MNC of the SIM card using the same format as "mccmnc". When both values are available, a difference between them reveals that a user is roaming.</td>
+    <td>MCC and MNC of the SIM card using the same format as "mccmnc".  When both values are available, a difference between them reveals that a user is roaming.</td>
   </tr>
   <tr>
     <td>contype</td>
     <td>integer</td>
-    <td>Network connection type. Refer to List: Connection Types.</td>
+    <td>Network connection type.  Refer to List:  Connection Types.</td>
   </tr>
   <tr>
     <td>geofetch</td>
@@ -2332,7 +2330,7 @@ Refer to tools.ietf.org/html/rfc6235#section-4.1.1 for more information on IP tr
   <tr>
     <td>geo</td>
     <td>object</td>
-    <td>Location of the device (i.e., typically the user's current location). Refer to Object: Geo.</td>
+    <td>Location of the device (i.e., typically the user's current location).  Refer to Object:  Geo.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -2344,9 +2342,9 @@ Refer to tools.ietf.org/html/rfc6235#section-4.1.1 for more information on IP tr
 
 ### Object:  Geo <a name="object_geo"></a>
 
-This object encapsulates various methods for specifying a geographic location. When subordinate to a "Device" object, it indicates the location of the device which can also be interpreted as the user's current location. When subordinate to a "User" object, it indicates the location of the user's home base (i.e., not necessarily their current location).
+This object encapsulates various methods for specifying a geographic location. When subordinate to a "`Device`" object, it indicates the location of the device which can also be interpreted as the user's current location. When subordinate to a "`User`" object, it indicates the location of the user's home base (i.e., not necessarily their current location).
 
-The "lat" and "lon" attributes should only be passed if they conform to the accuracy depicted in the "type" attribute. For example, the centroid of a large region (e.g., postal code) should not be passed.
+The "`lat`" and "`lon`" attributes should only be passed if they conform to the accuracy depicted in the "`type`" attribute. For example, the centroid of a large region (e.g., postal code) should not be passed.
 
 <table>
   <tr>
@@ -2357,7 +2355,7 @@ The "lat" and "lon" attributes should only be passed if they conform to the accu
   <tr>
     <td>type</td>
     <td>integer</td>
-    <td>Source of location data; recommended when passing lat/lon. Refer to List: Location Types.</td>
+    <td>Source of location data; recommended when passing lat/lon.  Refer to List:  Location Types.</td>
   </tr>
   <tr>
     <td>lat</td>
@@ -2372,22 +2370,22 @@ The "lat" and "lon" attributes should only be passed if they conform to the accu
   <tr>
     <td>accur</td>
     <td>integer</td>
-    <td>Estimated location accuracy in meters; recommended when lat/lon are specified and derived from a device's location services (i.e., type = 1). Note that this is the accuracy as reported from the device. Consult OS specific documentation (e.g., Android, iOS) for exact interpretation.</td>
+    <td>Estimated location accuracy in meters; recommended when lat/lon are specified and derived from a device's location services (i.e., type = 1).  Note that this is the accuracy as reported from the device.  Consult OS specific documentation (e.g., Android, iOS) for exact interpretation.</td>
   </tr>
   <tr>
     <td>lastfix</td>
     <td>integer</td>
-    <td>Number of seconds since this geolocation fix was established. Note that devices may cache location data across multiple fetches. Ideally, this value should be from the time the actual fix was taken.</td>
+    <td>Number of seconds since this geolocation fix was established.  Note that devices may cache location data across multiple fetches.  Ideally, this value should be from the time the actual fix was taken.</td>
   </tr>
   <tr>
     <td>ipserv</td>
     <td>integer</td>
-    <td>Service or provider used to determine geolocation from IP address if applicable (i.e., "type" = 2). Refer to List: IP Location Services.</td>
+    <td>Service or provider used to determine geolocation from IP address if applicable (i.e., "type" = 2).  Refer to List:  IP Location Services.</td>
   </tr>
   <tr>
     <td>country</td>
     <td>string</td>
-    <td>Country code using ISO-3166-1-alpha-2. <br />
+    <td>Country code using ISO-3166-1-alpha-2.
 Note that alpha-3 codes may be encountered and vendors are encouraged to be tolerant of them.</td>
   </tr>
   <tr>
@@ -2398,13 +2396,13 @@ Note that alpha-3 codes may be encountered and vendors are encouraged to be tole
   <tr>
     <td>metro</td>
     <td>string</td>
-    <td>Regional marketing areas such as Nielsen's DMA codes or other similar taxonomy to be agreed among vendors prior to use. <br />
-Note that DMA is a trademarked asset of The Nielsen Company. Vendors are encouraged to ensure their use of DMAs is properly licensed.</td>
+    <td>Regional marketing areas such as Nielsen's DMA codes or other similar taxonomy to be agreed among vendors prior to use.
+Note that DMA is a trademarked asset of The Nielsen Company.  Vendors are encouraged to ensure their use of DMAs is properly licensed.</td>
   </tr>
   <tr>
     <td>city</td>
     <td>string</td>
-    <td>City using United Nations Code for Trade & Transport Locations "UN/LOCODE" with the space between country and city suppressed (e.g., Boston MA, USA = "USBOS"). Refer to UN/LOCODE Code List.</td>
+    <td>City using United Nations Code for Trade & Transport Locations "UN/LOCODE" with the space between country and city suppressed (e.g., Boston MA, USA = "USBOS").  Refer to [UN/LOCODE Code List](https://www.unece.org/cefact/locode/service/location).</td>
   </tr>
   <tr>
     <td>zip</td>
@@ -2426,7 +2424,7 @@ Note that DMA is a trademarked asset of The Nielsen Company. Vendors are encoura
 
 ### Object:  Data <a name="object_data"></a>
 
-The data and segment objects together allow additional data about the related object (e.g., user, content) to be specified. This data may be from multiple sources whether from the exchange itself or third parties as specified by the "id" attribute. When in use, vendor-specific IDs should be communicated *a priori* among the parties.
+The data and segment objects together allow additional data about the related object (e.g., user, content) to be specified.  This data may be from multiple sources whether from the exchange itself or third parties as specified by the "id" attribute.  When in use, vendor-specific IDs should be communicated *a priori* among the parties.
 
 <table>
   <tr>
@@ -2447,7 +2445,7 @@ The data and segment objects together allow additional data about the related ob
   <tr>
     <td>segment</td>
     <td>object array</td>
-    <td>Array of "Segment" objects that contain the actual data values. Refer to Object: Segment.</td>
+    <td>Array of "Segment" objects that contain the actual data values.  Refer to Object:  Segment.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -2459,7 +2457,7 @@ The data and segment objects together allow additional data about the related ob
 
 ### Object:  Segment <a name="object_segment"></a>
 
-Segment objects are essentially key-value pairs that convey specific units of data. The parent "Data" object is a collection of such values from a given data provider. When in use, vendor-specific IDs should be communicated *a priori* among the parties.
+Segment objects are essentially key-value pairs that convey specific units of data.  The parent "`Data`" object is a collection of such values from a given data provider.  When in use, vendor-specific IDs should be communicated *a priori* among the parties.
 
 <table>
   <tr>
@@ -2503,13 +2501,13 @@ This object contains any known legal, governmental, or industry regulations that
   <tr>
     <td>coppa</td>
     <td>integer</td>
-    <td>Flag indicating if COPPA regulations apply, where 0 = no, 1 = yes. <br />
+    <td>Flag indicating if COPPA regulations apply, where 0 = no, 1 = yes.
 The Children's Online Privacy Protection Act (COPPA) was established by the U.S. Federal Trade Commission.</td>
   </tr>
   <tr>
     <td>gdpr</td>
     <td>integer</td>
-    <td>Flag indicating if GDPR regulations apply, where 0 = no, 1 = yes. <br />
+    <td>Flag indicating if GDPR regulations apply, where 0 = no, 1 = yes.
 The General Data Protection Regulation (GDPR) is a regulation of the European Union.</td>
   </tr>
   <tr>
@@ -2570,7 +2568,7 @@ The following table is a list of API frameworks either supported by a placement 
 
 ### List:  Audit Status Codes <a name="list_auditstatuscodes"></a>
 
-The following table lists the codes used in "Audit" objects to reflect status or workflow state.
+The following table lists the codes used in "`Audit`" objects to reflect status or workflow state.
 
 <table>
   <tr>
@@ -2579,23 +2577,27 @@ The following table lists the codes used in "Audit" objects to reflect status or
   </tr>
   <tr>
     <td>1</td>
-    <td>Pending Audit: An audit has not yet been completed on this ad. A recommendation cannot be made to use this ad, but vendors' policies may override.</td>
+    <td>**Pending Audit:**  An audit has not yet been completed on this ad.  A recommendation cannot be made to use this ad, but vendors' policies may override.</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>Pre-Approved: An audit has not yet been completed on this ad. Subject to vendors' policies, it can be recommended for use. However, once the audit has been completed, its status will change and it may or may not be approved for continued use.</td>
+    <td>**Pre-Approved:**  An audit has not yet been completed on this ad.  Subject to vendors' policies, it can be recommended for use.  However, once the audit has been completed, its status will change and it may or may not be approved for continued use.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>Approved: The audit is complete and the ad is approved for use. Note, however, that some attributes (e.g., "adomain", "cat", "attr", etc.) may have been changed in the process by the auditor.</td>
+    <td>**Approved:**  The audit is complete and the ad is approved for use.  Note, however, that some attributes (e.g., "adomain", "cat", "attr", etc.) may have been changed in the process by the auditor.</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>Denied: The audit is complete, but the ad has been found unacceptable in some material aspect and is disapproved for use.</td>
+    <td>**Denied:**  The audit is complete, but the ad has been found unacceptable in some material aspect and is disapproved for use.</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>Changed; Resubmission Requested: A version of the ad has been detected in use that is materially different from the version that was previously audited, which may result in rejection during use until the ad is resubmitted for audit and approved. Vendors need to communicate offline as to the criteria that constitutes a material change.</td>
+    <td>**Changed; Resubmission Requested:**  A version of the ad has been detected in use that is materially different from the version that was previously audited, which may result in rejection during use until the ad is resubmitted for audit and approved.  Vendors need to communicate offline as to the criteria that constitutes a material change.</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>**Expired:** The ad has been marked as expired by the vendor. Vendors need to communicate offline as to the expected bidding behaviour for ads with this status.</td>
   </tr>
   <tr>
     <td>500+</td>
@@ -2605,6 +2607,7 @@ The following table lists the codes used in "Audit" objects to reflect status or
 
 
 ### List:  Category Taxonomies <a name="list_categorytaxonomies"></a>
+
 
 This list identifies the taxonomy in effect when content categories are listed.
 
@@ -2666,7 +2669,7 @@ The following table lists the types of creative activation (i.e., click) behavio
 
 ### List:  Companion Types <a name="list_companiontypes"></a>
 
-The following table lists the options to indicate markup types allowed for companion ads that apply to video and audio ads. This table is derived from VAST 2.0+ and DAAST 1.0+ specifications.
+The following table lists the options to indicate markup types allowed for companion ads that apply to video and audio ads.  This table is derived from VAST 2.0+ and DAAST 1.0+ specifications.
 
 <table>
   <tr>
@@ -2730,7 +2733,7 @@ The following table lists the options for the type of device connectivity.
 
 ### List:  Content Contexts <a name="list_contentcontexts"></a>
 
-The following table lists the various options for indicating the type of content being used or consumed by the user in which ads may appear. This table has values derived from the TAG Inventory Quality Guidelines (IQG).
+The following table lists the various options for indicating the type of content being used or consumed by the user in which ads may appear.  This table has values derived from the TAG Inventory Quality Guidelines (IQG).
 
 <table>
   <tr>
@@ -2856,57 +2859,9 @@ The following table specifies a standard list of creative attributes that can de
 </table>
 
 
-### List:  Creative Subtypes - Audio <a name="list_creativesubtypesaudio"></a>
+### List:  Creative Subtypes - Audio/Video <a name="list_creativesubtypesaudiovideo"></a>
 
-The following table lists the various subtypes of audio ad creatives.
-
-<table>
-  <tr>
-    <td>Value</td>
-    <td>Definition</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>DAAST 1.0</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>DAAST 1.0 Wrapper</td>
-  </tr>
-</table>
-
-
-### List:  Creative Subtypes - Display <a name="list_creativesubtypesdisplay"></a>
-
-The following table lists the various subtypes of display ad creatives.
-
-<table>
-  <tr>
-    <td>Value</td>
-    <td>Definition</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>HTML</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>AMPHTML</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Structured Image Object</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Structured Native Object</td>
-  </tr>
-</table>
-
-
-### List:  Creative Subtypes - Video <a name="list_creativesubtypesvideo"></a>
-
-The following table lists the various subtypes of video ad creatives.
+The following table lists the various subtypes of audio and video ad creatives.
 
 <table>
   <tr>
@@ -2947,11 +2902,47 @@ The following table lists the various subtypes of video ad creatives.
   </tr>
   <tr>
     <td>9</td>
-    <td>VAST 4.1</td>
+    <td>DAAST 1.0</td>
   </tr>
   <tr>
     <td>10</td>
+    <td>DAAST 1.0 Wrapper</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>VAST 4.1</td>
+  </tr>
+  <tr>
+    <td>12</td>
     <td>VAST 4.1 Wrapper</td>
+  </tr>
+</table>
+
+
+### List:  Creative Subtypes - Display <a name="list_creativesubtypesdisplay"></a>
+
+The following table lists the various subtypes of display ad creatives.
+
+<table>
+  <tr>
+    <td>Value</td>
+    <td>Definition</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>HTML</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>AMPHTML</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Structured Image Object</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Structured Native Object</td>
   </tr>
 </table>
 
@@ -2982,7 +2973,7 @@ The following table lists the various options for the delivery of video or audio
 
 ### List:  Device Types <a name="list_devicetypes"></a>
 
-The following table lists the types of devices. This table has values derived from the TAG Inventory Quality Guidelines (IQG).
+The following table lists the types of devices.  This table has values derived from the TAG Inventory Quality Guidelines (IQG).
 
 <table>
   <tr>
@@ -3022,7 +3013,7 @@ The following table lists the types of devices. This table has values derived fr
 
 ### List:  Display Context Types <a name="list_displaycontexttypes"></a>
 
-The following table lists the types of context in which a native ad may appear (i.e., the type of content surrounding the ad on the page). This is intended to denote primary content although other content may also appear on the page. Note that there are two levels of detail grouped by 10s (i.e., 12 is a refined case of 100).
+The following table lists the types of context in which a native ad may appear (i.e., the type of content surrounding the ad on the page).  This is intended to denote primary content although other content may also appear on the page.  Note that there are two levels of detail grouped by 10s (i.e., 12 is a refined case of 100).
 
 <table>
   <tr>
@@ -3362,7 +3353,7 @@ This list presents the digital out-of-home venue types and is derived from [DPAA
 
 ### List:  Event Tracking Methods <a name="list_eventtrackingmethods"></a>
 
-The following table lists the available methods of tracking of ad events. Vendor specific codes may include custom measurement companies (e.g., Moat, Doubleverify, IAS, etc.).
+The following table lists the available methods of tracking of ad events.  Vendor specific codes may include custom measurement companies (e.g., Moat, Doubleverify, IAS, etc.).
 
 <table>
   <tr>
@@ -3371,11 +3362,11 @@ The following table lists the available methods of tracking of ad events. Vendor
   </tr>
   <tr>
     <td>1</td>
-    <td>Image-Pixel: URL provided will be inserted as a 1x1 pixel at the time of the event.</td>
+    <td>Image-Pixel:  URL provided will be inserted as a 1x1 pixel at the time of the event.</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>JavaScript: URL provided will be inserted as a JavaScript tag at the time of the event.</td>
+    <td>JavaScript:  URL provided will be inserted as a JavaScript tag at the time of the event.</td>
   </tr>
   <tr>
     <td>500+</td>
@@ -3386,7 +3377,7 @@ The following table lists the available methods of tracking of ad events. Vendor
 
 ### List:  Event Types <a name="list_eventtypes"></a>
 
-The following table lists the types of ad events available for tracking. These types refer to the actual event, timing, etc.; not the method of firing. Scripts that are performing measurement should be deployed at impression time.
+The following table lists the types of ad events available for tracking.  These types refer to the actual event, timing, etc.; not the method of firing.  Scripts that are performing measurement should be deployed at impression time.
 
 <table>
   <tr>
@@ -3395,19 +3386,19 @@ The following table lists the types of ad events available for tracking. These t
   </tr>
   <tr>
     <td>1</td>
-    <td>impression: Initial creative rending.</td>
+    <td>impression:  Initial creative rending.</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>viewable-mrc50: Visible impression using MRC definition of 50% in view for 1 second.</td>
+    <td>viewable-mrc50:  Visible impression using MRC definition of 50% in view for 1 second.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>viewable-mrc100: 100% in view for 1 second (i.e., the GroupM standard).</td>
+    <td>viewable-mrc100:  100% in view for 1 second (i.e., the GroupM standard).</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>viewable-video50: Visible impression for video using MRC definition of 50% in view for 2 seconds.</td>
+    <td>viewable-video50:  Visible impression for video using MRC definition of 50% in view for 2 seconds.</td>
   </tr>
   <tr>
     <td>500+</td>
@@ -3570,7 +3561,7 @@ The following table lists the media ratings used in describing content based on 
 
 ### List:  Native Data Asset Types <a name="list_nativedataassettypes"></a>
 
-The following table is a list of common data asset types.  This list is non-exhaustive and is intended to be expanded over time. Size recommendations are noted as "*maximum length of at least*", which means the publisher or supply platform should support a maximum length of at least this value and the buying platform knows that a string of this size should be accepted.
+The following table is a list of common data asset types.  This list is non-exhaustive and is intended to be expanded over time.  Size recommendations are noted as "*maximum length of at least*", which means the publisher or supply platform should support a maximum length of at least this value and the buying platform knows that a string of this size should be accepted.
 
 <table>
   <tr>
@@ -3579,51 +3570,51 @@ The following table is a list of common data asset types.  This list is non-exha
   </tr>
   <tr>
     <td>1</td>
-    <td>sponsored: "Sponsored By" message which should contain the brand name of the sponsor. Recommended maximum length of at least 25 characters.</td>
+    <td>sponsored:  "Sponsored By" message which should contain the brand name of the sponsor.  Recommended maximum length of at least 25 characters.</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>desc: Descriptive text associated with the product or service being advertised. Long text lengths may be truncated or ellipsed when rendered. Recommended maximum length of at least 140 characters.</td>
+    <td>desc:  Descriptive text associated with the product or service being advertised.  Long text lengths may be truncated or ellipsed when rendered.  Recommended maximum length of at least 140 characters.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>rating: Numeric rating of the product (e.g., an app's rating). Recommended integer range of 0-5.</td>
+    <td>rating:  Numeric rating of the product (e.g., an app's rating).  Recommended integer range of 0-5.</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>likes: Number of social ratings or "likes" of the product.</td>
+    <td>likes:  Number of social ratings or "likes" of the product.</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>downloads: Number downloads and/or installs of the product.</td>
+    <td>downloads:  Number downloads and/or installs of the product.</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>price: Price of the product, app, or in-app purchase. Value should include currency symbol in localized format (e.g., "$10").</td>
+    <td>price:  Price of the product, app, or in-app purchase.  Value  should include currency symbol in localized format (e.g., "$10").</td>
   </tr>
   <tr>
     <td>7</td>
-    <td>saleprice: Sale price that can be used together with "price" to indicate a comparative discounted price. Value should include currency symbol in localized format (e.g. "$8.50").</td>
+    <td>saleprice:  Sale price that can be used together with "price" to indicate a comparative discounted price.  Value should include currency symbol in localized format (e.g., "$8.50").</td>
   </tr>
   <tr>
     <td>8</td>
-    <td>phone: A formatted phone number.</td>
+    <td>phone:  A formatted phone number.</td>
   </tr>
   <tr>
     <td>9</td>
-    <td>address: A formatted address.</td>
+    <td>address:  A formatted address.</td>
   </tr>
   <tr>
     <td>10</td>
-    <td>desc2: Additional descriptive text associated with the product.</td>
+    <td>desc2:  Additional descriptive text associated with the product.</td>
   </tr>
   <tr>
     <td>11</td>
-    <td>displayurl: Display URL for the ad. To be used when sponsoring entity does not own the content (e.g., "Sponsored by Brand on Site", where Site is specified in this data asset).</td>
+    <td>displayurl:  Display URL for the ad.  To be used when sponsoring entity doesn't own the content (e.g., "Sponsored by Brand on Site", where Site is specified in this data asset).</td>
   </tr>
   <tr>
     <td>12</td>
-    <td>ctatext: Description of the call to action (CTA) button for the destination URL. Recommended maximum length of at least 15 characters.</td>
+    <td>ctatext:  Description of the call to action (CTA) button for the destination URL.  Recommended maximum length of at least 15 characters.</td>
   </tr>
   <tr>
     <td>500+</td>
@@ -3634,7 +3625,7 @@ The following table is a list of common data asset types.  This list is non-exha
 
 ### List:  Native Image Asset Types <a name="list_nativeimageassettypes"></a>
 
-The following table is a list of common image asset types. This list is non-exhaustive and is intended to be expanded over time. Size recommendations are noted as "*maximum height or width of at least*", which means the publisher or supply platform should support a maximum height or width of at least this value and the buying platform knows that an image of this size should be accepted.
+The following table is a list of common image asset types.  This list is non-exhaustive and is intended to be expanded over time.  Size recommendations are noted as "*maximum height or width of at least*", which means the publisher or supply platform should support a maximum height or width of at least this value and the buying platform knows that an image of this size should be accepted.
 
 <table>
   <tr>
@@ -3643,14 +3634,14 @@ The following table is a list of common image asset types. This list is non-exha
   </tr>
   <tr>
     <td>1</td>
-    <td>Icon: Icon image. <br />
+    <td>Icon:  Icon image.
 Maximum height at least 50 device independent pixels (DIPS); aspect ratio 1:1.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>Main: Large image preview for the ad. <br />
-At least one of 2 size variants required: <br />
-Small: Maximum height at least 627 DIPS; maximum width at least 627, 836, or 1198 DIPS (i.e., aspect ratios of 1:1, 4:3, or 1.91:1, respectively). <br />
+    <td>Main:  Large image preview for the ad.
+At least one of 2 size variants required:
+Small:  Maximum height at least 627 DIPS; maximum width at least 627, 836, or 1198 DIPS (i.e., aspect ratios of 1:1, 4:3, or 1.91:1, respectively).
 Large: Maximum height at least 200 DIPS; maximum width at least 200, 267, or 382 DIPS (i.e., aspect ratios of 1:1, 4:3, or 1.91:1, respectively).</td>
   </tr>
   <tr>
@@ -3794,7 +3785,7 @@ The following table lists the options for device operating system.
 
 ### List:  Placement Positions <a name="list_placementpositions"></a>
 
-The following table lists the placement positions as a relative measure of visibility or prominence. This table has values derived from the TAG Inventory Quality Guidelines (IQG).
+The following table lists the placement positions as a relative measure of visibility or prominence.  This table has values derived from the TAG Inventory Quality Guidelines (IQG).
 
 <table>
   <tr>
@@ -3843,23 +3834,23 @@ The following table lists the various types of video placements derived largely 
   </tr>
   <tr>
     <td>1</td>
-    <td>In-Stream: Played before, during or after the streaming video content that the consumer has requested (e.g., Pre-roll, Mid-roll, Post-roll).</td>
+    <td>In-Stream:  Played before, during or after the streaming video content that the consumer has requested (e.g., Pre-roll, Mid-roll, Post-roll).</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>In-Banner: Exists within a web banner that leverages the banner space to deliver a video experience as opposed to another static or rich media format. The format relies on the existence of display ad inventory on the page for its delivery.</td>
+    <td>In-Banner:  Exists within a web banner that leverages the banner space to deliver a video experience as opposed to another static or rich media format.  The format relies on the existence of display ad inventory on the page for its delivery.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>In-Article: Loads and plays dynamically between paragraphs of editorial content; existing as a standalone branded message.</td>
+    <td>In-Article:  Loads and plays dynamically between paragraphs of editorial content; existing as a standalone branded message.</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>In-Feed: Found in content, social, or product feeds.</td>
+    <td>In-Feed:  Found in content, social, or product feeds.</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>Interstitial/Slider/Floating: Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).</td>
+    <td>Interstitial/Slider/Floating:  Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).</td>
   </tr>
 </table>
 
@@ -3974,7 +3965,7 @@ The following table lists the units of height and width used by creatives, asset
 
 ### List:  Start Delay Modes <a name="list_startdelaymodes"></a>
 
-The following table lists the various options for the video or audio start delay. If the start delay value is greater than 0, then the position is mid-roll and the value indicates the start delay.
+The following table lists the various options for the video or audio start delay.  If the start delay value is greater than 0, then the position is mid-roll and the value indicates the start delay.
 
 <table>
   <tr>
@@ -4071,172 +4062,200 @@ JavaScript Object Notation (JSON)
 Date/Time Format: ISO-8601; W3C Profile  
 [www.w3.org/TR/NOTE-datetime](https://www.w3.org/TR/NOTE-datetime)
 
+
 # Appendix B:  Change Log <a name="appendixb_changelog"></a>
 
-This appendix serves as an index of specification changes from the current version to the previous. These changes pertain only to the substance of the specification and not routine document formatting, information organization, or content without technical impact.
+This appendix serves as an index of specification changes from the current version to the previous.  These changes pertain only to the substance of the specification and not routine document formatting, information organization, or content without technical impact.
 
 Since v1.0 is the initial version of AdCOM, the change log is omitted.
 
 # Appendix C:  OpenRTB Interfaces <a name="appendixc_openrtbinterfaces"></a>
 
-As [OpenRTB v3.0+](https://github.com/InteractiveAdvertisingBureau/openrtb) is a very popular transaction layer that uses AdCOM, this appendix is provided to show the interface between the two specifications. This is presented here as informational only; please refer to the current OpenRTB specification v3.0+ for official details on OpenRTB.
+As OpenRTB v3.0+ is a very popular transaction layer that uses AdCOM, this appendix is provided to show the interface between the two specifications.  This is presented here as informational only; please refer to the current OpenRTB specification v3.0+ for official details on OpenRTB.
 
-In the JSON snippets that follow, AdCOM objects are shown within OpenRTB payloads. The ellipses indicate attributes unrelated to this example that have been omitted for brevity.
+In the JSON snippets that follow, AdCOM objects are shown within OpenRTB payloads.    The ellipses indicate attributes unrelated to this example that have been omitted for brevity.
 
 ## Request Context <a name="requestcontext"></a>
 
-The following is an abbreviated example of an OpenRTB v3.x bid request. It self-identifies as OpenRTB and shows its version as "3.0". It also shows that it is using AdCOM v1.0 as its domain layer.
+The following is an abbreviated example of an OpenRTB v3.x bid request.  It self-identifies as OpenRTB and shows its version as "3.0".  It also shows that it is using AdCOM v1.0 as its domain layer.
 
-The "context" object is the OpenRTB interface to AdCOM context objects. It can contain any of the top-level context objects, all of which are optional, and their subordinates. This example includes top-level objects "regs", "site" (no more than one distribution channel subtype may be included), "user", and "device".
+The "`context`" object is the OpenRTB interface to AdCOM context objects.  It can contain any of the top-level context objects, all of which are optional, and their subordinates.  This example includes top-level objects "`regs`", "`site`" (no more than one distribution channel subtype may be included), "`user`", and "`device`".
 
-This example is indicating a mobile optimized website and some basic details about the site and its publisher. The user is a female born in 1990. She is using an Apple iPhone 6S, running iOS 11.4.1, and is connected via the Verizon network. Her device (and presumably she) is currently located in Boston MA, USA, during eastern standard time.
+This example is indicating a mobile optimized website and some basic details about the site and its publisher.  The user is a female born in 1990.  She is using an Apple iPhone 6S, running iOS 11.4.1, and is connected via the Verizon network.  Her device (and presumably she) is currently located in Boston MA, USA, during eastern standard time.
+
+
+
+
 ```
 {
-	"openrtb": {
-		"ver": "3.0",
-		"domainspec": "adcom", "domainver": "1.0",
-		"request": {
-			...
-			"context": {
-				"regs": {
-					"gdpr": 0, "coppa": 0
-				},
-				"site": {
-					"id": "1234",
-					"name": "Awesome Example Site",
-					"domain": "examplesitedomain.com",
-					"mobile": 1,
-					"amp": 0,
-					"publisher": {
-						"id": "9876",
-						"name": "Example Publisher, Inc.",
-						"domain": "examplepubdomain.com"
-					}
-				},
-				"user": {
-					"id": "a0af45c77890045deec100acb8443baff57c",
-					"buyeruid": “fcd4282456238256034abcdef220d9aa5892",
-					"yob": 1990, "gender": "F"
-				},
-				"device": {
-					"type": 4,
-					"ifa": "8846d6fa10008bceaaf322908dfcb221",
-					"ip": "1.2.3.4",
-					"ua": "...user agent string...",
-					"make": "Apple", "model": "iPhone", "hwv": "6s",
-					"os": 13, "osv": "11.4.1",
-					"mccmnc": "310-005",
-					"geo": {
-						"type": 1,
-						"lat": 42.3601, "lon": 71.0581,
-					  "country": "USA",
-						"utcoffset": -300
-					}
-				}
-			}
-			...
-		}
-	}
+   "openrtb": {
+      "ver": "3.0",
+      "domainspec": "adcom",
+      "domainver": "1.0",
+      "request": {
+         ...
+         "context": {
+            "regs": {
+               "gdpr": 0,
+               "coppa": 0
+            },
+            "site": {
+               "id": "1234",
+               "name": "Awesome Example Site",
+               "domain": "examplesitedomain.com",
+               "mobile": 1,
+               "amp": 0,
+               "publisher": {
+                  "id": "9876",
+                  "name": "Example Publisher, Inc.",
+                  "domain": "examplepubdomain.com"
+               }
+            },
+            "user": {
+               "id": "a0af45c77890045deec100acb8443baff57c",
+               "buyeruid": "fcd4282456238256034abcdef220d9aa5892",
+               "yob": 1990,
+               "gender": "F"
+            },
+            "device": {
+               "type": 4,
+               "ifa": "8846d6fa10008bceaaf322908dfcb221",
+               "ip": "1.2.3.4",
+               "ua": "...user agent string...",
+               "make": "Apple",
+               "model": "iPhone",
+               "hwv": "6s",
+               "os": 13,
+               "osv": "11.4.1",
+               "mccmnc": "310-005",
+               "geo": {
+                  "type": 1,
+                  "lat": 42.3601,
+                  "lon": 71.0581,
+                  "country": "USA",
+                  "utcoffset": -300
+               }
+            }
+         }
+         ...
+      }
+   }
 }
 ```
+
+
 
 ## Item Specifications <a name="itemspecs"></a>
 
 The following snippet is an abbreviated OpenRTB v3.x bid request that offers a single item for sale.
 
-The "spec" object within an "item" is the OpenRTB interface to AdCOM placement objects. It contains one "Placement" top-level object and its subordinates.
+The "`spec`" object within an "`item`" is the OpenRTB interface to AdCOM placement objects.  It contains one "`Placement`" top-level object and its subordinates.
 
-This example is indicating a display placement that must be secure. Either a structured banner or AMPHTML is acceptable and if the latter, the AMP rendering mode will be *early*. The placement is not interstitial, two possible sizes are offered (i.e., 320x50 and 320x250), and a simple pixel tracker for the impression event is supported.
+This example is indicating a display placement that must be secure.  Either a structured banner or AMPHTML is acceptable and if the latter, the AMP rendering mode will be *early*.  The placement is not interstitial, two possible sizes are offered (i.e., 320x50 and 320x250), and a simple pixel tracker for the impression event is supported.
+
+
 ```
 {
-  "openrtb": {
-		...
-		"request": {
-			...
-			"item": [
-				{
-					...
-					"spec": {
-						"placement": {
-							"tagid": "plc-ftr-123abc",
-							"secure": 1,
-							"display": {
-								"ctype": [ 2, 3 ],
-								"ampren": 0,
-								"instl": 0,
-								"displayfmt": [
-									{
-										"w": 320, "h": 50
-									},
-									{
-										"w": 320, "h": 250
-									}
-								],
-								"event": [
-									{
-										"type": 1, "method": 1
-									}
-								]
-							}
-						}
-					}
-					...
-				}
-			]
-			...
-		}
-	}
+   "openrtb": {
+      ...
+      "request": {
+         ...
+         "item": [
+            {
+               ...
+               "spec": {
+                  "placement": {
+                     "tagid": "plc-ftr-123abc",
+                     "secure": 1,
+                     "display": {
+                        "ctype": [ 2, 3 ],
+                        "ampren": 0,
+                        "instl": 0,
+                        "displayfmt": [
+                           {
+                              "w": 320,
+                              "h": 50
+                           },
+                           {
+                              "w": 320,
+                              "h": 250
+                           }
+                        ],
+                        "event": [
+                           {
+                              "type": 1,
+                              "method": 1
+                           }
+                        ]
+                     }
+                  }
+               }
+               ...
+            }
+         ]
+         ...
+      }
+   }
 }
 ```
+
+
 
 ## Media Response <a name="mediaresponse"></a>
 
-The following is an abbreviated example of an OpenRTB v3.x bid response. It self-identifies as OpenRTB and shows its version as "3.0". It also shows that it is using AdCOM v1.0 as its domain layer.
+The following is an abbreviated example of an OpenRTB v3.x bid response.  It self-identifies as OpenRTB and shows its version as "3.0".  It also shows that it is using AdCOM v1.0 as its domain layer.
 
-The "media" object is the OpenRTB interface to AdCOM media objects. It contains one "Ad" top-level object and its subordinates.
+The "`media`" object is the OpenRTB interface to AdCOM media objects.  It contains one "`Ad`" top-level object and its subordinates.
 
-This example is indicating a secure display ad for Ford using a structured banner object with a 320x50 JPEG creative. A pixel tracker for the impression rendering event is requested.
+This example is indicating a secure display ad for Ford using a structured banner object with a 320x50 JPEG creative.  A pixel tracker for the impression rendering event is requested.
+
+
 ```
 {
-	"openrtb": {
-		"ver": "3.0",
-		"domainspec": "adcom", "domainver": "1.0",
-		"response": {
-			...
-			"seatbid": [
-				{
-					...
-					"bid": [
-						{
-							...
-							"media": {
-								"ad": {
-									"id": "d0bcb39723af87c2bb00942afee5710e",
-									"adomain": [ "ford.com" ],
-									"cid": "campaign-xyz.123",
-									"secure": 1,
-									"display": {
-										"mime": "image/jpeg",
-										"type": 3, "w": 320, "h": 50,
-										"banner": {
-											"img": "https://somebuyer.com/creative",
-											"link: "https://somebuyer.com/click"
-										},
-										"event": [
-											{
-												"type": 1, "method": 1,
-												"url": "https://somebuyer.com/pixel"
-											}
-										]
-									}
-								}
-							}
-							...
-						}
-					]
-				}
-			]
-		}
-	}
+   "openrtb": {
+      "ver": "3.0",
+      "domainspec": "adcom",
+      "domainver": "1.0",
+      "response": {
+         ...
+         "seatbid": [
+            {
+               ...
+               "bid": [
+                  {
+                     ...
+                     "media": {
+                        "ad": {
+                           "id": "d0bcb39723af87c2bb00942afee5710e",
+                           "adomain": [ "ford.com" ],
+                           "cid": "campaign-xyz.123",
+                           "secure": 1,
+                           "display": {
+                              "mime": "image/jpeg",
+                              "type": 3,
+                              "w": 320,
+                              "h": 50,
+                              "banner": {
+                                 "img": "https://somebuyer.com/creative",
+                                 "link": "https://somebuyer.com/click"
+                              },
+                              "event": [
+                                 {
+                                    "type": 1, "method": 1,
+                                    "url": "https://somebuyer.com/pixel"
+                                 }
+                              ]
+                           }
+                        }
+                     }
+                     ...
+                  }
+               ]
+            }
+         ]
+      }
+   }
 }
 ```
+
+
