@@ -874,7 +874,7 @@ The other attributes in this object apply to all aspects and substructures of th
   <tr>
     <td>ssai</td>
     <td>Integer; default 0</td>
-    <td>Indicates if server-side ad insertion (e.g., stitching an ad into an audio or video stream) is in use and the impact of this on asset and tracker retrieval, where 1 = all client-side, 2 = assets stitched server-side but tracking pixels fired client-side, 3 = all server-side.</td>
+    <td>Indicates if server-side ad insertion (e.g., stitching an ad into an audio or video stream) is in use and the impact of this on asset and tracker retrieval, where 0 = ssai status unknown, 1 = all client-side e.g. not server-side, 2 = assets stitched server-side but tracking pixels fired client-side, 3 = all server-side.</td>
   </tr>
   <tr>
     <td>sdk</td>
