@@ -325,8 +325,8 @@ This object provides additional detail about an ad specifically for display ads.
     <td>API required by the ad if applicable.  Refer to List:  API Frameworks.</td>
   </tr>
   <tr>
-    <td>type</td>
-    <td>integer array</td>
+    <td>ctype</td>
+    <td>integer</td>
     <td>Subtype of display creative.  Refer to List:  Creative Subtypes - Display.</td>
   </tr>
   <tr>
@@ -734,8 +734,8 @@ This object provides additional detail about an ad specifically for video ads.
     <td>API required by the ad if applicable.  Refer to List:  API Frameworks.</td>
   </tr>
   <tr>
-    <td>type</td>
-    <td>integer array</td>
+    <td>ctype</td>
+    <td>integer</td>
     <td>Subtype of video creative.  Refer to List:  Creative Subtypes - Video.</td>
   </tr>
   <tr>
@@ -779,8 +779,8 @@ This object provides additional detail about an ad specifically for audio ads.
     <td>API required by the ad if applicable.  Refer to List:  API Frameworks.</td>
   </tr>
   <tr>
-    <td>type</td>
-    <td>integer array</td>
+    <td>ctype</td>
+    <td>integer</td>
     <td>Subtype of audio creative.  Refer to List:  Creative Subtypes - Audio.</td>
   </tr>
   <tr>
