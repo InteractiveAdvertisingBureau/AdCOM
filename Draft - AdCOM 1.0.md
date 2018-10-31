@@ -739,6 +739,11 @@ This object provides additional detail about an ad specifically for video ads.
     <td>Subtype of video creative.  Refer to List:  Creative Subtypes - Video.</td>
   </tr>
   <tr>
+    <td>dur</td>
+    <td>integer</td>
+    <td>Duration of the video creative in seconds.</td>
+  </tr>
+  <tr>
     <td>adm</td>
     <td>string</td>
     <td>Video markup (e.g., VAST).
@@ -782,6 +787,11 @@ This object provides additional detail about an ad specifically for audio ads.
     <td>ctype</td>
     <td>integer</td>
     <td>Subtype of audio creative.  Refer to List:  Creative Subtypes - Audio.</td>
+  </tr>
+  <tr>
+    <td>dur</td>
+    <td>integer</td>
+    <td>Duration of the audio creative in seconds.</td>
   </tr>
   <tr>
     <td>adm</td>
