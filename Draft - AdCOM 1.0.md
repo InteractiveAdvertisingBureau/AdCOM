@@ -4157,7 +4157,9 @@ This example is indicating a display placement that must be secure.  Either a st
 ```
 {
    "openrtb": {
-      ...
+      "ver": "3.0",
+      "domainspec": "adcom",
+      "domainver": "1.0",
       "request": {
          ...
          "item": [
