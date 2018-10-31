@@ -2244,7 +2244,7 @@ This object provides information pertaining to the device through which the user
   <tr>
     <td>model</td>
     <td>string</td>
-    <td>Device model (e.g., "iPhone").	</td>
+    <td>Device model (e.g., "iPhone10,1" when the specific device model is known, "iPhone" otherwise).  The value obtained from the device O/S should be used when available.</td>
   </tr>
   <tr>
     <td>os</td>
