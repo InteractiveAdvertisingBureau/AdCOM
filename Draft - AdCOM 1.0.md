@@ -276,19 +276,19 @@ This object is the root of a structure that defines in instance of advertising m
   <tr>
     <td>display</td>
     <td>Object; required *</td>
-    <td>**Media Subtype Object** that indicates this is a display ad and provides additional detail as such.  Refer to Object:  Display.
+    <td>"Media Subtype Object" that indicates this is a display ad and provides additional detail as such.  Refer to Object:  Display.
 * Required if no other media subtype object is specified.</td>
   </tr>
   <tr>
     <td>video</td>
     <td>object; required *</td>
-    <td>**Media Subtype Object** that indicates this is a video ad and provides additional detail as such.  Refer to Object:  Video.
+    <td>"Media Subtype Object" that indicates this is a video ad and provides additional detail as such.  Refer to Object:  Video.
 * Required if no other media subtype object is specified.</td>
   </tr>
   <tr>
     <td>audio</td>
     <td>object; required *</td>
-    <td>**Media Subtype Object** that indicates this is an audio ad and provides additional detail as such.  Refer to Object:  Audio.
+    <td>"Media Subtype Object" that indicates this is an audio ad and provides additional detail as such.  Refer to Object:  Audio.
 * Required if no other media subtype object is specified.</td>
   </tr>
   <tr>
@@ -472,31 +472,31 @@ This object is the container for each asset comprising a native ad.  Each asset 
   <tr>
     <td>title</td>
     <td>object; required *</td>
-    <td>**Asset Subtype Object** that indicates this is a title asset and provides additional detail as such.  Refer to Object:  TitleAsset.
+    <td>"Asset Subtype Object" that indicates this is a title asset and provides additional detail as such.  Refer to Object:  TitleAsset.
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
     <td>image</td>
     <td>object; required *</td>
-    <td>**Asset Subtype Object** that indicates this is an image asset and provides additional detail as such.  Refer to Object:  ImageAsset.
+    <td>"Asset Subtype Object" that indicates this is an image asset and provides additional detail as such.  Refer to Object:  ImageAsset.
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
     <td>video</td>
     <td>object; required *</td>
-    <td>**Asset Subtype Object** that indicates this is a video asset and provides additional detail as such.  Refer to Object:  VideoAsset.
+    <td>"Asset Subtype Object" that indicates this is a video asset and provides additional detail as such.  Refer to Object:  VideoAsset.
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
     <td>data</td>
     <td>object; required *</td>
-    <td>**Asset Subtype Object** that indicates this is a data asset and provides additional detail as such.  Refer to Object:  DataAsset.
+    <td>"Asset Subtype Object" that indicates this is a data asset and provides additional detail as such.  Refer to Object:  DataAsset.
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
     <td>link</td>
     <td>object; required *</td>
-    <td>**Asset Subtype Object** that indicates this is a link asset and provides additional detail as such.  Refer to Object:  LinkAsset.
+    <td>"Asset Subtype Object" that indicates this is a link asset and provides additional detail as such.  Refer to Object:  LinkAsset.
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
@@ -939,19 +939,19 @@ The other attributes in this object apply to all aspects and substructures of th
   <tr>
     <td>display</td>
     <td>object; required *</td>
-    <td>**Placement Subtype Object** that indicates that this may be a display placement and provides additional detail related thereto.  Refer to Object:  DisplayPlacement.
+    <td>"Placement Subtype Object" that indicates that this may be a display placement and provides additional detail related thereto.  Refer to Object:  DisplayPlacement.
 * At least one placement subtype object is required.</td>
   </tr>
   <tr>
     <td>video</td>
     <td>object; required *</td>
-    <td>**Placement Subtype Object** that indicates that this may be a video placement and provides additional detail related thereto.  Refer to Object:  VideoPlacement.
+    <td>"Placement Subtype Object" that indicates that this may be a video placement and provides additional detail related thereto.  Refer to Object:  VideoPlacement.
 * At least one placement subtype object is required.</td>
   </tr>
   <tr>
     <td>audio</td>
     <td>object; required *</td>
-    <td>**Placement Subtype Object** that indicates that this may be an audio placement and provides additional detail related thereto.  Refer to Object:  AudioPlacement.
+    <td>"Placement Subtype Object" that indicates that this may be an audio placement and provides additional detail related thereto.  Refer to Object:  AudioPlacement.
 * At least one placement subtype object is required.</td>
   </tr>
   <tr>
@@ -1163,25 +1163,25 @@ This object represents the permitted specifications of a single asset of a nativ
   <tr>
     <td>title</td>
     <td>object; required *</td>
-    <td>**Asset Format Subtype Object** that indicates this is specifying a title asset and provides additional detail as such.  Refer to Object:  TitleAssetFormat.
+    <td>"Asset Format Subtype Object" that indicates this is specifying a title asset and provides additional detail as such.  Refer to Object:  TitleAssetFormat.
 * Required if no other asset format subtype object is specified.</td>
   </tr>
   <tr>
     <td>img</td>
     <td>object; required *</td>
-    <td>**Asset Format Subtype Object** that indicates this is specifying an image asset and provides additional detail as such.  Refer to Object:  ImageAssetFormat.
+    <td>"Asset Format Subtype Object" that indicates this is specifying an image asset and provides additional detail as such.  Refer to Object:  ImageAssetFormat.
 * Required if no other asset format subtype object is specified.</td>
   </tr>
   <tr>
     <td>video</td>
     <td>object; required *</td>
-    <td>**Asset Format Subtype Object**, which leverages the "VideoPlacement" object, that indicates this is specifying a video asset and provides additional detail as such.  Refer to Object:  VideoPlacement.
+    <td>"Asset Format Subtype Object", which leverages the "VideoPlacement" object, that indicates this is specifying a video asset and provides additional detail as such.  Refer to Object:  VideoPlacement.
 * Required if no other asset format subtype object is specified.</td>
   </tr>
   <tr>
     <td>data</td>
     <td>object; required *</td>
-    <td>**Asset Format Subtype Object** that indicates this is specifying a data asset and provides additional detail as such.  Refer to Object:  DataAssetFormat.
+    <td>"Asset Format Subtype Object" that indicates this is specifying a data asset and provides additional detail as such.  Refer to Object:  DataAssetFormat.
 * Required if no other asset format subtype object is specified.</td>
   </tr>
   <tr>
@@ -2577,27 +2577,27 @@ The following table lists the codes used in "`Audit`" objects to reflect status 
   </tr>
   <tr>
     <td>1</td>
-    <td>**Pending Audit:**  An audit has not yet been completed on this ad.  A recommendation cannot be made to use this ad, but vendors' policies may override.</td>
+    <td>Pending Audit:  An audit has not yet been completed on this ad.  A recommendation cannot be made to use this ad, but vendors' policies may override.</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>**Pre-Approved:**  An audit has not yet been completed on this ad.  Subject to vendors' policies, it can be recommended for use.  However, once the audit has been completed, its status will change and it may or may not be approved for continued use.</td>
+    <td>Pre-Approved:  An audit has not yet been completed on this ad.  Subject to vendors' policies, it can be recommended for use.  However, once the audit has been completed, its status will change and it may or may not be approved for continued use.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>**Approved:**  The audit is complete and the ad is approved for use.  Note, however, that some attributes (e.g., "adomain", "cat", "attr", etc.) may have been changed in the process by the auditor.</td>
+    <td>Approved:  The audit is complete and the ad is approved for use.  Note, however, that some attributes (e.g., "adomain", "cat", "attr", etc.) may have been changed in the process by the auditor.</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>**Denied:**  The audit is complete, but the ad has been found unacceptable in some material aspect and is disapproved for use.</td>
+    <td>Denied:  The audit is complete, but the ad has been found unacceptable in some material aspect and is disapproved for use.</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>**Changed; Resubmission Requested:**  A version of the ad has been detected in use that is materially different from the version that was previously audited, which may result in rejection during use until the ad is resubmitted for audit and approved.  Vendors need to communicate offline as to the criteria that constitutes a material change.</td>
+    <td>Changed; Resubmission Requested:  A version of the ad has been detected in use that is materially different from the version that was previously audited, which may result in rejection during use until the ad is resubmitted for audit and approved.  Vendors need to communicate offline as to the criteria that constitutes a material change.</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>**Expired:** The ad has been marked as expired by the vendor. Vendors need to communicate offline as to the expected bidding behaviour for ads with this status.</td>
+    <td>Expired: The ad has been marked as expired by the vendor.  Vendors need to communicate offline as to the expected bidding behavior for ads with this status.</td>
   </tr>
   <tr>
     <td>500+</td>
@@ -3486,7 +3486,7 @@ The following table lists the services and/or vendors used for resolving IP addr
   </tr>
   <tr>
     <td>4</td>
-    <td>NetAquity (Digital Element)</td>
+    <td>NetAcuity (Digital Element)</td>
   </tr>
 </table>
 
