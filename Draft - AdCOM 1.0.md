@@ -3386,18 +3386,22 @@ The following table lists the types of ad events available for tracking.  These 
   </tr>
   <tr>
     <td>1</td>
-    <td>impression:  Initial creative rending.</td>
+    <td>loaded:  Creative pre-cached or pre-loaded; prior to initial rendering.</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>viewable-mrc50:  Visible impression using MRC definition of 50% in view for 1 second.</td>
+    <td>impression:  Initial creative rending.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>viewable-mrc100:  100% in view for 1 second (i.e., the GroupM standard).</td>
+    <td>viewable-mrc50:  Visible impression using MRC definition of 50% in view for 1 second.</td>
   </tr>
   <tr>
     <td>4</td>
+    <td>viewable-mrc100:  100% in view for 1 second (i.e., the GroupM standard).</td>
+  </tr>
+  <tr>
+    <td>5</td>
     <td>viewable-video50:  Visible impression for video using MRC definition of 50% in view for 2 seconds.</td>
   </tr>
   <tr>
