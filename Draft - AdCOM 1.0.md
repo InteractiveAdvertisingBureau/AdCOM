@@ -201,7 +201,7 @@ The Media group of objects defines an actual ad including reference to its creat
 
 The following figure presents the objects and interrelationships in this group. The objects are defined in the subsections thereafter.
 
-![](https://drive.google.com/uc?id=1emv6vWJXFz0Rc0BAaxJ1AtDrjc3kHpfN)
+![](https://drive.google.com/open?id=1mp4eInBTtsn0eihc09D-7GoIJ-5XIDv6)
 
 ### Object:  Ad <a name="object_ad"></a>
 
@@ -1667,13 +1667,13 @@ This object is used in video and audio placements to specify an associated or so
 </table>
 
 
-## Context Objects## Context Objects <a name="contextobjects"></a>
+## Context Objects <a name="contextobjects"></a>
 
 This group of objects represent concepts that are interacting, presenting, enclosing, or are otherwise relating to the world in which impressions live. These include the user, their device, their location, the channel (e.g., site, app, digital out-of-home) with which they are interacting, the channel's publisher, its content, and any regulations that are in effect (e.g., COPPA, GDPR).
 
 The following figure presents the objects and interrelationships in this group. The objects are defined in the subsections thereafter.
 
-![](https://drive.google.com/uc?id=1C5cN3Ktm-D2ouXvvvqzIRJ3wqCe90PsK)
+![](https://drive.google.com/open?id=1si55OMpfqweHwCbZ17Da3U95V5NO0XbA)
 
 ### Abstract Class:  DistributionChannel <a name="abstract_distributionchannel"></a>
 
