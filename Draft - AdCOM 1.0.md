@@ -354,6 +354,11 @@ Note that mixing absolute and relative sizes is not recommended.</td>
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
+    <td>priv</td>
+    <td>string</td>
+    <td>URL of a page informing the user about a buyer's targeting activity.</td>
+  </tr>
+  <tr>
     <td>adm</td>
     <td>string</td>
     <td>General display markup (e.g., HTML, AMPHTML) if not using a structured alternative (e.g., "banner", "native").
@@ -405,8 +410,8 @@ This object describes a basic banner creative.  It is intended for display scena
   </tr>
   <tr>
     <td>link</td>
-    <td>string</td>
-    <td>Destination URL if the image is activated (e.g., clicked).  The attribute is not applicable in some contexts (e.g., DOOH) and its inclusion does not guarantee it will be supported.</td>
+    <td>object</td>
+    <td>Destination link if the image is activated (e.g., clicked); not applicable in some contexts (e.g., DOOH) and its inclusion does not guarantee it will be supported.  Refer to Object:  LinkAsset.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -425,11 +430,6 @@ This object is the root of a structure that defines a native display ad.
     <td>Attribute</td>
     <td>Type</td>
     <td>Definition</td>
-  </tr>
-  <tr>
-    <td>priv</td>
-    <td>string</td>
-    <td>URL of a page informing the user about a buyer's targeting activity.</td>
   </tr>
   <tr>
     <td>link</td>
