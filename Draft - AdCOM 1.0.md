@@ -201,7 +201,7 @@ The Media group of objects defines an actual ad including reference to its creat
 
 The following figure presents the objects and interrelationships in this group. The objects are defined in the subsections thereafter.
 
-![](https://drive.google.com/uc?id=1mp4eInBTtsn0eihc09D-7GoIJ-5XIDv6)
+![](https://drive.google.com/open?id=1mp4eInBTtsn0eihc09D-7GoIJ-5XIDv6)
 
 ### Object:  Ad <a name="object_ad"></a>
 
@@ -868,7 +868,7 @@ The following figure presents the objects and interrelationships in this group. 
 
 This object represents the properties of a placement and the characteristics of ads permitted to be rendering within them.  Placements of all types begin with this object as their root.  It contains one or more subtype objects (i.e., "`display`", "`video`", "`audio`") that define the kinds of media permitted as well as media specific placement behaviors.
 
-The other attributes in this object apply to all aspects and substructures of the placement (i.e., the same block lists, language, secure status, etc. apply to all media types and native assets as applicable).
+The other attributes in this object apply to all aspects and substructures of the placement (i.e., the same language, secure status, etc. apply to all media types and native assets as applicable).
 
 <table>
   <tr>
@@ -884,7 +884,7 @@ The other attributes in this object apply to all aspects and substructures of th
   <tr>
     <td>ssai</td>
     <td>Integer; default 0</td>
-    <td>Indicates if server-side ad insertion (e.g., stitching an ad into an audio or video stream) is in use and the impact of this on asset and tracker retrieval, where 0 = ssai status unknown, 1 = all client-side e.g. not server-side, 2 = assets stitched server-side but tracking pixels fired client-side, 3 = all server-side.</td>
+    <td>Indicates if server-side ad insertion (e.g., stitching an ad into an audio or video stream) is in use and the impact of this on asset and tracker retrieval, where 0 = status unknown, 1 = all client-side (i.e., not server-side), 2 = assets stitched server-side but tracking pixels fired client-side, 3 = all server-side.</td>
   </tr>
   <tr>
     <td>sdk</td>
@@ -900,31 +900,6 @@ The other attributes in this object apply to all aspects and substructures of th
     <td>reward</td>
     <td>integer; default 0</td>
     <td>Indicates if this is a rewarded placement, where 0 = no, 1 = yes.</td>
-  </tr>
-  <tr>
-    <td>bcat</td>
-    <td>string array</td>
-    <td>Block list of content categories using IDs from the taxonomy indicated in "cattax".</td>
-  </tr>
-  <tr>
-    <td>cattax</td>
-    <td>integer; default 2</td>
-    <td>The taxonomy in use for the "bcat" attribute.  Refer to List:  Category Taxonomies.</td>
-  </tr>
-  <tr>
-    <td>badv</td>
-    <td>string array</td>
-    <td>Block list of advertisers by their domains (e.g., "ford.com").</td>
-  </tr>
-  <tr>
-    <td>bapp</td>
-    <td>string array</td>
-    <td>Block list of apps for which ads are disallowed.  These should be bundle or package names (e.g., "com.foo.mygame") and should NOT be app store IDs (e.g., not iTunes store IDs).</td>
-  </tr>
-  <tr>
-    <td>battr</td>
-    <td>integer array</td>
-    <td>Block list of creative attributes.  Refer to List:  Creative Attributes.</td>
   </tr>
   <tr>
     <td>wlang</td>
@@ -1673,7 +1648,7 @@ This group of objects represent concepts that are interacting, presenting, enclo
 
 The following figure presents the objects and interrelationships in this group. The objects are defined in the subsections thereafter.
 
-![](https://drive.google.com/uc?id=1si55OMpfqweHwCbZ17Da3U95V5NO0XbA)
+![](https://drive.google.com/open?id=1si55OMpfqweHwCbZ17Da3U95V5NO0XbA)
 
 ### Abstract Class:  DistributionChannel <a name="abstract_distributionchannel"></a>
 
@@ -2519,6 +2494,49 @@ The Children's Online Privacy Protection Act (COPPA) was established by the U.S.
     <td>integer</td>
     <td>Flag indicating if GDPR regulations apply, where 0 = no, 1 = yes.
 The General Data Protection Regulation (GDPR) is a regulation of the European Union.</td>
+  </tr>
+  <tr>
+    <td>ext</td>
+    <td>object</td>
+    <td>Optional vendor-specific extensions.</td>
+  </tr>
+</table>
+
+
+### Object:  Restrictions <a name="object_restrictions"></a>
+
+This object allows lists of restrictions on ad responses to be specified including specific content categories, advertisers, ads pertaining to specific apps, or creative attributes.
+
+<table>
+  <tr>
+    <td>Attribute</td>
+    <td>Type</td>
+    <td>Definition</td>
+  </tr>
+  <tr>
+    <td>bcat</td>
+    <td>string array</td>
+    <td>Block list of content categories using IDs from the taxonomy indicated in "cattax".</td>
+  </tr>
+  <tr>
+    <td>cattax</td>
+    <td>integer; default 2</td>
+    <td>The taxonomy in use for the "bcat" attribute.  Refer to List:  Category Taxonomies.</td>
+  </tr>
+  <tr>
+    <td>badv</td>
+    <td>string array</td>
+    <td>Block list of advertisers by their domains (e.g., "ford.com").</td>
+  </tr>
+  <tr>
+    <td>bapp</td>
+    <td>string array</td>
+    <td>Block list of apps for which ads are disallowed.  These should be bundle or package names (e.g., "com.foo.mygame") and should NOT be app store IDs (e.g., not iTunes store IDs).</td>
+  </tr>
+  <tr>
+    <td>battr</td>
+    <td>integer array</td>
+    <td>Block list of creative attributes.  Refer to List:  Creative Attributes.</td>
   </tr>
   <tr>
     <td>ext</td>
