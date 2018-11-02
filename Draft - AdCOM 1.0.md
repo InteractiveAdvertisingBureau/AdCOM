@@ -1649,7 +1649,7 @@ This group of objects represent concepts that are interacting, presenting, enclo
 
 The following figure presents the objects and interrelationships in this group. The objects are defined in the subsections thereafter.
 
-![](https://drive.google.com/open?id=1si55OMpfqweHwCbZ17Da3U95V5NO0XbA)
+![](https://drive.google.com/file/d/1si55OMpfqweHwCbZ17Da3U95V5NO0XbA/view?usp=sharing)
 
 ### Abstract Class:  DistributionChannel <a name="abstract_distributionchannel"></a>
 
