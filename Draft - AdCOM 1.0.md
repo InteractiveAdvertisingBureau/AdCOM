@@ -2,7 +2,7 @@
 
 # **AdCOM Specification v1.0**
 
-#### Final v 1.0
+#### FINAL v1.0
 
 **November 2018**
 
