@@ -4093,9 +4093,9 @@ In the JSON snippets that follow, AdCOM objects are shown within OpenRTB payload
 
 The following is an abbreviated example of an OpenRTB v3.x bid request.  It self-identifies as OpenRTB and shows its version as "3.0".  It also shows that it is using AdCOM v1.0 as its domain layer.
 
-The "`context`" object is the OpenRTB interface to AdCOM context objects.  It can contain any of the top-level context objects, all of which are optional, and their subordinates.  This example includes top-level objects "`regs`", "`site`" (no more than one distribution channel subtype may be included), "`user`", and "`device`".
+The "`context`" object is the OpenRTB interface to AdCOM context objects.  It can contain any of the top-level context objects, all of which are optional, and their subordinates.  This example includes top-level objects "`regs`", "`restrictions`", "`site`" (no more than one distribution channel subtype may be included), "`user`", and "`device`".
 
-This example is indicating a mobile optimized website and some basic details about the site and its publisher.  The user is a female born in 1990.  She is using an Apple iPhone 6S, running iOS 11.4.1, and is connected via the Verizon network.  Her device (and presumably she) is currently located in Boston MA, USA, during eastern standard time.
+This example is indicating a mobile optimized website and some basic details about the site and its publisher.  The user is a female born in 1990.  She is using an Apple iPhone 6S, running iOS 11.4.1, and is connected via the Verizon network.  Her device (and presumably she) is currently located in Boston MA, USA, during eastern standard time.  She is not subject to GDPR or COPPA.  We would also like to block adult, illegal, and uncategorized content as well as ads from car makers Ford and Buick.
 
 
 
@@ -4112,6 +4112,11 @@ This example is indicating a mobile optimized website and some basic details abo
             "regs": {
                "gdpr": 0,
                "coppa": 0
+            },
+            "restrictions": {
+               "bcat": [ "IAB24", "IAB25", "IAB26" ],
+               "cattax": 1,
+               "badv": [ "ford.com", "buick.com" ]
             },
             "site": {
                "id": "1234",
@@ -4253,7 +4258,10 @@ This example is indicating a secure display ad for Ford using a structured banne
                               "h": 50,
                               "banner": {
                                  "img": "https://somebuyer.com/creative",
-                                 "link": "https://somebuyer.com/click"
+                                 "link": {
+                                    "url": "https://somebuyer.com/click",
+                                    "urlfb": "https://somebuyer.com"
+                                 }
                               },
                               "event": [
                                  {
