@@ -73,6 +73,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [Object:  Data](#object_data)
     - [Object:  Segment](#object_segment)
     - [Object:  Regs](#object_regs)
+    - [Object:  Restrictions](#object_restrictions)
   - [Enumerations](#enumerations)
     - [List:  API Frameworks](#list_apiframeworks)
     - [List:  Audit Status Codes](#list_auditstatuscodes)
