@@ -201,7 +201,7 @@ The Media group of objects defines an actual ad including reference to its creat
 
 The following figure presents the objects and interrelationships in this group. The objects are defined in the subsections thereafter.
 
-![](https://drive.google.com/open?id=1mp4eInBTtsn0eihc09D-7GoIJ-5XIDv6)
+![](https://drive.google.com/uc?id=1mp4eInBTtsn0eihc09D-7GoIJ-5XIDv6)
 
 ### Object:  Ad <a name="object_ad"></a>
 
@@ -1673,7 +1673,7 @@ This group of objects represent concepts that are interacting, presenting, enclo
 
 The following figure presents the objects and interrelationships in this group. The objects are defined in the subsections thereafter.
 
-![](https://drive.google.com/open?id=1si55OMpfqweHwCbZ17Da3U95V5NO0XbA)
+![](https://drive.google.com/uc?id=1si55OMpfqweHwCbZ17Da3U95V5NO0XbA)
 
 ### Abstract Class:  DistributionChannel <a name="abstract_distributionchannel"></a>
 
