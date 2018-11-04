@@ -2561,7 +2561,7 @@ The following table is a list of API frameworks either supported by a placement 
     <td>Definition</td>
   </tr>
   <tr>
-    <td>1</td>
+    <td><>1</td>
     <td>VPAID 1.0</td>
   </tr>
   <tr>
@@ -2606,27 +2606,27 @@ The following table lists the codes used in `Audit` objects to reflect status or
   </tr>
   <tr>
     <td>1</td>
-    <td>Pending Audit:  An audit has not yet been completed on this ad.  A recommendation cannot be made to use this ad, but vendors' policies may override.</td>
+    <td><strong>Pending Audit:</strong>  An audit has not yet been completed on this ad.  A recommendation cannot be made to use this ad, but vendors' policies may override.</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>Pre-Approved:  An audit has not yet been completed on this ad.  Subject to vendors' policies, it can be recommended for use.  However, once the audit has been completed, its status will change and it may or may not be approved for continued use.</td>
+    <td><strong>Pre-Approved:</strong>  An audit has not yet been completed on this ad.  Subject to vendors' policies, it can be recommended for use.  However, once the audit has been completed, its status will change and it may or may not be approved for continued use.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>Approved:  The audit is complete and the ad is approved for use.  Note, however, that some attributes (e.g., "adomain", "cat", "attr", etc.) may have been changed in the process by the auditor.</td>
+    <td><strong>Approved:</strong>  The audit is complete and the ad is approved for use.  Note, however, that some attributes (e.g., <code>adomain</code>, <code>cat</code>, <code>attr</code>, etc.) may have been changed in the process by the auditor.</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>Denied:  The audit is complete, but the ad has been found unacceptable in some material aspect and is disapproved for use.</td>
+    <td><strong>Denied:</strong>  The audit is complete, but the ad has been found unacceptable in some material aspect and is disapproved for use.</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>Changed; Resubmission Requested:  A version of the ad has been detected in use that is materially different from the version that was previously audited, which may result in rejection during use until the ad is resubmitted for audit and approved.  Vendors need to communicate offline as to the criteria that constitutes a material change.</td>
+    <td><strong>Changed; Resubmission Requested:</strong>  A version of the ad has been detected in use that is materially different from the version that was previously audited, which may result in rejection during use until the ad is resubmitted for audit and approved.  Vendors need to communicate offline as to the criteria that constitutes a material change.</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>Expired: The ad has been marked as expired by the vendor.  Vendors need to communicate offline as to the expected bidding behavior for ads with this status.</td>
+    <td><strong>Expired:</strong> The ad has been marked as expired by the vendor.  Vendors need to communicate offline as to the expected bidding behavior for ads with this status.</td>
   </tr>
   <tr>
     <td>500+</td>
@@ -3055,23 +3055,23 @@ The following table lists the types of context in which a native ad may appear (
   </tr>
   <tr>
     <td>11</td>
-    <td>Primarily article content, which could include images, etc. as part of the article.</td>
+    <td>-  Primarily article content, which could include images, etc. as part of the article.</td>
   </tr>
   <tr>
     <td>12</td>
-    <td>Primarily video content.</td>
+    <td>-  Primarily video content.</td>
   </tr>
   <tr>
     <td>13</td>
-    <td>Primarily audio content.</td>
+    <td>-  Primarily audio content.</td>
   </tr>
   <tr>
     <td>14</td>
-    <td>Primarily image content.</td>
+    <td>-  Primarily image content.</td>
   </tr>
   <tr>
     <td>15</td>
-    <td>User-generated content (e.g., forums, comments, etc.).</td>
+    <td>-  User-generated content (e.g., forums, comments, etc.).</td>
   </tr>
   <tr>
     <td>20</td>
@@ -3079,11 +3079,11 @@ The following table lists the types of context in which a native ad may appear (
   </tr>
   <tr>
     <td>21</td>
-    <td>Primarily email content.</td>
+    <td>-  Primarily email content.</td>
   </tr>
   <tr>
     <td>22</td>
-    <td>Primarily chat/IM content.</td>
+    <td>-  Primarily chat/IM content.</td>
   </tr>
   <tr>
     <td>30</td>
@@ -3091,11 +3091,11 @@ The following table lists the types of context in which a native ad may appear (
   </tr>
   <tr>
     <td>31</td>
-    <td>App store/marketplace.</td>
+    <td>-  App store/marketplace.</td>
   </tr>
   <tr>
     <td>32</td>
-    <td>Product reviews site primarily, which may sell product secondarily.</td>
+    <td>-  Product reviews site primarily, which may sell product secondarily.</td>
   </tr>
   <tr>
     <td>500+</td>
@@ -3391,11 +3391,11 @@ The following table lists the available methods of tracking of ad events.  Vendo
   </tr>
   <tr>
     <td>1</td>
-    <td>Image-Pixel:  URL provided will be inserted as a 1x1 pixel at the time of the event.</td>
+    <td><strong>Image-Pixel:</strong>  URL provided will be inserted as a 1x1 pixel at the time of the event.</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>JavaScript:  URL provided will be inserted as a JavaScript tag at the time of the event.</td>
+    <td><strong>JavaScript:</strong>  URL provided will be inserted as a JavaScript tag at the time of the event.</td>
   </tr>
   <tr>
     <td>500+</td>
@@ -3415,23 +3415,23 @@ The following table lists the types of ad events available for tracking.  These 
   </tr>
   <tr>
     <td>1</td>
-    <td>loaded:  Creative pre-cached or pre-loaded; prior to initial rendering.</td>
+    <td><strong>loaded:</strong>  Creative pre-cached or pre-loaded; prior to initial rendering.</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>impression:  Initial creative rending.</td>
+    <td><strong>impression:</strong>  Initial creative rending.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>viewable-mrc50:  Visible impression using MRC definition of 50% in view for 1 second.</td>
+    <td><strong>viewable-mrc50:</strong>  Visible impression using MRC definition of 50% in view for 1 second.</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>viewable-mrc100:  100% in view for 1 second (i.e., the GroupM standard).</td>
+    <td><strong>viewable-mrc100:</strong>  100% in view for 1 second (i.e., the GroupM standard).</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>viewable-video50:  Visible impression for video using MRC definition of 50% in view for 2 seconds.</td>
+    <td><strong>viewable-video50:</strong>  Visible impression for video using MRC definition of 50% in view for 2 seconds.</td>
   </tr>
   <tr>
     <td>500+</td>
@@ -3603,51 +3603,51 @@ The following table is a list of common data asset types.  This list is non-exha
   </tr>
   <tr>
     <td>1</td>
-    <td>sponsored:  "Sponsored By" message which should contain the brand name of the sponsor.  Recommended maximum length of at least 25 characters.</td>
+    <td><strong>sponsored:</strong>  "Sponsored By" message which should contain the brand name of the sponsor.  Recommended maximum length of at least 25 characters.</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>desc:  Descriptive text associated with the product or service being advertised.  Long text lengths may be truncated or ellipsed when rendered.  Recommended maximum length of at least 140 characters.</td>
+    <td><strong>desc:</strong>  Descriptive text associated with the product or service being advertised.  Long text lengths may be truncated or ellipsed when rendered.  Recommended maximum length of at least 140 characters.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>rating:  Numeric rating of the product (e.g., an app's rating).  Recommended integer range of 0-5.</td>
+    <td><strong>rating:</strong>  Numeric rating of the product (e.g., an app's rating).  Recommended integer range of 0-5.</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>likes:  Number of social ratings or "likes" of the product.</td>
+    <td><strong>likes:</strong>  Number of social ratings or "likes" of the product.</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>downloads:  Number downloads and/or installs of the product.</td>
+    <td><strong>downloads:</strong>  Number downloads and/or installs of the product.</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>price:  Price of the product, app, or in-app purchase.  Value  should include currency symbol in localized format (e.g., "$10").</td>
+    <td><strong>price:</strong>  Price of the product, app, or in-app purchase.  Value  should include currency symbol in localized format (e.g., "$10").</td>
   </tr>
   <tr>
     <td>7</td>
-    <td>saleprice:  Sale price that can be used together with "price" to indicate a comparative discounted price.  Value should include currency symbol in localized format (e.g., "$8.50").</td>
+    <td><strong>saleprice:</strong>  Sale price that can be used together with "price" to indicate a comparative discounted price.  Value should include currency symbol in localized format (e.g., "$8.50").</td>
   </tr>
   <tr>
     <td>8</td>
-    <td>phone:  A formatted phone number.</td>
+    <td><strong>phone:</strong>  A formatted phone number.</td>
   </tr>
   <tr>
     <td>9</td>
-    <td>address:  A formatted address.</td>
+    <td><strong>address:</strong>  A formatted address.</td>
   </tr>
   <tr>
     <td>10</td>
-    <td>desc2:  Additional descriptive text associated with the product.</td>
+    <td><strong>desc2:</strong>  Additional descriptive text associated with the product.</td>
   </tr>
   <tr>
     <td>11</td>
-    <td>displayurl:  Display URL for the ad.  To be used when sponsoring entity doesn't own the content (e.g., "Sponsored by Brand on Site", where Site is specified in this data asset).</td>
+    <td><strong>displayurl:</strong>  Display URL for the ad.  To be used when sponsoring entity doesn't own the content (e.g., "Sponsored by Brand on Site", where Site is specified in this data asset).</td>
   </tr>
   <tr>
     <td>12</td>
-    <td>ctatext:  Description of the call to action (CTA) button for the destination URL.  Recommended maximum length of at least 15 characters.</td>
+    <td><strong>ctatext:</strong>  Description of the call to action (CTA) button for the destination URL.  Recommended maximum length of at least 15 characters.</td>
   </tr>
   <tr>
     <td>500+</td>
@@ -3667,15 +3667,15 @@ The following table is a list of common image asset types.  This list is non-exh
   </tr>
   <tr>
     <td>1</td>
-    <td>Icon:  Icon image.
+    <td><strong>Icon:</strong>  Icon image.
 Maximum height at least 50 device independent pixels (DIPS); aspect ratio 1:1.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>Main:  Large image preview for the ad.
-At least one of 2 size variants required:
-Small:  Maximum height at least 627 DIPS; maximum width at least 627, 836, or 1198 DIPS (i.e., aspect ratios of 1:1, 4:3, or 1.91:1, respectively).
-Large: Maximum height at least 200 DIPS; maximum width at least 200, 267, or 382 DIPS (i.e., aspect ratios of 1:1, 4:3, or 1.91:1, respectively).</td>
+    <td><strong>Main:</strong>  Large image preview for the ad.
+At least one of 2 size variants required:<br/><br/>
+<em>Small:</em>  Maximum height at least 627 DIPS; maximum width at least 627, 836, or 1198 DIPS (i.e., aspect ratios of 1:1, 4:3, or 1.91:1, respectively).<br/><br/>
+<em>Large:</em> Maximum height at least 200 DIPS; maximum width at least 200, 267, or 382 DIPS (i.e., aspect ratios of 1:1, 4:3, or 1.91:1, respectively).</td>
   </tr>
   <tr>
     <td>500+</td>
@@ -3867,23 +3867,23 @@ The following table lists the various types of video placements derived largely 
   </tr>
   <tr>
     <td>1</td>
-    <td>In-Stream:  Played before, during or after the streaming video content that the consumer has requested (e.g., Pre-roll, Mid-roll, Post-roll).</td>
+    <td><strong>In-Stream:</strong>  Played before, during or after the streaming video content that the consumer has requested (e.g., Pre-roll, Mid-roll, Post-roll).</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>In-Banner:  Exists within a web banner that leverages the banner space to deliver a video experience as opposed to another static or rich media format.  The format relies on the existence of display ad inventory on the page for its delivery.</td>
+    <td><strong>In-Banner:</strong>  Exists within a web banner that leverages the banner space to deliver a video experience as opposed to another static or rich media format.  The format relies on the existence of display ad inventory on the page for its delivery.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>In-Article:  Loads and plays dynamically between paragraphs of editorial content; existing as a standalone branded message.</td>
+    <td><strong>In-Article:</strong>  Loads and plays dynamically between paragraphs of editorial content; existing as a standalone branded message.</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>In-Feed:  Found in content, social, or product feeds.</td>
+    <td><strong>In-Feed:</strong>  Found in content, social, or product feeds.</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>Interstitial/Slider/Floating:  Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).</td>
+    <td><strong>Interstitial/Slider/Floating:</strong>  Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).</td>
   </tr>
 </table>
 
