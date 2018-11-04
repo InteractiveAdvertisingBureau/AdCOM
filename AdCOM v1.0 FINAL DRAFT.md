@@ -2561,7 +2561,7 @@ The following table is a list of API frameworks either supported by a placement 
     <td>Definition</td>
   </tr>
   <tr>
-    <td><>1</td>
+    <td>1</td>
     <td>VPAID 1.0</td>
   </tr>
   <tr>
