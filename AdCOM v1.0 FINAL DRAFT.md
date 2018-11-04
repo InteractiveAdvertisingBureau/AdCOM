@@ -1664,24 +1664,24 @@ Note:  As an abstract class, a `DistributionChannel` is never instantiated on it
     <td>Definition</td>
   </tr>
   <tr>
-    <td>id</td>
+    <td><code>id</code></td>
     <td>string; recommended</td>
     <td>Vendor-specific unique identifier of the distribution channel.</td>
   </tr>
   <tr>
-    <td>name</td>
+    <td><code>name</code></td>
     <td>string</td>
     <td>Displayable name of the distribution channel.</td>
   </tr>
   <tr>
-    <td>pub</td>
+    <td><code>pub</code></td>
     <td>object</td>
-    <td>Details about the publisher of the distribution channel.  Refer to  Object:  Publisher.</td>
+    <td>Details about the publisher of the distribution channel.  Refer to  <a href="#object_publisher">Object: Publisher</a>.</td>
   </tr>
   <tr>
-    <td>content</td>
+    <td><code>content</code></td>
     <td>object</td>
-    <td>Details about the content within the distribution channel.  Refer to Object:  Content.</td>
+    <td>Details about the content within the distribution channel.  Refer to <a href="#object_content">Object: Content</a>.</td>
   </tr>
 </table>
 
@@ -1699,67 +1699,67 @@ This object is used to define an ad supported website, in contrast to a non-brow
     <td>Definition</td>
   </tr>
   <tr>
-    <td>domain</td>
+    <td><code>domain</code></td>
     <td>string</td>
-    <td>Domain of the site (e.g., "mysite.foo.com").</td>
+    <td>Domain of the site (e.g., “mysite.foo.com”).</td>
   </tr>
   <tr>
-    <td>cat</td>
+    <td><code>cat</code></td>
     <td>string array</td>
-    <td>Array of content categories describing the site using IDs from the taxonomy indicated in "cattax".</td>
+    <td>Array of content categories describing the site using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
-    <td>sectcat</td>
+    <td><code>sectcat</code></td>
     <td>string array</td>
-    <td>Array of content categories describing the current section of the site using IDs from the taxonomy indicated in "cattax".</td>
+    <td>Array of content categories describing the current section of the site using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
-    <td>pagecat</td>
+    <td><code>pagecat</code></td>
     <td>string array</td>
-    <td>Array of content categories describing the current page or view of the site using IDs from the taxonomy indicated in "cattax".</td>
+    <td>Array of content categories describing the current page or view of the site using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
-    <td>cattax</td>
+    <td><code>cattax</code></td>
     <td>integer</td>
-    <td>The taxonomy in use for the "cat", "sectcat" and "pagecat" attributes.  Refer to List:  Category Taxonomies.</td>
+    <td>The taxonomy in use for the <code>cat</code>, <code>sectcat</code> and <code>pagecat</code> attributes.  Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
   </tr>
   <tr>
-    <td>privpolicy</td>
+    <td><code>privpolicy</code></td>
     <td>integer</td>
     <td>Indicates if the site has a privacy policy, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
-    <td>keywords</td>
+    <td><code>keywords</code></td>
     <td>string</td>
     <td>Comma separated list of keywords about the site.</td>
   </tr>
   <tr>
-    <td>page</td>
+    <td><code>page</code></td>
     <td>string</td>
     <td>URL of the page within the site.</td>
   </tr>
   <tr>
-    <td>ref</td>
+    <td><code>ref</code></td>
     <td>string</td>
     <td>Referrer URL that caused navigation to the current page.</td>
   </tr>
   <tr>
-    <td>search</td>
+    <td><code>search</code></td>
     <td>string</td>
     <td>Search string that caused navigation to the current page.</td>
   </tr>
   <tr>
-    <td>mobile</td>
+    <td><code>mobile</code></td>
     <td>integer</td>
     <td>Indicates if the site has been programmed to optimize layout when viewed on mobile devices, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
-    <td>amp</td>
+    <td><code>amp</code></td>
     <td>integer</td>
     <td>Indicates if the page is built with AMP HTML, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -1780,66 +1780,66 @@ This object is used to define an ad supported non-browser application, in contra
   </tr>
   <tr>
     <td>domain</td>
-    <td>string</td>
-    <td>Domain of the app (e.g., "mygame.foo.com").</td>
+    <td><code>string</code></td>
+    <td>Domain of the app (e.g., “mygame.foo.com”).</td>
   </tr>
   <tr>
-    <td>cat</td>
+    <td><code>cat</code></td>
     <td>string array</td>
-    <td>Array of content categories describing the app using IDs from the taxonomy indicated in "cattax".</td>
+    <td>Array of content categories describing the app using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
-    <td>sectcat</td>
+    <td><code>sectcat</code></td>
     <td>string array</td>
-    <td>Array of content categories describing the current section of the app using IDs from the taxonomy indicated in "cattax".</td>
+    <td>Array of content categories describing the current section of the app using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
-    <td>pagecat</td>
+    <td><code>pagecat</code></td>
     <td>string array</td>
-    <td>Array of content categories describing the current page or view of the app using IDs from the taxonomy indicated in "cattax".</td>
+    <td>Array of content categories describing the current page or view of the app using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
-    <td>cattax</td>
+    <td><code>cattax</code></td>
     <td>integer</td>
-    <td>The taxonomy in use for the "cat", "sectcat" and "pagecat" attributes.  Refer to List:  Category Taxonomies.</td>
+    <td>The taxonomy in use for the <code>cat</code>, <code>sectcat</code> and <code>pagecat</code> attributes.  Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
   </tr>
   <tr>
-    <td>privpolicy</td>
+    <td><code>privpolicy</code></td>
     <td>integer</td>
     <td>Indicates if the app has a privacy policy, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
-    <td>keywords</td>
+    <td><code>keywords</code></td>
     <td>string</td>
     <td>Comma separated list of keywords about the app.</td>
   </tr>
   <tr>
-    <td>bundle</td>
+    <td><code>bundle</code></td>
     <td>string</td>
-    <td>Bundle or package name of the app (e.g., "com.foo.mygame") and should NOT be app store IDs (e.g., not iTunes store IDs).</td>
+    <td>Bundle or package name of the app (e.g., “com.foo.mygame”) and should NOT be app store IDs (e.g., not iTunes store IDs).</td>
   </tr>
   <tr>
-    <td>storeid</td>
+    <td><code>storeid</code></td>
     <td>string</td>
     <td>The ID of the app in an app store (e.g., Apple iTunes, Google Play).</td>
   </tr>
   <tr>
-    <td>storeurl</td>
+    <td><code>storeurl</code></td>
     <td>string</td>
     <td>App store URL for an installed app; for IQG 2.1 compliance.</td>
   </tr>
   <tr>
-    <td>ver</td>
+    <td><code>ver</code></td>
     <td>string</td>
     <td>Application version.</td>
   </tr>
   <tr>
-    <td>paid</td>
+    <td><code>paid</code></td>
     <td>Integer; default 0</td>
     <td>Indicator of whether or not this is a paid app, where 0 = free, 1 = paid.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -1859,27 +1859,27 @@ This object is used to define an ad supported digital out-of-home (DOOH) experie
     <td>Definition</td>
   </tr>
   <tr>
-    <td>venue</td>
+    <td><code>venue</code></td>
     <td>integer</td>
-    <td>The type of out-of-home venue.  Refer to List:  DOOH Venue Types.</td>
+    <td>The type of out-of-home venue.  Refer to <a href="#list_doohvenuetypes">List: DOOH Venue Types</a>List:  DOOH Venue Types.</td>
   </tr>
   <tr>
-    <td>fixed</td>
+    <td><code>fixed</code></td>
     <td>integer</td>
     <td>Indicates whether the DOOH placement is in a fixed location (e.g., kiosk, billboard, elevator) or is movable (e.g., taxi), where 1 = fixed, 2 = movable.</td>
   </tr>
   <tr>
-    <td>etime</td>
+    <td><code>etime</code></td>
     <td>integer</td>
     <td>The exposure time in seconds per view that the creative will be displayed before refreshing to the next creative.</td>
   </tr>
   <tr>
-    <td>dpi</td>
+    <td><code>dpi</code></td>
     <td>integer</td>
     <td>Minimum DPI for text-based creative elements to display clearly.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -1897,32 +1897,32 @@ This object describes the publisher of the media in which ads will be displayed.
     <td>Definition</td>
   </tr>
   <tr>
-    <td>id</td>
+    <td><code>id</code></td>
     <td>string, recommended</td>
     <td>Vendor-specific unique publisher identifier, as used in ads.txt files.</td>
   </tr>
   <tr>
-    <td>name</td>
+    <td><code>name</code></td>
     <td>string</td>
     <td>Displayable name of the publisher.</td>
   </tr>
   <tr>
-    <td>domain</td>
+    <td><code>domain</code></td>
     <td>string</td>
-    <td>Highest level domain of the publisher (e.g., "publisher.com").</td>
+    <td>Highest level domain of the publisher (e.g., “publisher.com”).</td>
   </tr>
   <tr>
-    <td>cat</td>
+    <td><code>cat</code></td>
     <td>string array</td>
-    <td>Array of content categories that describe the publisher using IDs from the taxonomy indicated in "cattax".</td>
+    <td>Array of content categories that describe the publisher using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
-    <td>cattax</td>
+    <td><code>cattax</code></td>
     <td>integer</td>
-    <td>The taxonomy in use for the "cat" attribute.  Refer to List:  Category Taxonomies.</td>
+    <td>The taxonomy in use for the <code>cat</code> attribute.  Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -1940,136 +1940,136 @@ This object describes the content in which an impression can appear, which may b
     <td>Definition</td>
   </tr>
   <tr>
-    <td>id</td>
+    <td><code>id</code></td>
     <td>string</td>
     <td>ID uniquely identifying the content.</td>
   </tr>
   <tr>
-    <td>episode</td>
+    <td><code>episode</code></td>
     <td>integer</td>
     <td>Episode number.</td>
   </tr>
   <tr>
-    <td>title</td>
+    <td><code>title</code></td>
     <td>string</td>
-    <td>Content title.
-Video Examples: "Search Committee" (television), "Star Wars, A New Hope" (movie), or "Endgame" (made for web).
-Non-Video Example:  "Why an Antarctic Glacier Is Melting So Quickly" (Time magazine article).</td>
+    <td>Content title.<br/>
+Video Examples: “Search Committee” (television), “Star Wars, A New Hope” (movie), or “Endgame” (made for web).<br/>
+Non-Video Example:  “Why an Antarctic Glacier Is Melting So Quickly” (Time magazine article).</td>
   </tr>
   <tr>
-    <td>series</td>
+    <td><code>series</code></td>
     <td>string</td>
-    <td>Content series.
-Video Examples: "The Office" (television), "Star Wars" (movie), or "Arby 'N' The Chief" (made for web).
-Non-Video Example:  "Ecocentric" (Time Magazine blog).</td>
+    <td>Content series.<br/>
+Video Examples: “The Office” (television), “Star Wars” (movie), or “Arby 'N' The Chief” (made for web).<br/>
+Non-Video Example:  “Ecocentric” (Time Magazine blog).</td>
   </tr>
   <tr>
-    <td>season</td>
+    <td><code>season</code></td>
     <td>string</td>
-    <td>Content season (e.g., "Season 3").</td>
+    <td>Content season (e.g., “Season 3”).</td>
   </tr>
   <tr>
-    <td>artist</td>
+    <td><code>artist</code></td>
     <td>string</td>
     <td>Artist credited with the content.</td>
   </tr>
   <tr>
-    <td>genre</td>
+    <td><code>genre</code></td>
     <td>string</td>
     <td>Genre that best describes the content (e.g., rock, pop, etc).</td>
   </tr>
   <tr>
-    <td>album</td>
+    <td><code>album</code></td>
     <td>string</td>
     <td>Album to which the content belongs; typically for audio.</td>
   </tr>
   <tr>
-    <td>isrc</td>
+    <td><code>isrc</code></td>
     <td>string</td>
     <td>International Standard Recording Code conforming to ISO-3901.</td>
   </tr>
   <tr>
-    <td>url</td>
+    <td><code>url</code></td>
     <td>string</td>
     <td>URL of the content, for buy-side contextualization or review.</td>
   </tr>
   <tr>
-    <td>cat</td>
+    <td><code>cat</code></td>
     <td>string array</td>
-    <td>Array of content categories describing the content using IDs from the taxonomy indicated in "cattax".</td>
+    <td>Array of content categories describing the content using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
-    <td>cattax</td>
+    <td><code>cattax</code></td>
     <td>integer</td>
-    <td>The taxonomy in use for the "cat" attribute.  Refer to List:  Category Taxonomies.</td>
+    <td>The taxonomy in use for the <code>cat</code> attribute.  Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
   </tr>
   <tr>
-    <td>prodq</td>
+    <td><code>prodq</code></td>
     <td>integer</td>
-    <td>Production quality.  Refer to List:  Production Qualities.</td>
+    <td>Production quality.  Refer to <a href="#list_productionqualities">List: Production Qualities</a>.</td>
   </tr>
   <tr>
-    <td>context</td>
+    <td><code>context</code></td>
     <td>integer</td>
-    <td>Type of content (game, video, text, etc.).  Refer to List:  Content Contexts.</td>
+    <td>Type of content (game, video, text, etc.).  Refer to <a href="#list_contentcontexts">List: Content Contexts</a>.</td>
   </tr>
   <tr>
-    <td>rating</td>
+    <td><code>rating</code></td>
     <td>string</td>
     <td>Content rating (e.g., MPAA).</td>
   </tr>
   <tr>
-    <td>urating</td>
+    <td><code>urating</code></td>
     <td>string</td>
     <td>User rating of the content (e.g., number of stars, likes, etc.).</td>
   </tr>
   <tr>
-    <td>mrating</td>
+    <td><code>mrating</code></td>
     <td>integer</td>
-    <td>Media rating per IQG guidelines.  Refer to List:  Media Ratings.</td>
+    <td>Media rating per IQG guidelines.  Refer to <a href="#list_mediaratings">List: Media Ratings</a>.</td>
   </tr>
   <tr>
-    <td>keywords</td>
+    <td><code>keywords</code></td>
     <td>string</td>
     <td>Comma separated list of keywords describing the content.</td>
   </tr>
   <tr>
-    <td>live</td>
+    <td><code>live</code></td>
     <td>integer</td>
     <td>Indication of live content, where 0 = not live, 1 = live (e.g., stream, live blog).</td>
   </tr>
   <tr>
-    <td>srcrel</td>
+    <td><code>srcrel</code></td>
     <td>integer</td>
     <td>Source relationship, where 0 = indirect, 1 = direct.</td>
   </tr>
   <tr>
-    <td>len</td>
+    <td><code>len</code></td>
     <td>integer</td>
     <td>Length of content in seconds; typically for video or audio.</td>
   </tr>
   <tr>
-    <td>lang</td>
+    <td><code>lang</code></td>
     <td>string</td>
     <td>Content language using ISO-639-1-alpha-2.</td>
   </tr>
   <tr>
-    <td>embed</td>
+    <td><code>embed</code></td>
     <td>integer</td>
     <td>Indicator of whether or not the content is embedded off-site from the the site or app described in those objects (e.g., an embedded video player), where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
-    <td>producer</td>
+    <td><code>producer</code></td>
     <td>object</td>
-    <td>Details about the content producer.  Refer to Object:  Producer.</td>
+    <td>Details about the content producer.  Refer to <a href="#object_producer">Object: Producer</a>.</td>
   </tr>
   <tr>
-    <td>data</td>
+    <td><code>data</code></td>
     <td>object array</td>
-    <td>Additional user data.  Each "Data" object represents a different data source.  Refer to Object:  Data.</td>
+    <td>Additional user data.  Each <code>Data</code> object represents a different data source.  Refer to <a href="#object_data">Object: Data</a>.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -2087,32 +2087,32 @@ This object defines the producer of the content in which ad will be displayed.  
     <td>Definition</td>
   </tr>
   <tr>
-    <td>id</td>
+    <td><code>id</code></td>
     <td>string, recommended</td>
     <td>Vendor-specific unique producer identifier.  Useful if content is syndicated and may be posted on a site using embed tags.</td>
   </tr>
   <tr>
-    <td>name</td>
+    <td><code>name</code></td>
     <td>string</td>
     <td>Displayable name of the producer.</td>
   </tr>
   <tr>
-    <td>domain</td>
+    <td><code>domain</code></td>
     <td>string</td>
-    <td>Highest level domain of the producer (e.g., "producer.com").</td>
+    <td>Highest level domain of the producer (e.g., “producer.com”).</td>
   </tr>
   <tr>
-    <td>cat</td>
+    <td><code>cat</code></td>
     <td>string array</td>
-    <td>Array of content categories that describe the producer using IDs from the taxonomy indicated in "cattax".</td>
+    <td>Array of content categories that describe the producer using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
-    <td>cattax</td>
+    <td><code>cattax</code></td>
     <td>integer</td>
-    <td>The taxonomy in use for the  "cat" attribute.  Refer to List:  Category Taxonomies.</td>
+    <td>The taxonomy in use for the  <code>cat</code> attribute.  Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -2130,47 +2130,47 @@ This object contains information known or derived about the human user of the de
     <td>Definition</td>
   </tr>
   <tr>
-    <td>id</td>
+    <td><code>id</code></td>
     <td>string; recommended</td>
-    <td>Vendor-specific ID for the user.  At least one of "id" or "buyeruid" is strongly recommended.</td>
+    <td>Vendor-specific ID for the user.  At least one of <code>id</code> or <code>buyeruid</code> is strongly recommended.</td>
   </tr>
   <tr>
-    <td>buyeruid</td>
+    <td><code>buyeruid</code></td>
     <td>string; recommended</td>
-    <td>Buyer-specific ID for the user as mapped by an exchange for the buyer.  At least one of "id" or "buyeruid" is strongly recommended.</td>
+    <td>Buyer-specific ID for the user as mapped by an exchange for the buyer.  At least one of <code>id</code> or <code>buyeruid</code> is strongly recommended.</td>
   </tr>
   <tr>
-    <td>yob</td>
+    <td><code>yob</code></td>
     <td>integer</td>
     <td>Year of birth as a 4-digit integer.</td>
   </tr>
   <tr>
-    <td>gender</td>
+    <td><code>gender</code></td>
     <td>string</td>
-    <td>Gender, where "M" = male, "F" = female, "O" = known to be other (i.e., omitted is unknown).</td>
+    <td>Gender, where “M” = male, “F” = female, “O” = known to be other (i.e., omitted is unknown).</td>
   </tr>
   <tr>
-    <td>keywords</td>
+    <td><code>keywords</code></td>
     <td>string</td>
     <td>Comma separated list of keywords, interests, or intent.</td>
   </tr>
   <tr>
-    <td>consent</td>
+    <td><code>consent</code></td>
     <td>string</td>
-    <td>GDPR consent string if applicable, complying with the comply with the IAB standard [Consent String Format](https://bit.ly/2HzD6Kg) in the [Transparency and Consent Framework](https://iabtechlab.com/gdpr-tech) technical specifications.</td>
+    <td>GDPR consent string if applicable, complying with the comply with the IAB standard <a href="https://bit.ly/2HzD6Kg">Consent String Format</a> in the <a href="https://iabtechlab.com/gdpr-tech">Transparency and Consent Framework</a> technical specifications.</td>
   </tr>
   <tr>
-    <td>geo</td>
+    <td><code>geo</code></td>
     <td>object</td>
-    <td>Location of the user's home base (i.e., not necessarily their current location).  Refer to Object:  Geo.</td>
+    <td>Location of the user's home base (i.e., not necessarily their current location).  Refer to <a href="#object_geo">Object: Geo</a>.</td>
   </tr>
   <tr>
-    <td>data</td>
+    <td><code>data</code></td>
     <td>object array</td>
-    <td>Additional user data.  Each "Data" object represents a different data source.  Refer to Object:  Data.</td>
+    <td>Additional user data.  Each <code>Data</code> object represents a different data source.  Refer to <a href="#object_data">Object: Data</a>.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -2188,138 +2188,138 @@ This object provides information pertaining to the device through which the user
     <td>Definition</td>
   </tr>
   <tr>
-    <td>type</td>
+    <td><code>type</code></td>
     <td>integer</td>
-    <td>The general type of device.  Refer to List:  Device Types.</td>
+    <td>The general type of device.  Refer to <a href="#list_devicetypes">List: Device Types</a>.</td>
   </tr>
   <tr>
-    <td>ua</td>
+    <td><code>ua</code></td>
     <td>string</td>
     <td>Browser user agent string.</td>
   </tr>
   <tr>
-    <td>ifa</td>
+    <td><code>ifa</code></td>
     <td>string</td>
     <td>ID sanctioned for advertiser use in the clear (i.e., not hashed).</td>
   </tr>
   <tr>
-    <td>dnt</td>
+    <td><code>dnt</code></td>
     <td>integer</td>
-    <td>Standard "Do Not Track" flag as set in the header by the browser, where 0 = tracking is unrestricted, 1 = do not track.</td>
+    <td>Standard “Do Not Track” flag as set in the header by the browser, where 0 = tracking is unrestricted, 1 = do not track.</td>
   </tr>
   <tr>
-    <td>lmt</td>
+    <td><code>lmt</code></td>
     <td>integer</td>
-    <td>"Limit Ad Tracking" signal commercially endorsed (e.g., iOS, Android), where 0 = tracking is unrestricted, 1 = tracking must be limited per commercial guidelines.</td>
+    <td>“Limit Ad Tracking” signal commercially endorsed (e.g., iOS, Android), where 0 = tracking is unrestricted, 1 = tracking must be limited per commercial guidelines.</td>
   </tr>
   <tr>
-    <td>make</td>
+    <td><code>make</code></td>
     <td>string</td>
     <td>Device make (e.g., "Apple").</td>
   </tr>
   <tr>
-    <td>model</td>
+    <td><code>model</code></td>
     <td>string</td>
-    <td>Device model (e.g., "iPhone10,1" when the specific device model is known, "iPhone" otherwise).  The value obtained from the device O/S should be used when available.</td>
+    <td>Device model (e.g., “iPhone10,1” when the specific device model is known, “iPhone” otherwise).  The value obtained from the device O/S should be used when available.</td>
   </tr>
   <tr>
-    <td>os</td>
+    <td><code>os</code></td>
     <td>integer</td>
-    <td>Device operating system.  Refer to List:  Operating Systems.</td>
+    <td>Device operating system.  Refer to <a href="#list_operatingsystems">List: Operating Systems</a>.</td>
   </tr>
   <tr>
-    <td>osv</td>
+    <td><code>osv</code></td>
     <td>string</td>
-    <td>Device operating system version (e.g., "3.1.2").</td>
+    <td>Device operating system version (e.g., “3.1.2”).</td>
   </tr>
   <tr>
-    <td>hwv</td>
+    <td><code>hwv</code></td>
     <td>string</td>
-    <td>Hardware version of the device (e.g., "5S" for iPhone 5S).</td>
+    <td>Hardware version of the device (e.g., “5S” for iPhone 5S).</td>
   </tr>
   <tr>
-    <td>h</td>
+    <td><code>h</code></td>
     <td>integer</td>
     <td>Physical height of the screen in pixels.</td>
   </tr>
   <tr>
-    <td>w</td>
+    <td><code>w</code></td>
     <td>integer</td>
     <td>Physical width of the screen in pixels.</td>
   </tr>
   <tr>
-    <td>ppi</td>
+    <td><code>ppi</code></td>
     <td>integer</td>
     <td>Screen size as pixels per linear inch.</td>
   </tr>
   <tr>
-    <td>pxratio</td>
+    <td><code>pxratio</code></td>
     <td>float</td>
     <td>The ratio of physical pixels to device independent pixels.</td>
   </tr>
   <tr>
-    <td>js</td>
+    <td><code>js</code></td>
     <td>integer</td>
     <td>Support for JavaScript, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
-    <td>lang</td>
+    <td><code>lang</code></td>
     <td>string</td>
     <td>Browser language using ISO-639-1-alpha-2.</td>
   </tr>
   <tr>
-    <td>ip</td>
+    <td><code>ip</code></td>
     <td>string</td>
     <td>IPv4 address closest to device.</td>
   </tr>
   <tr>
-    <td>ipv6</td>
+    <td><code>ipv6</code></td>
     <td>string</td>
     <td>IP address closest to device as IPv6.</td>
   </tr>
   <tr>
-    <td>xff</td>
+    <td><code>xff</code></td>
     <td>string</td>
-    <td>The value of the `x-forwarded-for` header.</td>
+    <td>The value of the “x-forwarded-for” header.</td>
   </tr>
   <tr>
-    <td>iptr</td>
+    <td><code>iptr</code></td>
     <td>integer</td>
-    <td>Indicator of truncation of any of the IP attributes (i.e., "ip", "ipv6", "xff"), where 0 = no, 1 = yes (e.g., from 1.2.3.4 to 1.2.3.0).
-Refer to tools.ietf.org/html/rfc6235#section-4.1.1 for more information on IP truncation.</td>
+    <td>Indicator of truncation of any of the IP attributes (i.e., <code>ip</code>, <code>ipv6</code>, <code>xff</code>), where 0 = no, 1 = yes (e.g., from 1.2.3.4 to 1.2.3.0).
+Refer to https://tools.ietf.org/html/rfc6235#section-4.1.1 for more information on IP truncation.</td>
   </tr>
   <tr>
-    <td>carrier</td>
+    <td><code>carrier</code></td>
     <td>string</td>
-    <td>Carrier or ISP (e.g., "VERIZON") using exchange curated string names which should be published to bidders a priori.</td>
+    <td>Carrier or ISP (e.g., “VERIZON”) using exchange curated string names which should be published to bidders <em>a priori</em>.</td>
   </tr>
   <tr>
-    <td>mccmnc</td>
+    <td><code>mccmnc</code></td>
     <td>string</td>
-    <td>Mobile carrier as the concatenated MCC-MNC code (e.g., "310-005" identifies Verizon Wireless CDMA in the USA).  Refer to en.wikipedia.org/wiki/Mobile_country_code for further information and references.  Note that the dash between the MCC and MNC parts is required to remove parsing ambiguity.</td>
+    <td>Mobile carrier as the concatenated MCC-MNC code (e.g., “310-005” identifies Verizon Wireless CDMA in the USA).  Refer to https://en.wikipedia.org/wiki/Mobile_country_code for further information and references.  Note that the dash between the MCC and MNC parts is required to remove parsing ambiguity.</td>
   </tr>
   <tr>
-    <td>mccmncsim</td>
+    <td><code>mccmncsim</code></td>
     <td>string</td>
-    <td>MCC and MNC of the SIM card using the same format as "mccmnc".  When both values are available, a difference between them reveals that a user is roaming.</td>
+    <td>MCC and MNC of the SIM card using the same format as <code>mccmnc</code>.  When both values are available, a difference between them reveals that a user is roaming.</td>
   </tr>
   <tr>
-    <td>contype</td>
+    <td><code>contype</code></td>
     <td>integer</td>
-    <td>Network connection type.  Refer to List:  Connection Types.</td>
+    <td>Network connection type.  Refer to <a href="#list_connectiontypes">List: Connection Types</a>.</td>
   </tr>
   <tr>
-    <td>geofetch</td>
+    <td><code>geofetch</code></td>
     <td>integer</td>
     <td>Indicates if the geolocation API will be available to JavaScript code running in display ad, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
-    <td>geo</td>
+    <td><code>geo</code></td>
     <td>object</td>
-    <td>Location of the device (i.e., typically the user's current location).  Refer to Object:  Geo.</td>
+    <td>Location of the device (i.e., typically the user's current location).  Refer to <a href="#object_geo">Object: Geo</a>.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -2339,69 +2339,69 @@ The `lat` and `lon` attributes should only be passed if they conform to the accu
     <td>Definition</td>
   </tr>
   <tr>
-    <td>type</td>
+    <td><code>type</code></td>
     <td>integer</td>
-    <td>Source of location data; recommended when passing lat/lon.  Refer to List:  Location Types.</td>
+    <td>Source of location data; recommended when passing lat/lon.  Refer to <a href="#list_locationtypes">List: Location Types</a>.</td>
   </tr>
   <tr>
-    <td>lat</td>
+    <td><code>lat</code></td>
     <td>float</td>
     <td>Latitude from -90.0 to +90.0, where negative is south.</td>
   </tr>
   <tr>
-    <td>lon</td>
+    <td><code>lon</code></td>
     <td>float</td>
     <td>Longitude from -180.0 to +180.0, where negative is west.</td>
   </tr>
   <tr>
-    <td>accur</td>
+    <td><code>accur</code></td>
     <td>integer</td>
     <td>Estimated location accuracy in meters; recommended when lat/lon are specified and derived from a device's location services (i.e., type = 1).  Note that this is the accuracy as reported from the device.  Consult OS specific documentation (e.g., Android, iOS) for exact interpretation.</td>
   </tr>
   <tr>
-    <td>lastfix</td>
+    <td><code>lastfix</code></td>
     <td>integer</td>
     <td>Number of seconds since this geolocation fix was established.  Note that devices may cache location data across multiple fetches.  Ideally, this value should be from the time the actual fix was taken.</td>
   </tr>
   <tr>
-    <td>ipserv</td>
+    <td><code>ipserv</code></td>
     <td>integer</td>
-    <td>Service or provider used to determine geolocation from IP address if applicable (i.e., "type" = 2).  Refer to List:  IP Location Services.</td>
+    <td>Service or provider used to determine geolocation from IP address if applicable (i.e., <code>type</code> = 2).  Refer to <a href="#list_iplocationservices">List: IP Location Services</a>.</td>
   </tr>
   <tr>
-    <td>country</td>
+    <td><code>country</code></td>
     <td>string</td>
     <td>Country code using ISO-3166-1-alpha-2.
 Note that alpha-3 codes may be encountered and vendors are encouraged to be tolerant of them.</td>
   </tr>
   <tr>
-    <td>region</td>
+    <td><code>region</code></td>
     <td>string</td>
     <td>Region code using ISO-3166-2; 2-letter state code if USA.</td>
   </tr>
   <tr>
-    <td>metro</td>
+    <td><code>metro</code></td>
     <td>string</td>
-    <td>Regional marketing areas such as Nielsen's DMA codes or other similar taxonomy to be agreed among vendors prior to use.
+    <td>Regional marketing areas such as Nielsen's DMA codes or other similar taxonomy to be agreed among vendors prior to use.<br/>
 Note that DMA is a trademarked asset of The Nielsen Company.  Vendors are encouraged to ensure their use of DMAs is properly licensed.</td>
   </tr>
   <tr>
-    <td>city</td>
+    <td><code>city</code></td>
     <td>string</td>
-    <td>City using United Nations Code for Trade & Transport Locations "UN/LOCODE" with the space between country and city suppressed (e.g., Boston MA, USA = "USBOS").  Refer to [UN/LOCODE Code List](https://www.unece.org/cefact/locode/service/location).</td>
+    <td>City using United Nations Code for Trade & Transport Locations “UN/LOCODE” with the space between country and city suppressed (e.g., Boston MA, USA = “USBOS”).  Refer to <a href="https://www.unece.org/cefact/locode/service/location">UN/LOCODE Code List</a>.</td>
   </tr>
   <tr>
-    <td>zip</td>
+    <td><code>zip</code></td>
     <td>string</td>
     <td>ZIP or postal code.</td>
   </tr>
   <tr>
-    <td>utcoffset</td>
+    <td><code>utcoffset</code></td>
     <td>integer</td>
     <td>Local time as the number +/- of minutes from UTC.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -2419,22 +2419,22 @@ The data and segment objects together allow additional data about the related ob
     <td>Definition</td>
   </tr>
   <tr>
-    <td>id</td>
+    <td><code>id</code></td>
     <td>string</td>
     <td>Vendor-specific ID for the data provider.</td>
   </tr>
   <tr>
-    <td>name</td>
+    <td><code>name</code></td>
     <td>string</td>
     <td>Vendor-specific displayable name for the data provider.</td>
   </tr>
   <tr>
-    <td>segment</td>
+    <td><code>segment</code></td>
     <td>object array</td>
-    <td>Array of "Segment" objects that contain the actual data values.  Refer to Object:  Segment.</td>
+    <td>Array of <code>Segment</code> objects that contain the actual data values.  Refer to <a href="#object_segment">Object: Segment</a>.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -2452,22 +2452,22 @@ Segment objects are essentially key-value pairs that convey specific units of da
     <td>Definition</td>
   </tr>
   <tr>
-    <td>id</td>
+    <td><code>id</code></td>
     <td>string</td>
     <td>ID of the data segment specific to the data provider.</td>
   </tr>
   <tr>
-    <td>name</td>
+    <td><code>name</code></td>
     <td>string</td>
     <td>Displayable name of the data segment specific to the data provider.</td>
   </tr>
   <tr>
-    <td>value</td>
+    <td><code>value</code></td>
     <td>string</td>
     <td>String representation of the data segment value.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -2485,19 +2485,19 @@ This object contains any known legal, governmental, or industry regulations that
     <td>Definition</td>
   </tr>
   <tr>
-    <td>coppa</td>
+    <td><code>coppa</code></td>
     <td>integer</td>
     <td>Flag indicating if COPPA regulations apply, where 0 = no, 1 = yes.
 The Children's Online Privacy Protection Act (COPPA) was established by the U.S. Federal Trade Commission.</td>
   </tr>
   <tr>
-    <td>gdpr</td>
+    <td><code>gdpr</code></td>
     <td>integer</td>
     <td>Flag indicating if GDPR regulations apply, where 0 = no, 1 = yes.
 The General Data Protection Regulation (GDPR) is a regulation of the European Union.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -2515,32 +2515,32 @@ This object allows lists of restrictions on ad responses to be specified includi
     <td>Definition</td>
   </tr>
   <tr>
-    <td>bcat</td>
+    <td><code>bcat</code></td>
     <td>string array</td>
-    <td>Block list of content categories using IDs from the taxonomy indicated in "cattax".</td>
+    <td>Block list of content categories using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
-    <td>cattax</td>
+    <td><code>cattax</code></td>
     <td>integer; default 2</td>
-    <td>The taxonomy in use for the "bcat" attribute.  Refer to List:  Category Taxonomies.</td>
+    <td>The taxonomy in use for the <code>bcat</code> attribute.  Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
   </tr>
   <tr>
-    <td>badv</td>
+    <td><code>badv</code></td>
     <td>string array</td>
-    <td>Block list of advertisers by their domains (e.g., "ford.com").</td>
+    <td>Block list of advertisers by their domains (e.g., “ford.com”).</td>
   </tr>
   <tr>
-    <td>bapp</td>
+    <td><code>bapp</code></td>
     <td>string array</td>
-    <td>Block list of apps for which ads are disallowed.  These should be bundle or package names (e.g., "com.foo.mygame") and should NOT be app store IDs (e.g., not iTunes store IDs).</td>
+    <td>Block list of apps for which ads are disallowed.  These should be bundle or package names (e.g., “com.foo.mygame”) and should NOT be app store IDs (e.g., not iTunes store IDs).</td>
   </tr>
   <tr>
-    <td>battr</td>
+    <td><code>battr</code></td>
     <td>integer array</td>
-    <td>Block list of creative attributes.  Refer to List:  Creative Attributes.</td>
+    <td>Block list of creative attributes.  Refer to <a href="#list_creativeattributes">List: Creative Attributes</a>.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
