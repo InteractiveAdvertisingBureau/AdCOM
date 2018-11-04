@@ -221,12 +221,12 @@ This object is the root of a structure that defines in instance of advertising m
   </tr>
   <tr>
     <td><code>adomain</code></td>
-    <td>string array; recommended</td>
+    <td>string&nbsp;array; recommended</td>
     <td>Advertiser domain; top two levels only (e.g., “ford.com”).  This can be an array for the case of rotating creatives.</td>
   </tr>
   <tr>
     <td><code>bundle</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>When the product of the ad is an app, the unique ID of that app as a bundle or package name (e.g., “com.foo.mygame”).  This  should NOT be an app store ID (e.g., no iTunes store IDs).  This can be an array of for the case of rotating creatives.</td>
   </tr>
   <tr>
@@ -236,12 +236,12 @@ This object is the root of a structure that defines in instance of advertising m
   </tr>
   <tr>
     <td><code>cat</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of content categories describing the ad using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
     <td><code>cattax</code></td>
-    <td>integer; default 2</td>
+    <td>integer;<br/>default&nbsp;2</td>
     <td>The taxonomy in use for the <code>cat</code> attribute.  Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
   </tr>
   <tr>
@@ -251,7 +251,7 @@ This object is the root of a structure that defines in instance of advertising m
   </tr>
   <tr>
     <td><code>attr</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>Set of attributes describing the creative.  Refer to <a href="#list_creativeattributes">List: Creative Attributes</a>.</td>
   </tr>
   <tr>
@@ -322,7 +322,7 @@ This object provides additional detail about an ad specifically for display ads.
   </tr>
   <tr>
     <td><code>api</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>API required by the ad if applicable.  Refer to <a href="#list_apiframeworks">List: API Frameworks</a>.</td>
   </tr>
   <tr>
@@ -383,7 +383,7 @@ Note that including both <code>adm</code> and <code>curl</code> is not recommend
   </tr>
   <tr>
     <td><code>event</code></td>
-    <td>object array</td>
+    <td>object&nbsp;array</td>
     <td>Array of events that the advertiser or buying platform wants to track.  Refer to  <a href="#object_event">Object: Event</a>.</td>
   </tr>
   <tr>
@@ -439,7 +439,7 @@ This object is the root of a structure that defines a native display ad.
   </tr>
   <tr>
     <td><code>asset</code></td>
-    <td>object array</td>
+    <td>object&nbsp;array</td>
     <td>Array of assets that comprise the native ad.  Refer to <a href="#object_asset">Object: Asset</a>.</td>
   </tr>
   <tr>
@@ -467,36 +467,36 @@ This object is the container for each asset comprising a native ad.  Each asset 
   </tr>
   <tr>
     <td><code>req</code></td>
-    <td>integer; default 0</td>
+    <td>integer;<br/>default&nbsp;0</td>
     <td>Indicates if the asset is required to be displayed, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
     <td><code>title</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Asset Subtype Object</strong> that indicates this is a title asset and provides additional detail as such.  Refer to <a href="#object_titleasset">Object: TitleAsset</a>.<br/>
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
     <td><code>image</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Asset Subtype Object</strong> that indicates this is an image asset and provides additional detail as such.  Refer to <a href="#object_imageasset">Object: ImageAsset</a>.<br/>
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
     <td><code>video</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Asset Subtype Object</strong> that indicates this is a video asset and provides additional detail as such.  Refer to <a href="#object_videoasset">Object: VideoAsset</a>.<br/>
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
     <td><code>data</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Asset Subtype Object</strong> that indicates this is a data asset and provides additional detail as such.  Refer to <a href="#object_dataasset">Object: DataAsset</a>.<br/>
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
     <td><code>link</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Asset Subtype Object</strong> that indicates this is a link asset and provides additional detail as such.  Refer to <a href="#object_linkasset">Object: LinkAsset</a>.<br/>
 * Required if no other asset subtype object is specified.</td>
   </tr>
@@ -530,7 +530,7 @@ This object identifies the native asset as a link asset and is used to define na
   </tr>
   <tr>
     <td><code>trkr</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>List of third-party tracker URLs to be fired on click.</td>
   </tr>
   <tr>
@@ -619,13 +619,13 @@ This object identifies the native asset as a video asset.  Video markup (e.g., V
   </tr>
   <tr>
     <td><code>adm</code></td>
-    <td>string; required *</td>
+    <td>string; required&nbsp;*</td>
     <td>Video markup (e.g., VAST document) for the asset.<br/>
 * Exactly one of <code>adm</code> and <code>curl</code> is required.  Including both is not recommended.  </td>
   </tr>
   <tr>
     <td><code>curl</code></td>
-    <td>string; required *</td>
+    <td>string; required&nbsp;*</td>
     <td>A URL that returns the video markup (e.g., VAST document) for the asset.  If this ad is matched to a placement specification, the <code>Placement.curlx</code> attribute indicates if this markup retrieval option is supported.<br/>
 * Exactly one of <code>adm</code> and <code>curl</code> is required.  Including both is not recommended.</td>
   </tr>
@@ -692,7 +692,7 @@ This object specifies a type of event that the advertiser or buying platform wan
   </tr>
   <tr>
     <td><code>api</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>The APIs being used by the tracker; only relevant when the tracking method is JavaScript.  Refer to <a href="#list_apiframeworks">List:  API Frameworks</a>.</td>
   </tr>
   <tr>
@@ -703,7 +703,7 @@ This object specifies a type of event that the advertiser or buying platform wan
   </tr>
   <tr>
     <td><code>cdata</code></td>
-    <td>object (Map)</td>
+    <td>object&nbsp;(Map)</td>
     <td>An array of key-value pairs to support vendor-specific data required for custom tracking.  For example, the account number of a buyer with a tracking company might be represented as: {"acct": "123"}.</td>
   </tr>
   <tr>
@@ -726,12 +726,12 @@ This object provides additional detail about an ad specifically for video ads.
   </tr>
   <tr>
     <td><code>mime</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Mime type(s) of the ad creative(s) (e.g., “video/mp4”).</td>
   </tr>
   <tr>
     <td><code>api</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>API required by the ad if applicable.  Refer to <a href="#list_apiframeworks">List: API Frameworks</a>.</td>
   </tr>
   <tr>
@@ -776,12 +776,12 @@ This object provides additional detail about an ad specifically for audio ads.
   </tr>
   <tr>
     <td><code>mime</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Mime type(s) of the ad creative(s) (e.g., “audio/mp4”).</td>
   </tr>
   <tr>
     <td><code>api</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>API required by the ad if applicable.  Refer to <a href="#list_apiframeworks">List: API Frameworks</a>.</td>
   </tr>
   <tr>
@@ -831,7 +831,7 @@ This objects represents the outcome of some form of review of the ad.  This is t
   </tr>
   <tr>
     <td><code>feedback</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>One or more human-readable explanations as to reasons for rejection or any changes to fields for ad quality reasons (e.g., <code>adomain</code>, <code>cat</code>, <code>attr</code>, etc.).</td>
   </tr>
   <tr>
@@ -884,7 +884,7 @@ The other attributes in this object apply to all aspects and substructures of th
   </tr>
   <tr>
     <td><code>ssai</code></td>
-    <td>Integer; default 0</td>
+    <td>Integer;<br/>default&nbsp;0</td>
     <td>Indicates if server-side ad insertion (e.g., stitching an ad into an audio or video stream) is in use and the impact of this on asset and tracker retrieval, where 0 = status unknown, 1 = all client-side (i.e., not server-side), 2 = assets stitched server-side but tracking pixels fired client-side, 3 = all server-side.</td>
   </tr>
   <tr>
@@ -899,12 +899,12 @@ The other attributes in this object apply to all aspects and substructures of th
   </tr>
   <tr>
     <td><code>reward</code></td>
-    <td>integer; default 0</td>
+    <td>integer;<br/>default&nbsp;0</td>
     <td>Indicates if this is a rewarded placement, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
     <td><code>wlang</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Whitelist of permitted languages of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated <em>a priori</em>.  Omission of this attribute indicates there are no restrictions.</td>
   </tr>
   <tr>
@@ -924,19 +924,19 @@ The other attributes in this object apply to all aspects and substructures of th
   </tr>
   <tr>
     <td><code>display</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Placement Subtype Object</strong> that indicates that this may be a display placement and provides additional detail related thereto.  Refer to <a href="#object_displayplacement">Object: DisplayPlacement</a>.<br/>
 * At least one placement subtype object is required.</td>
   </tr>
   <tr>
     <td><code>video</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Placement Subtype Object</strong> that indicates that this may be a video placement and provides additional detail related thereto.  Refer to <a href="#object_videoplacement">Object: VideoPlacement</a>.<br/>
 * At least one placement subtype object is required.</td>
   </tr>
   <tr>
     <td><code>audio</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Placement Subtype Object</strong> that indicates that this may be an audio placement and provides additional detail related thereto.  Refer to <a href="#object_audioplacement">Object: AudioPlacement</a>.<br/>
 * At least one placement subtype object is required.</td>
   </tr>
@@ -975,12 +975,12 @@ This object signals that the placement may be a display placement.  It provides 
   </tr>
   <tr>
     <td><code>ifrbust</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of iframe busters supported by this placement.  The meaning of strings in this attribute must be coordinated <em>a priori</em> among vendors.</td>
   </tr>
   <tr>
     <td><code>clktype</code></td>
-    <td>integer; default 1</td>
+    <td>integer;<br/>default&nbsp;1</td>
     <td>Indicates the click type of this placement.  Refer to <a href="#list_clicktypes">List: Click Types</a>.</td>
   </tr>
   <tr>
@@ -1000,17 +1000,17 @@ This object signals that the placement may be a display placement.  It provides 
   </tr>
   <tr>
     <td><code>mime</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of supported mime types (e.g., “image/jpeg”, “image/gif”).  If omitted, all types are assumed.</td>
   </tr>
   <tr>
     <td><code>api</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>List of supported APIs.  If an API is not explicitly listed, it is assumed to be unsupported.  Refer to <a href="#list_apiframeworks">List: API Frameworks</a>.</td>
   </tr>
   <tr>
     <td><code>ctype</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>Creative subtypes permitted.  Refer to <a href="#list_creativesubtypesdisplay">List: Creative Subtypes - Display</a>.</td>
   </tr>
   <tr>
@@ -1025,17 +1025,17 @@ This object signals that the placement may be a display placement.  It provides 
   </tr>
   <tr>
     <td><code>unit</code></td>
-    <td>integer; default 1</td>
+    <td>integer;<br/>default&nbsp;1</td>
     <td>Unit of size used for placement size (i.e., <code>w</code> and <code>h</code> attributes).  Refer to <a href="#list_sizeunits">List: Size Units</a>.</td>
   </tr>
   <tr>
     <td><code>priv</code></td>
-    <td>integer; default 0</td>
+    <td>integer;<br/>default&nbsp;0</td>
     <td>Indicator of whether or not the placement supports a buyer-specific privacy notice URL, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
     <td><code>displayfmt</code></td>
-    <td>object array</td>
+    <td>object&nbsp;array</td>
     <td>Array of objects that govern the attributes (e.g., sizes) of a banner display placement.  Refer to <a href="#object_displayformat">Object: DisplayFormat</a>.</td>
   </tr>
   <tr>
@@ -1045,7 +1045,7 @@ This object signals that the placement may be a display placement.  It provides 
   </tr>
   <tr>
     <td><code>event</code></td>
-    <td>object array</td>
+    <td>object&nbsp;array</td>
     <td>Array of supported ad tracking events.  Refer to <a href="#object_eventspec">Object: EventSpec</a>.</td>
   </tr>
   <tr>
@@ -1092,7 +1092,7 @@ Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
     <td><code>expdir</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>Directions in which the creative is permitted to expand.  Refer to <a href="#list_expandabledirections">List: Expandable Directions</a>.</td>
   </tr>
   <tr>
@@ -1115,7 +1115,7 @@ This object refines a display placement to be specifically a native display plac
   </tr>
   <tr>
     <td><code>asset</code></td>
-    <td>array of objects; required</td>
+    <td>object&nbsp;array; required</td>
     <td>Array of objects that specify the set of native assets and their permitted formats.  Refer to <a href="#object_assetformat">Object: AssetFormat</a>.</td>
   </tr>
   <tr>
@@ -1143,30 +1143,30 @@ This object represents the permitted specifications of a single asset of a nativ
   </tr>
   <tr>
     <td><code>req</code></td>
-    <td>integer; default 0</td>
+    <td>integer;<br/>default&nbsp;0</td>
     <td>Indicator of whether or not this asset is required, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
     <td><code>title</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Asset Format Subtype Object</strong> that indicates this is specifying a title asset and provides additional detail as such.  Refer to <a href="#object_titleassetformat">Object: TitleAssetFormat</a>.<br/>
 * Required if no other asset format subtype object is specified.</td>
   </tr>
   <tr>
     <td><code>img</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Asset Format Subtype Object</strong> that indicates this is specifying an image asset and provides additional detail as such.  Refer to <a href="#object_imageassetformat">Object: ImageAssetFormat</a>.<br/>
 * Required if no other asset format subtype object is specified.</td>
   </tr>
   <tr>
     <td><code>video</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Asset Format Subtype Object</strong>, which leverages the <code>VideoPlacement</code> object, that indicates this is specifying a video asset and provides additional detail as such.  Refer to <a href="#object_videoplacement">Object: VideoPlacement</a>.<br/>
 * Required if no other asset format subtype object is specified.</td>
   </tr>
   <tr>
     <td><code>data</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Asset Format Subtype Object</strong> that indicates this is specifying a data asset and provides additional detail as such.  Refer to <a href="#object_dataassetformat">Object: DataAssetFormat</a>.<br/>
 * Required if no other asset format subtype object is specified.</td>
   </tr>
@@ -1218,7 +1218,7 @@ This object is used to provide native asset format specifications for an image e
   </tr>
   <tr>
     <td><code>mime</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of supported mime types (e.g., “image/jpeg”, “image/gif”).  If omitted, all types are assumed.</td>
   </tr>
   <tr>
@@ -1308,32 +1308,32 @@ This object specifies a type of ad tracking event and which methods of tracking 
   </tr>
   <tr>
     <td><code>method</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>Array of supported event tracking methods for this event type.  Refer to <a href="#list_eventtrackingmethods">List: Event Tracking Methods</a>.</td>
   </tr>
   <tr>
     <td><code>api</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>Event tracking APIs available for use; only relevant for JavaScript method trackers.  Refer to <a href="#list_apiframeworks">List: API Frameworks</a>.</td>
   </tr>
   <tr>
     <td><code>jstrk</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of domains, top two levels only (e.g., “tracker.com”), that constitute a restriction list of JavaScript trackers.  The sense of the restrictions is determined by <code>wjs</code>.</td>
   </tr>
   <tr>
     <td><code>wjs</code></td>
-    <td>integer; default 1</td>
+    <td>integer;<br/>default&nbsp;1</td>
     <td>Sense of the <code>jstrk</code> restriction list, where 0 = block list, 1 = whitelist.</td>
   </tr>
   <tr>
     <td><code>pxtrk</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of domains, top two levels only (e.g., “tracker.com”), that constitute a restriction list of pixel image trackers.  The sense of the restrictions is determined by <code>wpx</code>.</td>
   </tr>
   <tr>
     <td><code>wpx</code></td>
-    <td>integer; default 1</td>
+    <td>integer;<br/>default&nbsp;1</td>
     <td>Sense of the <code>pxtrk</code> restriction list, where 0 = block list, 1 = whitelist.</td>
   </tr>
   <tr>
@@ -1376,12 +1376,12 @@ This object signals that the placement may be a video placement and provides add
   </tr>
   <tr>
     <td><code>skipmin</code></td>
-    <td>integer; default 0</td>
+    <td>integer;<br/>default&nbsp;0</td>
     <td>The placement allows creatives of total duration greater than this number of seconds to be skipped; only applicable if the ad is skippable.</td>
   </tr>
   <tr>
     <td><code>skipafter</code></td>
-    <td>integer; default 0</td>
+    <td>integer;<br/>default&nbsp;0</td>
     <td>Number of seconds a creative must play before the placement enables skipping; only applicable if the ad is skippable.</td>
   </tr>
   <tr>
@@ -1401,17 +1401,17 @@ This object signals that the placement may be a video placement and provides add
   </tr>
   <tr>
     <td><code>mime</code></td>
-    <td>string array; required</td>
+    <td>string&nbsp;array; required</td>
     <td>Array of supported mime types (e.g., “video/mp4”).  If omitted, all types are assumed.</td>
   </tr>
   <tr>
     <td><code>api</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>List of supported APIs for this placement.  If an API is not explicitly listed, it is assumed to be unsupported.  Refer to <a href="#list_apiframeworks">List: API Frameworks</a>.</td>
   </tr>
   <tr>
     <td><code>ctype</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>Creative subtypes permitted for this placement.  Refer to <a href="#list_creativesubtypesaudiovideo">List: Creative Subtypes - Audio/Video</a>.</td>
   </tr>
   <tr>
@@ -1441,7 +1441,7 @@ This object signals that the placement may be a video placement and provides add
   </tr>
   <tr>
     <td><code>maxext</code></td>
-    <td>Integer; default 0</td>
+    <td>integer;<br/>default&nbsp;0</td>
     <td>Maximum extended creative duration if extension is allowed.  If 0, extension is not allowed.  If -1, extension is allowed and there is no time limit imposed.  If greater than 0, then the value represents the number of seconds of extended play supported beyond the <code>maxdur</code> value.</td>
   </tr>
   <tr>
@@ -1456,7 +1456,7 @@ This object signals that the placement may be a video placement and provides add
   </tr>
   <tr>
     <td><code>delivery</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>Array of supported creative delivery methods.  If omitted, all can be assumed.  Refer to <a href="#list_deliverymethods">List: Delivery Methods</a>.</td>
   </tr>
   <tr>
@@ -1471,17 +1471,17 @@ This object signals that the placement may be a video placement and provides add
   </tr>
   <tr>
     <td><code>boxing</code></td>
-    <td>integer; default 1</td>
+    <td>integer;<br/>default&nbsp;1</td>
     <td>Indicates if letterboxing of 4:3 creatives into a 16:9 window is allowed, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
     <td><code>comp</code></td>
-    <td>object array</td>
+    <td>object&nbsp;array</td>
     <td>Array of objects indicating that companion ads are available and providing the specifications thereof.  Refer to <a href="#object_companion">Object: Companion</a>.</td>
   </tr>
   <tr>
     <td><code>comptype</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>Supported companion ad types; recommended if companion ads are specified in <code>comp</code>.  Refer to <a href="#list_companiontypes">List: Companion Types</a>.</td>
   </tr>
   <tr>
@@ -1514,12 +1514,12 @@ This object signals that the placement may be an audio placement and provides ad
   </tr>
   <tr>
     <td><code>skipmin</code></td>
-    <td>integer; default 0</td>
+    <td>integer;<br/>default&nbsp;0</td>
     <td>The placement allows creatives of total duration greater than this number of seconds to be skipped; only applicable if the ad is skippable.</td>
   </tr>
   <tr>
     <td><code>skipafter</code></td>
-    <td>integer; default 0</td>
+    <td>integer;<br/>default&nbsp;0</td>
     <td>Number of seconds a creative must play before the placement enables skipping; only applicable if the ad is skippable.</td>
   </tr>
   <tr>
@@ -1544,17 +1544,17 @@ This object signals that the placement may be an audio placement and provides ad
   </tr>
   <tr>
     <td><code>mime</code></td>
-    <td>string array; required</td>
+    <td>string&nbsp;array; required</td>
     <td>Array of supported mime types (e.g., “audio/mp4”).  If omitted, all types are assumed.</td>
   </tr>
   <tr>
     <td><code>api</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>List of supported APIs for this placement.  If an API is not explicitly listed, it is assumed to be unsupported.  Refer to <a href="#list_apiframeworks">List: API Frameworks</a>.</td>
   </tr>
   <tr>
     <td><code>ctype</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>Creative subtypes permitted for this placement.  Refer to <a href="#list_creativesubtypesaudiovideo">List: Creative Subtypes - Audio/Video</a>.</td>
   </tr>
   <tr>
@@ -1584,7 +1584,7 @@ This object signals that the placement may be an audio placement and provides ad
   </tr>
   <tr>
     <td><code>delivery</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>Array of supported creative delivery methods.  If omitted, all can be assumed.  Refer to <a href="#list_deliverymethods">List: Delivery Methods</a>.</td>
   </tr>
   <tr>
@@ -1594,12 +1594,12 @@ This object signals that the placement may be an audio placement and provides ad
   </tr>
   <tr>
     <td><code>comp</code></td>
-    <td>object array</td>
+    <td>object&nbsp;array</td>
     <td>Array of objects indicating that companion ads are available and providing the specifications thereof.  Refer to <a href="#object_companion">Object: Companion</a>.</td>
   </tr>
   <tr>
     <td><code>comptype</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>Supported companion ad types; recommended if companion ads are specified in <code>comp</code>.  Refer to <a href="#list_companiontypes">List: Companion Types</a>.</td>
   </tr>
   <tr>
@@ -1705,17 +1705,17 @@ This object is used to define an ad supported website, in contrast to a non-brow
   </tr>
   <tr>
     <td><code>cat</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of content categories describing the site using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
     <td><code>sectcat</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of content categories describing the current section of the site using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
     <td><code>pagecat</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of content categories describing the current page or view of the site using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
@@ -1785,17 +1785,17 @@ This object is used to define an ad supported non-browser application, in contra
   </tr>
   <tr>
     <td><code>cat</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of content categories describing the app using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
     <td><code>sectcat</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of content categories describing the current section of the app using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
     <td><code>pagecat</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of content categories describing the current page or view of the app using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
@@ -1835,7 +1835,7 @@ This object is used to define an ad supported non-browser application, in contra
   </tr>
   <tr>
     <td><code>paid</code></td>
-    <td>Integer; default 0</td>
+    <td>integer;<br/>default&nbsp;0</td>
     <td>Indicator of whether or not this is a paid app, where 0 = free, 1 = paid.</td>
   </tr>
   <tr>
@@ -1913,7 +1913,7 @@ This object describes the publisher of the media in which ads will be displayed.
   </tr>
   <tr>
     <td><code>cat</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of content categories that describe the publisher using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
@@ -1995,7 +1995,7 @@ This object describes the content in which an impression can appear, which may b
   </tr>
   <tr>
     <td><code>cat</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of content categories describing the content using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
@@ -2065,7 +2065,7 @@ This object describes the content in which an impression can appear, which may b
   </tr>
   <tr>
     <td><code>data</code></td>
-    <td>object array</td>
+    <td>object&nbsp;array</td>
     <td>Additional user data.  Each <code>Data</code> object represents a different data source.  Refer to <a href="#object_data">Object: Data</a>.</td>
   </tr>
   <tr>
@@ -2103,7 +2103,7 @@ This object defines the producer of the content in which ad will be displayed.  
   </tr>
   <tr>
     <td><code>cat</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Array of content categories that describe the producer using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
@@ -2166,7 +2166,7 @@ This object contains information known or derived about the human user of the de
   </tr>
   <tr>
     <td><code>data</code></td>
-    <td>object array</td>
+    <td>object&nbsp;array</td>
     <td>Additional user data.  Each <code>Data</code> object represents a different data source.  Refer to <a href="#object_data">Object: Data</a>.</td>
   </tr>
   <tr>
@@ -2430,7 +2430,7 @@ The data and segment objects together allow additional data about the related ob
   </tr>
   <tr>
     <td><code>segment</code></td>
-    <td>object array</td>
+    <td>object&nbsp;array</td>
     <td>Array of <code>Segment</code> objects that contain the actual data values.  Refer to <a href="#object_segment">Object: Segment</a>.</td>
   </tr>
   <tr>
@@ -2516,27 +2516,27 @@ This object allows lists of restrictions on ad responses to be specified includi
   </tr>
   <tr>
     <td><code>bcat</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Block list of content categories using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
     <td><code>cattax</code></td>
-    <td>integer; default 2</td>
+    <td>integer;<br/>default&nbsp;2</td>
     <td>The taxonomy in use for the <code>bcat</code> attribute.  Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
   </tr>
   <tr>
     <td><code>badv</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Block list of advertisers by their domains (e.g., “ford.com”).</td>
   </tr>
   <tr>
     <td><code>bapp</code></td>
-    <td>string array</td>
+    <td>string&nbsp;array</td>
     <td>Block list of apps for which ads are disallowed.  These should be bundle or package names (e.g., “com.foo.mygame”) and should NOT be app store IDs (e.g., not iTunes store IDs).</td>
   </tr>
   <tr>
     <td><code>battr</code></td>
-    <td>integer array</td>
+    <td>integer&nbsp;array</td>
     <td>Block list of creative attributes.  Refer to <a href="#list_creativeattributes">List: Creative Attributes</a>.</td>
   </tr>
   <tr>
