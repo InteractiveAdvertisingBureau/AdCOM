@@ -209,7 +209,7 @@ The following figure presents the objects and interrelationships in this group. 
 This object is the root of a structure that defines in instance of advertising media.  It includes metadata about the ad overall and sub-objects that provide additional detail specific to the type of media comprising the creative.
 
 <table>
-  <tr>
+  <tr bgcolor="DarkCyan">
     <td>Attribute</td>
     <td>Type</td>
     <td>Definition</td>
