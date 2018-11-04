@@ -209,10 +209,10 @@ The following figure presents the objects and interrelationships in this group. 
 This object is the root of a structure that defines in instance of advertising media.  It includes metadata about the ad overall and sub-objects that provide additional detail specific to the type of media comprising the creative.
 
 <table>
-  <tr bgcolor="DarkCyan">
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+  <tr>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>id</code></td>
@@ -311,9 +311,9 @@ This object provides additional detail about an ad specifically for display ads.
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>mime</code></td>
@@ -400,9 +400,9 @@ This object describes a basic banner creative.  It is intended for display scena
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>img</code></td>
@@ -428,9 +428,9 @@ This object is the root of a structure that defines a native display ad.
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>link</code></td>
@@ -456,9 +456,9 @@ This object is the container for each asset comprising a native ad.  Each asset 
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>id</code></td>
@@ -514,9 +514,9 @@ This object identifies the native asset as a link asset and is used to define na
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>url</code></td>
@@ -547,9 +547,9 @@ This object identifies the native asset as a title asset, which is essentially j
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>text</code></td>
@@ -575,9 +575,9 @@ This object identifies the native asset as a image asset.  Image assets are use 
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>url</code></td>
@@ -613,9 +613,9 @@ This object identifies the native asset as a video asset.  Video markup (e.g., V
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>adm</code></td>
@@ -643,9 +643,9 @@ This object identifies the native asset as a data asset.  A data asset is used f
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>value</code></td>
@@ -676,9 +676,9 @@ This object specifies a type of event that the advertiser or buying platform wan
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>type</code></td>
@@ -720,9 +720,9 @@ This object provides additional detail about an ad specifically for video ads.
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>mime</code></td>
@@ -770,9 +770,9 @@ This object provides additional detail about an ad specifically for audio ads.
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>mime</code></td>
@@ -820,9 +820,9 @@ This objects represents the outcome of some form of review of the ad.  This is t
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>status</code></td>
@@ -873,9 +873,9 @@ The other attributes in this object apply to all aspects and substructures of th
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>tagid</code></td>
@@ -954,9 +954,9 @@ This object signals that the placement may be a display placement.  It provides 
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>pos</code></td>
@@ -1062,9 +1062,9 @@ This object represents an allowed set of parameters for a banner display ad and 
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>w</code></td>
@@ -1109,9 +1109,9 @@ This object refines a display placement to be specifically a native display plac
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>asset</code></td>
@@ -1132,9 +1132,9 @@ This object represents the permitted specifications of a single asset of a nativ
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>id</code></td>
@@ -1184,9 +1184,9 @@ This object is used to provide native asset format specifications for a title el
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>len</code></td>
@@ -1207,9 +1207,9 @@ This object is used to provide native asset format specifications for an image e
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>type</code></td>
@@ -1269,9 +1269,9 @@ This object is used to provide native asset format specifications for a data ele
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>type</code></td>
@@ -1297,9 +1297,9 @@ This object specifies a type of ad tracking event and which methods of tracking 
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>type</code></td>
@@ -1350,9 +1350,9 @@ This object signals that the placement may be a video placement and provides add
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>ptype</code></td>
@@ -1498,9 +1498,9 @@ This object signals that the placement may be an audio placement and provides ad
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>delay</code></td>
@@ -1616,9 +1616,9 @@ This object is used in video and audio placements to specify an associated or so
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>id</code></td>
@@ -1659,9 +1659,9 @@ Note:  As an abstract class, a `DistributionChannel` is never instantiated on it
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>id</code></td>
@@ -1694,9 +1694,9 @@ This object is used to define an ad supported website, in contrast to a non-brow
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>domain</code></td>
@@ -1774,9 +1774,9 @@ This object is used to define an ad supported non-browser application, in contra
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>domain</td>
@@ -1854,9 +1854,9 @@ This object is used to define an ad supported digital out-of-home (DOOH) experie
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>venue</code></td>
@@ -1892,9 +1892,9 @@ This object describes the publisher of the media in which ads will be displayed.
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>id</code></td>
@@ -1935,9 +1935,9 @@ This object describes the content in which an impression can appear, which may b
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>id</code></td>
@@ -2082,9 +2082,9 @@ This object defines the producer of the content in which ad will be displayed.  
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>id</code></td>
@@ -2125,9 +2125,9 @@ This object contains information known or derived about the human user of the de
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>id</code></td>
@@ -2183,9 +2183,9 @@ This object provides information pertaining to the device through which the user
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>type</code></td>
@@ -2334,9 +2334,9 @@ The `lat` and `lon` attributes should only be passed if they conform to the accu
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>type</code></td>
@@ -2414,9 +2414,9 @@ The data and segment objects together allow additional data about the related ob
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>id</code></td>
@@ -2447,9 +2447,9 @@ Segment objects are essentially key-value pairs that convey specific units of da
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>id</code></td>
@@ -2480,9 +2480,9 @@ This object contains any known legal, governmental, or industry regulations that
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>coppa</code></td>
@@ -2510,9 +2510,9 @@ This object allows lists of restrictions on ad responses to be specified includi
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Definition</td>
+    <td><strong>Attribute</strong></td>
+    <td><strong>Type</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td><code>bcat</code></td>
@@ -2557,8 +2557,8 @@ The following table is a list of API frameworks either supported by a placement 
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -2601,8 +2601,8 @@ The following table lists the codes used in `Audit` objects to reflect status or
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -2642,8 +2642,8 @@ This list identifies the taxonomy in effect when content categories are listed.
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -2670,8 +2670,8 @@ The following table lists the types of creative activation (i.e., click) behavio
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>0</td>
@@ -2702,8 +2702,8 @@ The following table lists the options to indicate markup types allowed for compa
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -2726,8 +2726,8 @@ The following table lists the options for the type of device connectivity.
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -2766,8 +2766,8 @@ The following table lists the various options for indicating the type of content
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -2806,8 +2806,8 @@ The following table specifies a standard list of creative attributes that can de
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -2894,8 +2894,8 @@ The following table lists the various subtypes of audio and video ad creatives.
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -2954,8 +2954,8 @@ The following table lists the various subtypes of display ad creatives.
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -2982,8 +2982,8 @@ The following table lists the various options for the delivery of video or audio
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3006,8 +3006,8 @@ The following table lists the types of devices.  This table has values derived f
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3046,8 +3046,8 @@ The following table lists the types of context in which a native ad may appear (
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>10</td>
@@ -3110,8 +3110,8 @@ The following table lists the general types of display placements; the locations
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3142,8 +3142,8 @@ This list presents the digital out-of-home venue types and is derived from [DPAA
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3386,8 +3386,8 @@ The following table lists the available methods of tracking of ad events.  Vendo
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3410,8 +3410,8 @@ The following table lists the types of ad events available for tracking.  These 
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3446,8 +3446,8 @@ The following table lists the directions in which an expandable ad may expand, g
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3478,8 +3478,8 @@ The following table lists the types of feeds, typically for audio.
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3502,8 +3502,8 @@ The following table lists the services and/or vendors used for resolving IP addr
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3530,8 +3530,8 @@ The following table indicates the options for media linearity, typically for vid
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3550,8 +3550,8 @@ The following table lists the options to indicate how the geographic information
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3574,8 +3574,8 @@ The following table lists the media ratings used in describing content based on 
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3598,8 +3598,8 @@ The following table is a list of common data asset types.  This list is non-exha
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3662,8 +3662,8 @@ The following table is a list of common image asset types.  This list is non-exh
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3690,8 +3690,8 @@ The following table lists the options for device operating system.
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>0</td>
@@ -3822,8 +3822,8 @@ The following table lists the placement positions as a relative measure of visib
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3862,8 +3862,8 @@ The following table lists the various types of video placements derived largely 
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3894,8 +3894,8 @@ The following table lists the various modes for when media playback terminates.
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3918,8 +3918,8 @@ The following table lists the various media playback methods.
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3954,8 +3954,8 @@ The following table lists the options for content quality.  These values are def
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -3978,8 +3978,8 @@ The following table lists the units of height and width used by creatives, asset
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
@@ -4002,8 +4002,8 @@ The following table lists the various options for the video or audio start delay
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>>0</td>
@@ -4030,8 +4030,8 @@ The following table lists the types of volume normalization modes, typically for
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Definition</td>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>0</td>
