@@ -1953,15 +1953,15 @@ This object describes the content in which an impression can appear, which may b
     <td><code>title</code></td>
     <td>string</td>
     <td>Content title.<br/>
-Video Examples: “Search Committee” (television), “Star Wars, A New Hope” (movie), or “Endgame” (made for web).<br/>
-Non-Video Example:  “Why an Antarctic Glacier Is Melting So Quickly” (Time magazine article).</td>
+<em>Video Examples:</em> “Search Committee” (television), “Star Wars, A New Hope” (movie), or “Endgame” (made for web).<br/>
+<em>Non-Video Example:</em>  “Why an Antarctic Glacier Is Melting So Quickly” (Time magazine article).</td>
   </tr>
   <tr>
     <td><code>series</code></td>
     <td>string</td>
     <td>Content series.<br/>
-Video Examples: “The Office” (television), “Star Wars” (movie), or “Arby 'N' The Chief” (made for web).<br/>
-Non-Video Example:  “Ecocentric” (Time Magazine blog).</td>
+<em>Video Examples:</em> “The Office” (television), “Star Wars” (movie), or “Arby 'N' The Chief” (made for web).<br/>
+<em>Non-Video Example:</em>  “Ecocentric” (Time Magazine blog).</td>
   </tr>
   <tr>
     <td><code>season</code></td>
@@ -2371,8 +2371,8 @@ The `lat` and `lon` attributes should only be passed if they conform to the accu
   <tr>
     <td><code>country</code></td>
     <td>string</td>
-    <td>Country code using ISO-3166-1-alpha-2.
-Note that alpha-3 codes may be encountered and vendors are encouraged to be tolerant of them.</td>
+    <td>Country code using ISO-3166-1-alpha-2.<br/>
+<em>Note that alpha-3 codes may be encountered and vendors are encouraged to be tolerant of them.</em></td>
   </tr>
   <tr>
     <td><code>region</code></td>
@@ -2383,7 +2383,7 @@ Note that alpha-3 codes may be encountered and vendors are encouraged to be tole
     <td><code>metro</code></td>
     <td>string</td>
     <td>Regional marketing areas such as Nielsen's DMA codes or other similar taxonomy to be agreed among vendors prior to use.<br/>
-Note that DMA is a trademarked asset of The Nielsen Company.  Vendors are encouraged to ensure their use of DMAs is properly licensed.</td>
+<em>Note that DMA is a trademarked asset of The Nielsen Company.  Vendors are encouraged to ensure their use of DMAs is properly licensed.</em></td>
   </tr>
   <tr>
     <td><code>city</code></td>
