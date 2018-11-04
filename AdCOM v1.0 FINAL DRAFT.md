@@ -210,8 +210,8 @@ This object is the root of a structure that defines in instance of advertising m
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -311,8 +311,8 @@ This object provides additional detail about an ad specifically for display ads.
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -400,8 +400,8 @@ This object describes a basic banner creative.  It is intended for display scena
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -428,8 +428,8 @@ This object is the root of a structure that defines a native display ad.
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -456,8 +456,8 @@ This object is the container for each asset comprising a native ad.  Each asset 
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -514,8 +514,8 @@ This object identifies the native asset as a link asset and is used to define na
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -547,8 +547,8 @@ This object identifies the native asset as a title asset, which is essentially j
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -575,8 +575,8 @@ This object identifies the native asset as a image asset.  Image assets are use 
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -613,8 +613,8 @@ This object identifies the native asset as a video asset.  Video markup (e.g., V
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -643,8 +643,8 @@ This object identifies the native asset as a data asset.  A data asset is used f
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -676,8 +676,8 @@ This object specifies a type of event that the advertiser or buying platform wan
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -720,8 +720,8 @@ This object provides additional detail about an ad specifically for video ads.
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -770,8 +770,8 @@ This object provides additional detail about an ad specifically for audio ads.
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -820,8 +820,8 @@ This objects represents the outcome of some form of review of the ad.  This is t
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -873,8 +873,8 @@ The other attributes in this object apply to all aspects and substructures of th
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -954,8 +954,8 @@ This object signals that the placement may be a display placement.  It provides 
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1062,8 +1062,8 @@ This object represents an allowed set of parameters for a banner display ad and 
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1109,8 +1109,8 @@ This object refines a display placement to be specifically a native display plac
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1132,8 +1132,8 @@ This object represents the permitted specifications of a single asset of a nativ
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1184,8 +1184,8 @@ This object is used to provide native asset format specifications for a title el
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1207,8 +1207,8 @@ This object is used to provide native asset format specifications for an image e
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1269,8 +1269,8 @@ This object is used to provide native asset format specifications for a data ele
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1297,8 +1297,8 @@ This object specifies a type of ad tracking event and which methods of tracking 
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1350,8 +1350,8 @@ This object signals that the placement may be a video placement and provides add
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1498,8 +1498,8 @@ This object signals that the placement may be an audio placement and provides ad
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1616,8 +1616,8 @@ This object is used in video and audio placements to specify an associated or so
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1659,8 +1659,8 @@ Note:  As an abstract class, a `DistributionChannel` is never instantiated on it
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1694,8 +1694,8 @@ This object is used to define an ad supported website, in contrast to a non-brow
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1774,8 +1774,8 @@ This object is used to define an ad supported non-browser application, in contra
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1854,8 +1854,8 @@ This object is used to define an ad supported digital out-of-home (DOOH) experie
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1892,8 +1892,8 @@ This object describes the publisher of the media in which ads will be displayed.
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -1935,8 +1935,8 @@ This object describes the content in which an impression can appear, which may b
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -2082,8 +2082,8 @@ This object defines the producer of the content in which ad will be displayed.  
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -2125,8 +2125,8 @@ This object contains information known or derived about the human user of the de
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -2183,8 +2183,8 @@ This object provides information pertaining to the device through which the user
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -2334,8 +2334,8 @@ The `lat` and `lon` attributes should only be passed if they conform to the accu
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -2414,8 +2414,8 @@ The data and segment objects together allow additional data about the related ob
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -2447,8 +2447,8 @@ Segment objects are essentially key-value pairs that convey specific units of da
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -2480,8 +2480,8 @@ This object contains any known legal, governmental, or industry regulations that
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
@@ -2510,8 +2510,8 @@ This object allows lists of restrictions on ad responses to be specified includi
 
 <table>
   <tr>
-    <td><strong>Attribute</strong></td>
-    <td><strong>Type</strong></td>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
