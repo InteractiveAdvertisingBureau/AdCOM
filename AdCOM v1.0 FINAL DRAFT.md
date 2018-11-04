@@ -158,7 +158,7 @@ Given this layered concept, the IAB Tech Lab has defined an overall organization
 
 ![](https://drive.google.com/uc?id=1oJ7_sDwDzVKbu3vXXIifjc-Ki7LiOkvI)
 
-There are a number of objects that are common to multiple transaction specifications. For example, both OpenRTB and OpenDirect share a common concept of a "site", a "placement", an "ad", and other so-called domain objects. These objects describe the subject of a transaction; those concepts upon which the transaction operates. Factoring them into their own model enables multiple transaction protocol specifications to reuse these common objects rather than each of them redefining similar but needlessly different versions of core concepts.
+There are a number of objects that are common to multiple transaction specifications. For example, both OpenRTB and OpenDirect share a common concept of a “site”, a “placement”, an “ad”, and other so-called domain objects. These objects describe the subject of a transaction; those concepts upon which the transaction operates. Factoring them into their own model enables multiple transaction protocol specifications to reuse these common objects rather than each of them redefining similar but needlessly different versions of core concepts.
 
 ## AdCOM Principles <a name="adcomprinciples"></a>
 
@@ -172,7 +172,7 @@ The following points define the guiding principles underlying the AdCOM specific
 
 * AdCOM imposes no specific representation on its objects.  This document uses JSON for illustration purposes, but this is not intended to imply any representational requirement or language binding.
 
-* All AdCOM objects may be extended as needed for vendor-specific applications.  Extensions to an AdCOM object must always be placed within a subordinate "ext" object.  Most enumerated lists when indicated can also be extended to include vendor-specific codes typically starting at 500.
+* All AdCOM objects may be extended as needed for vendor-specific applications.  Extensions to an AdCOM object must always be placed within a subordinate “ext” object.  Most enumerated lists when indicated can also be extended to include vendor-specific codes typically starting at 500.
 
 * The typical process of promoting a new AdCOM object, attribute, or list value into future specification versions is either when a substantial concept is discovered that is applicable to multiple transaction specifications or when vendor-specific extensions become widely adopted.
 
@@ -180,7 +180,7 @@ The following points define the guiding principles underlying the AdCOM specific
 
 This section contains the detailed AdCOM domain layer specification.  Unless explicitly specified otherwise, annotated as optional, or called out as a best practice, all material aspects of this section are required for AdCOM compliance.
 
-Throughout the object specifications, attributes may be indicated as "Required" or "Recommended". Attributes are deemed *required* only if their omission would break the technical meaning of the object and is not necessarily an indicator of business value otherwise. Attributes are *recommended* when their omission would not break the object, but would dramatically diminish its value. Transaction layers in which AdCOM is used may provide additional *required* and/or *recommended* guidance specific to the application.
+Throughout the object specifications, attributes may be indicated as “Required” or “Recommended”. Attributes are deemed *required* only if their omission would break the technical meaning of the object and is not necessarily an indicator of business value otherwise. Attributes are *recommended* when their omission would not break the object, but would dramatically diminish its value. Transaction layers in which AdCOM is used may provide additional *required* and/or *recommended* guidance specific to the application.
 
 From a specification compliance perspective, any attribute not denoted *required* is optional, whether *recommended* or not. An optional attribute may have a default value to be assumed if omitted. If no default is indicated, then by convention its absence should be interpreted as *unknown*, unless otherwise specified. Empty strings or null values should be interpreted the same as omitted (i.e., the default if one is specified or *unknown* otherwise).
 
@@ -307,7 +307,7 @@ This object is the root of a structure that defines in instance of advertising m
 
 ### Object:  Display <a name="object_display"></a>
 
-This object provides additional detail about an ad specifically for display ads. There are multiple attributes for specifying creative details: "`banner`" for simple banner images "`native`" for native ads, "`adm`" for including general markup, and "`curl`" for referencing general markup via URL. In any given "`Display`" object, only one of these attributes should be used to avoid confusion. To the extent feasible, structured objects should be favored over general markup for quality and safety issues.
+This object provides additional detail about an ad specifically for display ads. There are multiple attributes for specifying creative details: `banner` for simple banner images `native` for native ads, `adm` for including general markup, and `curl` for referencing general markup via URL. In any given `Display` object, only one of these attributes should be used to avoid confusion. To the extent feasible, structured objects should be favored over general markup for quality and safety issues.
 
 <table>
   <tr>
@@ -452,7 +452,7 @@ This object is the root of a structure that defines a native display ad.
 
 ### Object:  Asset <a name="object_asset"></a>
 
-This object is the container for each asset comprising a native ad.  Each asset is of a specific type and to reflect this, one and only one of the subtype objects (i.e., "`title`", "`img`", "`video`", "`data`") must be present; all others should be omitted.
+This object is the container for each asset comprising a native ad.  Each asset is of a specific type and to reflect this, one and only one of the subtype objects (i.e., `title`, `img`, `video`, `data`) must be present; all others should be omitted.
 
 <table>
   <tr>
@@ -867,7 +867,7 @@ The following figure presents the objects and interrelationships in this group. 
 
 ### Object:  Placement <a name="object_placement"></a>
 
-This object represents the properties of a placement and the characteristics of ads permitted to be rendering within them.  Placements of all types begin with this object as their root.  It contains one or more subtype objects (i.e., "`display`", "`video`", "`audio`") that define the kinds of media permitted as well as media specific placement behaviors.
+This object represents the properties of a placement and the characteristics of ads permitted to be rendering within them.  Placements of all types begin with this object as their root.  It contains one or more subtype objects (i.e., `display`, `video`, `audio`) that define the kinds of media permitted as well as media specific placement behaviors.
 
 The other attributes in this object apply to all aspects and substructures of the placement (i.e., the same language, secure status, etc. apply to all media types and native assets as applicable).
 
@@ -1655,7 +1655,7 @@ The following figure presents the objects and interrelationships in this group. 
 
 A distribution channel is an abstraction of the various types of entities or channels through which ads are distributed.  Examples include websites, mobile apps, and digital out-of-home (DOOH) systems.  This generalized class contains those attributes and relationships that are common to all distribution channels and as such, all of its attributes and relationships are inherited by each of its derived classes.
 
-Note:  As an abstract class, a DistributionChannel is never instantiated on its own.  Only objects of its derived classes are actually realized.
+Note:  As an abstract class, a `DistributionChannel` is never instantiated on its own.  Only objects of its derived classes are actually realized.
 
 <table>
   <tr>
@@ -1690,7 +1690,7 @@ Note:  As an abstract class, a DistributionChannel is never instantiated on its 
 
 *Derived from:* [DistributionChannel](#abstract_distributionchannel)
 
-This object is used to define an ad supported website, in contrast to a non-browser application, for example. As a derived class, a "`Site`" object inherits all "`DistributionChannel`" attributes and adds those defined below.
+This object is used to define an ad supported website, in contrast to a non-browser application, for example. As a derived class, a `Site` object inherits all `DistributionChannel` attributes and adds those defined below.
 
 <table>
   <tr>
@@ -1770,7 +1770,7 @@ This object is used to define an ad supported website, in contrast to a non-brow
 
 *Derived from:* [DistributionChannel](#abstract_distributionchannel)
 
-This object is used to define an ad supported non-browser application, in contrast to a typical website, example. As a derived class, an "`App`" object inherits all "`DistributionChannel`" attributes and adds those defined below.
+This object is used to define an ad supported non-browser application, in contrast to a typical website, example. As a derived class, an `App` object inherits all `DistributionChannel` attributes and adds those defined below.
 
 <table>
   <tr>
@@ -1850,7 +1850,7 @@ This object is used to define an ad supported non-browser application, in contra
 
 *Derived from:* [DistributionChannel](#abstract_distributionchannel)
 
-This object is used to define an ad supported digital out-of-home (DOOH) experience such as a public kiosk or digital billboard. As a derived class, a "`Dooh`" object inherits all "`DistributionChannel`" attributes and adds those defined below.
+This object is used to define an ad supported digital out-of-home (DOOH) experience such as a public kiosk or digital billboard. As a derived class, a `Dooh` object inherits all `DistributionChannel` attributes and adds those defined below.
 
 <table>
   <tr>
@@ -2328,9 +2328,9 @@ Refer to tools.ietf.org/html/rfc6235#section-4.1.1 for more information on IP tr
 
 ### Object:  Geo <a name="object_geo"></a>
 
-This object encapsulates various methods for specifying a geographic location. When subordinate to a "`Device`" object, it indicates the location of the device which can also be interpreted as the user's current location. When subordinate to a "`User`" object, it indicates the location of the user's home base (i.e., not necessarily their current location).
+This object encapsulates various methods for specifying a geographic location. When subordinate to a `Device` object, it indicates the location of the device which can also be interpreted as the user's current location. When subordinate to a `User` object, it indicates the location of the user's home base (i.e., not necessarily their current location).
 
-The "`lat`" and "`lon`" attributes should only be passed if they conform to the accuracy depicted in the "`type`" attribute. For example, the centroid of a large region (e.g., postal code) should not be passed.
+The `lat` and `lon` attributes should only be passed if they conform to the accuracy depicted in the `type` attribute. For example, the centroid of a large region (e.g., postal code) should not be passed.
 
 <table>
   <tr>
@@ -2410,7 +2410,7 @@ Note that DMA is a trademarked asset of The Nielsen Company.  Vendors are encour
 
 ### Object:  Data <a name="object_data"></a>
 
-The data and segment objects together allow additional data about the related object (e.g., user, content) to be specified.  This data may be from multiple sources whether from the exchange itself or third parties as specified by the "id" attribute.  When in use, vendor-specific IDs should be communicated *a priori* among the parties.
+The data and segment objects together allow additional data about the related object (e.g., user, content) to be specified.  This data may be from multiple sources whether from the exchange itself or third parties as specified by the `id` attribute.  When in use, vendor-specific IDs should be communicated *a priori* among the parties.
 
 <table>
   <tr>
@@ -2443,7 +2443,7 @@ The data and segment objects together allow additional data about the related ob
 
 ### Object:  Segment <a name="object_segment"></a>
 
-Segment objects are essentially key-value pairs that convey specific units of data.  The parent "`Data`" object is a collection of such values from a given data provider.  When in use, vendor-specific IDs should be communicated *a priori* among the parties.
+Segment objects are essentially key-value pairs that convey specific units of data.  The parent `Data` object is a collection of such values from a given data provider.  When in use, vendor-specific IDs should be communicated *a priori* among the parties.
 
 <table>
   <tr>
@@ -2597,7 +2597,7 @@ The following table is a list of API frameworks either supported by a placement 
 
 ### List:  Audit Status Codes <a name="list_auditstatuscodes"></a>
 
-The following table lists the codes used in "`Audit`" objects to reflect status or workflow state.
+The following table lists the codes used in `Audit` objects to reflect status or workflow state.
 
 <table>
   <tr>
@@ -4071,11 +4071,11 @@ OpenRTB v3.0 Specification
 [https://github.com/InteractiveAdvertisingBureau/openrtb](https://github.com/InteractiveAdvertisingBureau/openrtb)
 
 IAB Resources & TAG Inventory Quality Guidelines (IQG)  
-[www.iab.com/guidelines/taxonomy](https://www.iab.com/guidelines/taxonomy)
-[www.iab.com/guidelines/digital-video-suite](https://www.iab.com/guidelines/digital-video-suite) 
-[www.iab.com/wp-content/uploads/2015/03/long-form-video-final.pdf](https://www.iab.com/wp-content/uploads/2015/03/long-form-video-final.pdf)
+[www.iab.com/guidelines/taxonomy](https://www.iab.com/guidelines/taxonomy)<br/>
+[www.iab.com/guidelines/digital-video-suite](https://www.iab.com/guidelines/digital-video-suite)<br/>
+[www.iab.com/wp-content/uploads/2015/03/long-form-video-final.pdf](https://www.iab.com/wp-content/uploads/2015/03/long-form-video-final.pdf)<br/>
+[www.tagtoday.net/iqg/guidelines](https://www.tagtoday.net/iqg/guidelines)<br/>
 [github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework)
-[www.tagtoday.net/iqg/guidelines](https://www.tagtoday.net/iqg/guidelines)
 
 Digital Place-Based Advertising Association (DPAA)  
 [dp-aa.org](https://dp-aa.org)
@@ -4110,9 +4110,9 @@ In the JSON snippets that follow, AdCOM objects are shown within OpenRTB payload
 
 ## Request Context <a name="requestcontext"></a>
 
-The following is an abbreviated example of an OpenRTB v3.x bid request.  It self-identifies as OpenRTB and shows its version as "3.0".  It also shows that it is using AdCOM v1.0 as its domain layer.
+The following is an abbreviated example of an OpenRTB v3.x bid request.  It self-identifies as OpenRTB and shows its version as “3.0”.  It also shows that it is using AdCOM v1.0 as its domain layer.
 
-The "`context`" object is the OpenRTB interface to AdCOM context objects.  It can contain any of the top-level context objects, all of which are optional, and their subordinates.  This example includes top-level objects "`regs`", "`restrictions`", "`site`" (no more than one distribution channel subtype may be included), "`user`", and "`device`".
+The `context` object is the OpenRTB interface to AdCOM context objects.  It can contain any of the top-level context objects, all of which are optional, and their subordinates.  This example includes top-level objects `regs`, `restrictions`, `site` (no more than one distribution channel subtype may be included), `user`, and `device`.
 
 This example is indicating a mobile optimized website and some basic details about the site and its publisher.  The user is a female born in 1990.  She is using an Apple iPhone 6S, running iOS 11.4.1, and is connected via the Verizon network.  Her device (and presumably she) is currently located in Boston MA, USA, during eastern standard time.  She is not subject to GDPR or COPPA.  We would also like to block adult, illegal, and uncategorized content as well as ads from car makers Ford and Buick.
 
@@ -4187,7 +4187,7 @@ This example is indicating a mobile optimized website and some basic details abo
 
 The following snippet is an abbreviated OpenRTB v3.x bid request that offers a single item for sale.
 
-The "`spec`" object within an "`item`" is the OpenRTB interface to AdCOM placement objects.  It contains one "`Placement`" top-level object and its subordinates.
+The `spec` object within an `item` is the OpenRTB interface to AdCOM placement objects.  It contains one `Placement` top-level object and its subordinates.
 
 This example is indicating a display placement that must be secure.  Either a structured banner or AMPHTML is acceptable and if the latter, the AMP rendering mode will be *early*.  The placement is not interstitial, two possible sizes are offered (i.e., 320x50 and 320x250), and a simple pixel tracker for the impression event is supported.
 
@@ -4243,9 +4243,9 @@ This example is indicating a display placement that must be secure.  Either a st
 
 ## Media Response <a name="mediaresponse"></a>
 
-The following is an abbreviated example of an OpenRTB v3.x bid response.  It self-identifies as OpenRTB and shows its version as "3.0".  It also shows that it is using AdCOM v1.0 as its domain layer.
+The following is an abbreviated example of an OpenRTB v3.x bid response.  It self-identifies as OpenRTB and shows its version as “3.0”.  It also shows that it is using AdCOM v1.0 as its domain layer.
 
-The "`media`" object is the OpenRTB interface to AdCOM media objects.  It contains one "`Ad`" top-level object and its subordinates.
+The `media` object is the OpenRTB interface to AdCOM media objects.  It contains one `Ad` top-level object and its subordinates.
 
 This example is indicating a secure display ad for Ford using a structured banner object with a 320x50 JPEG creative.  A pixel tracker for the impression rendering event is requested.
 
