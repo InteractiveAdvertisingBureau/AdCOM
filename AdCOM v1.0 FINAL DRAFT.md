@@ -215,90 +215,90 @@ This object is the root of a structure that defines in instance of advertising m
     <td>Definition</td>
   </tr>
   <tr>
-    <td>id</td>
+    <td><code>id</code></td>
     <td>string; required</td>
     <td>ID of the creative; unique at least throughout the scope of a vendor (e.g., an exchange or buying platform).  Note that multiple instances of the same ad when used in transactions must have the same ID.</td>
   </tr>
   <tr>
-    <td>adomain</td>
+    <td><code>adomain</code></td>
     <td>string array; recommended</td>
-    <td>Advertiser domain; top two levels only (e.g., "ford.com").  This can be an array for the case of rotating creatives.</td>
+    <td>Advertiser domain; top two levels only (e.g., “ford.com”).  This can be an array for the case of rotating creatives.</td>
   </tr>
   <tr>
-    <td>bundle</td>
+    <td><code>bundle</code></td>
     <td>string array</td>
-    <td>When the product of the ad is an app, the unique ID of that app as a bundle or package name (e.g., "com.foo.mygame").  This  should NOT be an app store ID (e.g., no iTunes store IDs).  This can be an array of for the case of rotating creatives.</td>
+    <td>When the product of the ad is an app, the unique ID of that app as a bundle or package name (e.g., “com.foo.mygame”).  This  should NOT be an app store ID (e.g., no iTunes store IDs).  This can be an array of for the case of rotating creatives.</td>
   </tr>
   <tr>
-    <td>iurl</td>
+    <td><code>iurl</code></td>
     <td>string</td>
     <td>URL without cache-busting to an image that is representative of the ad content for cursory level ad quality checking.</td>
   </tr>
   <tr>
-    <td>cat</td>
+    <td><code>cat</code></td>
     <td>string array</td>
-    <td>Array of content categories describing the ad using IDs from the taxonomy indicated in "cattax".</td>
+    <td>Array of content categories describing the ad using IDs from the taxonomy indicated in <code>cattax</code>.</td>
   </tr>
   <tr>
-    <td>cattax</td>
+    <td><code>cattax</code></td>
     <td>integer; default 2</td>
-    <td>The taxonomy in use for the "cat" attribute.  Refer to List:  Category Taxonomies.</td>
+    <td>The taxonomy in use for the <code>cat</code> attribute.  Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
   </tr>
   <tr>
-    <td>lang</td>
+    <td><code>lang</code></td>
     <td>string</td>
-    <td>Language of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated a priori.  The non-standard code "xx" may also be used if the creative has no linguistic content (e.g., a banner with just a company logo).</td>
+    <td>Language of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated a priori.  The non-standard code “xx” may also be used if the creative has no linguistic content (e.g., a banner with just a company logo).</td>
   </tr>
   <tr>
-    <td>attr</td>
+    <td><code>attr</code></td>
     <td>integer array</td>
-    <td>Set of attributes describing the creative.  Refer to List:  Creative Attributes.</td>
+    <td>Set of attributes describing the creative.  Refer to <a href="#list_creativeattributes">List: Creative Attributes</a>.</td>
   </tr>
   <tr>
-    <td>secure</td>
+    <td><code>secure</code></td>
     <td>integer</td>
     <td>Flag to indicate if the creative is secure (i.e., uses HTTPS for all assets and markup), where 0 = no, 1 = yes.  There is no default and thus if omitted, the secure state is unknown.  However, as a practical matter, the safe assumption is to treat unknown as non-secure.</td>
   </tr>
   <tr>
-    <td>mrating</td>
+    <td><code>mrating</code></td>
     <td>integer</td>
-    <td>Media rating per IQG guidelines.  Refer to List:  Media Ratings.</td>
+    <td>Media rating per IQG guidelines.  Refer to <a href="#list_mediaratings">List: Media Ratings</a>.</td>
   </tr>
   <tr>
-    <td>init</td>
+    <td><code>init</code></td>
     <td>string</td>
     <td>Date/time of the original instantiation of this ad (i.e., this object or any of its children) in the format of ISO-8601; W3C profile.  Refer to www.w3.org/TR/NOTE-datetime.</td>
   </tr>
   <tr>
-    <td>lastmod</td>
+    <td><code>lastmod</code></td>
     <td>string</td>
-    <td>Date/time of most recent modification to this ad (i.e., this object or any of its children other than the "Audit" object) in the format of ISO-8601; W3C profile.  Refer to www.w3.org/TR/NOTE-datetime.</td>
+    <td>Date/time of most recent modification to this ad (i.e., this object or any of its children other than the <code>Audit</code> object) in the format of ISO-8601; W3C profile.  Refer to www.w3.org/TR/NOTE-datetime.</td>
   </tr>
   <tr>
-    <td>display</td>
+    <td><code>display</code></td>
     <td>Object; required *</td>
-    <td>"Media Subtype Object" that indicates this is a display ad and provides additional detail as such.  Refer to Object:  Display.
+    <td><strong>Media Subtype Object</strong> that indicates this is a display ad and provides additional detail as such.  Refer to <a href="#object_display">Object: Display</a>.<br/>
 * Required if no other media subtype object is specified.</td>
   </tr>
   <tr>
-    <td>video</td>
+    <td><code>video</code></td>
     <td>object; required *</td>
-    <td>"Media Subtype Object" that indicates this is a video ad and provides additional detail as such.  Refer to Object:  Video.
+    <td><strong>Media Subtype Object</strong> that indicates this is a video ad and provides additional detail as such.  Refer to <a href="#object_video">Object: Video</a>.<br/>
 * Required if no other media subtype object is specified.</td>
   </tr>
   <tr>
-    <td>audio</td>
+    <td><code>audio</code></td>
     <td>object; required *</td>
-    <td>"Media Subtype Object" that indicates this is an audio ad and provides additional detail as such.  Refer to Object:  Audio.
+    <td><strong>Media Subtype Object</strong> that indicates this is an audio ad and provides additional detail as such.  Refer to <a href="#object_audio">Object: Audio</a>.<br/>
 * Required if no other media subtype object is specified.</td>
   </tr>
   <tr>
-    <td>audit</td>
+    <td><code>audit</code></td>
     <td>object</td>
-    <td>An object depicting the audit status of the ad; typically part of a quality/safety review process.  Refer to Object:  Audit.</td>
+    <td>An object depicting the audit status of the ad; typically part of a quality/safety review process.  Refer to <a href="#object_audit">Object: Audit</a>.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -316,78 +316,78 @@ This object provides additional detail about an ad specifically for display ads.
     <td>Definition</td>
   </tr>
   <tr>
-    <td>mime</td>
+    <td><code>mime</code></td>
     <td>string</td>
-    <td>Mime type of the ad (e.g., "image/jpeg").</td>
+    <td>Mime type of the ad (e.g., “image/jpeg”).</td>
   </tr>
   <tr>
-    <td>api</td>
+    <td><code>api</code></td>
     <td>integer array</td>
-    <td>API required by the ad if applicable.  Refer to List:  API Frameworks.</td>
+    <td>API required by the ad if applicable.  Refer to <a href="#list_apiframeworks">List: API Frameworks</a>.</td>
   </tr>
   <tr>
-    <td>ctype</td>
+    <td><code>ctype</code></td>
     <td>integer</td>
-    <td>Subtype of display creative.  Refer to List:  Creative Subtypes - Display.</td>
+    <td>Subtype of display creative.  Refer to <a href="#list_creativesubtypesdisplay">List: Creative Subtypes - Display</a>.</td>
   </tr>
   <tr>
-    <td>w</td>
+    <td><code>w</code></td>
     <td>integer</td>
-    <td>Absolute width of the creative in device independent pixels (DIPS), typically for non-native ads.
+    <td>Absolute width of the creative in device independent pixels (DIPS), typically for non-native ads.<br/>
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
-    <td>h</td>
+    <td><code>h</code></td>
     <td>integer</td>
-    <td>Absolute height of the creative in device independent pixels (DIPS), typically for non-native ads.
+    <td>Absolute height of the creative in device independent pixels (DIPS), typically for non-native ads.<br/>
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
-    <td>wratio</td>
+    <td><code>wratio</code></td>
     <td>integer</td>
-    <td>Relative width of the creative when expressing size as a ratio, typically for non-native ads.
+    <td>Relative width of the creative when expressing size as a ratio, typically for non-native ads.<br/>
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
-    <td>hratio</td>
+    <td><code>hratio</code></td>
     <td>integer</td>
-    <td>Relative height of the creative when expressing size as a ratio, typically for non-native ads.
+    <td>Relative height of the creative when expressing size as a ratio, typically for non-native ads.<br/>
 Note that mixing absolute and relative sizes is not recommended.</td>
   </tr>
   <tr>
-    <td>priv</td>
+    <td><code>priv</code></td>
     <td>string</td>
     <td>URL of a page informing the user about a buyer's targeting activity.</td>
   </tr>
   <tr>
-    <td>adm</td>
+    <td><code>adm</code></td>
     <td>string</td>
-    <td>General display markup (e.g., HTML, AMPHTML) if not using a structured alternative (e.g., "banner", "native").
-Note that including both "adm" and "curl" is not recommended.</td>
+    <td>General display markup (e.g., HTML, AMPHTML) if not using a structured alternative (e.g., <code>banner</code>, <code>native</code>).<br/>
+Note that including both <code>adm</code> and <code>curl</code> is not recommended.</td>
   </tr>
   <tr>
-    <td>curl</td>
+    <td><code>curl</code></td>
     <td>string</td>
-    <td>Optional means of retrieving display markup by reference; a URL that can return HTML, AMPHTML, or a collection native "Asset" object and their subordinates).  If this ad is matched to a Placement specification, the "Placement.curlx" attribute indicates if this markup retrieval option is supported.
-Note that including both "adm" and "curl" is not recommended. </td>
+    <td>Optional means of retrieving display markup by reference; a URL that can return HTML, AMPHTML, or a collection native <code>Asset</code> object and their subordinates).  If this ad is matched to a Placement specification, the <code>Placement.curlx</code> attribute indicates if this markup retrieval option is supported.<br/>
+Note that including both <code>adm</code> and <code>curl</code> is not recommended. </td>
   </tr>
   <tr>
-    <td>banner</td>
+    <td><code>banner</code></td>
     <td>object</td>
-    <td>Structured banner image object, recommended for simple banner creatives.  Refer to Object:  Banner.</td>
+    <td>Structured banner image object, recommended for simple banner creatives.  Refer to <a href="#object_banner">Object: Banner</a>.</td>
   </tr>
   <tr>
-    <td>native</td>
+    <td><code>native</code></td>
     <td>object</td>
-    <td>Structured native object, recommended for native ads.  Refer to Object:  Native.</td>
+    <td>Structured native object, recommended for native ads.  Refer to <a href="#object_native">Object: Native</a>.</td>
   </tr>
   <tr>
-    <td>event</td>
+    <td><code>event</code></td>
     <td>object array</td>
-    <td>Array of events that the advertiser or buying platform wants to track.  Refer to  Object:  Event.</td>
+    <td>Array of events that the advertiser or buying platform wants to track.  Refer to  <a href="#object_event">Object: Event</a>.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -405,17 +405,17 @@ This object describes a basic banner creative.  It is intended for display scena
     <td>Definition</td>
   </tr>
   <tr>
-    <td>img</td>
+    <td><code>img</code></td>
     <td>string; required</td>
     <td>A URL that will return the image.</td>
   </tr>
   <tr>
-    <td>link</td>
+    <td><code>link</code></td>
     <td>object</td>
-    <td>Destination link if the image is activated (e.g., clicked); not applicable in some contexts (e.g., DOOH) and its inclusion does not guarantee it will be supported.  Refer to Object:  LinkAsset.</td>
+    <td>Destination link if the image is activated (e.g., clicked); not applicable in some contexts (e.g., DOOH) and its inclusion does not guarantee it will be supported.  Refer to <a href="#object_linkasset">Object: LinkAsset</a>.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -433,17 +433,17 @@ This object is the root of a structure that defines a native display ad.
     <td>Definition</td>
   </tr>
   <tr>
-    <td>link</td>
+    <td><code>link</code></td>
     <td>object</td>
-    <td>Default destination link for the native ad overall; used if an asset is activated (e.g., clicked) that doesn't specify it's own destination link.  Refer to Object:  LinkAsset.</td>
+    <td>Default destination link for the native ad overall; used if an asset is activated (e.g., clicked) that doesn't specify it's own destination link.  Refer to <a href="#object_linkasset">Object: LinkAsset</a>.</td>
   </tr>
   <tr>
-    <td>asset</td>
+    <td><code>asset</code></td>
     <td>object array</td>
-    <td>Array of assets that comprise the native ad.  Refer to Object:  Asset.</td>
+    <td>Array of assets that comprise the native ad.  Refer to <a href="#object_asset">Object: Asset</a>.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -461,47 +461,47 @@ This object is the container for each asset comprising a native ad.  Each asset 
     <td>Definition</td>
   </tr>
   <tr>
-    <td>id</td>
+    <td><code>id</code></td>
     <td>integer</td>
-    <td>The value of "AssetFormat.id" if this ad references a specific native placement defined by a "Placement" object and its structure.</td>
+    <td>The value of <code>AssetFormat.id</code> if this ad references a specific native placement defined by a <code>Placement</code> object and its structure.</td>
   </tr>
   <tr>
-    <td>req</td>
-    <td>Integer; default 0</td>
+    <td><code>req</code></td>
+    <td>integer; default 0</td>
     <td>Indicates if the asset is required to be displayed, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
-    <td>title</td>
+    <td><code>title</code></td>
     <td>object; required *</td>
-    <td>"Asset Subtype Object" that indicates this is a title asset and provides additional detail as such.  Refer to Object:  TitleAsset.
+    <td><strong>Asset Subtype Object</strong> that indicates this is a title asset and provides additional detail as such.  Refer to <a href="#object_titleasset">Object: TitleAsset</a>.<br/>
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
-    <td>image</td>
+    <td><code>image</code></td>
     <td>object; required *</td>
-    <td>"Asset Subtype Object" that indicates this is an image asset and provides additional detail as such.  Refer to Object:  ImageAsset.
+    <td><strong>Asset Subtype Object</strong> that indicates this is an image asset and provides additional detail as such.  Refer to <a href="#object_imageasset">Object: ImageAsset</a>.<br/>
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
-    <td>video</td>
+    <td><code>video</code></td>
     <td>object; required *</td>
-    <td>"Asset Subtype Object" that indicates this is a video asset and provides additional detail as such.  Refer to Object:  VideoAsset.
+    <td><strong>Asset Subtype Object</strong> that indicates this is a video asset and provides additional detail as such.  Refer to <a href="#object_videoasset">Object: VideoAsset</a>.<br/>
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
-    <td>data</td>
+    <td><code>data</code></td>
     <td>object; required *</td>
-    <td>"Asset Subtype Object" that indicates this is a data asset and provides additional detail as such.  Refer to Object:  DataAsset.
+    <td><strong>Asset Subtype Object</strong> that indicates this is a data asset and provides additional detail as such.  Refer to <a href="#object_dataasset">Object: DataAsset</a>.<br/>
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
-    <td>link</td>
+    <td><code>link</code></td>
     <td>object; required *</td>
-    <td>"Asset Subtype Object" that indicates this is a link asset and provides additional detail as such.  Refer to Object:  LinkAsset.
+    <td><strong>Asset Subtype Object</strong> that indicates this is a link asset and provides additional detail as such.  Refer to <a href="#object_linkasset">Object: LinkAsset</a>.<br/>
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -519,22 +519,22 @@ This object identifies the native asset as a link asset and is used to define na
     <td>Definition</td>
   </tr>
   <tr>
-    <td>url</td>
+    <td><code>url</code></td>
     <td>string; required</td>
     <td>Landing URL of the clickable link.</td>
   </tr>
   <tr>
-    <td>urlfb</td>
+    <td><code>urlfb</code></td>
     <td>string</td>
-    <td>Fallback URL for deep-link to be used if the URL specified in "url" is not supported by the device.</td>
+    <td>Fallback URL for deep-link to be used if the URL specified in <code>url</code> is not supported by the device.</td>
   </tr>
   <tr>
-    <td>trkr</td>
+    <td><code>trkr</code></td>
     <td>string array</td>
     <td>List of third-party tracker URLs to be fired on click.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -552,17 +552,17 @@ This object identifies the native asset as a title asset, which is essentially j
     <td>Definition</td>
   </tr>
   <tr>
-    <td>text</td>
+    <td><code>text</code></td>
     <td>string; required</td>
     <td>The text content of the text element.</td>
   </tr>
   <tr>
-    <td>len</td>
+    <td><code>len</code></td>
     <td>integer</td>
-    <td>The length of the contents of the "text" attribute.</td>
+    <td>The length of the contents of the <code>text</code> attribute.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -580,27 +580,27 @@ This object identifies the native asset as a image asset.  Image assets are use 
     <td>Definition</td>
   </tr>
   <tr>
-    <td>url</td>
+    <td><code>url</code></td>
     <td>string; required</td>
     <td>A URL that returns the image for the asset.</td>
   </tr>
   <tr>
-    <td>w</td>
+    <td><code>w</code></td>
     <td>integer; recommended</td>
     <td>Width of the image asset in device independent pixels (DIPS).</td>
   </tr>
   <tr>
-    <td>h</td>
+    <td><code>h</code></td>
     <td>integer; recommended</td>
     <td>Height of the image asset in device independent pixels (DIPS).</td>
   </tr>
   <tr>
-    <td>type</td>
+    <td><code>type</code></td>
     <td>integer</td>
-    <td>The type of image represented by this asset.  Refer to List:  Native Image Asset Types.</td>
+    <td>The type of image represented by this asset.  Refer to <a href="#list_nativeimageassettypes">List: Native Image Asset Types</a>.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -618,19 +618,19 @@ This object identifies the native asset as a video asset.  Video markup (e.g., V
     <td>Definition</td>
   </tr>
   <tr>
-    <td>adm</td>
+    <td><code>adm</code></td>
     <td>string; required *</td>
-    <td>Video markup (e.g., VAST document) for the asset.
-* Exactly one of "adm" and "curl" is required.  Including both is not recommended.  </td>
+    <td>Video markup (e.g., VAST document) for the asset.<br/>
+* Exactly one of <code>adm</code> and <code>curl</code> is required.  Including both is not recommended.  </td>
   </tr>
   <tr>
-    <td>curl</td>
+    <td><code>curl</code></td>
     <td>string; required *</td>
-    <td>A URL that returns the video markup (e.g., VAST document) for the asset.  If this ad is matched to a placement specification, the "Placement.curlx" attribute indicates if this markup retrieval option is supported.
-* Exactly one of "adm" and "curl" is required.  Including both is not recommended.</td>
+    <td>A URL that returns the video markup (e.g., VAST document) for the asset.  If this ad is matched to a placement specification, the <code>Placement.curlx</code> attribute indicates if this markup retrieval option is supported.<br/>
+* Exactly one of <code>adm</code> and <code>curl</code> is required.  Including both is not recommended.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -648,22 +648,22 @@ This object identifies the native asset as a data asset.  A data asset is used f
     <td>Definition</td>
   </tr>
   <tr>
-    <td>value</td>
+    <td><code>value</code></td>
     <td>string; required</td>
-    <td>A formatted string of data to be displayed (e.g., "5 stars", "3.4 stars out of 5", "$ 10", etc.).</td>
+    <td>A formatted string of data to be displayed (e.g., “5 stars”, “3.4 stars out of 5”, “$10”, etc.).</td>
   </tr>
   <tr>
-    <td>len</td>
+    <td><code>len</code></td>
     <td>integer</td>
-    <td>The length of the "`value`" contents.  This length should conform to recommendations provided in List:  Native Data Asset Types, where applicable.</td>
+    <td>The length of the <code>value</code> contents.  This length should conform to recommendations provided in <a href="#list_nativedataassettypes">List: Native Data Asset Types</a></td>
   </tr>
   <tr>
-    <td>type</td>
+    <td><code>type</code></td>
     <td>integer</td>
-    <td>The type of data represented by this asset.  Refer to List:  Native Data Asset Types.</td>
+    <td>The type of data represented by this asset.  Refer to <a href="#list_nativedataassettypes">List: Native Data Asset Types</a>.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -681,33 +681,33 @@ This object specifies a type of event that the advertiser or buying platform wan
     <td>Definition</td>
   </tr>
   <tr>
-    <td>type</td>
+    <td><code>type</code></td>
     <td>integer; required</td>
-    <td>Type of event to track.  Refer to List:  Event Types.</td>
+    <td>Type of event to track.  Refer to <a href="#list_eventtypes">List: Event Types</a>.</td>
   </tr>
   <tr>
-    <td>method</td>
+    <td><code>method</code></td>
     <td>integer; required</td>
-    <td>Method of tracking requested.  Refer to List:  Event Tracking Methods.</td>
+    <td>Method of tracking requested.  Refer to <a href="#list_eventtrackingmethods">List: Event Tracking Methods</a>.</td>
   </tr>
   <tr>
-    <td>api</td>
+    <td><code>api</code></td>
     <td>integer array</td>
-    <td>The APIs being used by the tracker; only relevant when the tracking method is JavaScript.  Refer to List:  API Frameworks.</td>
+    <td>The APIs being used by the tracker; only relevant when the tracking method is JavaScript.  Refer to <a href="#list_apiframeworks">List:  API Frameworks</a>.</td>
   </tr>
   <tr>
-    <td>url</td>
+    <td><code>url</code></td>
     <td>string; required *</td>
-    <td>The URL of the tracking pixel or JavaScript tag, respectively.
+    <td>The URL of the tracking pixel or JavaScript tag, respectively.<br/>
 * Required for Image-Pixel or JavaScript methods.</td>
   </tr>
   <tr>
-    <td>cdata</td>
+    <td><code>cdata</code></td>
     <td>object (Map)</td>
-    <td>An array of key-value pairs to support vendor-specific data required for custom tracking.  For example, the account number of a buyer with a tracking company might be represented as:  {"acct": "123"}.</td>
+    <td>An array of key-value pairs to support vendor-specific data required for custom tracking.  For example, the account number of a buyer with a tracking company might be represented as: {"acct": "123"}.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -725,39 +725,39 @@ This object provides additional detail about an ad specifically for video ads.
     <td>Definition</td>
   </tr>
   <tr>
-    <td>mime</td>
+    <td><code>mime</code></td>
     <td>string array</td>
-    <td>Mime type(s) of the ad creative(s) (e.g., "video/mp4").</td>
+    <td>Mime type(s) of the ad creative(s) (e.g., “video/mp4”).</td>
   </tr>
   <tr>
-    <td>api</td>
+    <td><code>api</code></td>
     <td>integer array</td>
-    <td>API required by the ad if applicable.  Refer to List:  API Frameworks.</td>
+    <td>API required by the ad if applicable.  Refer to <a href="#list_apiframeworks">List: API Frameworks</a>.</td>
   </tr>
   <tr>
-    <td>ctype</td>
+    <td><code>ctype</code></td>
     <td>integer</td>
-    <td>Subtype of video creative.  Refer to List:  Creative Subtypes - Video.</td>
+    <td>Subtype of video creative.  Refer to <a href="#list_creativesubtypesaudiovideo">List: Creative Subtypes - Audio/Video</a>.</td>
   </tr>
   <tr>
-    <td>dur</td>
+    <td><code>dur</code></td>
     <td>integer</td>
     <td>Duration of the video creative in seconds.</td>
   </tr>
   <tr>
-    <td>adm</td>
+    <td><code>adm</code></td>
     <td>string</td>
-    <td>Video markup (e.g., VAST).
-Note that including both "adm" and "curl" is not recommended.</td>
+    <td>Video markup (e.g., VAST).<br/>
+Note that including both <code>adm</code> and <code>curl</code> is not recommended.</td>
   </tr>
   <tr>
-    <td>curl</td>
+    <td><code>curl</code></td>
     <td>string</td>
-    <td>Optional means of retrieving markup by reference; a URL that returns video markup (e.g., VAST).  If this ad is matched to a Placement specification, the "Placement.curlx" attribute indicates if this markup retrieval option is supported.
-Note that including both "adm" and "curl" is not recommended. </td>
+    <td>Optional means of retrieving markup by reference; a URL that returns video markup (e.g., VAST).  If this ad is matched to a Placement specification, the <code>Placement.curlx</code> attribute indicates if this markup retrieval option is supported.<br/>
+Note that including both <code>adm</code> and <code>curl</code> is not recommended. </td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -775,39 +775,39 @@ This object provides additional detail about an ad specifically for audio ads.
     <td>Definition</td>
   </tr>
   <tr>
-    <td>mime</td>
+    <td><code>mime</code></td>
     <td>string array</td>
-    <td>Mime type(s) of the ad creative(s) (e.g., "audio/mp4").</td>
+    <td>Mime type(s) of the ad creative(s) (e.g., “audio/mp4”).</td>
   </tr>
   <tr>
-    <td>api</td>
+    <td><code>api</code></td>
     <td>integer array</td>
-    <td>API required by the ad if applicable.  Refer to List:  API Frameworks.</td>
+    <td>API required by the ad if applicable.  Refer to <a href="#list_apiframeworks">List: API Frameworks</a>.</td>
   </tr>
   <tr>
-    <td>ctype</td>
+    <td><code>ctype</code></td>
     <td>integer</td>
-    <td>Subtype of audio creative.  Refer to List:  Creative Subtypes - Audio.</td>
+    <td>Subtype of audio creative.  Refer to <a href="#list_creativesubtypesaudiovideo">List: Creative Subtypes - Audio/Video</a>.</td>
   </tr>
   <tr>
-    <td>dur</td>
+    <td><code>dur</code></td>
     <td>integer</td>
     <td>Duration of the audio creative in seconds.</td>
   </tr>
   <tr>
-    <td>adm</td>
+    <td><code>adm</code></td>
     <td>string</td>
-    <td>Audio markup (e.g., DAAST).
-Note that including both "adm" and "curl" is not recommended.</td>
+    <td>Audio markup (e.g., DAAST).<br/>
+Note that including both <code>adm</code> and <code>curl</code> is not recommended.</td>
   </tr>
   <tr>
-    <td>curl</td>
+    <td><code>curl</code></td>
     <td>string</td>
-    <td>Optional means of retrieving markup by reference; a URL that returns audio markup (e.g., DAAST).  If this ad is matched to a Placement specification, the "Placement.curlx" attribute indicates if this markup retrieval option is supported.
-Note that including both "adm" and "curl" is not recommended. </td>
+    <td>Optional means of retrieving markup by reference; a URL that returns audio markup (e.g., DAAST).  If this ad is matched to a Placement specification, the <code>Placement.curlx</code> attribute indicates if this markup retrieval option is supported.<br/>
+Note that including both <code>adm</code> and <code>curl</code> is not recommended. </td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
@@ -825,32 +825,32 @@ This objects represents the outcome of some form of review of the ad.  This is t
     <td>Definition</td>
   </tr>
   <tr>
-    <td>status</td>
-    <td>Integer</td>
-    <td>The audit status of the ad.  Refer to List:  Audit Status Codes.</td>
+    <td><code>status</code></td>
+    <td>integer</td>
+    <td>The audit status of the ad.  Refer to <a href="#list_auditstatuscodes">List: Audit Status Codes</a>.</td>
   </tr>
   <tr>
-    <td>feedback</td>
+    <td><code>feedback</code></td>
     <td>string array</td>
-    <td>One or more human-readable explanations as to reasons for rejection or any changes to fields for ad quality reasons (e.g., "adomain", "cat", "attr", etc.).</td>
+    <td>One or more human-readable explanations as to reasons for rejection or any changes to fields for ad quality reasons (e.g., <code>adomain</code>, <code>cat</code>, <code>attr</code>, etc.).</td>
   </tr>
   <tr>
-    <td>init</td>
+    <td><code>init</code></td>
     <td>string</td>
     <td>Date/time of the original instantiation of this object in the format of ISO-8601; W3C profile.  Refer to www.w3.org/TR/NOTE-datetime.</td>
   </tr>
   <tr>
-    <td>lastmod</td>
+    <td><code>lastmod</code></td>
     <td>string</td>
     <td>Date/time of most recent modification to this object in the format of ISO-8601; W3C profile.  Refer to www.w3.org/TR/NOTE-datetime.</td>
   </tr>
   <tr>
-    <td>corr</td>
+    <td><code>corr</code></td>
     <td>object</td>
-    <td>Correction object wherein the auditor can specify changes to attributes of the "Ad" object or its children they believe to be proper.  For example, if the original "Ad" indicated a category of "IAB3", but the auditor deems the correct category to be "IAB13", then "corr" could include a sparse "Ad" object including just the "cat" array indicating "IAB13".</td>
+    <td>Correction object wherein the auditor can specify changes to attributes of the <code>Ad</code> object or its children they believe to be proper.  For example, if the original <code>Ad</code> indicated a category of “IAB3”, but the auditor deems the correct category to be “IAB13”, then <code>corr</code> could include a sparse <code>Ad</code> object including just the <code>cat</code> array indicating “IAB13”.</td>
   </tr>
   <tr>
-    <td>ext</td>
+    <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
   </tr>
