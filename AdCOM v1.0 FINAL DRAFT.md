@@ -276,19 +276,19 @@ This object is the root of a structure that defines in instance of advertising m
   </tr>
   <tr>
     <td><code>display</code></td>
-    <td>Object; required *</td>
+    <td>Object; required&nbsp;*</td>
     <td><strong>Media Subtype Object</strong> that indicates this is a display ad and provides additional detail as such.  Refer to <a href="#object_display">Object: Display</a>.<br/>
 * Required if no other media subtype object is specified.</td>
   </tr>
   <tr>
     <td><code>video</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Media Subtype Object</strong> that indicates this is a video ad and provides additional detail as such.  Refer to <a href="#object_video">Object: Video</a>.<br/>
 * Required if no other media subtype object is specified.</td>
   </tr>
   <tr>
     <td><code>audio</code></td>
-    <td>object; required *</td>
+    <td>object; required&nbsp;*</td>
     <td><strong>Media Subtype Object</strong> that indicates this is an audio ad and provides additional detail as such.  Refer to <a href="#object_audio">Object: Audio</a>.<br/>
 * Required if no other media subtype object is specified.</td>
   </tr>
