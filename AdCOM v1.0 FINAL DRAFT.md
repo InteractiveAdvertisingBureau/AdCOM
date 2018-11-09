@@ -267,12 +267,12 @@ This object is the root of a structure that defines in instance of advertising m
   <tr>
     <td><code>init</code></td>
     <td>string</td>
-    <td>Date/time of the original instantiation of this ad (i.e., this object or any of its children) in the format of ISO-8601; W3C profile.  Refer to www.w3.org/TR/NOTE-datetime.</td>
+    <td>Timestamp of the original instantiation of this ad (i.e., this object or any of its children) in Unix format (i.e., milliseconds since the epoch).</td>
   </tr>
   <tr>
     <td><code>lastmod</code></td>
     <td>string</td>
-    <td>Date/time of most recent modification to this ad (i.e., this object or any of its children other than the <code>Audit</code> object) in the format of ISO-8601; W3C profile.  Refer to www.w3.org/TR/NOTE-datetime.</td>
+    <td>Timestamp of most recent modification to this ad (i.e., this object or any of its children other than the <code>Audit</code> object) in Unix format (i.e., milliseconds since the epoch).</td>
   </tr>
   <tr>
     <td><code>display</code></td>
@@ -837,12 +837,12 @@ This objects represents the outcome of some form of review of the ad.  This is t
   <tr>
     <td><code>init</code></td>
     <td>string</td>
-    <td>Date/time of the original instantiation of this object in the format of ISO-8601; W3C profile.  Refer to www.w3.org/TR/NOTE-datetime.</td>
+    <td>Timestamp of the original instantiation of this object in Unix format (i.e., milliseconds since the epoch).</td>
   </tr>
   <tr>
     <td><code>lastmod</code></td>
     <td>string</td>
-    <td>Date/time of most recent modification to this object in the format of ISO-8601; W3C profile.  Refer to www.w3.org/TR/NOTE-datetime.</td>
+    <td>Timestamp of most recent modification to this object in Unix format (i.e., milliseconds since the epoch).</td>
   </tr>
   <tr>
     <td><code>corr</code></td>
@@ -4091,9 +4091,6 @@ MCC-MNC Codes for Mobile Carriers, Wikipedia
 
 JavaScript Object Notation (JSON)  
 [www.json.org](http://www.json.org)
-
-Date/Time Format: ISO-8601; W3C Profile  
-[www.w3.org/TR/NOTE-datetime](https://www.w3.org/TR/NOTE-datetime)
 
 
 # Appendix B:  Change Log <a name="appendixb_changelog"></a>
