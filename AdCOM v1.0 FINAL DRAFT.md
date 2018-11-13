@@ -3406,7 +3406,7 @@ The following table lists the available methods of tracking of ad events.  Vendo
 
 ### List:  Event Types <a name="list_eventtypes"></a>
 
-The following table lists the types of ad events available for tracking.  These types refer to the actual event, timing, etc.; not the method of firing.  Scripts that are performing measurement should be deployed at impression time.
+The following table lists the types of ad events available for tracking.  These types refer to the actual event, timing, etc.; not the method of firing.  Scripts that are performing measurement should be deployed at the "loaded" event.
 
 <table>
   <tr>
@@ -3415,11 +3415,11 @@ The following table lists the types of ad events available for tracking.  These 
   </tr>
   <tr>
     <td>1</td>
-    <td><strong>loaded:</strong>  Creative pre-cached or pre-loaded; prior to initial rendering.</td>
+    <td><strong>loaded:</strong>  Delivered as a part of the creative markup. Creative may be pre-cached or pre-loaded; prior to initial rendering.</td>
   </tr>
   <tr>
     <td>2</td>
-    <td><strong>impression:</strong>  Initial creative rending.</td>
+    <td><strong>impression:</strong>  Ad impression per <a href="https://www.iab.com/guidelines/iab-measurement-guidelines/">IAB/MRC Ad Impression Measurement Guidelines</a>.</td>
   </tr>
   <tr>
     <td>3</td>
