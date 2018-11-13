@@ -48,14 +48,16 @@ OpenRTB 2.0 through 2.5 can be easily extended to support OMSDK by communicating
 
 3. The "partner name" assigned to Publishers who have installed the OMSDK
 
-To support this, OpenRTB's list of API Frameworks should be extended with a value for OMID. Extend List 5.6 API Frameworks as follows: 
+To support this, OpenRTB's list of API Frameworks should be extended with a value for OMID. In addition, the "api" field of the Bid Response **Bid** object should be treated as an integer array instead of a single integer.
+
+The Extended List of 5.6 API Frameworks is as follows: 
 
 ## List 5.6 API Frameworks
 
 <table>
   <tr>
-    <td>Value</td>
-    <td>Description </td>
+    <td><b>Value</b></td>
+    <td><b>Description</b></td>
   </tr>
   <tr>
     <td>1</td>
@@ -98,9 +100,9 @@ The "api" field of the **Banner, Video, or Native Object** should be used to ind
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Description</td>
+    <td><b>Attribute</b></td>
+    <td><b>Type</b></td>
+    <td><b>Description</b></td>
   </tr>
   <tr>
     <td>api</td>
@@ -112,15 +114,15 @@ The "api" field of the **Banner, Video, or Native Object** should be used to ind
 
 ## Bid Response
 
-The "api" field of the **Bid Object** should be used to indicate that the ad being used in the bid requires use of OMID. This field is supported in OpenRTB 2.4+, though consistent with the design principles of OpenRTB, it should be possible to retrofit this field into OpenRTB 2.3 and earlier versions as SSPs and DSPs should gracefully ignore fields they do not understand. 
+The "api" field of the **Bid Object** should be used to indicate that the ad being used in the bid requires use of OMID. This field is supported in OpenRTB 2.4+, though consistent with the design principles of OpenRTB, it should be possible to retrofit this field into OpenRTB 2.3 and earlier versions as SSPs and DSPs should gracefully ignore fields they do not understand. In addition, OpenRTB 2.4+ specifications list the **Type** of this field as "integer". In order to support specifying multiple supported API types, including OMID, the field should be treated as an "integer array".
 
 ### Bid Object
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Description</td>
+    <td><b>Attribute</b></td>
+    <td><b>Type</b></td>
+    <td><b>Description</b></td>
   </tr>
   <tr>
     <td>api</td>
@@ -150,9 +152,9 @@ Suggested values to use for "Event Trackers Request Object" are:
 
 <table>
   <tr>
-    <td>Object</td>
-    <td>Value</td>
-    <td>Name</td>
+    <td><b>Object</b></td>
+    <td><b>Value</b></td>
+    <td><b>Name</b></td>
   </tr>
   <tr>
     <td>event</td>
@@ -189,9 +191,9 @@ Bid requests will include two new fields to identify the partner integration.  O
 
 <table>
   <tr>
-    <td>Attribute</td>
-    <td>Type</td>
-    <td>Description</td>
+    <td><b>Attribute</b></td>
+    <td><b>Type</b></td>
+    <td><b>Description</b></td>
   </tr>
   <tr>
     <td>omidpn</td>
@@ -206,7 +208,7 @@ Bid requests will include two new fields to identify the partner integration.  O
 </table>
 
 
-Note that these fields are in addition to the API frameworks array, which is carried in an "api" field in OpenRTB 2.x and an 'apis' field in AdCOM.  The API frameworks array must include the value 7 to indicate OMID 1.0 support.
+Note that these fields are in addition to the API frameworks array, which is carried in an "api" field in OpenRTB 2.x and an "apis" field in AdCOM.  The API frameworks array must include the value 7 to indicate OMID 1.0 support.
 
 ### **OpenRTB 2.x**
 
