@@ -266,12 +266,12 @@ This object is the root of a structure that defines in instance of advertising m
   </tr>
   <tr>
     <td><code>init</code></td>
-    <td>string</td>
+    <td>integer</td>
     <td>Timestamp of the original instantiation of this ad (i.e., this object or any of its children) in Unix format (i.e., milliseconds since the epoch).</td>
   </tr>
   <tr>
     <td><code>lastmod</code></td>
-    <td>string</td>
+    <td>integer</td>
     <td>Timestamp of most recent modification to this ad (i.e., this object or any of its children other than the <code>Audit</code> object) in Unix format (i.e., milliseconds since the epoch).</td>
   </tr>
   <tr>
@@ -836,12 +836,12 @@ This objects represents the outcome of some form of review of the ad.  This is t
   </tr>
   <tr>
     <td><code>init</code></td>
-    <td>string</td>
+    <td>integer</td>
     <td>Timestamp of the original instantiation of this object in Unix format (i.e., milliseconds since the epoch).</td>
   </tr>
   <tr>
     <td><code>lastmod</code></td>
-    <td>string</td>
+    <td>integer</td>
     <td>Timestamp of most recent modification to this object in Unix format (i.e., milliseconds since the epoch).</td>
   </tr>
   <tr>
