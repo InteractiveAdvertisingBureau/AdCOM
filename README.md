@@ -1,15 +1,10 @@
 ![IAB Tech Lab](https://drive.google.com/uc?id=10yoBoG5uRETSXRrnJPUDuONujvADrSG1)
 
-# **AdCOM 1.0 Beta**
+# **AdCOM 1.0**
 
-BETA DRAFT
+FINAL
 
-July 24, 2018
-
-
-#### Beta Launch
-AdCOM will have a 60-day public comment period, running through September 24, 2018. Beta testing by the IAB Tech Lab OpenRTB Working Group will be ongoing. Industry members are encouraged to actively participate throughout the beta period, and to get involved with the OpenRTB Working Group. The group will evaluate and incorporate the feedback received, as well as real world insights from beta testing, to produce final specs that will be ready for full industry adoption by the end of the year. 
-
+November 2018
 
 #### Executive Summary
 One of the most successful IAB standards is OpenRTB.  This protocol for conducting real-time auctions among sell-side exchanges and demand-side bidders first launched as OpenRTB v1.0 Mobile in February 2011.  Later that year, OpenRTB v2.0 was released, which provided a unified protocol for mobile, display, and video.  Due to widespread industry adoption, OpenRTB was established as an IAB standard in January 2012 with the release of version v2.1 although governance over technical content remained with the OpenRTB community.  Since then and true to its initial objective, OpenRTB has become the lingua franca of real-time programmatic advertising and entered 2018 as v2.5.

@@ -115,6 +115,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
   - [Request Context](#requestcontext)
   - [Item Specifications](#itemspecs)
   - [Media Response](#mediaresponse)
+- [Appendix D:  Errata](#appendixd_errata)
 
 
 
@@ -1417,12 +1418,12 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td><code>w</code></td>
     <td>integer</td>
-    <td>Width of the creative in units specified by <code>unit</code>.</td>
+    <td>Width of the placement in units specified by <code>unit</code>.</td>
   </tr>
   <tr>
     <td><code>h</code></td>
     <td>integer</td>
-    <td>Height of the creative in units specified by <code>unit</code>.</td>
+    <td>Height of the placement in units specified by <code>unit</code>.</td>
   </tr>
   <tr>
     <td><code>unit</code></td>
@@ -4298,4 +4299,10 @@ This example is indicating a secure display ad for Ford using a structured banne
 }
 ```
 
+# Appendix C:  Errata <a name="appendixd_errata"></a>
 
+This appendix catalogues any error corrections which have been made to this document after its release. The body of the document has been updated accordingly.
+
+Only minor fixes, such as clarifications or corrections to descriptions, may be treated as errata. Any change that materially affects the specification (such as a change in field names) requires a new point release.
+
+**Description of "w" and "h" fields in VideoPlacement object:** The description of the "w" and "h" fields has been corrected. It originally read "*[Width/Height]* of the creative in units specified by <code>unit</code>." It was intended to read "*[Width/Height]* of the placement...." The size of the video player placement generally does not have a direct bearing on what creative assets may be served to it. (2018/12/12)
