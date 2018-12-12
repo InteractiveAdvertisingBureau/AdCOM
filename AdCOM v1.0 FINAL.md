@@ -4305,4 +4305,8 @@ This appendix catalogues any error corrections which have been made to this docu
 
 Only minor fixes, such as clarifications or corrections to descriptions, may be treated as errata. Any change that materially affects the specification (such as a change in field names) requires a new point release.
 
-**Description of "w" and "h" fields in VideoPlacement object:** The description of the "w" and "h" fields has been corrected. It originally read "*[Width/Height]* of the creative in units specified by <code>unit</code>." It was intended to read "*[Width/Height]* of the placement...." The size of the video player placement generally does not have a direct bearing on what creative assets may be served to it. (2018/12/12)
+Granular details of the changes can be seen by reviewing the commit history of the document.
+
+**Description of "w" and "h" fields in VideoPlacement object:** The description of the "w" and "h" fields has been corrected to read "*[Width/Height]* of the placement...." The size of the video player placement generally does not have a direct bearing on what creative assets may be served to it. (2018/12/12)
+
+**Clarification of event types:** The Event Types list has been adjusted to clarify which event measurement scripts should be attached to (generally, "loaded") as well as clarifying the definition of "loaded" and "impression". (2018/12/12)
