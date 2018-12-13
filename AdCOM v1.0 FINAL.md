@@ -115,6 +115,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
   - [Request Context](#requestcontext)
   - [Item Specifications](#itemspecs)
   - [Media Response](#mediaresponse)
+- [Appendix D:  Errata](#appendixd_errata)
 
 
 
@@ -1417,12 +1418,12 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td><code>w</code></td>
     <td>integer</td>
-    <td>Width of the creative in units specified by <code>unit</code>.</td>
+    <td>Width of the placement in units specified by <code>unit</code>.</td>
   </tr>
   <tr>
     <td><code>h</code></td>
     <td>integer</td>
-    <td>Height of the creative in units specified by <code>unit</code>.</td>
+    <td>Height of the placement in units specified by <code>unit</code>.</td>
   </tr>
   <tr>
     <td><code>unit</code></td>
@@ -3406,7 +3407,7 @@ The following table lists the available methods of tracking of ad events.  Vendo
 
 ### List:  Event Types <a name="list_eventtypes"></a>
 
-The following table lists the types of ad events available for tracking.  These types refer to the actual event, timing, etc.; not the method of firing.  Scripts that are performing measurement should be deployed at impression time.
+The following table lists the types of ad events available for tracking.  These types refer to the actual event, timing, etc.; not the method of firing.  Scripts that are performing measurement should be deployed at the "loaded" event.
 
 <table>
   <tr>
@@ -3415,11 +3416,11 @@ The following table lists the types of ad events available for tracking.  These 
   </tr>
   <tr>
     <td>1</td>
-    <td><strong>loaded:</strong>  Creative pre-cached or pre-loaded; prior to initial rendering.</td>
+    <td><strong>loaded:</strong>  Delivered as a part of the creative markup. Creative may be pre-cached or pre-loaded; prior to initial rendering.</td>
   </tr>
   <tr>
     <td>2</td>
-    <td><strong>impression:</strong>  Initial creative rending.</td>
+    <td><strong>impression:</strong>  Ad impression per <a href="https://www.iab.com/guidelines/iab-measurement-guidelines/">IAB/MRC Ad Impression Measurement Guidelines</a>.</td>
   </tr>
   <tr>
     <td>3</td>
@@ -4298,4 +4299,14 @@ This example is indicating a secure display ad for Ford using a structured banne
 }
 ```
 
+# Appendix C:  Errata <a name="appendixd_errata"></a>
 
+This appendix catalogues any error corrections which have been made to this document after its release. The body of the document has been updated accordingly.
+
+Only minor fixes, such as clarifications or corrections to descriptions, may be treated as errata. Any change that materially affects the specification (such as a change in field names) requires a new point release.
+
+Granular details of the changes can be seen by reviewing the commit history of the document.
+
+**Description of "w" and "h" fields in VideoPlacement object:** The description of the "w" and "h" fields has been corrected to read "*[Width/Height]* of the placement...." The size of the video player placement generally does not have a direct bearing on what creative assets may be served to it. (2018/12/12)
+
+**Clarification of event types:** The Event Types list has been adjusted to clarify which event measurement scripts should be attached to (generally, "loaded") as well as clarifying the definition of "loaded" and "impression". (2018/12/12)
