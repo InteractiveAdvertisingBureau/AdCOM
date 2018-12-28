@@ -4222,7 +4222,7 @@ This example is indicating a display placement that must be secure.  Either a st
                         "event": [
                            {
                               "type": 1,
-                              "method": 1
+                              "method": [1]
                            }
                         ]
                      }
