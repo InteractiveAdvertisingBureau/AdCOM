@@ -4141,7 +4141,7 @@ This example is indicating a mobile optimized website and some basic details abo
                "domain": "examplesitedomain.com",
                "mobile": 1,
                "amp": 0,
-               "publisher": {
+               "pub": {
                   "id": "9876",
                   "name": "Example Publisher, Inc.",
                   "domain": "examplepubdomain.com"
