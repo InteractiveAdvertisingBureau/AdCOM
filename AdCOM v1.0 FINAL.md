@@ -4266,7 +4266,6 @@ This example is indicating a secure display ad for Ford using a structured banne
                         "ad": {
                            "id": "d0bcb39723af87c2bb00942afee5710e",
                            "adomain": [ "ford.com" ],
-                           "cid": "campaign-xyz.123",
                            "secure": 1,
                            "display": {
                               "mime": "image/jpeg",
