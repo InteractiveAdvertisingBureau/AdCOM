@@ -4222,7 +4222,7 @@ This example is indicating a display placement that must be secure.  Either a st
                         "event": [
                            {
                               "type": 1,
-                              "method": [1]
+                              "method": [ 1 ]
                            }
                         ]
                      }
@@ -4281,7 +4281,8 @@ This example is indicating a secure display ad for Ford using a structured banne
                               },
                               "event": [
                                  {
-                                    "type": 1, "method": 1,
+                                    "type": 1,
+                                    "method": 1,
                                     "url": "https://somebuyer.com/pixel"
                                  }
                               ]
