@@ -4269,7 +4269,7 @@ This example is indicating a secure display ad for Ford using a structured banne
                            "secure": 1,
                            "display": {
                               "mime": "image/jpeg",
-                              "type": 3,
+                              "ctype": 3,
                               "w": 320,
                               "h": 50,
                               "banner": {
