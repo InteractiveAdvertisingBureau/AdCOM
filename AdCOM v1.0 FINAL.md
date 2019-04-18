@@ -2590,6 +2590,10 @@ The following table is a list of API frameworks either supported by a placement 
     <td>OMID 1.0</td>
   </tr>
   <tr>
+    <td>8</td>
+    <td>SIMID 1.0</td>
+  </tr>
+  <tr>
     <td>500+</td>
     <td>Vendor-specific codes.</td>
   </tr>
@@ -2945,6 +2949,14 @@ The following table lists the various subtypes of audio and video ad creatives.
   <tr>
     <td>12</td>
     <td>VAST 4.1 Wrapper</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>VAST 4.2</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>VAST 4.2 Wrapper</td>
   </tr>
 </table>
 
