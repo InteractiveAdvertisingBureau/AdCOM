@@ -26,7 +26,6 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
 - [OVERVIEW](#Overview)
   - [OpenMedia Mission](#openmediamission)
   - [AdCOM Executive Summary](#execsummary)
-  - [Version History](#versionhistory)
 - [ARCHITECTURE](#architecture)
   - [OpenMedia Layers](#openmedialayers)
   - [AdCOM Principles](#adcomprinciples)
@@ -110,12 +109,13 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Start Delay Modes](#list_startdelaymodes)
     - [List:  Volume Normalization Modes](#list_volumenormalizationmodes)
 - [Appendix A:  Additional Resources](#appendixa_additionalresources)
-- [Appendix B:  Change Log](#appendixb_changelog)
+- [Appendix B:  Change Log/Version History](#appendixb_changelog)
 - [Appendix C:  OpenRTB Interfaces](#appendixc_openrtbinterfaces)
   - [Request Context](#requestcontext)
   - [Item Specifications](#itemspecs)
   - [Media Response](#mediaresponse)
 - [Appendix D:  Errata](#appendixd_errata)
+- [Appendix E:  Versioning Policy](#appendixe_versioning)
 
 
 
@@ -141,10 +141,6 @@ These and other problematic behaviors result in poor and potentially damaging us
 
 Reusability by multiple IAB specifications positions AdCOM to leverage solutions such as this across a range of industry applications.
 
-## Version History <a name="versionhistory"></a>
-
-1.0	Original Release of AdCOM; the Advertising Common Object Model.
-
 # ARCHITECTURE <a name="architecture"></a>
 
 This section describes the OpenMedia specification landscape, the role AdCOM plays, its overall structure, and the principles that guide the usage and extensibility of the AdCOM specification.
@@ -165,7 +161,9 @@ There are a number of objects that are common to multiple transaction specificat
 
 The following points define the guiding principles underlying the AdCOM specification, some of its basic rules, and its evolution.
 
-* AdCOM is backwards compatible within minor versions (e.g. 1.x to 1.y).  No breaking changes may be made within a minor revision (e.g., no removal of attributes or objects, name or type changes, or redefinition of semantics).  New objects and attributes may be added and enumerated lists may be extended and thus implementers must accept these types of changes without breakage.
+* AdCOM is backwards compatible within minor and patch versions (e.g. 1.x to 1.y or 1.x.a to 1.x.b).  No breaking changes may be made within a minor revision (e.g., no removal of attributes or objects, name or type changes, or redefinition of semantics).  New objects and attributes may be added and enumerated lists may be extended and thus implementers must accept these types of changes without breakage within major version numbers.
+* * For example, an implementer receiving AdCOM objects via a layer 3 transport specification (such as OpenRTB) should only check the major version number when deciding whether it can process the data; it may consider itself to have an "AdCOM 1.0" implementation but must tolerate new fields or enumerated list values it is not expecting, such as from a newer version (e.g. AdCOM 1.1). 
+* * Likewise, an implementer sending AdCOM objects via a layer 3 transport specification (such as OpenRTB) should only check the major version number when deciding what to send: it may freely transmit new fields or enumerated list values (such as from a newer version, e.g. AdCOM 1.1) and must tolerate new fields and enumerated list values it is not expecting. 
 
 * Object and attribute names have been made intentionally compact while still trying to balance readability.  The reason for this is that in applications like OpenRTB where JSON is still widely used, these names may be transmitted in plain text extremely frequently.
 
@@ -173,7 +171,7 @@ The following points define the guiding principles underlying the AdCOM specific
 
 * AdCOM imposes no specific representation on its objects.  This document uses JSON for illustration purposes, but this is not intended to imply any representational requirement or language binding.
 
-* All AdCOM objects may be extended as needed for vendor-specific applications.  Extensions to an AdCOM object must always be placed within a subordinate “ext” object.  Most enumerated lists when indicated can also be extended to include vendor-specific codes typically starting at 500.
+* All AdCOM objects may be extended as needed for vendor-specific applications.  Extension fields for an AdCOM object must always be placed within a subordinate “ext” object.  Most enumerated lists when indicated can also be extended to include vendor-specific codes typically starting at 500.
 
 * The typical process of promoting a new AdCOM object, attribute, or list value into future specification versions is either when a substantial concept is discovered that is applicable to multiple transaction specifications or when vendor-specific extensions become widely adopted.
 
@@ -4094,7 +4092,7 @@ JavaScript Object Notation (JSON)
 [www.json.org](http://www.json.org)
 
 
-# Appendix B:  Change Log <a name="appendixb_changelog"></a>
+# Appendix B:  Change Log/Version History <a name="appendixb_changelog"></a>
 
 This appendix serves as an index of specification changes from the current version to the previous.  These changes pertain only to the substance of the specification and not routine document formatting, information organization, or content without technical impact.
 
@@ -4299,14 +4297,26 @@ This example is indicating a secure display ad for Ford using a structured banne
 }
 ```
 
-# Appendix C:  Errata <a name="appendixd_errata"></a>
+# Appendix D:  Errata <a name="appendixd_errata"></a>
 
-This appendix catalogues any error corrections which have been made to this document after its release. The body of the document has been updated accordingly.
+This appendix catalogues any error corrections which have been made to this document after its versioned release. The body of the document has been updated accordingly.
 
-Only minor fixes, such as clarifications or corrections to descriptions, may be treated as errata. Any change that materially affects the specification (such as a change in field names) requires a new point release.
+Only minor fixes, such as clarifications or corrections to descriptions, may be treated as errata. Any change that materially affects the specification (such as a change in field names) requires a new release.
 
 Granular details of the changes can be seen by reviewing the commit history of the document.
 
 **Description of "w" and "h" fields in VideoPlacement object:** The description of the "w" and "h" fields has been corrected to read "*[Width/Height]* of the placement...." The size of the video player placement generally does not have a direct bearing on what creative assets may be served to it. (2018/12/12)
 
 **Clarification of event types:** The Event Types list has been adjusted to clarify which event measurement scripts should be attached to (generally, "loaded") as well as clarifying the definition of "loaded" and "impression". (2018/12/12)
+
+# Appendix E:  Versioning Policy <a name="appendixe_versioning"></a>
+
+AdCOM follows a variant of [Semantic Versioning](https://semver.org/). AdCOM's version number follows a pattern of "x.y.z" with the following rules:
+
+- Major version (x) increments for breaking changes and substantial improvements to the specification
+- Minor version (y) increments for a bundle of non-breaking, but still significant improvements
+- "Patch" version (z) increments for small, insignificant updates such as revising enumerated lists or non-breaking fixes to spec errors. Presence of a patch version is optional (i.e. on initial release).
+
+In general, only the major version number should be considered significant where there is a need for distinguishing versions; for example, when parsing an OpenRTB bid request and interpreting the "domainver" field. See [AdCOM Principles](#adcom_principles).
+
+Errata, such as clarifications or corrections to descriptions not materially impacting the specification itself, are not considered to require the version number to be incremented.  See [Errata](#appendixd_errata).
