@@ -124,7 +124,7 @@ The "api" field of the **Bid Object** should be used to indicate that the ad bei
   </tr>
   <tr>
     <td>api</td>
-    <td>integer array</td>
+    <td>integer</td>
     <td>API required by the markup if applicable. Refer to List 5.6.</td>
   </tr>
 </table>
