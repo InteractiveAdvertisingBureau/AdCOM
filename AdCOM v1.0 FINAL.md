@@ -4336,7 +4336,7 @@ Granular details of the changes can be seen by reviewing the commit history of t
 
 # Appendix E:  Versioning Policy <a name="appendixe_versioning"></a>
 
-The current version of the AdCOM specification is updated approximately once a month if there are non-breaking improvements to be released such as new fields or new values in enumerated lists. Errata, such as clarifications or corrections to descriptions not materially impacting the specification itself, are also addressed during monthly updates.  See [Errata](#appendixd_errata). 
+The current version of the AdCOM specification is updated approximately once a month if there are non-breaking improvements to be released such as new fields, objects, or values in enumerated lists. Errata, such as clarifications or corrections to descriptions not materially impacting the specification itself, are also addressed during monthly updates. See [Errata](#appendixd_errata). 
 
 AdCOM's version number is only incremented on breaking changes. In other words, AdCOM 1.1 should be considered a distinct version from AdCOM 1.0 where there is a need for distinguishing versions; for example, when parsing an OpenRTB bid request and interpreting the "domainver" field. See [AdCOM Principles](#adcomprinciples). 
 
