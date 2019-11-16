@@ -4340,5 +4340,5 @@ The current version of the AdCOM specification is updated approximately once a m
 
 AdCOM's version number is only incremented on breaking changes. In other words, AdCOM 1.1 should be considered a distinct version from AdCOM 1.0 where there is a need for distinguishing versions; for example, when parsing an OpenRTB bid request and interpreting the "domainver" field. See [AdCOM Principles](#adcomprinciples). 
 
-Release branches are created for each monthly release and the history of these can be reviewed on GitHub. The default view for the repository will always be the most recent release, whereas ongoing development work occurs in the 'master' branch. 
+Release branches are created for each monthly release and the history of these can be reviewed on GitHub. The master branch for the repository will always reflect the most recent release, whereas ongoing development work occurs in the 'develop' branch. 
 
