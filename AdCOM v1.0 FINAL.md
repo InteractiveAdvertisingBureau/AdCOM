@@ -4113,7 +4113,7 @@ This appendix serves as a brief summary of changes to the specification. These c
   <tr>
     <td>1.0</td>
     <td>November 2019</td>
-    <td><b>Added VAST 4.2 and SIMID 1.0:</b> API frameworks and video/audio subtypes lists have been updated to include VAST 4.2 and SIMID 1.0.<p>
+    <td><b>Added VAST 4.2 and SIMID 1.0:</b> API frameworks and video/audio subtypes lists have been updated to include VAST 4.2 and SIMID 1.0.<br/>
     <b>Versioning policy:</b> Elaborated on the versioning of this specification.</td>
   </tr>
   <tr>
