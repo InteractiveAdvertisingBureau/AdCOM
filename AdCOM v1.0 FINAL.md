@@ -4102,7 +4102,7 @@ JavaScript Object Notation (JSON)
 
 # Appendix B:  Change Log <a name="appendixb_changelog"></a>
 
-This appendix serves as an index of changes from the last release of this specification to the current.  These changes pertain only to the substance of the specification and not routine document formatting, information organization, or content without technical impact. For that, see [Appendix D: Errata](#appendixd_errata)
+This appendix serves as an index of changes from the last release of this specification to the current.  These changes pertain only to the substance of the specification and not routine document formatting, information organization, or content without technical impact. For that, see [Appendix D: Errata](#appendixd_errata).
 
 <table>
   <tr>
