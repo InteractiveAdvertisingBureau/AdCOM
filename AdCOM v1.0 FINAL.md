@@ -109,7 +109,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Start Delay Modes](#list_startdelaymodes)
     - [List:  Volume Normalization Modes](#list_volumenormalizationmodes)
 - [Appendix A:  Additional Resources](#appendixa_additionalresources)
-- [Appendix B:  Change Log/Version History](#appendixb_changelog)
+- [Appendix B:  Change Log](#appendixb_changelog)
 - [Appendix C:  OpenRTB Interfaces](#appendixc_openrtbinterfaces)
   - [Request Context](#requestcontext)
   - [Item Specifications](#itemspecs)
@@ -161,9 +161,7 @@ There are a number of objects that are common to multiple transaction specificat
 
 The following points define the guiding principles underlying the AdCOM specification, some of its basic rules, and its evolution.
 
-* AdCOM is backwards compatible within minor and patch versions (e.g. 1.x to 1.y or 1.x.a to 1.x.b).  No breaking changes may be made within a minor revision (e.g., no removal of attributes or objects, name or type changes, or redefinition of semantics).  New objects and attributes may be added and enumerated lists may be extended and thus implementers must accept these types of changes without breakage within major version numbers.
-* * For example, an implementer receiving AdCOM objects via a layer 3 transport specification (such as OpenRTB) should only check the major version number when deciding whether it can process the data; it may consider itself to have an "AdCOM 1.0" implementation but must tolerate new fields or enumerated list values it is not expecting, such as from a newer version (e.g. AdCOM 1.1). 
-* * Likewise, an implementer sending AdCOM objects via a layer 3 transport specification (such as OpenRTB) should only check the major version number when deciding what to send: it may freely transmit new fields or enumerated list values (such as from a newer version, e.g. AdCOM 1.1) and must tolerate new fields and enumerated list values it is not expecting. 
+* AdCOM is a living specification. New objects and attributes may be added and enumerated lists may be extended at any time and thus implementers must accept these types of changes without breakage within a version number. See [Appendix E: Versioning Policy](#appendixe_versioning)
 
 * Object and attribute names have been made intentionally compact while still trying to balance readability.  The reason for this is that in applications like OpenRTB where JSON is still widely used, these names may be transmitted in plain text extremely frequently.
 
@@ -2587,7 +2585,11 @@ The following table is a list of API frameworks either supported by a placement 
     <td>7</td>
     <td>OMID 1.0</td>
   </tr>
-  <tr>
+    <tr>
+    <td>8</td>
+    <td>SIMID 1.0</td>
+  </tr>
+    <tr>
     <td>500+</td>
     <td>Vendor-specific codes.</td>
   </tr>
@@ -2943,6 +2945,14 @@ The following table lists the various subtypes of audio and video ad creatives.
   <tr>
     <td>12</td>
     <td>VAST 4.1 Wrapper</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>VAST 4.2</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>VAST 4.2 Wrapper</td>
   </tr>
 </table>
 
@@ -4092,11 +4102,22 @@ JavaScript Object Notation (JSON)
 [www.json.org](http://www.json.org)
 
 
-# Appendix B:  Change Log/Version History <a name="appendixb_changelog"></a>
+# Appendix B:  Change Log <a name="appendixb_changelog"></a>
 
-This appendix serves as an index of specification changes from the current version to the previous.  These changes pertain only to the substance of the specification and not routine document formatting, information organization, or content without technical impact.
+This appendix serves as an index of changes from the last release of this specification to the current.  These changes pertain only to the substance of the specification and not routine document formatting, information organization, or content without technical impact. For that, see [Appendix D: Errata](#appendixd_errata)
 
-Since v1.0 is the initial version of AdCOM, the change log is omitted.
+<table>
+  <tr>
+    <td><strong>Version</strong></td>
+    <td><strong>Release</strong></td>
+    <td><strong>Changes</strong></td>
+  </tr>
+  <tr>
+    <td>1.0</td>
+    <td>November 2019</td>
+    <td>**Added VAST 4.2 and SIMID 1.0:** API frameworks and video/audio subtypes lists have been updated to include VAST 4.2 and SIMID 1.0.</td>
+  </tr>
+</table>
 
 # Appendix C:  OpenRTB Interfaces <a name="appendixc_openrtbinterfaces"></a>
 
@@ -4301,7 +4322,7 @@ This example is indicating a secure display ad for Ford using a structured banne
 
 This appendix catalogues any error corrections which have been made to this document after its versioned release. The body of the document has been updated accordingly.
 
-Only minor fixes, such as clarifications or corrections to descriptions, may be treated as errata. Any change that materially affects the specification (such as a change in field names) requires a new release.
+Only minor fixes, such as clarifications or corrections to descriptions, may be treated as errata. Improvements or material changes are summarized in the change log.
 
 Granular details of the changes can be seen by reviewing the commit history of the document.
 
@@ -4311,12 +4332,7 @@ Granular details of the changes can be seen by reviewing the commit history of t
 
 # Appendix E:  Versioning Policy <a name="appendixe_versioning"></a>
 
-AdCOM follows a variant of [Semantic Versioning](https://semver.org/). AdCOM's version number follows a pattern of "x.y.z" with the following rules:
+The current version of the AdCOM specification is updated approximately once a month if there are non-breaking improvements to be released such as new fields or new values in enumerated lists. Errata, such as clarifications or corrections to descriptions not materially impacting the specification itself, are also addressed during monthly updates.  See [Errata](#appendixd_errata). AdCOM's version number is only incremented on breaking changes. In other words, AdCOM 1.1 should be considered a distinct version from AdCOM 1.0 where there is a need for distinguishing versions; for example, when parsing an OpenRTB bid request and interpreting the "domainver" field. See [AdCOM Principles](#adcomprinciples). 
 
-- Major version (x) increments for breaking changes and substantial improvements to the specification
-- Minor version (y) increments for a bundle of non-breaking, but still significant improvements
-- "Patch" version (z) increments for small, insignificant updates such as revising enumerated lists or non-breaking fixes to spec errors. Presence of a patch version is optional (i.e. on initial release).
+Release branches are created for each monthly release and the history of these can be reviewed on GitHub. The default view for the repository will always be the most recent release, whereas ongoing development work occurs in the 'master' branch. 
 
-In general, only the major version number should be considered significant where there is a need for distinguishing versions; for example, when parsing an OpenRTB bid request and interpreting the "domainver" field. See [AdCOM Principles](#adcom_principles).
-
-Errata, such as clarifications or corrections to descriptions not materially impacting the specification itself, are not considered to require the version number to be incremented.  See [Errata](#appendixd_errata).
