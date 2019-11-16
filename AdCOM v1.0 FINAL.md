@@ -4102,7 +4102,7 @@ JavaScript Object Notation (JSON)
 
 # Appendix B:  Change Log <a name="appendixb_changelog"></a>
 
-This appendix serves as an index of changes from the last release of this specification to the current.  These changes pertain only to the substance of the specification and not routine document formatting, information organization, or content without technical impact. For that, see [Appendix D: Errata](#appendixd_errata).
+This appendix serves as a brief summary of changes to the specification. These changes pertain only to the substance of the specification and not routine document formatting, information organization, or content without technical impact. For that, see [Appendix D: Errata](#appendixd_errata).
 
 <table>
   <tr>
@@ -4113,7 +4113,13 @@ This appendix serves as an index of changes from the last release of this specif
   <tr>
     <td>1.0</td>
     <td>November 2019</td>
-    <td><b>Added VAST 4.2 and SIMID 1.0:</b> API frameworks and video/audio subtypes lists have been updated to include VAST 4.2 and SIMID 1.0.</td>
+    <td><b>Added VAST 4.2 and SIMID 1.0:</b> API frameworks and video/audio subtypes lists have been updated to include VAST 4.2 and SIMID 1.0.<p>
+    <b>Versioning policy:</b> Elaborated on the versioning of this specification.</td>
+  </tr>
+  <tr>
+    <td>1.0</td>
+    <td>November 2018</td>
+    <td>Initial release.</td>
   </tr>
 </table>
 
