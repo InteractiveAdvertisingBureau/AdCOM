@@ -2,10 +2,6 @@
 
 # **AdCOM 1.0**
 
-FINAL
-
-November 2018
-
 #### Executive Summary
 One of the most successful IAB standards is OpenRTB.  This protocol for conducting real-time auctions among sell-side exchanges and demand-side bidders first launched as OpenRTB v1.0 Mobile in February 2011.  Later that year, OpenRTB v2.0 was released, which provided a unified protocol for mobile, display, and video.  Due to widespread industry adoption, OpenRTB was established as an IAB standard in January 2012 with the release of version v2.1 although governance over technical content remained with the OpenRTB community.  Since then and true to its initial objective, OpenRTB has become the lingua franca of real-time programmatic advertising and entered 2018 as v2.5.
 
