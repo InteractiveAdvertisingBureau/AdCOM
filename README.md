@@ -16,11 +16,11 @@ These and other problematic behaviors result in poor and potentially damaging us
 Reusability by multiple IAB specifications positions AdCOM to leverage solutions such as this across a range of industry applications.
 
 #### About This Repository
-At all times, the *master* branch of this repository contains the most recent release of AdCOM.  See ["AdCOM v1.0 Final.md"](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md) in the master branch for the latest specification.
+At all times, the **master** branch of this repository contains the most recent release of AdCOM.  See ["AdCOM v1.0 Final.md"](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md) in the master branch for the latest specification.
 
 Branches exist for prior releases. Use these to review detailed changes from one release to another. A brief change log is found in the spec itself.
 
-The *develop* branch contains work-in-progress for an upcoming release. It may change at any time.
+The **develop** branch contains work-in-progress for an upcoming release. It may change at any time.
 
 #### OpenMedia
 https://iabtechlab.com/openmedia 
