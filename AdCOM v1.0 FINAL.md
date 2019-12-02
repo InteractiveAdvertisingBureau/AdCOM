@@ -2,9 +2,7 @@
 
 # **AdCOM Specification v1.0**
 
-#### FINAL v1.0
-
-**November 2018**
+**November 2019**
 
 
 **About the IAB Technology Lab**
@@ -26,7 +24,6 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
 - [OVERVIEW](#Overview)
   - [OpenMedia Mission](#openmediamission)
   - [AdCOM Executive Summary](#execsummary)
-  - [Version History](#versionhistory)
 - [ARCHITECTURE](#architecture)
   - [OpenMedia Layers](#openmedialayers)
   - [AdCOM Principles](#adcomprinciples)
@@ -116,6 +113,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
   - [Item Specifications](#itemspecs)
   - [Media Response](#mediaresponse)
 - [Appendix D:  Errata](#appendixd_errata)
+- [Appendix E:  Versioning Policy](#appendixe_versioning)
 
 
 
@@ -141,10 +139,6 @@ These and other problematic behaviors result in poor and potentially damaging us
 
 Reusability by multiple IAB specifications positions AdCOM to leverage solutions such as this across a range of industry applications.
 
-## Version History <a name="versionhistory"></a>
-
-1.0	Original Release of AdCOM; the Advertising Common Object Model.
-
 # ARCHITECTURE <a name="architecture"></a>
 
 This section describes the OpenMedia specification landscape, the role AdCOM plays, its overall structure, and the principles that guide the usage and extensibility of the AdCOM specification.
@@ -165,7 +159,7 @@ There are a number of objects that are common to multiple transaction specificat
 
 The following points define the guiding principles underlying the AdCOM specification, some of its basic rules, and its evolution.
 
-* AdCOM is backwards compatible within minor versions (e.g. 1.x to 1.y).  No breaking changes may be made within a minor revision (e.g., no removal of attributes or objects, name or type changes, or redefinition of semantics).  New objects and attributes may be added and enumerated lists may be extended and thus implementers must accept these types of changes without breakage.
+* AdCOM is a living specification. New objects and attributes may be added and enumerated lists may be extended at any time and thus implementers must accept these types of changes without breakage within a version number. See [Appendix E: Versioning Policy](#appendixe_versioning)
 
 * Object and attribute names have been made intentionally compact while still trying to balance readability.  The reason for this is that in applications like OpenRTB where JSON is still widely used, these names may be transmitted in plain text extremely frequently.
 
@@ -173,7 +167,7 @@ The following points define the guiding principles underlying the AdCOM specific
 
 * AdCOM imposes no specific representation on its objects.  This document uses JSON for illustration purposes, but this is not intended to imply any representational requirement or language binding.
 
-* All AdCOM objects may be extended as needed for vendor-specific applications.  Extensions to an AdCOM object must always be placed within a subordinate “ext” object.  Most enumerated lists when indicated can also be extended to include vendor-specific codes typically starting at 500.
+* All AdCOM objects may be extended as needed for vendor-specific applications.  Extension fields for an AdCOM object must always be placed within a subordinate “ext” object.  Most enumerated lists when indicated can also be extended to include vendor-specific codes typically starting at 500.
 
 * The typical process of promoting a new AdCOM object, attribute, or list value into future specification versions is either when a substantial concept is discovered that is applicable to multiple transaction specifications or when vendor-specific extensions become widely adopted.
 
@@ -2589,7 +2583,11 @@ The following table is a list of API frameworks either supported by a placement 
     <td>7</td>
     <td>OMID 1.0</td>
   </tr>
-  <tr>
+    <tr>
+    <td>8</td>
+    <td>SIMID 1.0</td>
+  </tr>
+    <tr>
     <td>500+</td>
     <td>Vendor-specific codes.</td>
   </tr>
@@ -2945,6 +2943,14 @@ The following table lists the various subtypes of audio and video ad creatives.
   <tr>
     <td>12</td>
     <td>VAST 4.1 Wrapper</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>VAST 4.2</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>VAST 4.2 Wrapper</td>
   </tr>
 </table>
 
@@ -4096,9 +4102,26 @@ JavaScript Object Notation (JSON)
 
 # Appendix B:  Change Log <a name="appendixb_changelog"></a>
 
-This appendix serves as an index of specification changes from the current version to the previous.  These changes pertain only to the substance of the specification and not routine document formatting, information organization, or content without technical impact.
+This appendix serves as a brief summary of changes to the specification. These changes pertain only to the substance of the specification and not routine document formatting, information organization, or content without technical impact. For that, see [Appendix D: Errata](#appendixd_errata).
 
-Since v1.0 is the initial version of AdCOM, the change log is omitted.
+<table>
+  <tr>
+    <td><strong>Version</strong></td>
+    <td><strong>Release</strong></td>
+    <td><strong>Changes</strong></td>
+  </tr>
+  <tr>
+    <td>1.0</td>
+    <td>November 2019</td>
+    <td><b>Added VAST 4.2 and SIMID 1.0:</b> API frameworks and video/audio subtypes lists have been updated to include VAST 4.2 and SIMID 1.0.<br/>
+    <b>Versioning policy:</b> Elaborated on the versioning of this specification.</td>
+  </tr>
+  <tr>
+    <td>1.0</td>
+    <td>November 2018</td>
+    <td>Initial release.</td>
+  </tr>
+</table>
 
 # Appendix C:  OpenRTB Interfaces <a name="appendixc_openrtbinterfaces"></a>
 
@@ -4299,14 +4322,23 @@ This example is indicating a secure display ad for Ford using a structured banne
 }
 ```
 
-# Appendix C:  Errata <a name="appendixd_errata"></a>
+# Appendix D:  Errata <a name="appendixd_errata"></a>
 
-This appendix catalogues any error corrections which have been made to this document after its release. The body of the document has been updated accordingly.
+This appendix catalogues any error corrections which have been made to this document after its versioned release. The body of the document has been updated accordingly.
 
-Only minor fixes, such as clarifications or corrections to descriptions, may be treated as errata. Any change that materially affects the specification (such as a change in field names) requires a new point release.
+Only minor fixes, such as clarifications or corrections to descriptions, may be treated as errata. Improvements or material changes are summarized in the change log.
 
 Granular details of the changes can be seen by reviewing the commit history of the document.
 
 **Description of "w" and "h" fields in VideoPlacement object:** The description of the "w" and "h" fields has been corrected to read "*[Width/Height]* of the placement...." The size of the video player placement generally does not have a direct bearing on what creative assets may be served to it. (2018/12/12)
 
 **Clarification of event types:** The Event Types list has been adjusted to clarify which event measurement scripts should be attached to (generally, "loaded") as well as clarifying the definition of "loaded" and "impression". (2018/12/12)
+
+# Appendix E:  Versioning Policy <a name="appendixe_versioning"></a>
+
+The current version of the AdCOM specification is updated approximately once a month if there are non-breaking improvements to be released such as new fields, objects, or values in enumerated lists. Errata, such as clarifications or corrections to descriptions not materially impacting the specification itself, are also addressed during monthly updates. See [Errata](#appendixd_errata). 
+
+AdCOM's version number is only incremented on breaking changes. In other words, AdCOM 1.1 should be considered a distinct version from AdCOM 1.0 where there is a need for distinguishing versions; for example, when parsing an OpenRTB bid request and interpreting the "domainver" field. See [AdCOM Principles](#adcomprinciples). 
+
+Release branches are created for each monthly release and the history of these can be reviewed on GitHub. The master branch for the repository will always reflect the most recent release, whereas ongoing development work occurs in the 'develop' branch. 
+
