@@ -2182,6 +2182,8 @@ Implementer should ensure compliance with regional legislation around data usage
 
 This object provides information pertaining to the device through which the user is interacting.  Device information includes its hardware, platform, location, and carrier data.  The device can refer to a mobile handset, a desktop computer, set top box, or other digital device.
 
+Implementer should ensure compliance with regional legislation around data usage and sharing.
+
 <table>
   <tr>
     <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
