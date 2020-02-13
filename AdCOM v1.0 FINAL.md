@@ -171,6 +171,10 @@ The following points define the guiding principles underlying the AdCOM specific
 
 * The typical process of promoting a new AdCOM object, attribute, or list value into future specification versions is either when a substantial concept is discovered that is applicable to multiple transaction specifications or when vendor-specific extensions become widely adopted.
 
+# GUIDANCE <a name="guidance"></a>
+
+AdCOM implementations are expected to ensure compliance on every transaction with all applicable regional legislation.
+
 # SPECIFICATION <a name="spec"></a>
 
 This section contains the detailed AdCOM domain layer specification.  Unless explicitly specified otherwise, annotated as optional, or called out as a best practice, all material aspects of this section are required for AdCOM compliance.
@@ -232,7 +236,7 @@ This object is the root of a structure that defines in instance of advertising m
   <tr>
     <td><code>cat</code></td>
     <td>string&nbsp;array</td>
-    <td>Array of content categories describing the ad using IDs from the taxonomy indicated in <code>cattax</code>.</td>
+    <td>Array of content categories describing the ad using IDs from the taxonomy indicated in <code>cattax</code>. Implementer should ensure compliance with regional legislation around data usage and sharing.</td>
   </tr>
   <tr>
     <td><code>cattax</code></td>
@@ -1909,7 +1913,7 @@ This object describes the publisher of the media in which ads will be displayed.
   <tr>
     <td><code>cat</code></td>
     <td>string&nbsp;array</td>
-    <td>Array of content categories that describe the publisher using IDs from the taxonomy indicated in <code>cattax</code>.</td>
+    <td>Array of content categories that describe the publisher using IDs from the taxonomy indicated in <code>cattax</code>. Implementer should ensure compliance with regional legislation around data usage and sharing.</td>
   </tr>
   <tr>
     <td><code>cattax</code></td>
@@ -1991,7 +1995,7 @@ This object describes the content in which an impression can appear, which may b
   <tr>
     <td><code>cat</code></td>
     <td>string&nbsp;array</td>
-    <td>Array of content categories describing the content using IDs from the taxonomy indicated in <code>cattax</code>.</td>
+    <td>Array of content categories describing the content using IDs from the taxonomy indicated in <code>cattax</code>. Implementer should ensure compliance with regional legislation around data usage and sharing.</td>
   </tr>
   <tr>
     <td><code>cattax</code></td>
@@ -2117,6 +2121,8 @@ This object defines the producer of the content in which ad will be displayed.  
 ### Object:  User <a name="object_user"></a>
 
 This object contains information known or derived about the human user of the device (i.e., the audience for advertising).  The user ID is a vendor-specific artifact and may be subject to rotation or other privacy policies.  However, this user ID must be stable long enough to serve reasonably as the basis for frequency capping and retargeting.
+
+Implementer should ensure compliance with regional legislation around data usage and sharing.
 
 <table>
   <tr>
@@ -2406,6 +2412,8 @@ The `lat` and `lon` attributes should only be passed if they conform to the accu
 ### Object:  Data <a name="object_data"></a>
 
 The data and segment objects together allow additional data about the related object (e.g., user, content) to be specified.  This data may be from multiple sources whether from the exchange itself or third parties as specified by the `id` attribute.  When in use, vendor-specific IDs should be communicated *a priori* among the parties.
+
+Implementer should ensure compliance with regional legislation around data usage and sharing.
 
 <table>
   <tr>
