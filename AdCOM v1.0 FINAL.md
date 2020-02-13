@@ -69,9 +69,12 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [Object:  Geo](#object_geo)
     - [Object:  Data](#object_data)
     - [Object:  Segment](#object_segment)
+    - [Object:  Extended Identifiers](#object_eids)
+    - [Object:  Extended Identifier UIDs](#object_eid_uids)
     - [Object:  Regs](#object_regs)
     - [Object:  Restrictions](#object_restrictions)
   - [Enumerations](#enumerations)
+    - [List:  Agent Types](#list_agenttypes)
     - [List:  API Frameworks](#list_apiframeworks)
     - [List:  Audit Status Codes](#list_auditstatuscodes)
     - [List:  Category Taxonomies](#list_categorytaxonomies)
@@ -2165,6 +2168,11 @@ This object contains information known or derived about the human user of the de
     <td>Additional user data.  Each <code>Data</code> object represents a different data source.  Refer to <a href="#object_data">Object: Data</a>.</td>
   </tr>
   <tr>
+    <td><code>eids</code></td>
+    <td>object</td>
+    <td>Extended (third-party) identifiers for this user.  Refer to <a href="#object_eids">Object: Extended Identifiers</a>.</td>
+  </tr>
+  <tr>
     <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
@@ -2469,6 +2477,60 @@ Segment objects are essentially key-value pairs that convey specific units of da
 </table>
 
 
+### Object:  Extended Identifiers <a name="object_eids"></a>
+
+Extended identifiers support in the OpenRTB specification allows buyers to use audience data in real-time bidding.  The exchange should ensure that business agreements allow for the sending of this data.  Note, it is assumed that exchanges and DSPs will collaborate with the appropriate regulatory agencies and ID vendor(s) to ensure compliance.
+
+<table>
+  <tr>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td><code>source</code></td>
+    <td>string</td>
+    <td>Source or technology provider responsible for the set of included IDs.  Expressed as a top-level domain.</td>
+  </tr>
+  <tr>
+    <td><code>uids</code></td>
+    <td>object&nbsp;array</td>
+    <td>Array of extended ID UID objects from the given <code>source</code>.  Refer to <a href="#object_eid_uids">Object: Extended Identifier UIDs</a>.</td>
+  </tr>
+  <tr>
+    <td><code>ext</code></td>
+    <td>object</td>
+    <td>Optional vendor-specific extensions.</td>
+  </tr>
+</table>
+
+
+### Object:  Extended Identifier UIDs <a name="object_eid_uids"></a>
+
+<table>
+  <tr>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td><code>id</code></td>
+    <td>string</td>
+    <td>Cookie or platform-native identifier.</td>
+  </tr>
+  <tr>
+    <td><code>atype</code></td>
+    <td>integer</td>
+    <td>Type of user agent the match is from.  It is highly recommended to set this, as many DSPs separate app-native IDs from browser-based IDs and require a type value for ID resolution.  Refer to <a href="#list_agenttypes">List: Agent Types</a>.</td>
+  </tr>
+  <tr>
+    <td><code>ext</code></td>
+    <td>object</td>
+    <td>Optional vendor-specific extensions.</td>
+  </tr>
+</table>
+
+
 ### Object:  Regs <a name="object_regs"></a>
 
 This object contains any known legal, governmental, or industry regulations that are in effect.
@@ -2545,6 +2607,30 @@ This object allows lists of restrictions on ad responses to be specified includi
 ## Enumerations <a name="enumerations"></a>
 
 The following lists define enumerations referenced by attributes in AdCOM objects.
+
+### List:  Agent Types <a name="list_agenttypes"></a>
+
+This list identifies the user agent types a user identifier is from.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>An ID which is tied to a specific web browser or device (cookie-based, probabilistic, or other).</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>In-app impressions, which will typically contain a type of device ID (or rather, the privacy-compliant versions of device IDs).</td>
+  </tr>
+  <tr>
+    <td>500+</td>
+    <td>Vendor-specific codes.</td>
+  </tr>
+</table>
+
 
 ### List:  API Frameworks <a name="list_apiframeworks"></a>
 
