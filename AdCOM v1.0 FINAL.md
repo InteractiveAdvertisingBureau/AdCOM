@@ -27,6 +27,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
 - [ARCHITECTURE](#architecture)
   - [OpenMedia Layers](#openmedialayers)
   - [AdCOM Principles](#adcomprinciples)
+- [GUIDANCE](#guidance)
 - [SPECIFICATION](#spec)
   - [Media Objects](#mediaobjects)
     - [Object:  Ad](#object_ad)
