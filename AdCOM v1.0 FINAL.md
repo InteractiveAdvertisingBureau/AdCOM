@@ -242,7 +242,7 @@ This object is the root of a structure that defines in instance of advertising m
   <tr>
     <td><code>lang</code></td>
     <td>string</td>
-    <td>Language of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated a priori.  The non-standard code “xx” may also be used if the creative has no linguistic content (e.g., a banner with just a company logo).</td>
+    <td>Language of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated beforehand.  The non-standard code “xx” may also be used if the creative has no linguistic content (e.g., a banner with just a company logo).</td>
   </tr>
   <tr>
     <td><code>attr</code></td>
@@ -900,7 +900,7 @@ The other attributes in this object apply to all aspects and substructures of th
   <tr>
     <td><code>wlang</code></td>
     <td>string&nbsp;array</td>
-    <td>Whitelist of permitted languages of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated <em>a priori</em>.  Omission of this attribute indicates there are no restrictions.</td>
+    <td>Whitelist of permitted languages of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated beforehand.  Omission of this attribute indicates there are no restrictions.</td>
   </tr>
   <tr>
     <td><code>secure</code></td>
@@ -971,7 +971,7 @@ This object signals that the placement may be a display placement.  It provides 
   <tr>
     <td><code>ifrbust</code></td>
     <td>string&nbsp;array</td>
-    <td>Array of iframe busters supported by this placement.  The meaning of strings in this attribute must be coordinated <em>a priori</em> among vendors.</td>
+    <td>Array of iframe busters supported by this placement.  The meaning of strings in this attribute must be coordinated beforehand among vendors.</td>
   </tr>
   <tr>
     <td><code>clktype</code></td>
@@ -2286,7 +2286,7 @@ Refer to https://tools.ietf.org/html/rfc6235#section-4.1.1 for more information 
   <tr>
     <td><code>carrier</code></td>
     <td>string</td>
-    <td>Carrier or ISP (e.g., “VERIZON”) using exchange curated string names which should be published to bidders <em>a priori</em>.</td>
+    <td>Carrier or ISP (e.g., “VERIZON”) using exchange curated string names which should be published to bidders beforehand.</td>
   </tr>
   <tr>
     <td><code>mccmnc</code></td>
@@ -2405,7 +2405,7 @@ The `lat` and `lon` attributes should only be passed if they conform to the accu
 
 ### Object:  Data <a name="object_data"></a>
 
-The data and segment objects together allow additional data about the related object (e.g., user, content) to be specified.  This data may be from multiple sources whether from the exchange itself or third parties as specified by the `id` attribute.  When in use, vendor-specific IDs should be communicated *a priori* among the parties.
+The data and segment objects together allow additional data about the related object (e.g., user, content) to be specified.  This data may be from multiple sources whether from the exchange itself or third parties as specified by the `id` attribute.  When in use, vendor-specific IDs should be discussed beforehand among the parties.
 
 <table>
   <tr>
@@ -2438,7 +2438,7 @@ The data and segment objects together allow additional data about the related ob
 
 ### Object:  Segment <a name="object_segment"></a>
 
-Segment objects are essentially key-value pairs that convey specific units of data.  The parent `Data` object is a collection of such values from a given data provider.  When in use, vendor-specific IDs should be communicated *a priori* among the parties.
+Segment objects are essentially key-value pairs that convey specific units of data.  The parent `Data` object is a collection of such values from a given data provider.  When in use, vendor-specific IDs should be discussed beforehand among the parties.
 
 <table>
   <tr>
