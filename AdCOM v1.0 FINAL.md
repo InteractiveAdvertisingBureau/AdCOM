@@ -4123,6 +4123,11 @@ This appendix serves as a brief summary of changes to the specification. These c
   </tr>
   <tr>
     <td>1.0</td>
+    <td>February 2020</td>
+    <td><b>Regulatory guidance:</b> A section has been added to call attention to the expectation that implementers comply with applicable laws or regulations. Fields and objects which may be impacted have had text added.</td>
+  </tr>
+  <tr>
+    <td>1.0</td>
     <td>November 2019</td>
     <td><b>Added VAST 4.2 and SIMID 1.0:</b> API frameworks and video/audio subtypes lists have been updated to include VAST 4.2 and SIMID 1.0.<br/>
     <b>Versioning policy:</b> Elaborated on the versioning of this specification.</td>
@@ -4340,6 +4345,8 @@ This appendix catalogues any error corrections which have been made to this docu
 Only minor fixes, such as clarifications or corrections to descriptions, may be treated as errata. Improvements or material changes are summarized in the change log.
 
 Granular details of the changes can be seen by reviewing the commit history of the document.
+
+**Language improvements:** Word choice has been improved in places for clarity. (2020/02/14).
 
 **Description of "w" and "h" fields in VideoPlacement object:** The description of the "w" and "h" fields has been corrected to read "*[Width/Height]* of the placement...." The size of the video player placement generally does not have a direct bearing on what creative assets may be served to it. (2018/12/12)
 
