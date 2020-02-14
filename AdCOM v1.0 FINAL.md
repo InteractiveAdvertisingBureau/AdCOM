@@ -27,6 +27,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
 - [ARCHITECTURE](#architecture)
   - [OpenMedia Layers](#openmedialayers)
   - [AdCOM Principles](#adcomprinciples)
+- [REGULATORY GUIDANCE](#guidance)
 - [SPECIFICATION](#spec)
   - [Media Objects](#mediaobjects)
     - [Object:  Ad](#object_ad)
@@ -171,6 +172,10 @@ The following points define the guiding principles underlying the AdCOM specific
 
 * The typical process of promoting a new AdCOM object, attribute, or list value into future specification versions is either when a substantial concept is discovered that is applicable to multiple transaction specifications or when vendor-specific extensions become widely adopted.
 
+# REGULATORY GUIDANCE <a name="guidance"></a>
+
+AdCOM implementations are expected to ensure compliance on every transaction with all applicable regional legislation.
+
 # SPECIFICATION <a name="spec"></a>
 
 This section contains the detailed AdCOM domain layer specification.  Unless explicitly specified otherwise, annotated as optional, or called out as a best practice, all material aspects of this section are required for AdCOM compliance.
@@ -232,7 +237,7 @@ This object is the root of a structure that defines in instance of advertising m
   <tr>
     <td><code>cat</code></td>
     <td>string&nbsp;array</td>
-    <td>Array of content categories describing the ad using IDs from the taxonomy indicated in <code>cattax</code>.</td>
+    <td>Array of content categories describing the ad using IDs from the taxonomy indicated in <code>cattax</code>. Implementer should ensure compliance with regional legislation around data usage and sharing.</td>
   </tr>
   <tr>
     <td><code>cattax</code></td>
@@ -242,7 +247,7 @@ This object is the root of a structure that defines in instance of advertising m
   <tr>
     <td><code>lang</code></td>
     <td>string</td>
-    <td>Language of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated a priori.  The non-standard code “xx” may also be used if the creative has no linguistic content (e.g., a banner with just a company logo).</td>
+    <td>Language of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated beforehand.  The non-standard code “xx” may also be used if the creative has no linguistic content (e.g., a banner with just a company logo).</td>
   </tr>
   <tr>
     <td><code>attr</code></td>
@@ -900,7 +905,7 @@ The other attributes in this object apply to all aspects and substructures of th
   <tr>
     <td><code>wlang</code></td>
     <td>string&nbsp;array</td>
-    <td>Whitelist of permitted languages of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated <em>a priori</em>.  Omission of this attribute indicates there are no restrictions.</td>
+    <td>Whitelist of permitted languages of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated beforehand.  Omission of this attribute indicates there are no restrictions.</td>
   </tr>
   <tr>
     <td><code>secure</code></td>
@@ -971,7 +976,7 @@ This object signals that the placement may be a display placement.  It provides 
   <tr>
     <td><code>ifrbust</code></td>
     <td>string&nbsp;array</td>
-    <td>Array of iframe busters supported by this placement.  The meaning of strings in this attribute must be coordinated <em>a priori</em> among vendors.</td>
+    <td>Array of iframe busters supported by this placement.  The meaning of strings in this attribute must be coordinated beforehand among vendors.</td>
   </tr>
   <tr>
     <td><code>clktype</code></td>
@@ -1909,7 +1914,7 @@ This object describes the publisher of the media in which ads will be displayed.
   <tr>
     <td><code>cat</code></td>
     <td>string&nbsp;array</td>
-    <td>Array of content categories that describe the publisher using IDs from the taxonomy indicated in <code>cattax</code>.</td>
+    <td>Array of content categories that describe the publisher using IDs from the taxonomy indicated in <code>cattax</code>. Implementer should ensure compliance with regional legislation around data usage and sharing.</td>
   </tr>
   <tr>
     <td><code>cattax</code></td>
@@ -1991,7 +1996,7 @@ This object describes the content in which an impression can appear, which may b
   <tr>
     <td><code>cat</code></td>
     <td>string&nbsp;array</td>
-    <td>Array of content categories describing the content using IDs from the taxonomy indicated in <code>cattax</code>.</td>
+    <td>Array of content categories describing the content using IDs from the taxonomy indicated in <code>cattax</code>. Implementer should ensure compliance with regional legislation around data usage and sharing.</td>
   </tr>
   <tr>
     <td><code>cattax</code></td>
@@ -2118,6 +2123,8 @@ This object defines the producer of the content in which ad will be displayed.  
 
 This object contains information known or derived about the human user of the device (i.e., the audience for advertising).  The user ID is a vendor-specific artifact and may be subject to rotation or other privacy policies.  However, this user ID must be stable long enough to serve reasonably as the basis for frequency capping and retargeting.
 
+Implementer should ensure compliance with regional legislation around data usage and sharing.
+
 <table>
   <tr>
     <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
@@ -2175,6 +2182,8 @@ This object contains information known or derived about the human user of the de
 ### Object:  Device <a name="object_device"></a>
 
 This object provides information pertaining to the device through which the user is interacting.  Device information includes its hardware, platform, location, and carrier data.  The device can refer to a mobile handset, a desktop computer, set top box, or other digital device.
+
+Implementer should ensure compliance with regional legislation around data usage and sharing.
 
 <table>
   <tr>
@@ -2286,7 +2295,7 @@ Refer to https://tools.ietf.org/html/rfc6235#section-4.1.1 for more information 
   <tr>
     <td><code>carrier</code></td>
     <td>string</td>
-    <td>Carrier or ISP (e.g., “VERIZON”) using exchange curated string names which should be published to bidders <em>a priori</em>.</td>
+    <td>Carrier or ISP (e.g., “VERIZON”) using exchange curated string names which should be published to bidders beforehand.</td>
   </tr>
   <tr>
     <td><code>mccmnc</code></td>
@@ -2405,7 +2414,9 @@ The `lat` and `lon` attributes should only be passed if they conform to the accu
 
 ### Object:  Data <a name="object_data"></a>
 
-The data and segment objects together allow additional data about the related object (e.g., user, content) to be specified.  This data may be from multiple sources whether from the exchange itself or third parties as specified by the `id` attribute.  When in use, vendor-specific IDs should be communicated *a priori* among the parties.
+The data and segment objects together allow additional data about the related object (e.g., user, content) to be specified.  This data may be from multiple sources whether from the exchange itself or third parties as specified by the `id` attribute.  When in use, vendor-specific IDs should be discussed beforehand among the parties.
+
+Implementer should ensure compliance with regional legislation around data usage and sharing.
 
 <table>
   <tr>
@@ -2438,7 +2449,7 @@ The data and segment objects together allow additional data about the related ob
 
 ### Object:  Segment <a name="object_segment"></a>
 
-Segment objects are essentially key-value pairs that convey specific units of data.  The parent `Data` object is a collection of such values from a given data provider.  When in use, vendor-specific IDs should be communicated *a priori* among the parties.
+Segment objects are essentially key-value pairs that convey specific units of data.  The parent `Data` object is a collection of such values from a given data provider.  When in use, vendor-specific IDs should be discussed beforehand among the parties.
 
 <table>
   <tr>
@@ -4112,6 +4123,11 @@ This appendix serves as a brief summary of changes to the specification. These c
   </tr>
   <tr>
     <td>1.0</td>
+    <td>February 2020</td>
+    <td><b>Regulatory guidance:</b> A section has been added to call attention to the expectation that implementers comply with applicable laws or regulations. Fields and objects which may be impacted have had text added.</td>
+  </tr>
+  <tr>
+    <td>1.0</td>
     <td>November 2019</td>
     <td><b>Added VAST 4.2 and SIMID 1.0:</b> API frameworks and video/audio subtypes lists have been updated to include VAST 4.2 and SIMID 1.0.<br/>
     <b>Versioning policy:</b> Elaborated on the versioning of this specification.</td>
@@ -4329,6 +4345,8 @@ This appendix catalogues any error corrections which have been made to this docu
 Only minor fixes, such as clarifications or corrections to descriptions, may be treated as errata. Improvements or material changes are summarized in the change log.
 
 Granular details of the changes can be seen by reviewing the commit history of the document.
+
+**Language improvements:** Word choice has been improved in places for clarity. (2020/02/14).
 
 **Description of "w" and "h" fields in VideoPlacement object:** The description of the "w" and "h" fields has been corrected to read "*[Width/Height]* of the placement...." The size of the video player placement generally does not have a direct bearing on what creative assets may be served to it. (2018/12/12)
 
