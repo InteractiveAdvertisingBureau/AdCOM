@@ -27,7 +27,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
 - [ARCHITECTURE](#architecture)
   - [OpenMedia Layers](#openmedialayers)
   - [AdCOM Principles](#adcomprinciples)
-- [GUIDANCE](#guidance)
+- [REGULATORY GUIDANCE](#guidance)
 - [SPECIFICATION](#spec)
   - [Media Objects](#mediaobjects)
     - [Object:  Ad](#object_ad)
@@ -172,7 +172,7 @@ The following points define the guiding principles underlying the AdCOM specific
 
 * The typical process of promoting a new AdCOM object, attribute, or list value into future specification versions is either when a substantial concept is discovered that is applicable to multiple transaction specifications or when vendor-specific extensions become widely adopted.
 
-# GUIDANCE <a name="guidance"></a>
+# REGULATORY GUIDANCE <a name="guidance"></a>
 
 AdCOM implementations are expected to ensure compliance on every transaction with all applicable regional legislation.
 
