@@ -2627,7 +2627,7 @@ This list identifies the user agent types a user identifier is from.
   </tr>
   <tr>
     <td>3</td>
-    <td>Person-based or cross-device ID, such as a hashed email address.</td>
+    <td>A person-based ID, i.e., that is the same across devices.</td>
   </tr>
   <tr>
     <td>500+</td>
