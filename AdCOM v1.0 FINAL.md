@@ -2626,6 +2626,10 @@ This list identifies the user agent types a user identifier is from.
     <td>In-app impressions, which will typically contain a type of device ID (or rather, the privacy-compliant versions of device IDs).</td>
   </tr>
   <tr>
+    <td>3</td>
+    <td>Person-based or cross-device ID, such as a hashed email address.</td>
+  </tr>
+  <tr>
     <td>500+</td>
     <td>Vendor-specific codes.</td>
   </tr>
