@@ -1991,7 +1991,7 @@ This object describes the content in which an impression can appear, which may b
   <tr>
     <td><code>url</code></td>
     <td>string</td>
-    <td>URL of the content, for buy-side contextualization or review. If more than one URL need to be passed, use the urls attribute</td>
+    <td>URL of the content, for buy-side contextualization or review. If more than one URL need to be passed, use the <code>urls</code> attribute</td>
   </tr>
   <tr>
     <td><code>urls</code></td>
