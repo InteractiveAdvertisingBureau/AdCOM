@@ -1991,12 +1991,13 @@ This object describes the content in which an impression can appear, which may b
   <tr>
     <td><code>url</code></td>
     <td>string</td>
-    <td>A single URL of the content, for buy-side contextualization or review. Only one of <code>url</code> or <code>urls</code> fields should be provided.</td>
+    <td>A single URL of the content, for buy-side contextualization or review. 
+        <b>Deprecated</b> - please use <code>urls</code> instead.</td>
   </tr>
   <tr>
     <td><code>urls</code></td>
     <td>string array</td>
-    <td>An array of URLs of content that may be adjacent to the ad placement, for buy-side contextualization or review. Only one of <code>url</code> or <code>urls</code> fields should be provided.</td>
+    <td>An array of URLs of content that may be adjacent to the ad placement, for buy-side contextualization or review.</td>
   </tr>    
   <tr>
     <td><code>cat</code></td>
