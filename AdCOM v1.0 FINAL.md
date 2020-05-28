@@ -1485,6 +1485,11 @@ This object signals that the placement may be a video placement and provides add
     <td>Supported companion ad types; recommended if companion ads are specified in <code>comp</code>.  Refer to <a href="#list_companiontypes">List: Companion Types</a>.</td>
   </tr>
   <tr>
+      <tr>
+    <td><code>expdir</code></td>
+    <td>integer&nbsp;array</td>
+    <td>Directions in which the creative is permitted to expand.  Refer to <a href="#list_expandabledirections">List: Expandable Directions</a>.</td>
+  </tr>
     <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
