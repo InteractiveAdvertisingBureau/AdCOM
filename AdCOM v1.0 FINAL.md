@@ -1994,14 +1994,8 @@ This object describes the content in which an impression can appear, which may b
   <tr>
     <td><code>url</code></td>
     <td>string</td>
-    <td>A single URL of the content, for buy-side contextualization or review. 
-        <b>Deprecated</b> - please use <code>urls</code> instead.</td>
-  </tr>
-  <tr>
-    <td><code>urls</code></td>
-    <td>string array</td>
-    <td>An array of URLs of content that may be adjacent to the ad placement, for buy-side contextualization or review.</td>
-  </tr>    
+    <td>A single URL of the content, for buy-side contextualization or review.</td>
+  </tr>  
   <tr>
     <td><code>cat</code></td>
     <td>string&nbsp;array</td>
@@ -4220,8 +4214,7 @@ This appendix serves as a brief summary of changes to the specification. These c
   <tr>
     <td>1.0</td>
     <td>June 2020</td>
-    <td><b>Added 'urls' to content:</b> Support for brand safety in scenarios such as in-app ads which might be adjacent to multiple pieces of content.<br />
-    <b>Added extended IDs object:</b> Support for passing of multiple IDs of varying types.<br /></td>
+    <td><b>Added extended IDs object:</b> Support for passing of multiple IDs of varying types.<br /></td>
   </tr>
   <tr>
     <td>1.0</td>
