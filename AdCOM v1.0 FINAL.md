@@ -4219,6 +4219,12 @@ This appendix serves as a brief summary of changes to the specification. These c
   </tr>
   <tr>
     <td>1.0</td>
+    <td>June 2020</td>
+    <td><b>Added 'urls' to content:</b> Support for brand safety in scenarios such as in-app ads which might be adjacent to multiple pieces of content.<br />
+    <b>Added extended IDs object:</b> Support for passing of multiple IDs of varying types.<br /></td>
+  </tr>
+  <tr>
+    <td>1.0</td>
     <td>February 2020</td>
     <td><b>Regulatory guidance:</b> A section has been added to call attention to the expectation that implementers comply with applicable laws or regulations. Fields and objects which may be impacted have had text added.</td>
   </tr>
