@@ -94,7 +94,7 @@ In OpenRTB 2.0 and 2.1, value 6 is not present. If extending an existing OpenRTB
 
 The "api" field of the **Banner, Video, or Native Object** should be used to indicate availability of OMID. This is supported in OpenRTB 2.0+.
 
-### Banner/Video/Native Object
+### Banner/Video/Native/Audio Object
 
 <table>
   <tr>
