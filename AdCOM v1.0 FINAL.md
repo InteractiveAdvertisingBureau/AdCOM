@@ -1488,6 +1488,16 @@ This object signals that the placement may be a video placement and provides add
     <td>Supported companion ad types; recommended if companion ads are specified in <code>comp</code>.  Refer to <a href="#list_companiontypes">List: Companion Types</a>.</td>
   </tr>
   <tr>
+      <tr>
+    <td><code>expdir</code></td>
+    <td>integer&nbsp;array</td>
+    <td>Directions in which the creative (video placement) is permitted to expand.  Refer to <a href="#list_expandabledirections">List: Expandable Directions</a>.</td>
+  </tr>
+        <tr>
+    <td><code>overlayexpdir</code></td>
+    <td>integer&nbsp;array</td>
+    <td>Directions in which the creative (video overlay) is permitted to expand. This is primarily used for non-linear videos.  Refer to <a href="#list_expandabledirections">List: Expandable Directions</a>.</td>
+  </tr>
     <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
@@ -1604,6 +1614,11 @@ This object signals that the placement may be an audio placement and provides ad
     <td><code>comptype</code></td>
     <td>integer&nbsp;array</td>
     <td>Supported companion ad types; recommended if companion ads are specified in <code>comp</code>.  Refer to <a href="#list_companiontypes">List: Companion Types</a>.</td>
+  </tr>
+          <tr>
+    <td><code>overlayexpdir</code></td>
+    <td>integer&nbsp;array</td>
+    <td>Directions in which the creative (overlay) is permitted to expand.  Refer to <a href="#list_expandabledirections">List: Expandable Directions</a>.</td>
   </tr>
   <tr>
     <td><code>ext</code></td>
@@ -2688,6 +2703,11 @@ The following table is a list of API frameworks either supported by a placement 
     <td>8</td>
     <td>SIMID 1.0</td>
   </tr>
+    </tr>
+    <tr>
+    <td>9</td>
+    <td>SIMID 1.1</td>
+  </tr>
     <tr>
     <td>500+</td>
     <td>Vendor-specific codes.</td>
@@ -3576,6 +3596,10 @@ The following table lists the directions in which an expandable ad may expand, g
   <tr>
     <td>5</td>
     <td>Full Screen</td>
+  </tr>
+    <tr>
+    <td>6</td>
+    <td>Resize/Minimize (make smaller)</td>
   </tr>
 </table>
 
