@@ -2703,10 +2703,13 @@ The following table is a list of API frameworks either supported by a placement 
     <td>8</td>
     <td>SIMID 1.0</td>
   </tr>
-    </tr>
     <tr>
     <td>9</td>
     <td>SIMID 1.1</td>
+  </tr>
+    <tr>
+    <td>10</td>
+    <td>SafeFrame 2.0</td>
   </tr>
     <tr>
     <td>500+</td>
