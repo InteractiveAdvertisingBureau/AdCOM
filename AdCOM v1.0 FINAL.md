@@ -1734,7 +1734,7 @@ This object is used to define an ad supported website, in contrast to a non-brow
   <tr>
     <td><code>keywords</code></td>
     <td>string</td>
-    <td>Comma separated list of keywords about the site. Only one of 'keywords' or 'kwarray' may be present. NOTE: this field is deprecated, use 'kwarray' instead.</td>
+    <td>Comma-separated list of keywords about the site. Only one of 'keywords' or 'kwarray' may be present. NOTE: this field is deprecated, use 'kwarray' instead.</td>
   </tr>
   <tr>
     <td><code>kwarray</code></td>
@@ -1819,7 +1819,7 @@ This object is used to define an ad supported non-browser application, in contra
   <tr>
     <td><code>keywords</code></td>
     <td>string</td>
-    <td>Comma separated list of keywords about the app. Only one of 'keywords' or 'kwarray' may be present. NOTE: this field is deprecated, use 'kwarray' instead.</td>
+    <td>Comma-separated list of keywords about the app. Only one of 'keywords' or 'kwarray' may be present. NOTE: this field is deprecated, use 'kwarray' instead.</td>
   </tr>
   <tr>
     <td><code>kwarray</code></td>
@@ -2044,7 +2044,7 @@ This object describes the content in which an impression can appear, which may b
   <tr>
     <td><code>keywords</code></td>
     <td>string</td>
-    <td>Comma separated list of keywords describing the content. Only one of 'keywords' or 'kwarray' may be present. NOTE: this field is deprecated, use 'kwarray' instead.</td>
+    <td>Comma-separated list of keywords describing the content. Only one of 'keywords' or 'kwarray' may be present. NOTE: this field is deprecated, use 'kwarray' instead.</td>
   </tr>
   <tr>
     <td><code>kwarray</code></td>
@@ -2172,7 +2172,12 @@ Implementer should ensure compliance with regional legislation around data usage
   <tr>
     <td><code>keywords</code></td>
     <td>string</td>
-    <td>Comma separated list of keywords, interests, or intent.</td>
+    <td>Comma-separated list of keywords, interests, or intent. Only one of 'keywords' or 'kwarray' may be present. NOTE: this field is deprecated, use 'kwarray' instead.</td>
+  </tr>
+  <tr>
+    <td><code>kwarray</code></td>
+    <td>string array</td>
+    <td>Array of keywords describing the content. Only one of 'keywords' or 'kwarray' may be present.</td>
   </tr>
   <tr>
     <td><code>consent</code></td>
