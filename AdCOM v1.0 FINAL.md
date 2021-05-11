@@ -908,7 +908,7 @@ The other attributes in this object apply to all aspects and substructures of th
   <tr>
     <td><code>wlang</code></td>
     <td>string&nbsp;array</td>
-    <td>Whitelist of permitted languages of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated beforehand.  Omission of this attribute indicates there are no restrictions.</td>
+    <td>Allow list of permitted languages of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated beforehand.  Omission of this attribute indicates there are no restrictions.</td>
   </tr>
   <tr>
     <td><code>secure</code></td>
@@ -1327,7 +1327,7 @@ This object specifies a type of ad tracking event and which methods of tracking 
   <tr>
     <td><code>wjs</code></td>
     <td>integer;<br/>default&nbsp;1</td>
-    <td>Sense of the <code>jstrk</code> restriction list, where 0 = block list, 1 = whitelist.</td>
+    <td>Sense of the <code>jstrk</code> restriction list, where 0 = block list, 1 = allow list.</td>
   </tr>
   <tr>
     <td><code>pxtrk</code></td>
@@ -1337,7 +1337,7 @@ This object specifies a type of ad tracking event and which methods of tracking 
   <tr>
     <td><code>wpx</code></td>
     <td>integer;<br/>default&nbsp;1</td>
-    <td>Sense of the <code>pxtrk</code> restriction list, where 0 = block list, 1 = whitelist.</td>
+    <td>Sense of the <code>pxtrk</code> restriction list, where 0 = block list, 1 = allow list.</td>
   </tr>
   <tr>
     <td><code>ext</code></td>
