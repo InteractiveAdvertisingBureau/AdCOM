@@ -112,7 +112,7 @@ The "api" field of the **Banner, Video, or Native Object** should be used to ind
 
 ## Bid Response
 
-The "api" field of the **Bid Object** should be used to indicate that the ad being used in the bid requires use of OMID. This field is supported in OpenRTB 2.4+, though consistent with the design principles of OpenRTB, it should be possible to retrofit this field into OpenRTB 2.3 and earlier versions as SSPs and DSPs should gracefully ignore fields they do not understand. 
+The "apis" and "api" fields of the **Bid Object** should be used to indicate that the ad being used in the bid requires use of OMID. The "apis" field is supported in OpenRTB 2.6 and "api" field is supported in OpenRTB 2.4+. Though consistent with the design principles of OpenRTB, it should be possible to retrofit these fields into earlier OpenRTB versions as SSPs and DSPs should gracefully ignore fields they do not understand.
 
 ### Bid Object
 
@@ -123,9 +123,14 @@ The "api" field of the **Bid Object** should be used to indicate that the ad bei
     <td>Description</td>
   </tr>
   <tr>
+    <td>apis</td>
+    <td>integer array</td>
+    <td>A list of APIs required by the markup if applicable. Refer to List 5.6.</td>
+  </tr>
+  <tr>
     <td>api</td>
     <td>integer</td>
-    <td>API required by the markup if applicable. Refer to List 5.6.</td>
+    <td><i>NOTE: Deprecated in favor of the apis integer array in OpenRTB 2.6.</i> API required by the markup if applicable. Refer to List 5.6.</td>
   </tr>
 </table>
 
