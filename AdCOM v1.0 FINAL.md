@@ -2758,7 +2758,7 @@ The following table lists the codes used in `Audit` objects to reflect status or
 ### List:  Category Taxonomies <a name="list_categorytaxonomies"></a>
 
 
-This list identifies the taxonomy in effect when content categories are listed.
+The following table lists the options for taxonomies that can be used to describe content, audience, and ad creative categories.
 
 <table>
   <tr>
@@ -2767,16 +2767,29 @@ This list identifies the taxonomy in effect when content categories are listed.
   </tr>
   <tr>
     <td>1</td>
-    <td>IAB Content Category Taxonomy 1.0.</td>
+    <td>IAB Tech Lab Content Category Taxonomy 1.0. - Deprecated, and recommend NOT be used since it does not have SCD flags. </td>
   </tr>
   <tr>
     <td>2</td>
-    <td>IAB Content Category Taxonomy 2.0:  www.iab.com/guidelines/taxonomy</td>
+    <td>IAB Tech Lab Content Category Taxonomy 2.0:  Deprecated, and recommend NOT be used since it does not have SCD flags.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>IAB Ad Product Taxonomy 1.0.</td>
+    <td> <a href="https://iabtechlab.com/wp-content/uploads/2020/10/IABTL-Ad-Product-Taxonomy-1.0-Final.xlsx">IAB Tech Lab Ad Product Taxonomy 1.0.</A> </td>
   </tr>
+  <tr>
+    <td>4</td>
+    <td><a href="https://iabtechlab.com/standards/audience-taxonomy/">IAB Tech Lab Audience Taxonomy 1.1</a></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td><a href="https://iabtechlab.com/standards/content-taxonomy/">IAB Tech Lab Content Taxonomy 2.1</a></td>
+  </tr>
+    <tr>
+    <td>6</td>
+    <td><a href="https://iabtechlab.com/standards/content-taxonomy/">IAB Tech Lab Content Taxonomy 2.2</a></td>
+  </tr>
+
   <tr>
     <td>500+</td>
     <td>Vendor-specific codes.</td>
