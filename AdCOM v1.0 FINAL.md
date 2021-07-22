@@ -1470,7 +1470,7 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td><code>linear</code></td>
     <td>integer</td>
-    <td>Indicates if the creative must be linear, nonlinear, etc.  If none specified, no restrictions are assumed.  Refer to <a href="#list_linearitymodes">List: Linearity Modes</a>.</td>
+    <td>Indicates if the creative must be linear, nonlinear, etc.  If none specified, no restrictions are assumed.  Refer to <a href="#list_linearitymodes">List: Linearity Modes</a>. Note that this field describes the expected VAST response and not whether a placement is in-stream, out-stream, etc. For that, see <code>ptype</code>.</td>
   </tr>
   <tr>
     <td><code>boxing</code></td>
@@ -3658,7 +3658,7 @@ The following table lists the services and/or vendors used for resolving IP addr
 
 ### List:  Linearity Modes <a name="list_linearitymodes"></a>
 
-The following table indicates the options for media linearity, typically for video.
+The following table indicates the options for media linearity (typically video). This corresponds to the required type of VAST response, where a linear response is VAST containing video assets, and non-linear is a VAST response (typically) containing a banner/overlay.
 
 <table>
   <tr>
@@ -3667,7 +3667,7 @@ The following table indicates the options for media linearity, typically for vid
   </tr>
   <tr>
     <td>1</td>
-    <td>Linear (i.e., In-Stream such as Pre-Roll, Mid-Roll, Post-Roll)</td>
+    <td>Linear</td>
   </tr>
   <tr>
     <td>2</td>
@@ -4237,6 +4237,16 @@ This appendix serves as a brief summary of changes to the specification. These c
   </tr>
   <tr>
     <td>1.0</td>
+    <td>August 2021</td>
+    <td><b>Added expdir to VideoPlacement:</b> Support for indicating permitted expansion direction for video ads.<br />
+    <b>Added overlaydir to VideoPlacement and AudioPlacement:</b> Support for indicating permitted expansion direction for video and audio ads overlays.<br />
+    <b>SIMID 1.1:</b> SIMID 1.1 has been added to the API frameworks list.<br />
+    <b>Expansion directions:</b> "Resize/Minimize (make smaller)" has been added to the list of expanding directions.<br />
+    <b>Definition of linearity:</b> In the linearity modes list and the <code>linear</code> field in the VideoPlacement object, text has been revised to clarify that linearity corresponds to expected VAST response and is not an indication of in-stream vs out-stream. 
+    </td>
+  </tr>
+  <tr>
+    <td>1.0</td>
     <td>June 2020</td>
     <td><b>Added extended IDs object:</b> Support for passing of multiple IDs of varying types.<br /></td>
   </tr>
@@ -4465,7 +4475,9 @@ Only minor fixes, such as clarifications or corrections to descriptions, may be 
 
 Granular details of the changes can be seen by reviewing the commit history of the document.
 
-**Language improvements:** Word choice has been improved in places for clarity. (2020/02/14).
+**Change of terminology:** References to "whitelist" have been changed to "allow list" consistent with industry norms. (2021/05/11)
+
+**Language improvements:** Word choice has been improved in places for clarity. (2020/02/14)
 
 **Description of "w" and "h" fields in VideoPlacement object:** The description of the "w" and "h" fields has been corrected to read "*[Width/Height]* of the placement...." The size of the video player placement generally does not have a direct bearing on what creative assets may be served to it. (2018/12/12)
 
