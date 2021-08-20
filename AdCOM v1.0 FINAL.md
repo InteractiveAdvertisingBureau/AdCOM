@@ -2,7 +2,7 @@
 
 # **AdCOM Specification v1.0**
 
-**June 2020**
+**August 2021**
 
 
 **About the IAB Technology Lab**
@@ -4255,7 +4255,9 @@ This appendix serves as a brief summary of changes to the specification. These c
     <b>Added overlaydir to VideoPlacement and AudioPlacement:</b> Support for indicating permitted expansion direction for video and audio ads overlays.<br />
     <b>SIMID 1.1:</b> SIMID 1.1 has been added to the API frameworks list.<br />
     <b>Expansion directions:</b> "Resize/Minimize (make smaller)" has been added to the list of expanding directions.<br />
-    <b>Definition of linearity:</b> In the linearity modes list and the <code>linear</code> field in the VideoPlacement object, text has been revised to clarify that linearity corresponds to expected VAST response and is not an indication of in-stream vs out-stream. 
+    <b>Definition of linearity:</b> In the linearity modes list and the <code>linear</code> field in the VideoPlacement object, text has been revised to clarify that linearity corresponds to expected VAST response and is not an indication of in-stream vs out-stream.<br />
+    <b>Category taxonomies list updated:</b> The category taxonomies list was updated with the latest IAB taxonomies. The description of the list was expanded to note that it includes taxonomies for describing content, ads, and audiences. Old versions of taxonomies have been marked deprecated.
+    <>
     </td>
   </tr>
   <tr>
