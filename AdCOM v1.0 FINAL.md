@@ -110,6 +110,8 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Size Units](#list_sizeunits)
     - [List:  Start Delay Modes](#list_startdelaymodes)
     - [List:  Volume Normalization Modes](#list_volumenormalizationmodes)
+    - [List:  Ad Sequence](#list_adsequence)
+    - [List:  Pod Sequence](#list_podsequence)
 - [Appendix A:  Additional Resources](#appendixa_additionalresources)
 - [Appendix B:  Change Log](#appendixb_changelog)
 - [Appendix C:  OpenRTB Interfaces](#appendixc_openrtbinterfaces)
@@ -4197,6 +4199,54 @@ The following table lists the types of volume normalization modes, typically for
   <tr>
     <td>4</td>
     <td>Custom Volume Normalization</td>
+  </tr>
+</table>
+
+
+### List:  Ad Sequence <a name="list_adsequence"></a>
+
+The following table lists the values for the ad sequence field, for use in audio and video ad pods.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>First ad in the pod</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>Any ad in the pod</td>
+  </tr>
+  <tr>
+    <td>-1</td>
+    <td>Last ad in the pod</td>
+  </tr>
+</table>
+
+
+### List:  Pod Sequence <a name="list_podsequence"></a>
+
+The following table lists the values for the pod sequence field, for use in audio and video content streams with one or more ad pods.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>First pod in the content stream</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>Any pod in the content stream</td>
+  </tr>
+  <tr>
+    <td>-1</td>
+    <td>Last pod in the content stream</td>
   </tr>
 </table>
 
