@@ -2,7 +2,7 @@
 
 # **AdCOM Specification v1.0**
 
-**June 2020**
+**August 2021**
 
 
 **About the IAB Technology Lab**
@@ -1470,7 +1470,7 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td><code>linear</code></td>
     <td>integer</td>
-    <td>Indicates if the creative must be linear, nonlinear, etc.  If none specified, no restrictions are assumed.  Refer to <a href="#list_linearitymodes">List: Linearity Modes</a>.</td>
+    <td>Indicates if the creative must be linear, nonlinear, etc.  If none specified, no restrictions are assumed.  Refer to <a href="#list_linearitymodes">List: Linearity Modes</a>. Note that this field describes the expected VAST response and not whether a placement is in-stream, out-stream, etc. For that, see <code>ptype</code>.</td>
   </tr>
   <tr>
     <td><code>boxing</code></td>
@@ -1488,6 +1488,16 @@ This object signals that the placement may be a video placement and provides add
     <td>Supported companion ad types; recommended if companion ads are specified in <code>comp</code>.  Refer to <a href="#list_companiontypes">List: Companion Types</a>.</td>
   </tr>
   <tr>
+      <tr>
+    <td><code>expdir</code></td>
+    <td>integer&nbsp;array</td>
+    <td>Directions in which the creative (video placement) is permitted to expand.  Refer to <a href="#list_expandabledirections">List: Expandable Directions</a>.</td>
+  </tr>
+        <tr>
+    <td><code>overlayexpdir</code></td>
+    <td>integer&nbsp;array</td>
+    <td>Directions in which the creative (video overlay) is permitted to expand. This is primarily used for non-linear videos.  Refer to <a href="#list_expandabledirections">List: Expandable Directions</a>.</td>
+  </tr>
     <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
@@ -1604,6 +1614,11 @@ This object signals that the placement may be an audio placement and provides ad
     <td><code>comptype</code></td>
     <td>integer&nbsp;array</td>
     <td>Supported companion ad types; recommended if companion ads are specified in <code>comp</code>.  Refer to <a href="#list_companiontypes">List: Companion Types</a>.</td>
+  </tr>
+          <tr>
+    <td><code>overlayexpdir</code></td>
+    <td>integer&nbsp;array</td>
+    <td>Directions in which the creative (overlay) is permitted to expand.  Refer to <a href="#list_expandabledirections">List: Expandable Directions</a>.</td>
   </tr>
   <tr>
     <td><code>ext</code></td>
@@ -2688,6 +2703,11 @@ The following table is a list of API frameworks either supported by a placement 
     <td>8</td>
     <td>SIMID 1.0</td>
   </tr>
+    </tr>
+    <tr>
+    <td>9</td>
+    <td>SIMID 1.1</td>
+  </tr>
     <tr>
     <td>500+</td>
     <td>Vendor-specific codes.</td>
@@ -2738,7 +2758,7 @@ The following table lists the codes used in `Audit` objects to reflect status or
 ### List:  Category Taxonomies <a name="list_categorytaxonomies"></a>
 
 
-This list identifies the taxonomy in effect when content categories are listed.
+The following table lists the options for taxonomies that can be used to describe content, audience, and ad creative categories.
 
 <table>
   <tr>
@@ -2747,16 +2767,29 @@ This list identifies the taxonomy in effect when content categories are listed.
   </tr>
   <tr>
     <td>1</td>
-    <td>IAB Content Category Taxonomy 1.0.</td>
+    <td>IAB Tech Lab Content Category Taxonomy 1.0. - Deprecated, and recommend NOT be used since it does not have SCD flags. </td>
   </tr>
   <tr>
     <td>2</td>
-    <td>IAB Content Category Taxonomy 2.0:  www.iab.com/guidelines/taxonomy</td>
+    <td>IAB Tech Lab Content Category Taxonomy 2.0:  Deprecated, and recommend NOT be used since it does not have SCD flags.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>IAB Ad Product Taxonomy 1.0.</td>
+    <td> <a href="https://iabtechlab.com/wp-content/uploads/2020/10/IABTL-Ad-Product-Taxonomy-1.0-Final.xlsx">IAB Tech Lab Ad Product Taxonomy 1.0.</A> </td>
   </tr>
+  <tr>
+    <td>4</td>
+    <td><a href="https://iabtechlab.com/standards/audience-taxonomy/">IAB Tech Lab Audience Taxonomy 1.1</a></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td><a href="https://iabtechlab.com/standards/content-taxonomy/">IAB Tech Lab Content Taxonomy 2.1</a></td>
+  </tr>
+    <tr>
+    <td>6</td>
+    <td><a href="https://iabtechlab.com/standards/content-taxonomy/">IAB Tech Lab Content Taxonomy 2.2</a></td>
+  </tr>
+
   <tr>
     <td>500+</td>
     <td>Vendor-specific codes.</td>
@@ -3577,6 +3610,10 @@ The following table lists the directions in which an expandable ad may expand, g
     <td>5</td>
     <td>Full Screen</td>
   </tr>
+    <tr>
+    <td>6</td>
+    <td>Resize/Minimize (make smaller)</td>
+  </tr>
 </table>
 
 
@@ -3634,7 +3671,7 @@ The following table lists the services and/or vendors used for resolving IP addr
 
 ### List:  Linearity Modes <a name="list_linearitymodes"></a>
 
-The following table indicates the options for media linearity, typically for video.
+The following table indicates the options for media linearity (typically video). This corresponds to the required type of VAST response, where a linear response is VAST containing video assets, and non-linear is a VAST response (typically) containing a banner/overlay.
 
 <table>
   <tr>
@@ -3643,7 +3680,7 @@ The following table indicates the options for media linearity, typically for vid
   </tr>
   <tr>
     <td>1</td>
-    <td>Linear (i.e., In-Stream such as Pre-Roll, Mid-Roll, Post-Roll)</td>
+    <td>Linear</td>
   </tr>
   <tr>
     <td>2</td>
@@ -4213,6 +4250,18 @@ This appendix serves as a brief summary of changes to the specification. These c
   </tr>
   <tr>
     <td>1.0</td>
+    <td>August 2021</td>
+    <td><b>Added expdir to VideoPlacement:</b> Support for indicating permitted expansion direction for video ads.<br />
+    <b>Added overlaydir to VideoPlacement and AudioPlacement:</b> Support for indicating permitted expansion direction for video and audio ads overlays.<br />
+    <b>SIMID 1.1:</b> SIMID 1.1 has been added to the API frameworks list.<br />
+    <b>Expansion directions:</b> "Resize/Minimize (make smaller)" has been added to the list of expanding directions.<br />
+    <b>Definition of linearity:</b> In the linearity modes list and the <code>linear</code> field in the VideoPlacement object, text has been revised to clarify that linearity corresponds to expected VAST response and is not an indication of in-stream vs out-stream.<br />
+    <b>Category taxonomies list updated:</b> The category taxonomies list was updated with the latest IAB taxonomies. The description of the list was expanded to note that it includes taxonomies for describing content, ads, and audiences. Old versions of taxonomies have been marked deprecated.
+    <>
+    </td>
+  </tr>
+  <tr>
+    <td>1.0</td>
     <td>June 2020</td>
     <td><b>Added extended IDs object:</b> Support for passing of multiple IDs of varying types.<br /></td>
   </tr>
@@ -4441,7 +4490,9 @@ Only minor fixes, such as clarifications or corrections to descriptions, may be 
 
 Granular details of the changes can be seen by reviewing the commit history of the document.
 
-**Language improvements:** Word choice has been improved in places for clarity. (2020/02/14).
+**Change of terminology:** References to "whitelist" have been changed to "allow list" consistent with industry norms. (2021/05/11)
+
+**Language improvements:** Word choice has been improved in places for clarity. (2020/02/14)
 
 **Description of "w" and "h" fields in VideoPlacement object:** The description of the "w" and "h" fields has been corrected to read "*[Width/Height]* of the placement...." The size of the video player placement generally does not have a direct bearing on what creative assets may be served to it. (2018/12/12)
 
