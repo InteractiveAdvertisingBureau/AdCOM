@@ -228,9 +228,14 @@ This object is the root of a structure that defines in instance of advertising m
     <td>Advertiser domain; top two levels only (e.g., “ford.com”).  This can be an array for the case of rotating creatives.</td>
   </tr>
   <tr>
+    <td><code>storeid</code></td>
+    <td>string&nbsp;array</td>
+    <td>When the product of the ad is an app, the unique ID of that app as an app store ID (e.g., Apple iTunes, Google Play).  This should NOT be a bundle or package name (e.g., not “com.foo.mygame”).  This can be an array of for the case of rotating creatives.</td>
+  </tr>
+  <tr>
     <td><code>bundle</code></td>
     <td>string&nbsp;array</td>
-    <td>When the product of the ad is an app, the unique ID of that app as a bundle or package name (e.g., “com.foo.mygame”).  This  should NOT be an app store ID (e.g., no iTunes store IDs).  This can be an array of for the case of rotating creatives.</td>
+    <td>When the product of the ad is an app, the unique ID of that app as a bundle or package name (e.g., “com.foo.mygame”).  This should NOT be an app store ID (e.g., not Apple iTunes, Google Play).  This can be an array of for the case of rotating creatives.</td>
   </tr>
   <tr>
     <td><code>iurl</code></td>
@@ -1832,14 +1837,14 @@ This object is used to define an ad supported non-browser application, in contra
     <td>Comma separated list of keywords about the app.</td>
   </tr>
   <tr>
-    <td><code>bundle</code></td>
-    <td>string</td>
-    <td>Bundle or package name of the app (e.g., “com.foo.mygame”) and should NOT be app store IDs (e.g., not iTunes store IDs).</td>
-  </tr>
-  <tr>
     <td><code>storeid</code></td>
     <td>string</td>
     <td>The ID of the app in an app store (e.g., Apple iTunes, Google Play).</td>
+  </tr>
+  <tr>
+    <td><code>bundle</code></td>
+    <td>string</td>
+    <td>Bundle or package name of the app (e.g., “com.foo.mygame”) and should NOT be app store IDs (e.g., not Apple iTunes, Google Play).</td>
   </tr>
   <tr>
     <td><code>storeurl</code></td>
@@ -2615,7 +2620,7 @@ This object allows lists of restrictions on ad responses to be specified includi
   <tr>
     <td><code>bapp</code></td>
     <td>string&nbsp;array</td>
-    <td>Block list of apps for which ads are disallowed.  These should be bundle or package names (e.g., “com.foo.mygame”) and should NOT be app store IDs (e.g., not iTunes store IDs).</td>
+    <td>Block list of apps for which ads are disallowed.  These should be app store IDs (e.g., iTunes store IDs or Google Play IDs), not bundle or package names (e.g., “com.foo.mygame”).</td>
   </tr>
   <tr>
     <td><code>battr</code></td>
@@ -4499,6 +4504,8 @@ Granular details of the changes can be seen by reviewing the commit history of t
 **Clarification of event types:** The Event Types list has been adjusted to clarify which event measurement scripts should be attached to (generally, "loaded") as well as clarifying the definition of "loaded" and "impression". (2018/12/12)
 
 **Update of Language Standard:** The Language standard has been updated from ISO-639-1-alpha-2 to IETF BCP 47 to improve locale support for languages and align with current W3C specifications. BCP 47 maintains backwards compatability with ISO-639-1-alpha-2 that has been used previously in OpenRTB and AdCOM. (2021/08/30)
+
+**App Store ID, Bundle and Blocked App Clarifications** App Store ID (storeid), Bundle (bundle) and Blocked App (bapp) descriptions have been clarified to ensure proper definitions and upgrade consistency between OpenRTB 2.x and AdCOM 1.x per [IAB Tech Lab OTT/CTV Store Assigned App Identification Guidelines](https://iabtechlab.com/wp-content/uploads/2020/08/IAB-Tech-Lab-OTT-store-assigned-App-Identification-Guidelines-2020.pdf). (2021/08/30)
 
 # Appendix E:  Versioning Policy <a name="appendixe_versioning"></a>
 
