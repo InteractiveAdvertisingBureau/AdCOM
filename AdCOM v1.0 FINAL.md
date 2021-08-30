@@ -250,7 +250,7 @@ This object is the root of a structure that defines in instance of advertising m
   <tr>
     <td><code>lang</code></td>
     <td>string</td>
-    <td>Language of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated beforehand.  The non-standard code “xx” may also be used if the creative has no linguistic content (e.g., a banner with just a company logo).</td>
+    <td>Language of the creative using IETF BCP 47. In practice, vendors using this object may elect an alternate standard (e.g., ISO-639-1-alpha-2) in which case this must be communicated beforehand.  The non-standard code “xx” may also be used if the creative has no linguistic content (e.g., a banner with just a company logo).</td>
   </tr>
   <tr>
     <td><code>attr</code></td>
@@ -908,7 +908,7 @@ The other attributes in this object apply to all aspects and substructures of th
   <tr>
     <td><code>wlang</code></td>
     <td>string&nbsp;array</td>
-    <td>Allow list of permitted languages of the creative using ISO-639-1-alpha-2.  In practice, vendors using this object may elect an alternate standard (e.g., BCP-47) in which case this must be communicated beforehand.  Omission of this attribute indicates there are no restrictions.</td>
+    <td>Allow list of permitted languages of the creative using IETF BCP 47.  In practice, vendors using this object may elect an alternate standard (e.g., ISO-639-1-alpha-2) in which case this must be communicated beforehand.  Omission of this attribute indicates there are no restrictions.</td>
   </tr>
   <tr>
     <td><code>secure</code></td>
@@ -2010,7 +2010,7 @@ This object describes the content in which an impression can appear, which may b
     <td><code>url</code></td>
     <td>string</td>
     <td>A single URL of the content, for buy-side contextualization or review.</td>
-  </tr>  
+  </tr>
   <tr>
     <td><code>cat</code></td>
     <td>string&nbsp;array</td>
@@ -2069,7 +2069,7 @@ This object describes the content in which an impression can appear, which may b
   <tr>
     <td><code>lang</code></td>
     <td>string</td>
-    <td>Content language using ISO-639-1-alpha-2.</td>
+    <td>Content language using IETF BCP 47.</td>
   </tr>
   <tr>
     <td><code>embed</code></td>
@@ -2292,7 +2292,7 @@ Implementer should ensure compliance with regional legislation around data usage
   <tr>
     <td><code>lang</code></td>
     <td>string</td>
-    <td>Browser language using ISO-639-1-alpha-2.</td>
+    <td>Browser language using IETF BCP 47.</td>
   </tr>
   <tr>
     <td><code>ip</code></td>
@@ -4203,38 +4203,38 @@ The following table lists the types of volume normalization modes, typically for
 
 # Appendix A:  Additional Resources <a name="appendixa_additionalresources"></a>
 
-Interactive Advertising Bureau Technology Laboratory (IAB Tech Lab)  
+Interactive Advertising Bureau Technology Laboratory (IAB Tech Lab)
 [www.iabtechlab.com](https://www.iabtechlab.com)
 
-Creative Commons / Attribution License  
+Creative Commons / Attribution License
 [creativecommons.org/licenses/by/3.0](https://creativecommons.org/licenses/by/3.0)
 
-AdCOM Project on Github  
+AdCOM Project on Github
 [https://github.com/InteractiveAdvertisingBureau/AdCOM](https://github.com/InteractiveAdvertisingBureau/AdCOM)
 
-OpenRTB v3.0 Specification  
+OpenRTB v3.0 Specification
 [https://github.com/InteractiveAdvertisingBureau/openrtb](https://github.com/InteractiveAdvertisingBureau/openrtb)
 
-IAB Resources & TAG Inventory Quality Guidelines (IQG)  
+IAB Resources & TAG Inventory Quality Guidelines (IQG)
 [www.iab.com/guidelines/taxonomy](https://www.iab.com/guidelines/taxonomy)<br/>
 [www.iab.com/guidelines/digital-video-suite](https://www.iab.com/guidelines/digital-video-suite)<br/>
 [www.iab.com/wp-content/uploads/2015/03/long-form-video-final.pdf](https://www.iab.com/wp-content/uploads/2015/03/long-form-video-final.pdf)<br/>
 [www.tagtoday.net/iqg/guidelines](https://www.tagtoday.net/iqg/guidelines)<br/>
 [github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework)
 
-Digital Place-Based Advertising Association (DPAA)  
+Digital Place-Based Advertising Association (DPAA)
 [dp-aa.org](https://dp-aa.org)
 
-United Nations Code for Trade & Transport Locations - UN/LOCODE"  
-[www.unece.org/cefact/locode/service/location](https://www.unece.org/cefact/locode/service/location) 
+United Nations Code for Trade & Transport Locations - UN/LOCODE"
+[www.unece.org/cefact/locode/service/location](https://www.unece.org/cefact/locode/service/location)
 
-IP Flow Anonymization Support / Truncation, Internet Engineering Task Force (IETF)  
-[tools.ietf.org/html/rfc6235#section-4.1.1](https://tools.ietf.org/html/rfc6235#section-4.1.1) 
+IP Flow Anonymization Support / Truncation, Internet Engineering Task Force (IETF)
+[tools.ietf.org/html/rfc6235#section-4.1.1](https://tools.ietf.org/html/rfc6235#section-4.1.1)
 
-MCC-MNC Codes for Mobile Carriers, Wikipedia  
-[en.wikipedia.org/wiki/Mobile_country_code](https://en.wikipedia.org/wiki/Mobile_country_code) 
+MCC-MNC Codes for Mobile Carriers, Wikipedia
+[en.wikipedia.org/wiki/Mobile_country_code](https://en.wikipedia.org/wiki/Mobile_country_code)
 
-JavaScript Object Notation (JSON)  
+JavaScript Object Notation (JSON)
 [www.json.org](http://www.json.org)
 
 
@@ -4497,6 +4497,8 @@ Granular details of the changes can be seen by reviewing the commit history of t
 **Description of "w" and "h" fields in VideoPlacement object:** The description of the "w" and "h" fields has been corrected to read "*[Width/Height]* of the placement...." The size of the video player placement generally does not have a direct bearing on what creative assets may be served to it. (2018/12/12)
 
 **Clarification of event types:** The Event Types list has been adjusted to clarify which event measurement scripts should be attached to (generally, "loaded") as well as clarifying the definition of "loaded" and "impression". (2018/12/12)
+
+**Update of Language Standard:** The Language standard has been updated from ISO-639-1-alpha-2 to IETF BCP 47 to improve locale support for languages and align with current W3C specifications. BCP 47 maintains backwards compatability with ISO-639-1-alpha-2 that has been used previously in OpenRTB and AdCOM. (2021/08/30)
 
 # Appendix E:  Versioning Policy <a name="appendixe_versioning"></a>
 
