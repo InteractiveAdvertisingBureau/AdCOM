@@ -110,7 +110,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Size Units](#list_sizeunits)
     - [List:  Start Delay Modes](#list_startdelaymodes)
     - [List:  Volume Normalization Modes](#list_volumenormalizationmodes)
-    - [List:  Ad Sequence](#list_adsequence)
+    - [List:  Slot Position in Pod](#list_slotpositioninpod)
     - [List:  Pod Sequence](#list_podsequence)
 - [Appendix A:  Additional Resources](#appendixa_additionalresources)
 - [Appendix B:  Change Log](#appendixb_changelog)
@@ -4203,9 +4203,9 @@ The following table lists the types of volume normalization modes, typically for
 </table>
 
 
-### List:  Ad Sequence <a name="list_adsequence"></a>
+### List:  Slot Position in Pod <a name="list_slotpositioninpod"></a>
 
-The following table lists the values for the ad sequence field, for use in audio and video ad pods.
+The following table lists the values for the slot position in pod field, for use in audio and video ad pods.
 
 <table>
   <tr>
@@ -4213,16 +4213,20 @@ The following table lists the values for the ad sequence field, for use in audio
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
-    <td>1</td>
-    <td>First ad in the pod</td>
+    <td>-1</td>
+    <td>Last ad in the pod</td>
   </tr>
   <tr>
     <td>0</td>
     <td>Any ad in the pod</td>
   </tr>
   <tr>
-    <td>-1</td>
-    <td>Last ad in the pod</td>
+    <td>1</td>
+    <td>First ad in the pod</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>First or Last ad in the pod</td>
   </tr>
 </table>
 
@@ -4237,16 +4241,16 @@ The following table lists the values for the pod sequence field, for use in audi
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
-    <td>1</td>
-    <td>First pod in the content stream</td>
+    <td>-1</td>
+    <td>Last pod in the content stream</td>
   </tr>
   <tr>
     <td>0</td>
     <td>Any pod in the content stream</td>
   </tr>
   <tr>
-    <td>-1</td>
-    <td>Last pod in the content stream</td>
+    <td>1</td>
+    <td>First pod in the content stream</td>
   </tr>
 </table>
 
