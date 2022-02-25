@@ -3178,6 +3178,10 @@ The following table lists the types of devices.  This table has values derived f
     <td>7</td>
     <td>Set Top Box</td>
   </tr>
+  <tr>
+    <td>8</td>
+    <td>OOH Device</td>
+  </tr>
 </table>
 
 
