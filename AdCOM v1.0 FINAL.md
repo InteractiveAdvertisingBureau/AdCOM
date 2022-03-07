@@ -1488,15 +1488,19 @@ This object signals that the placement may be a video placement and provides add
     <td>Supported companion ad types; recommended if companion ads are specified in <code>comp</code>.  Refer to <a href="#list_companiontypes">List: Companion Types</a>.</td>
   </tr>
   <tr>
-      <tr>
     <td><code>expdir</code></td>
     <td>integer&nbsp;array</td>
     <td>Directions in which the creative (video placement) is permitted to expand.  Refer to <a href="#list_expandabledirections">List: Expandable Directions</a>.</td>
   </tr>
-        <tr>
+  <tr>
     <td><code>overlayexpdir</code></td>
     <td>integer&nbsp;array</td>
     <td>Directions in which the creative (video overlay) is permitted to expand. This is primarily used for non-linear videos.  Refer to <a href="#list_expandabledirections">List: Expandable Directions</a>.</td>
+  </tr>
+  <tr>
+    <td><code>continuous</code></td>
+    <td>integer&nbsp;array</td>
+    <td>Identifies if an environment is set to play additional videos automatically without user interaction after the end of the current video. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening. 1 = yes, 0 = no.</td>
   </tr>
     <td><code>ext</code></td>
     <td>object</td>
@@ -1615,10 +1619,15 @@ This object signals that the placement may be an audio placement and provides ad
     <td>integer&nbsp;array</td>
     <td>Supported companion ad types; recommended if companion ads are specified in <code>comp</code>.  Refer to <a href="#list_companiontypes">List: Companion Types</a>.</td>
   </tr>
-          <tr>
+  <tr>
     <td><code>overlayexpdir</code></td>
     <td>integer&nbsp;array</td>
     <td>Directions in which the creative (overlay) is permitted to expand.  Refer to <a href="#list_expandabledirections">List: Expandable Directions</a>.</td>
+  </tr>
+  <tr>
+    <td><code>continuous</code></td>
+    <td>integer&nbsp;array</td>
+    <td>Identifies if an environment is set to play additional videos automatically without user interaction after the end of the current video. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening. 1 = yes, 0 = no.</td>
   </tr>
   <tr>
     <td><code>ext</code></td>
