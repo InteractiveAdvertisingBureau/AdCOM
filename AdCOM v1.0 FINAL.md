@@ -1500,7 +1500,7 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td><code>continuous</code></td>
     <td>integer&nbsp;array</td>
-    <td>Identifies if an environment is set to play additional videos automatically without user interaction after the end of the current video. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening. 1 = yes, 0 = no.</td>
+    <td>Continuous Playback - Identifies if an environment is set to play additional media automatically without user interaction after the end of the current piece of media. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening. 1 = yes, 0 = no.</td>
   </tr>
     <td><code>ext</code></td>
     <td>object</td>
@@ -1627,7 +1627,7 @@ This object signals that the placement may be an audio placement and provides ad
   <tr>
     <td><code>continuous</code></td>
     <td>integer&nbsp;array</td>
-    <td>Identifies if an environment is set to play additional videos automatically without user interaction after the end of the current video. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening. 1 = yes, 0 = no.</td>
+    <td>Continuous Playback - Identifies if an environment is set to play additional media automatically without user interaction after the end of the current piece of media. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening. 1 = yes, 0 = no.</td>
   </tr>
   <tr>
     <td><code>ext</code></td>
