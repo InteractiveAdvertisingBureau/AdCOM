@@ -1389,8 +1389,8 @@ This object signals that the placement may be a video placement and provides add
   </tr>
   <tr>
     <td><code>playmethod</code></td>
-    <td>integer</td>
-    <td>Playback method in use for this placement.  Refer to <a href="#list_playbackmethods">List: Playback Methods</a>.</td>
+    <td>integer&nbsp;array</td>
+    <td>Playback method(s) in use for this placement.  Refer to <a href="#list_playbackmethods">List: Playback Methods</a>.</td>
   </tr>
   <tr>
     <td><code>playend</code></td>
@@ -1488,12 +1488,11 @@ This object signals that the placement may be a video placement and provides add
     <td>Supported companion ad types; recommended if companion ads are specified in <code>comp</code>.  Refer to <a href="#list_companiontypes">List: Companion Types</a>.</td>
   </tr>
   <tr>
-      <tr>
     <td><code>expdir</code></td>
     <td>integer&nbsp;array</td>
     <td>Directions in which the creative (video placement) is permitted to expand.  Refer to <a href="#list_expandabledirections">List: Expandable Directions</a>.</td>
   </tr>
-        <tr>
+  <tr>
     <td><code>overlayexpdir</code></td>
     <td>integer&nbsp;array</td>
     <td>Directions in which the creative (video overlay) is permitted to expand. This is primarily used for non-linear videos.  Refer to <a href="#list_expandabledirections">List: Expandable Directions</a>.</td>
@@ -1537,8 +1536,8 @@ This object signals that the placement may be an audio placement and provides ad
   </tr>
   <tr>
     <td><code>playmethod</code></td>
-    <td>integer</td>
-    <td>Playback method in use for this placement.  Refer to <a href="#list_playbackmethods">List: Playback Methods</a>.</td>
+    <td>integer&nbsp;array</td>
+    <td>Playback method(s) in use for this placement.  Refer to <a href="#list_playbackmethods">List: Playback Methods</a>.</td>
   </tr>
   <tr>
     <td><code>playend</code></td>
@@ -4089,6 +4088,10 @@ The following table lists the various media playback methods.
   <tr>
     <td>6</td>
     <td>Initiates on Entering Viewport with Sound Off by Default</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Continuous Playback - Media playback is set to play additional media automatically without user interaction. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening.</td>
   </tr>
 </table>
 
