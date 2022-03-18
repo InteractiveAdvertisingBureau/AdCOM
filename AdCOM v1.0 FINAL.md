@@ -3976,6 +3976,10 @@ The following table lists the placement positions as a relative measure of visib
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
+    <td>0</td>
+    <td>Unknown</td>
+  </tr>
+  <tr>
     <td>1</td>
     <td>Above The Fold</td>
   </tr>
@@ -4110,6 +4114,10 @@ The following table lists the options for content quality.  These values are def
   <tr>
     <td><strong>Value</strong></td>
     <td><strong>Definition</strong></td>
+  </tr>  
+  <tr>
+    <td>0</td>
+    <td>Unknown</td>
   </tr>
   <tr>
     <td>1</td>
