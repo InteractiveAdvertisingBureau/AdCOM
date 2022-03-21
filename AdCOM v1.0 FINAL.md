@@ -906,7 +906,7 @@ The other attributes in this object apply to all aspects and substructures of th
   <tr>
     <td><code>reward</code></td>
     <td>integer;<br/>default&nbsp;0</td>
-    <td>Indicates if this is a rewarded placement, where 0 = no, 1 = yes.</td>
+    <td>Indicates whether the user recieves a reward for viewing the ad, where 0 = no, 1 = yes. Typcially video ad implementations allow users to read an additional news article for free, receive an extra life in a game, or get a sponsored ad-free music session. The reward is typically distributed after the video ad is completed.</td>
   </tr>
   <tr>
     <td><code>wlang</code></td>
