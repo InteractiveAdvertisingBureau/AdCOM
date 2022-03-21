@@ -2178,12 +2178,12 @@ Implementer should ensure compliance with regional legislation around data usage
   </tr>
   <tr>
     <td><code>yob</code></td>
-    <td>integer</td>
+    <td>integer, DEPRECATED</td>
     <td>Year of birth as a 4-digit integer.</td>
   </tr>
   <tr>
     <td><code>gender</code></td>
-    <td>string</td>
+    <td>string, DEPRECATED</td>
     <td>Gender, where “M” = male, “F” = female, “O” = known to be other (i.e., omitted is unknown).</td>
   </tr>
   <tr>
