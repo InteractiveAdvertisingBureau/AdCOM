@@ -4189,7 +4189,7 @@ The following table lists the various options for the video or audio start delay
 
 ### List:  User-Agent Source <a name="user-agent_source"></a>
 
-The following table lists the source types for User-Agents.
+The following table lists the possible sources for User-Agent metadata.
 
 <table>
   <tr>
