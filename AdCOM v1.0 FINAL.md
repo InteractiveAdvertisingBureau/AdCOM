@@ -2405,7 +2405,7 @@ Refer to https://tools.ietf.org/html/rfc6235#section-4.1.1 for more information 
   <tr>
     <td><code>mccmnc</code></td>
     <td>string</td>
-    <td>Mobile carrier as the concatenated MCC-MNC code (e.g., “310-005” identifies Verizon Wireless CDMA in the USA).  Refer to https://en.wikipedia.org/wiki/Mobile_country_code for further information and references.  Note that the dash between the MCC and MNC parts is required to remove parsing ambiguity.</td>
+    <td>Mobile carrier as the concatenated MCC-MNC code (e.g., “310-005” identifies Verizon Wireless CDMA in the USA).  Refer to https://en.wikipedia.org/wiki/Mobile_country_code for further information and references.  Note that the dash between the MCC and MNC parts is required to remove parsing ambiguity. The MCC-MNC values represent the SIM installed on the device and do not change when a device is roaming. Roaming may be inferred by a combination of the MCC-MNC, geo, IP and other data signals.</td>
   </tr>
   <tr>
     <td><code>mccmncsim</code></td>
