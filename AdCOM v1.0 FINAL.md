@@ -109,6 +109,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Production Qualities](#list_productionqualities)
     - [List:  Size Units](#list_sizeunits)
     - [List:  Start Delay Modes](#list_startdelaymodes)
+    - [List:  User-Agent Source](#user-agent_source)
     - [List:  Volume Normalization Modes](#list_volumenormalizationmodes)
     - [List:  Slot Position in Pod](#list_slotpositioninpod)
     - [List:  Pod Sequence](#list_podsequence)
@@ -4185,6 +4186,33 @@ The following table lists the various options for the video or audio start delay
   </tr>
 </table>
 
+
+### List:  User-Agent Source <a name="user-agent_source"></a>
+
+The following table lists the possible sources for User-Agent metadata.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>Unspecified/unknown</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><a href="https://wicg.github.io/ua-client-hints">User-Agent Client Hints</a> (only low-entropy headers were available)</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><a href="https://wicg.github.io/ua-client-hints">User-Agent Client Hints</a> (with high-entropy headers available)</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Parsed from User-Agent header (the same string carried by the ua field)</td>
+  </tr>
+</table>
 
 ### List:  Volume Normalization Modes <a name="list_volumenormalizationmodes"></a>
 
