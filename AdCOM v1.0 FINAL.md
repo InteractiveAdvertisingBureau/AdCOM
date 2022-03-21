@@ -1438,12 +1438,17 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td><code>mindur</code></td>
     <td>integer</td>
-    <td>Minimum creative duration in seconds.</td>
+    <td>Minimum creative duration in seconds. This field is mutually exclusive with rqddurs; only one of mindur and rqddurs may be in a bid request.</td>
   </tr>
   <tr>
     <td><code>maxdur</code></td>
     <td>integer</td>
-    <td>Maximum creative duration in seconds.</td>
+    <td>Maximum creative duration in seconds. This field is mutually exclusive with rqddurs; only one of maxdur and rqddurs may be in a bid request.</td>
+  </tr>
+  <tr>
+    <td><code>rqddurs</code></td>
+    <td>integer array</td>
+    <td>Precise acceptable durations for video creatives in seconds. This field specifically targets the Live TV use case where non-exact ad durations would result in undesirable 'dead air'. This field is mutually exclusive with mindur and maxdur; if rqddurs is specified, mindur and maxdur must not be specified and vice versa.</td>
   </tr>
   <tr>
     <td><code>maxext</code></td>
@@ -1469,6 +1474,31 @@ This object signals that the placement may be a video placement and provides add
     <td><code>maxseq</code></td>
     <td>integer</td>
     <td>The maximum number of ads that can be played in an ad pod.</td>
+  </tr>
+  <tr>
+    <td><code>poddur</code></td>
+    <td>integer</td>
+    <td>Indicates the total amount of time in seconds that advertisers may fill for a “dynamic” video ad pod, or the dynamic portion of a “hybrid” ad pod. This field is required only for the dynamic portion(s) of video ad pods. This field refers to the length of the entire ad break, whereas mindur/maxdur/rqddurs are constraints relating to the slots that make up the pod.</td>
+  </tr>
+  <tr>
+  <td><code>podid</code></td>
+    <td>integer</td>
+    <td>Unique identifier indicating that an impression opportunity belongs to a video ad pod. If multiple impression opportunities within a bid request share the same podid, this indicates that those impression opportunities belong to the same video ad pod.</td>
+  </tr>
+  <tr>
+  <td><code>podseq</code></td>
+    <td>integer; default 0</td>
+    <td>The sequence (position) of the video ad pod within a content stream. Refer to List: <a href="#list_podsequence">List: Pod Sequence</a> for guidance on the use of this field.</td>
+  </tr>
+  <tr>
+  <td><code>slotinpod</code></td>
+    <td>integer; default 0</td>
+    <td>For video ad pods, this value indicates that the seller can guarantee delivery against the indicated slot position in the pod. Refer to List: <a href="#list_slotpositioninpod">List: Slot Position in Pod</a> for guidance on the use of this field.</td>
+  </tr>
+  <tr>
+  <td><code>mincpmpersec</code></td>
+    <td>float</td>
+    <td>Minimum CPM per second. This is a price floor for the “dynamic” portion of a video ad pod, relative to the duration of bids an advertiser may submit.</td>
   </tr>
   <tr>
     <td><code>linear</code></td>
@@ -1575,12 +1605,17 @@ This object signals that the placement may be an audio placement and provides ad
   <tr>
     <td><code>mindur</code></td>
     <td>integer</td>
-    <td>Minimum creative duration in seconds.</td>
+    <td>Minimum creative duration in seconds. This field is mutually exclusive with rqddurs; only one of mindur and rqddurs may be in a bid request.</td>
   </tr>
   <tr>
     <td><code>maxdur</code></td>
     <td>integer</td>
-    <td>Maximum creative duration in seconds.</td>
+    <td>Maximum creative duration in seconds. This field is mutually exclusive with rqddurs; only one of maxdur and rqddurs may be in a bid request.</td>
+  </tr>
+  <tr>
+    <td><code>rqddurs</code></td>
+    <td>integer array</td>
+    <td>Precise acceptable durations for video creatives in seconds. This field specifically targets the Live TV use case where non-exact ad durations would result in undesirable 'dead air'. This field is mutually exclusive with mindur and maxdur; if rqddurs is specified, mindur and maxdur must not be specified and vice versa.</td>
   </tr>
   <tr>
     <td><code>maxext</code></td>
@@ -1606,6 +1641,31 @@ This object signals that the placement may be an audio placement and provides ad
     <td><code>maxseq</code></td>
     <td>integer</td>
     <td>The maximum number of ads that can be played in an ad pod.</td>
+  </tr>
+  <tr>
+    <td><code>poddur</code></td>
+    <td>integer</td>
+    <td>Indicates the total amount of time in seconds that advertisers may fill for a “dynamic” video ad pod, or the dynamic portion of a “hybrid” ad pod. This field is required only for the dynamic portion(s) of video ad pods. This field refers to the length of the entire ad break, whereas mindur/maxdur/rqddurs are constraints relating to the slots that make up the pod.</td>
+  </tr>
+  <tr>
+  <td><code>podid</code></td>
+    <td>integer</td>
+    <td>Unique identifier indicating that an impression opportunity belongs to a video ad pod. If multiple impression opportunities within a bid request share the same podid, this indicates that those impression opportunities belong to the same video ad pod.</td>
+  </tr>
+  <tr>
+  <td><code>podseq</code></td>
+    <td>integer; default 0</td>
+    <td>The sequence (position) of the video ad pod within a content stream. Refer to List: <a href="#list_podsequence">List: Pod Sequence</a> for guidance on the use of this field.</td>
+  </tr>
+  <tr>
+  <td><code>slotinpod</code></td>
+    <td>integer; default 0</td>
+    <td>For video ad pods, this value indicates that the seller can guarantee delivery against the indicated slot position in the pod. Refer to List: <a href="#list_slotpositioninpod">List: Slot Position in Pod</a> for guidance on the use of this field.</td>
+  </tr>
+  <tr>
+  <td><code>mincpmpersec</code></td>
+    <td>float</td>
+    <td>Minimum CPM per second. This is a price floor for the “dynamic” portion of a video ad pod, relative to the duration of bids an advertiser may submit.</td>
   </tr>
   <tr>
     <td><code>comp</code></td>
