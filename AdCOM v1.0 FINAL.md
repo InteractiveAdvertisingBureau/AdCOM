@@ -65,6 +65,8 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [Object:  Publisher](#object_publisher)
     - [Object:  Content](#object_content)
     - [Object:  Producer](#object_producer)
+    - [Object:  Network](#object_network)
+    - [Object:  Channel](#object_channel)
     - [Object:  User](#object_user)
     - [Object:  Device](#object_device)
     - [Object:  Geo](#object_geo)
@@ -2159,6 +2161,16 @@ This object describes the content in which an impression can appear, which may b
     <td>Details about the content producer.  Refer to <a href="#object_producer">Object: Producer</a>.</td>
   </tr>
   <tr>
+    <td><code>network</code></td>
+    <td>object</td>
+    <td>Details about the network.  Refer to <a href="#object_network">Object: Network</a>.</td>
+  </tr>
+  <tr>
+    <td><code>channel</code></td>
+    <td>object</td>
+    <td>Details about the channel.  Refer to <a href="#object_channel">Object: Channel</a>.</td>
+  </tr>
+  <tr>
     <td><code>data</code></td>
     <td>object&nbsp;array</td>
     <td>Additional user data.  Each <code>Data</code> object represents a different data source.  Refer to <a href="#object_data">Object: Data</a>.</td>
@@ -2205,6 +2217,70 @@ This object defines the producer of the content in which ad will be displayed.  
     <td><code>cattax</code></td>
     <td>integer</td>
     <td>The taxonomy in use for the  <code>cat</code> attribute.  Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
+  </tr>
+  <tr>
+    <td><code>ext</code></td>
+    <td>object</td>
+    <td>Optional vendor-specific extensions.</td>
+  </tr>
+</table>
+
+### Object:  Network <a name="object_network"></a>
+
+This object describes the network an ad will be displayed on. A Network is defined as the parent entity of the Channel object’s entity for the purposes of organizing Channels. Examples are companies that own and/or license a collection of content channels (Viacom, Discovery, CBS, WarnerMedia, Turner and others), or studio that creates such content and self-distributes content. Name is human-readable field while domain and id can be used for reporting and targeting purposes.
+
+<table>
+  <tr>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td><code>id</code></td>
+    <td>string</td>
+    <td>A unique identifier assigned by the publisher. This may not be a unique identifier across all supply sources.</td>
+  </tr>
+  <tr>
+    <td><code>name</code></td>
+    <td>string</td>
+    <td>Network the content is on (e.g., a TV network like "ABC").</td>
+  </tr>
+  <tr>
+    <td><code>domain</code></td>
+    <td>string</td>
+    <td>The primary domain of the network (e.g., “abc.com” in the case of the network ABC). It is recommended to include the top private domain (PSL+1) for DSP targeting normalization purposes.</td>
+  </tr>
+  <tr>
+    <td><code>ext</code></td>
+    <td>object</td>
+    <td>Optional vendor-specific extensions.</td>
+  </tr>
+</table>
+
+### Object:  Channel <a name="object_channel"></a>
+
+This object describes the channel an ad will be displayed on. A Channel is defined as the entity that curates a content library, or stream within a brand name for viewers. Examples are specific view selectable ‘channels’ within linear and streaming television (MTV, HGTV, CNN, BBC One, etc) or a specific stream of audio content commonly called ‘stations.’ Name is human-readable field while domain and id can be used for reporting and targeting purposes.
+
+<table>
+  <tr>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td><code>id</code></td>
+    <td>string</td>
+    <td>A unique identifier assigned by the publisher. This may not be a unique identifier across all supply sources.</td>
+  </tr>
+  <tr>
+    <td><code>name</code></td>
+    <td>string</td>
+    <td>Channel the content is on (e.g., a local channel like "WABC-TV").</td>
+  </tr>
+  <tr>
+    <td><code>domain</code></td>
+    <td>string</td>
+    <td>The primary domain of the channel (e.g., “abc7ny.com” in the case of the local channel WABC-TV). It is recommended to include the top private domain (PSL+1) for DSP targeting normalization purposes.</td>
   </tr>
   <tr>
     <td><code>ext</code></td>
