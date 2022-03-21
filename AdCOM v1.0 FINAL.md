@@ -2148,7 +2148,12 @@ This object describes the content in which an impression can appear, which may b
   <tr>
     <td><code>lang</code></td>
     <td>string</td>
-    <td>Content language using ISO-639-1-alpha-2.</td>
+    <td>Content language using ISO-639-1-alpha-2. Only one of lang or langb should be present.</td>
+  </tr>
+  <tr>
+    <td><code>langb</code></td>
+    <td>string</td>
+    <td>Content language using IETF BCP 47. Only one of lang or langb should be present.</td>
   </tr>
   <tr>
     <td><code>embed</code></td>
@@ -2450,7 +2455,12 @@ Implementer should ensure compliance with regional legislation around data usage
   <tr>
     <td><code>lang</code></td>
     <td>string</td>
-    <td>Browser language using ISO-639-1-alpha-2.</td>
+    <td>Browser language using ISO-639-1-alpha-2. Only one of lang or langb should be present.</td>
+  </tr>
+  <tr>
+    <td><code>langb</code></td>
+    <td>string</td>
+    <td>Browser language using IETF BCP 47. Only one of lang or langb should be present.</td>
   </tr>
   <tr>
     <td><code>ip</code></td>
