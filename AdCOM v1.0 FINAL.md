@@ -2213,7 +2213,7 @@ Implementer should ensure compliance with regional legislation around data usage
   </tr>
   <tr>
     <td><code>eids</code></td>
-    <td>object</td>
+    <td>object array</td>
     <td>Extended (third-party) identifiers for this user.  Refer to <a href="#object_eids">Object: Extended Identifiers</a>.</td>
   </tr>
   <tr>
