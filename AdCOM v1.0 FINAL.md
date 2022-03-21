@@ -2,7 +2,7 @@
 
 # **AdCOM Specification v1.0**
 
-**August 2021**
+**March 2022**
 
 
 **About the IAB Technology Lab**
@@ -4513,6 +4513,22 @@ This appendix serves as a brief summary of changes to the specification. These c
   </tr>
   <tr>
     <td>1.0</td>
+    <td>March 2022</td>
+    <td><b>Updates to support OpenRTB 2.6 release and keep 2.x/AdCOM in sync<br />
+    <b>Added Pod Bidding features</b>, rqddurs, poddur, podid, podseq, mincmppersec, slotinpod to AudioPlacement and VideoPlacement objects.<br />
+    <b>Added</b> Device.langb and Content.langb to support IETF BCP 47<br />
+    <b>Fixed</b> eids typo so that it is an object array instead of object<br />
+    <b>Added</b> network and channel objects<br />
+    <b>Deprecated</b> yob and gender<br />
+    <b>Added</b> kwarray as preferred format to keywords<br />
+    <b>Added</b> new playback method, continuousplayback<br />
+    <b>Added</b> device type ooh<br />
+    <b>Added</b> new lists to support pod bidding; Ad Sequence and Pod Sequence<br />
+    <b>Added</b> new list to support User-Agent Source<br />
+    </td>
+  </tr>
+  <tr>
+    <td>1.0</td>
     <td>August 2021</td>
     <td><b>Added expdir to VideoPlacement:</b> Support for indicating permitted expansion direction for video ads.<br />
     <b>Added overlaydir to VideoPlacement and AudioPlacement:</b> Support for indicating permitted expansion direction for video and audio ads overlays.<br />
@@ -4753,6 +4769,8 @@ Only minor fixes, such as clarifications or corrections to descriptions, may be 
 
 Granular details of the changes can be seen by reviewing the commit history of the document.
 
+**Clarification:** mccmnc description and rwdd description for clarity. (2022/03/25)
+      
 **Change of terminology:** References to "whitelist" have been changed to "allow list" consistent with industry norms. (2021/05/11)
 
 **Language improvements:** Word choice has been improved in places for clarity. (2020/02/14)
