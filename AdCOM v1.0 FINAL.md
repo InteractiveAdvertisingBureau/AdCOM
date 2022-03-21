@@ -4614,6 +4614,7 @@ This appendix serves as a brief summary of changes to the specification. These c
     <b>Added</b> device type ooh<br />
     <b>Added</b> new lists to support pod bidding; Ad Sequence and Pod Sequence<br />
     <b>Added</b> new list to support User-Agent Source<br />
+    <b>Added</b> UserAgent and BrandVersion objects to support <a href="https://wicg.github.io/ua-client-hints/">User Agent Client Hints</a><br />
     </td>
   </tr>
   <tr>
