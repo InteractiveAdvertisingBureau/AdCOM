@@ -69,6 +69,8 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [Object:  Channel](#object_channel)
     - [Object:  User](#object_user)
     - [Object:  Device](#object_device)
+    - [Object:  UserAgent](#object_useragent)
+    - [Object:  BrandVersion](#object_brandversion)
     - [Object:  Geo](#object_geo)
     - [Object:  Data](#object_data)
     - [Object:  Segment](#object_segment)
@@ -2385,7 +2387,13 @@ Implementer should ensure compliance with regional legislation around data usage
   <tr>
     <td><code>ua</code></td>
     <td>string</td>
-    <td>Browser user agent string.</td>
+    <td>Browser user agent string. This field represents a raw user agent string from the browser. For backwards compatibility, exchanges are recommended to always populate `ua` with the User-Agent string, when available from the end user’s device, even if an alternative representation, such as the User-Agent Client-Hints, is available and gets used to populate `sua`. No inferred or approximated user agents are expected in this field.
+If both `ua` and `sua` are present in the bid request, `sua` should be considered the more accurate representation of the device attributes. This is because the `ua` may contain a frozen or reduced UserAgent string.</td>
+  </tr>
+  <tr>
+    <td><code>sua</code></td>
+    <td>UserAgent object</td>
+    <td>Structured user agent information defined by a <a href="#object_useragent">Object: UserAgent</a>. If both `ua` and `sua` are present in the bid request, `sua` should be considered the more accurate representation of the device attributes. This is because the `ua` may contain a frozen or reduced UserAgent string.</td>
   </tr>
   <tr>
     <td><code>ifa</code></td>
@@ -2520,6 +2528,87 @@ Refer to https://tools.ietf.org/html/rfc6235#section-4.1.1 for more information 
   </tr>
 </table>
 
+### Object:  UserAgent <a name="object_useragent"></a>
+
+Structured user agent information provided when client supports <a href="https://wicg.github.io/ua-client-hints/">User-Agent Client Hints</a>. If both `device.ua` and `device.sua` are present in the bid request, `device.sua` should be considered the more accurate representation of the device attributes. This is because the `device.ua` may contain a frozen or reduced UserAgent string.
+
+<table>
+  <tr>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td><code>browsers</code></td>
+    <td>array of BrandVersion objects; recommended</td>
+    <td>Each BrandVersion object identifies a browser or similar software component. Refer to <a href="#object_brandversion">Object: BrandVersion</a>. Implementers should send brands and versions derived from the Sec-CH-UA-Full-Version-List header*.</td>
+  </tr>
+  <tr>
+    <td><code>platform</code></td>
+    <td>BrandVersion object; recommended</td>
+    <td>Refer to <a href="#object_brandversion">Object: BrandVersion</a> that identifies the user agent’s execution platform / OS. Implementers should send a brand derived from the Sec-CH-UA-Platform header, and version derived from the Sec-CH-UA-Platform-Version header *.</td>
+  </tr>
+  <tr>
+    <td><code>mobile</code></td>
+    <td>integer</td>
+    <td>1 if the agent prefers a “mobile” version of the content, if available, i.e. optimized for small screens or touch input. 0 if the agent prefers the “desktop” or “full” content. Implementers should derive this value from the Sec-CH-UA-Mobile header *.</td>
+  </tr>
+  <tr>
+    <td><code>architecture</code></td>
+    <td>string</td>
+    <td>Device’s major binary architecture, e.g. “x86” or “arm”. Implementers should retrieve this value from the Sec-CH-UA-Arch header*.</td>
+  </tr>
+  <tr>
+    <td><code>bitness</code></td>
+    <td>string</td>
+    <td>Device’s bitness, e.g. “64” for 64-bit architecture. Implementers should retrieve this value from the Sec-CH-UA-Bitness header *.</td>
+  </tr>
+  <tr>
+    <td><code>model</code></td>
+    <td>string</td>
+    <td>Device model. Implementers should retrieve this value from the Sec-CH-UA-Model header *.</td>
+  </tr>
+  <tr>
+    <td><code>source</code></td>
+    <td>integer; default 0</td>
+    <td>The source of data used to create this object. Refer to <a href="#user-agent_source">List: User-Agent Source</a></td>
+  </tr>
+  <tr>
+    <td><code>ext</code></td>
+    <td>object</td>
+    <td>Optional vendor-specific extensions.</td>
+  </tr>
+</table>
+
+*or an equivalent JavaScript accessor from NavigatorUAData interface. This header or accessor are only available for browsers that support <a href="https://wicg.github.io/ua-client-hints/">User-Agent Client Hints</a>. For browsers that don’t support User-Agent Client Hints, implementers may choose to populate this field by parsing the raw User-Agent string.
+
+
+### Object:  BrandVersion <a name="object_brandversion"></a>
+
+Further identification based on User-Agent Client Hints, the BrandVersion object is used to identify a device’s browser or similar software component, and the user agent’s execution platform or operating system.
+
+<table>
+  <tr>
+    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td><code>brand</code></td>
+    <td>string; recommended</td>
+    <td>A brand identifier, for example, “Chrome” or “Windows”. The value may be sourced from the User-Agent Client Hints headers, representing either the user agent brand (from the Sec-CH-UA-Full-Version header) or the platform brand (from the Sec-CH-UA-Platform header).</td>
+  </tr>
+  <tr>
+    <td><code>version</code></td>
+    <td>array of string</td>
+    <td>A sequence of version components, in descending hierarchical order (major, minor, micro, …)</td>
+  </tr>
+  <tr>
+    <td><code>ext</code></td>
+    <td>object</td>
+    <td>Optional vendor-specific extensions.</td>
+  </tr>
+</table>
 
 ### Object:  Geo <a name="object_geo"></a>
 
