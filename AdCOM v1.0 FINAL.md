@@ -4669,7 +4669,7 @@ This example is indicating a mobile optimized website and some basic details abo
 
 
 
-```
+```json
 {
    "openrtb": {
       "ver": "3.0",
@@ -4742,7 +4742,7 @@ The `spec` object within an `item` is the OpenRTB interface to AdCOM placement o
 This example is indicating a display placement that must be secure.  Either a structured banner or AMPHTML is acceptable and if the latter, the AMP rendering mode will be *early*.  The placement is not interstitial, two possible sizes are offered (i.e., 320x50 and 320x250), and a simple pixel tracker for the impression event is supported.
 
 
-```
+```json
 {
    "openrtb": {
       "ver": "3.0",
@@ -4800,7 +4800,7 @@ The `media` object is the OpenRTB interface to AdCOM media objects.  It contains
 This example is indicating a secure display ad for Ford using a structured banner object with a 320x50 JPEG creative.  A pixel tracker for the impression rendering event is requested.
 
 
-```
+```json
 {
    "openrtb": {
       "ver": "3.0",
