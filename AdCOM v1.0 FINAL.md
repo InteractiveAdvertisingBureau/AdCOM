@@ -2387,13 +2387,13 @@ Implementer should ensure compliance with regional legislation around data usage
   <tr>
     <td><code>ua</code></td>
     <td>string</td>
-    <td>Browser user agent string. This field represents a raw user agent string from the browser. For backwards compatibility, exchanges are recommended to always populate `ua` with the User-Agent string, when available from the end user’s device, even if an alternative representation, such as the User-Agent Client-Hints, is available and gets used to populate `sua`. No inferred or approximated user agents are expected in this field.
-If both `ua` and `sua` are present in the bid request, `sua` should be considered the more accurate representation of the device attributes. This is because the `ua` may contain a frozen or reduced UserAgent string.</td>
+    <td>Browser user agent string. This field represents a raw user agent string from the browser. For backwards compatibility, exchanges are recommended to always populate <code>ua</code> with the User-Agent string, when available from the end user’s device, even if an alternative representation, such as the User-Agent Client-Hints, is available and gets used to populate <code>sua</code>. No inferred or approximated user agents are expected in this field.
+If both <code>ua</code> and <code>sua</code> are present in the bid request, <code>sua</code> should be considered the more accurate representation of the device attributes. This is because the <code>ua</code> may contain a frozen or reduced UserAgent string.</td>
   </tr>
   <tr>
     <td><code>sua</code></td>
     <td>object</td>
-    <td>Structured user agent information. Refer to <a href="#object_useragent">Object: UserAgent</a>. If both `ua` and `sua` are present in the bid request, `sua` should be considered the more accurate representation of the device attributes. This is because the `ua` may contain a frozen or reduced UserAgent string.</td>
+    <td>Structured user agent information. Refer to <a href="#object_useragent">Object: UserAgent</a>. If both <code>ua</code> and <code>sua</code> are present in the bid request, <code>sua</code> should be considered the more accurate representation of the device attributes. This is because the <code>ua</code> may contain a frozen or reduced UserAgent string.</td>
   </tr>
   <tr>
     <td><code>ifa</code></td>
