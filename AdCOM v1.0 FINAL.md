@@ -1955,7 +1955,7 @@ This object is used to define an ad supported digital out-of-home (DOOH) experie
   <tr>
     <td><code>venue</code></td>
     <td>integer</td>
-    <td>The type of out-of-home venue.  Refer to <a href="#list_doohvenuetypes">List: DOOH Venue Types</a>List:  DOOH Venue Types.</td>
+    <td>The type of out-of-home venue.  Refer to <a href="#list_doohvenuetypes">List: DOOH Venue Types</a>.</td>
   </tr>
   <tr>
     <td><code>fixed</code></td>
@@ -4357,7 +4357,7 @@ The following table lists the various media playback methods.
   </tr>
   <tr>
     <td>7</td>
-    <td>Continuous Playback - Media playback is set to play additional media automatically without user interaction. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening.</td>
+    <td>Continuous Playback: Media playback is set to play additional media automatically without user interaction. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening.</td>
   </tr>
 </table>
 
