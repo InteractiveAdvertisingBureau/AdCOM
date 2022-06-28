@@ -857,7 +857,7 @@ This objects represents the outcome of some form of review of the ad.  This is t
   <tr>
     <td><code>corr</code></td>
     <td>object</td>
-    <td>Correction object wherein the auditor can specify changes to attributes of the <code>Ad</code> object or its children they believe to be proper.  For example, if the original <code>Ad</code> indicated a category of “IAB3”, but the auditor deems the correct category to be “IAB13”, then <code>corr</code> could include a sparse <code>Ad</code> object including just the <code>cat</code> array indicating “IAB13”.</td>
+    <td>Correction object wherein the auditor can specify changes to attributes of the <code>Ad</code> object or its children they believe to be proper.  For example, if the original <code>Ad</code> indicated a category of “IAB3”, but the auditor deems the correct category to be “IAB13”, then <code>corr</code> could include a sparse <code>Ad</code> object including just the <code>cat</code> array indicating “IAB13”. Refer to <a href="#object_ad">Object: Ad</a>.</td>
   </tr>
   <tr>
     <td><code>ext</code></td>
@@ -2392,8 +2392,8 @@ If both `ua` and `sua` are present in the bid request, `sua` should be considere
   </tr>
   <tr>
     <td><code>sua</code></td>
-    <td>UserAgent object</td>
-    <td>Structured user agent information defined by a <a href="#object_useragent">Object: UserAgent</a>. If both `ua` and `sua` are present in the bid request, `sua` should be considered the more accurate representation of the device attributes. This is because the `ua` may contain a frozen or reduced UserAgent string.</td>
+    <td>object</td>
+    <td>Structured user agent information. Refer to <a href="#object_useragent">Object: UserAgent</a>. If both `ua` and `sua` are present in the bid request, `sua` should be considered the more accurate representation of the device attributes. This is because the `ua` may contain a frozen or reduced UserAgent string.</td>
   </tr>
   <tr>
     <td><code>ifa</code></td>
@@ -2540,12 +2540,12 @@ Structured user agent information provided when client supports <a href="https:/
   </tr>
   <tr>
     <td><code>browsers</code></td>
-    <td>array of BrandVersion objects; recommended</td>
+    <td>object array; recommended</td>
     <td>Each BrandVersion object identifies a browser or similar software component. Refer to <a href="#object_brandversion">Object: BrandVersion</a>. Implementers should send brands and versions derived from the Sec-CH-UA-Full-Version-List header*.</td>
   </tr>
   <tr>
     <td><code>platform</code></td>
-    <td>BrandVersion object; recommended</td>
+    <td>object; recommended</td>
     <td>Refer to <a href="#object_brandversion">Object: BrandVersion</a> that identifies the user agent’s execution platform / OS. Implementers should send a brand derived from the Sec-CH-UA-Platform header, and version derived from the Sec-CH-UA-Platform-Version header *.</td>
   </tr>
   <tr>
@@ -2600,7 +2600,7 @@ Further identification based on User-Agent Client Hints, the BrandVersion object
   </tr>
   <tr>
     <td><code>version</code></td>
-    <td>array of string</td>
+    <td>string array</td>
     <td>A sequence of version components, in descending hierarchical order (major, minor, micro, …)</td>
   </tr>
   <tr>
