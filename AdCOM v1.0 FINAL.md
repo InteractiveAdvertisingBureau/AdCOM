@@ -2546,7 +2546,7 @@ Structured user agent information provided when client supports <a href="https:/
   <tr>
     <td><code>platform</code></td>
     <td>object; recommended</td>
-    <td>Refer to <a href="#object_brandversion">Object: BrandVersion</a> that identifies the user agent’s execution platform / OS. Implementers should send a brand derived from the Sec-CH-UA-Platform header, and version derived from the Sec-CH-UA-Platform-Version header *.</td>
+    <td>A BrandVersion that identifies the user agent’s execution platform / OS. Refer to <a href="#object_brandversion">Object: BrandVersion</a>. Implementers should send a brand derived from the Sec-CH-UA-Platform header, and version derived from the Sec-CH-UA-Platform-Version header *.</td>
   </tr>
   <tr>
     <td><code>mobile</code></td>
