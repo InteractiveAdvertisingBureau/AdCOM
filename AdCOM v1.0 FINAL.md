@@ -754,6 +754,12 @@ This object provides additional detail about an ad specifically for video ads.
     <td>integer</td>
     <td>Duration of the video creative in seconds.</td>
   </tr>
+   <tr>
+    <td><code>modernvideo</code></td>
+    <td>object</td>
+    <td><code>modernvideo</code> is recommended to be used over <code>adm</code> or <code>curl</code>. This object is a container to describe a video ad by its raw components.
+</td>
+  </tr>
   <tr>
     <td><code>adm</code></td>
     <td>string</td>
@@ -803,6 +809,12 @@ This object provides additional detail about an ad specifically for audio ads.
     <td><code>dur</code></td>
     <td>integer</td>
     <td>Duration of the audio creative in seconds.</td>
+  </tr>
+   <tr>
+    <td><code>modernaudio</code></td>
+    <td>object</td>
+    <td><code>modernaudio</code> is recommended to be used over <code>adm</code> or <code>curl</code>. This object is a container to describe an audio ad by its raw components.
+</td>
   </tr>
   <tr>
     <td><code>adm</code></td>
