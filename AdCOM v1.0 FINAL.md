@@ -229,10 +229,15 @@ This object is the root of a structure that defines in instance of advertising m
     <td>string; required</td>
     <td>ID of the creative; unique at least throughout the scope of a vendor (e.g., an exchange or buying platform).  Note that multiple instances of the same ad when used in transactions must have the same ID.</td>
   </tr>
+    <tr>
+    <td><code>advertiser</code></td>
+    <td>string&nbsp;array; recommended</td>
+    <td>The advertiser or brand of this ad. This combined with the <code>adomain</code> field should contain the same relevant information. This can be an array for the case of rotating creatives. If this is an array, <code>adomain</code> must contain equal amount of entries.</td>
+  </tr>
   <tr>
     <td><code>adomain</code></td>
     <td>string&nbsp;array; recommended</td>
-    <td>Advertiser domain; top two levels only (e.g., “ford.com”).  This can be an array for the case of rotating creatives.</td>
+    <td>Advertiser domain; top two levels only (e.g., “ford.com”). This can be an array for the case of rotating creatives. If this is an array, <code>advertiser</code> must contain equal amount of entries.</td>
   </tr>
   <tr>
     <td><code>bundle</code></td>
@@ -283,6 +288,11 @@ This object is the root of a structure that defines in instance of advertising m
     <td><code>lastmod</code></td>
     <td>integer</td>
     <td>Timestamp of most recent modification to this ad (i.e., this object or any of its children other than the <code>Audit</code> object) in Unix format (i.e., milliseconds since the epoch).</td>
+  </tr>
+  <tr>
+    <td><code>expire</code></td>
+    <td>integer; recommended</td>
+    <td>Timestamp of the expiration of this ad in Unix format (i.e., milliseconds since the epoch).</td>
   </tr>
   <tr>
     <td><code>display</code></td>
@@ -3846,6 +3856,10 @@ The following table lists the types of ad events available for tracking.  These 
   <tr>
     <td>5</td>
     <td><strong>viewable-video50:</strong>  Visible impression for video using MRC definition of 50% in view for 2 seconds.</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td><strong>Error:</strong> Any error that has occurred with the ad.</td>
   </tr>
   <tr>
     <td>500+</td>
