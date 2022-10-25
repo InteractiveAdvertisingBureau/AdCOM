@@ -313,6 +313,11 @@ This object is the root of a structure that defines in instance of advertising m
 * Required if no other media subtype object is specified.</td>
   </tr>
   <tr>
+    <td><code>event</code></td>
+    <td>object&nbsp;array</td>
+    <td>Array of events that the advertiser or buying platform wants to track.  Refer to  <a href="#object_event">Object: Event</a>.</td>
+  </tr>
+  <tr>
     <td><code>audit</code></td>
     <td>object</td>
     <td>An object depicting the audit status of the ad; typically part of a quality/safety review process.  Refer to <a href="#object_audit">Object: Audit</a>.</td>
@@ -733,6 +738,14 @@ This object specifies a type of event that the advertiser or buying platform wan
   </tr>
 </table>
 
+THIS SECTION IS TO BE FLESHED OUT (TODO)
+
+Tracking macros.
+
+Event URLs may contain macros that should be expanded as part of the event triggering process. For instance, an event of type error (6) may contain an optional status code macro "${ADCOM_STATUS_CODE}" which must be expanded with the actual status code if known by the sender. Details on each macro are given below.
+
+/TO BE FLESHED OUT.
+
 
 ### Object:  Video <a name="object_video"></a>
 
@@ -1074,11 +1087,6 @@ This object signals that the placement may be a display placement.  It provides 
     <td><code>nativefmt</code></td>
     <td>object</td>
     <td>This object specified the required and permitted assets and attributes of a native display placement.  Refer to <a href="#object_nativeformat">Object: NativeFormat</a>.</td>
-  </tr>
-  <tr>
-    <td><code>event</code></td>
-    <td>object&nbsp;array</td>
-    <td>Array of supported ad tracking events.  Refer to <a href="#object_eventspec">Object: EventSpec</a>.</td>
   </tr>
   <tr>
     <td><code>ext</code></td>
