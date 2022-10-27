@@ -117,6 +117,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Volume Normalization Modes](#list_volumenormalizationmodes)
     - [List:  Slot Position in Pod](#list_slotpositioninpod)
     - [List:  Pod Sequence](#list_podsequence)
+    - [List: Multiplier Measurement Source Types](#list_multipliermeasurementmourcetypes)
 - [Appendix A:  Additional Resources](#appendixa_additionalresources)
 - [Appendix B:  Change Log](#appendixb_changelog)
 - [Appendix C:  OpenRTB Interfaces](#appendixc_openrtbinterfaces)
@@ -4553,7 +4554,7 @@ The following table lists the values for the pod sequence field, for use in audi
 </table>
 
 
-### List: Multiplier Measurement Source Types <a name="list_podsequence"></a>
+### List: Multiplier Measurement Source Types <a name="list_multipliermeasurementmourcetypes"></a>
 
 The following table lists the types of entities that provide quantity measurement for impression multipliers.
 
