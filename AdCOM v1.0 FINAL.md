@@ -4553,6 +4553,34 @@ The following table lists the values for the pod sequence field, for use in audi
 </table>
 
 
+### List: Multiplier Measurement Source Types <a name="list_podsequence"></a>
+
+The following table lists the types of entities that provide quantity measurement for impression multipliers.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>Unknown</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Measurement Vendor Provided</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Publisher Provided</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Exchange Provided</td>
+  </tr>
+</table>
+
+
 # Appendix A:  Additional Resources <a name="appendixa_additionalresources"></a>
 
 Interactive Advertising Bureau Technology Laboratory (IAB Tech Lab)  
