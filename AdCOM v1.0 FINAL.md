@@ -4555,34 +4555,6 @@ The following table lists the values for the pod sequence field, for use in audi
 </table>
 
 
-### List: Venue Taxonomies <a name="list_venuetaxonomies"></a>
-
-The following table contains a list of supported Out-Of-Home media venue type taxonomies.
-
-<table>
-  <tr>
-    <td><strong>Value</strong></td>
-    <td><strong>Definition</strong></td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>OpenOOH - Digital Out-of-Home Screen Venue Types https://github.com/openooh/venue-taxonomy/blob/main/specification-1.0.md</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>DPAA Device Venue Types https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--dooh-venue-types-</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>DMI Categorization of Venues 1.1</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>OMA taxonomy</td>
-  </tr>
-</table>
-
-
 ### List: Multiplier Measurement Source Types <a name="list_multipliermeasurementmourcetypes"></a>
 
 The following table lists the types of entities that provide quantity measurement for impression multipliers.
@@ -4607,6 +4579,34 @@ The following table lists the types of entities that provide quantity measuremen
   <tr>
     <td>3</td>
     <td>Exchange Provided</td>
+  </tr>
+</table>
+
+
+### List: Venue Taxonomies <a name="list_venuetaxonomies"></a>
+
+The following table contains a list of supported Out-Of-Home media venue type taxonomies.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>OpenOOH - Digital Out-of-Home Screen Venue Types https://github.com/openooh/venue-taxonomy/blob/main/specification-1.0.md</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>DPAA Device Venue Types https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--dooh-venue-types-</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>DMI Categorization of Venues 1.1</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>OMA taxonomy</td>
   </tr>
 </table>
 
