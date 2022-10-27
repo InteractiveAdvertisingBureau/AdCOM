@@ -4566,7 +4566,7 @@ The following table contains a list of supported Out-Of-Home media venue type ta
   </tr>
   <tr>
     <td>1</td>
-    <td>OpenOOH - Digital Out-of-Home Screen Venue Types (https://github.com/openooh/venue-taxonomy/blob/main/specification-1.0.md)</td>
+    <td>OpenOOH - Digital Out-of-Home Screen Venue Types https://github.com/openooh/venue-taxonomy/blob/main/specification-1.0.md</td>
   </tr>
   <tr>
     <td>2</td>
