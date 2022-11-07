@@ -94,7 +94,8 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Device Types](#list_devicetypes)
     - [List:  Display Context Types](#list_displaycontexttypes)
     - [List:  Display Placement Types](#list_displayplacementtypes)
-    - [List:  DOOH Venue Types](#list_doohvenuetypes)
+    - [List:  DOOH Venue Taxonomies](#list_venuetaxonomies)
+    - [List:  DOOH Venue Types (deprecated)](#list_doohvenuetypes)
     - [List:  Event Tracking Methods](#list_eventtrackingmethods)
     - [List:  Event Types](#list_eventtypes)
     - [List:  Expandable Directions](#list_expandabledirections)
@@ -117,8 +118,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Volume Normalization Modes](#list_volumenormalizationmodes)
     - [List:  Slot Position in Pod](#list_slotpositioninpod)
     - [List:  Pod Sequence](#list_podsequence)
-    - [List: Multiplier Measurement Source Types](#list_multipliermeasurementmourcetypes)
-    - [List: Venue Taxonomies](#list_venuetaxonomies)
+    - [List:  Multiplier Measurement Source Types](#list_multipliermeasurementmourcetypes)
 - [Appendix A:  Additional Resources](#appendixa_additionalresources)
 - [Appendix B:  Change Log](#appendixb_changelog)
 - [Appendix C:  OpenRTB Interfaces](#appendixc_openrtbinterfaces)
@@ -3540,7 +3540,46 @@ The following table lists the general types of display placements; the locations
 </table>
 
 
-### List:  DOOH Venue Types <a name="list_doohvenuetypes"></a>
+### List: DOOH Venue Taxonomies <a name="list_doohvenuetaxonomies"></a>
+
+The following table contains a list of supported taxonomies describing the locations and contexts in which Out-Of-Home media may be experienced. Taxonomies entries are expected to refer to a specific version, unless a given taxonomy has explicit semantics for forward compatibility and handling updates.
+
+The specifics of how to serialize values for a given taxonomy are expected to be defined by the given taxonomy.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>AdCom DOOH Venue Types (deprecated) </td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>OpenOOH Venue Taxonomy 1.0 https://github.com/openooh/venue-taxonomy/blob/main/specification-1.0.md</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>DPAA Device Venue Types https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--dooh-venue-types-</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>DMI Categorization of Venues 1.1 https://www.dmi-org.com/download/DMI_Standards_for_DOOH_Venues.pdf</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>OMA taxonomy Jan 2022 https://www.oma.org.au/industry-standards</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>OpenOOH Venue Taxonomy 1.1 https://github.com/openooh/venue-taxonomy/blob/main/specification-1.1.md</td>
+  </tr>
+
+</table>
+
+
+### List:  DOOH Venue Types <a name="list_doohvenuetypes"> (deprecated)</a>
 
 This list presents the digital out-of-home venue types and is derived from [DPAA Programmatic Standards](https://dp-aa.org/dpaa-programmatic-standards/).
 
@@ -4579,34 +4618,6 @@ The following table lists the types of entities that provide quantity measuremen
   <tr>
     <td>3</td>
     <td>Exchange Provided</td>
-  </tr>
-</table>
-
-
-### List: Venue Taxonomies <a name="list_venuetaxonomies"></a>
-
-The following table contains a list of supported Out-Of-Home media venue type taxonomies.
-
-<table>
-  <tr>
-    <td><strong>Value</strong></td>
-    <td><strong>Definition</strong></td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>OpenOOH - Digital Out-of-Home Screen Venue Types https://github.com/openooh/venue-taxonomy/blob/main/specification-1.0.md</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>DPAA Device Venue Types https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--dooh-venue-types-</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>DMI Categorization of Venues 1.1</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>OMA taxonomy</td>
   </tr>
 </table>
 
