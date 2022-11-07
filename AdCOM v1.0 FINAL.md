@@ -94,6 +94,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Device Types](#list_devicetypes)
     - [List:  Display Context Types](#list_displaycontexttypes)
     - [List:  Display Placement Types](#list_displayplacementtypes)
+    - [List:  DOOH Multiplier Measurement Source Types](#list_doohmultipliermeasurementmourcetypes)
     - [List:  DOOH Venue Taxonomies](#list_venuetaxonomies)
     - [List:  DOOH Venue Types (deprecated)](#list_doohvenuetypes)
     - [List:  Event Tracking Methods](#list_eventtrackingmethods)
@@ -118,7 +119,6 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Volume Normalization Modes](#list_volumenormalizationmodes)
     - [List:  Slot Position in Pod](#list_slotpositioninpod)
     - [List:  Pod Sequence](#list_podsequence)
-    - [List:  Multiplier Measurement Source Types](#list_multipliermeasurementmourcetypes)
 - [Appendix A:  Additional Resources](#appendixa_additionalresources)
 - [Appendix B:  Change Log](#appendixb_changelog)
 - [Appendix C:  OpenRTB Interfaces](#appendixc_openrtbinterfaces)
@@ -3539,6 +3539,34 @@ The following table lists the general types of display placements; the locations
   </tr>
 </table>
 
+### List: DOOH Multiplier Measurement Source Types <a name="list_doohmultipliermeasurementmourcetypes"></a>
+
+The following table lists the types of entities that provide quantity measurement for impression multipliers, which are common in Out of Home advertising.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>Unknown</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Measurement Vendor Provided</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Publisher Provided</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Exchange Provided</td>
+  </tr>
+</table>
+
+
 
 ### List: DOOH Venue Taxonomies <a name="list_doohvenuetaxonomies"></a>
 
@@ -4590,34 +4618,6 @@ The following table lists the values for the pod sequence field, for use in audi
   <tr>
     <td>1</td>
     <td>First pod in the content stream</td>
-  </tr>
-</table>
-
-
-### List: Multiplier Measurement Source Types <a name="list_multipliermeasurementmourcetypes"></a>
-
-The following table lists the types of entities that provide quantity measurement for impression multipliers.
-
-<table>
-  <tr>
-    <td><strong>Value</strong></td>
-    <td><strong>Definition</strong></td>
-  </tr>
-  <tr>
-    <td>0</td>
-    <td>Unknown</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Measurement Vendor Provided</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Publisher Provided</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Exchange Provided</td>
   </tr>
 </table>
 
