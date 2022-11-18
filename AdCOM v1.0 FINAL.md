@@ -94,7 +94,9 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Device Types](#list_devicetypes)
     - [List:  Display Context Types](#list_displaycontexttypes)
     - [List:  Display Placement Types](#list_displayplacementtypes)
-    - [List:  DOOH Venue Types](#list_doohvenuetypes)
+    - [List:  DOOH Multiplier Measurement Source Types](#list_doohmultipliermeasurementmourcetypes)
+    - [List:  DOOH Venue Taxonomies](#list_venuetaxonomies)
+    - [List:  DOOH Venue Types (deprecated)](#list_doohvenuetypes)
     - [List:  Event Tracking Methods](#list_eventtrackingmethods)
     - [List:  Event Types](#list_eventtypes)
     - [List:  Expandable Directions](#list_expandabledirections)
@@ -3537,8 +3539,75 @@ The following table lists the general types of display placements; the locations
   </tr>
 </table>
 
+### List: DOOH Multiplier Measurement Source Types <a name="list_doohmultipliermeasurementmourcetypes"></a>
 
-### List:  DOOH Venue Types <a name="list_doohvenuetypes"></a>
+The following table lists the types of entities that provide quantity measurement for impression multipliers, which are common in Out of Home advertising.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>Unknown</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Measurement Vendor Provided</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Publisher Provided</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Exchange Provided</td>
+  </tr>
+</table>
+
+
+
+### List: DOOH Venue Taxonomies <a name="list_doohvenuetaxonomies"></a>
+
+The following table contains a list of supported taxonomies describing the locations and contexts in which Out-Of-Home media may be experienced. Taxonomies entries are expected to refer to a specific version, unless a given taxonomy has explicit semantics for forward compatibility and handling updates.
+
+The specifics of how to serialize values for a given taxonomy are expected to be defined by the given taxonomy.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>AdCom DOOH Venue Types (deprecated) </td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>OpenOOH Venue Taxonomy 1.0 https://github.com/openooh/venue-taxonomy/blob/main/specification-1.0.md</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>DPAA Device Venue Types https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--dooh-venue-types-</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>DMI Categorization of Venues 1.1 https://www.dmi-org.com/download/DMI_Standards_for_DOOH_Venues.pdf</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>OMA taxonomy Jan 2022 https://www.oma.org.au/industry-standards</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>OpenOOH Venue Taxonomy 1.1 https://github.com/openooh/venue-taxonomy/blob/main/specification-1.1.md</td>
+  </tr>
+
+</table>
+
+
+### List:  DOOH Venue Types <a name="list_doohvenuetypes"> (deprecated)</a>
 
 This list presents the digital out-of-home venue types and is derived from [DPAA Programmatic Standards](https://dp-aa.org/dpaa-programmatic-standards/).
 
