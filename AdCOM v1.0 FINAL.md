@@ -2,7 +2,7 @@
 
 # **AdCOM Specification v1.0**
 
-**March 2022**
+**November 2022**
 
 
 **About the IAB Technology Lab**
@@ -4669,6 +4669,15 @@ This appendix serves as a brief summary of changes to the specification. These c
     <td><strong>Release</strong></td>
     <td><strong>Changes</strong></td>
   </tr>
+    <tr>
+    <td>1.0</td>
+    <td>November 2022</td>
+    <td><b>Updates to support OpenRTB 2.6-202211 release and keep 2.x/AdCOM in sync<br />
+    <b>Added</b> Object: Dooh to support Digital Out of Home as a distribution channel<br />
+    <b>Added</b> List: DOOH Multiplier Measurement Source Types showing types of entities to provide impression multipliers needed in DOOH<br />
+    <b>Added</b> List: DOOH Venue Taxonomies to list supported venue taxonomies for DOOH<br />
+    <b>Deprecated</b>List: DOOH Venue Types outdated and replace with Venue Type Taxonomies<br />
+    </td>
   <tr>
     <td>1.0</td>
     <td>March 2022</td>
