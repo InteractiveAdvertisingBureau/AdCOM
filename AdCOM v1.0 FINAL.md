@@ -3581,27 +3581,27 @@ The specifics of how to serialize values for a given taxonomy are expected to be
   </tr>
   <tr>
     <td>0</td>
-    <td>AdCom DOOH Venue Types (deprecated) </td>
+    <td>AdCom DOOH Venue Types: (deprecated)</td>
   </tr>
   <tr>
     <td>1</td>
-    <td>OpenOOH Venue Taxonomy 1.0 https://github.com/openooh/venue-taxonomy/blob/main/specification-1.0.md</td>
+    <td>OpenOOH Venue Taxonomy 1.0: https://github.com/openooh/venue-taxonomy/blob/main/specification-1.0.md</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>DPAA Device Venue Types https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--dooh-venue-types-</td>
+    <td>DPAA Device Venue Types: https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--dooh-venue-types-</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>DMI Categorization of Venues 1.1 https://www.dmi-org.com/download/DMI_Standards_for_DOOH_Venues.pdf</td>
+    <td>DMI Categorization of Venues 1.1: https://www.dmi-org.com/download/DMI_Standards_for_DOOH_Venues.pdf</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>OMA taxonomy Jan 2022 https://www.oma.org.au/industry-standards</td>
+    <td>OMA taxonomy Jan 2022: https://www.oma.org.au/industry-standards</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>OpenOOH Venue Taxonomy 1.1 https://github.com/openooh/venue-taxonomy/blob/main/specification-1.1.md</td>
+    <td>OpenOOH Venue Taxonomy 1.1: https://github.com/openooh/venue-taxonomy/blob/main/specification-1.1.md</td>
   </tr>
 
 </table>
