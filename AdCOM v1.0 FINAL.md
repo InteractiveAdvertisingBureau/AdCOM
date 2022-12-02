@@ -1850,6 +1850,11 @@ This object is used to define an ad supported website, in contrast to a non-brow
     <td>Indicates if the page is built with AMP HTML, where 0 = no, 1 = yes.</td>
   </tr>
   <tr>
+    <td><code>inventorypartnerdomain</code></td>
+    <td>string</td>
+    <td>A domain to be used for inventory authorization in the case of inventory sharing arrangements between a site owner and content owner. This field is typically used by authorization crawlers to establish the domain of the content owner, who has the right to monetize some portion of ad inventory within the site. The content owner's domain should be listed in the site owner's ads.txt file as an <code>inventorypartnerdomain</code>. Authorization for supply from the <code>inventorypartnerdomain</code> will be published in the ads.txt file on the root of that domain. Refer to <a href="https://iabtechlab.com/wp-content/uploads/2022/04/Ads.txt-1.1.pdf">the ads.txt 1.1 spec</a> for more details.</td>
+  </tr>
+  <tr>
     <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
@@ -1935,6 +1940,11 @@ This object is used to define an ad supported non-browser application, in contra
     <td>Indicator of whether or not this is a paid app, where 0 = free, 1 = paid.</td>
   </tr>
   <tr>
+   <tr>
+    <td><code>inventorypartnerdomain</code></td>
+    <td>string</td>
+    <td>A domain to be used for inventory authorization in the case of inventory sharing arrangements between a site owner and content owner. This field is typically used by authorization crawlers to establish the domain of the content owner, who has the right to monetize some portion of ad inventory within the site. The content owner's domain should be listed in the site owner's ads.txt file as an <code>inventorypartnerdomain</code>. Authorization for supply from the <code>inventorypartnerdomain</code> will be published in the ads.txt file on the root of that domain. Refer to <a href="https://iabtechlab.com/wp-content/uploads/2022/04/Ads.txt-1.1.pdf">the ads.txt 1.1 spec</a> for more details.</td>
+  </tr>
     <td><code>ext</code></td>
     <td>object</td>
     <td>Optional vendor-specific extensions.</td>
@@ -4673,7 +4683,7 @@ This appendix serves as a brief summary of changes to the specification. These c
     <td>1.0</td>
     <td>November 2022</td>
     <td><b>Updates to support OpenRTB 2.6-202211 release and keep 2.x/AdCOM in sync<br />
-    <b>Added</b> Object: Dooh to support Digital Out of Home as a distribution channel<br />
+    <b>Added</b> inventorypartnerdomain to site and app objects<br />
     <b>Added</b> List: DOOH Multiplier Measurement Source Types showing types of entities to provide impression multipliers needed in DOOH<br />
     <b>Added</b> List: DOOH Venue Taxonomies to list supported venue taxonomies for DOOH<br />
     <b>Deprecated</b>List: DOOH Venue Types outdated and replace with Venue Type Taxonomies<br />
