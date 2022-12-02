@@ -859,7 +859,7 @@ This objects represents the outcome of some form of review of the ad.  This is t
   <tr>
     <td><code>corr</code></td>
     <td>object</td>
-    <td>Correction object wherein the auditor can specify changes to attributes of the <code>Ad</code> object or its children they believe to be proper.  For example, if the original <code>Ad</code> indicated a category of “IAB3”, but the auditor deems the correct category to be “IAB13”, then <code>corr</code> could include a sparse <code>Ad</code> object including just the <code>cat</code> array indicating “IAB13”.</td>
+    <td>Correction object wherein the auditor can specify changes to attributes of the <code>Ad</code> object or its children they believe to be proper.  For example, if the original <code>Ad</code> indicated a category of “IAB3”, but the auditor deems the correct category to be “IAB13”, then <code>corr</code> could include a sparse <code>Ad</code> object including just the <code>cat</code> array indicating “IAB13”. Refer to <a href="#object_ad">Object: Ad</a>.</td>
   </tr>
   <tr>
     <td><code>ext</code></td>
@@ -1967,7 +1967,7 @@ This object is used to define an ad supported digital out-of-home (DOOH) experie
   <tr>
     <td><code>venue</code></td>
     <td>integer</td>
-    <td>The type of out-of-home venue.  Refer to <a href="#list_doohvenuetypes">List: DOOH Venue Types</a>List:  DOOH Venue Types.</td>
+    <td>The type of out-of-home venue.  Refer to <a href="#list_doohvenuetypes">List: DOOH Venue Types</a>.</td>
   </tr>
   <tr>
     <td><code>fixed</code></td>
@@ -2399,13 +2399,13 @@ Implementer should ensure compliance with regional legislation around data usage
   <tr>
     <td><code>ua</code></td>
     <td>string</td>
-    <td>Browser user agent string. This field represents a raw user agent string from the browser. For backwards compatibility, exchanges are recommended to always populate `ua` with the User-Agent string, when available from the end user’s device, even if an alternative representation, such as the User-Agent Client-Hints, is available and gets used to populate `sua`. No inferred or approximated user agents are expected in this field.
-If both `ua` and `sua` are present in the bid request, `sua` should be considered the more accurate representation of the device attributes. This is because the `ua` may contain a frozen or reduced UserAgent string.</td>
+    <td>Browser user agent string. This field represents a raw user agent string from the browser. For backwards compatibility, exchanges are recommended to always populate <code>ua</code> with the User-Agent string, when available from the end user’s device, even if an alternative representation, such as the User-Agent Client-Hints, is available and gets used to populate <code>sua</code>. No inferred or approximated user agents are expected in this field.
+If both <code>ua</code> and <code>sua</code> are present in the bid request, <code>sua</code> should be considered the more accurate representation of the device attributes. This is because the <code>ua</code> may contain a frozen or reduced UserAgent string.</td>
   </tr>
   <tr>
     <td><code>sua</code></td>
-    <td>UserAgent object</td>
-    <td>Structured user agent information defined by a <a href="#object_useragent">Object: UserAgent</a>. If both `ua` and `sua` are present in the bid request, `sua` should be considered the more accurate representation of the device attributes. This is because the `ua` may contain a frozen or reduced UserAgent string.</td>
+    <td>object</td>
+    <td>Structured user agent information. Refer to <a href="#object_useragent">Object: UserAgent</a>. If both <code>ua</code> and <code>sua</code> are present in the bid request, <code>sua</code> should be considered the more accurate representation of the device attributes. This is because the <code>ua</code> may contain a frozen or reduced UserAgent string.</td>
   </tr>
   <tr>
     <td><code>ifa</code></td>
@@ -2552,13 +2552,13 @@ Structured user agent information provided when client supports <a href="https:/
   </tr>
   <tr>
     <td><code>browsers</code></td>
-    <td>array of BrandVersion objects; recommended</td>
+    <td>object array; recommended</td>
     <td>Each BrandVersion object identifies a browser or similar software component. Refer to <a href="#object_brandversion">Object: BrandVersion</a>. Implementers should send brands and versions derived from the Sec-CH-UA-Full-Version-List header*.</td>
   </tr>
   <tr>
     <td><code>platform</code></td>
-    <td>BrandVersion object; recommended</td>
-    <td>Refer to <a href="#object_brandversion">Object: BrandVersion</a> that identifies the user agent’s execution platform / OS. Implementers should send a brand derived from the Sec-CH-UA-Platform header, and version derived from the Sec-CH-UA-Platform-Version header *.</td>
+    <td>object; recommended</td>
+    <td>A BrandVersion that identifies the user agent’s execution platform / OS. Refer to <a href="#object_brandversion">Object: BrandVersion</a>. Implementers should send a brand derived from the Sec-CH-UA-Platform header, and version derived from the Sec-CH-UA-Platform-Version header *.</td>
   </tr>
   <tr>
     <td><code>mobile</code></td>
@@ -2612,7 +2612,7 @@ Further identification based on User-Agent Client Hints, the BrandVersion object
   </tr>
   <tr>
     <td><code>version</code></td>
-    <td>array of string</td>
+    <td>string array</td>
     <td>A sequence of version components, in descending hierarchical order (major, minor, micro, …)</td>
   </tr>
   <tr>
@@ -3591,27 +3591,27 @@ The specifics of how to serialize values for a given taxonomy are expected to be
   </tr>
   <tr>
     <td>0</td>
-    <td>AdCom DOOH Venue Types (deprecated) </td>
+    <td>AdCom DOOH Venue Types: (deprecated)</td>
   </tr>
   <tr>
     <td>1</td>
-    <td>OpenOOH Venue Taxonomy 1.0 https://github.com/openooh/venue-taxonomy/blob/main/specification-1.0.md</td>
+    <td>OpenOOH Venue Taxonomy 1.0: https://github.com/openooh/venue-taxonomy/blob/main/specification-1.0.md</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>DPAA Device Venue Types https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--dooh-venue-types-</td>
+    <td>DPAA Device Venue Types: https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--dooh-venue-types-</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>DMI Categorization of Venues 1.1 https://www.dmi-org.com/download/DMI_Standards_for_DOOH_Venues.pdf</td>
+    <td>DMI Categorization of Venues 1.1: https://www.dmi-org.com/download/DMI_Standards_for_DOOH_Venues.pdf</td>
   </tr>
   <tr>
     <td>4</td>
-    <td>OMA taxonomy Jan 2022 https://www.oma.org.au/industry-standards</td>
+    <td>OMA taxonomy Jan 2022: https://www.oma.org.au/industry-standards</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>OpenOOH Venue Taxonomy 1.1 https://github.com/openooh/venue-taxonomy/blob/main/specification-1.1.md</td>
+    <td>OpenOOH Venue Taxonomy 1.1: https://github.com/openooh/venue-taxonomy/blob/main/specification-1.1.md</td>
   </tr>
 
 </table>
@@ -4436,7 +4436,7 @@ The following table lists the various media playback methods.
   </tr>
   <tr>
     <td>7</td>
-    <td>Continuous Playback - Media playback is set to play additional media automatically without user interaction. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening.</td>
+    <td>Continuous Playback: Media playback is set to play additional media automatically without user interaction. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening.</td>
   </tr>
 </table>
 
@@ -4757,7 +4757,7 @@ This example is indicating a mobile optimized website and some basic details abo
 
 
 
-```
+```json
 {
    "openrtb": {
       "ver": "3.0",
@@ -4830,7 +4830,7 @@ The `spec` object within an `item` is the OpenRTB interface to AdCOM placement o
 This example is indicating a display placement that must be secure.  Either a structured banner or AMPHTML is acceptable and if the latter, the AMP rendering mode will be *early*.  The placement is not interstitial, two possible sizes are offered (i.e., 320x50 and 320x250), and a simple pixel tracker for the impression event is supported.
 
 
-```
+```json
 {
    "openrtb": {
       "ver": "3.0",
@@ -4888,7 +4888,7 @@ The `media` object is the OpenRTB interface to AdCOM media objects.  It contains
 This example is indicating a secure display ad for Ford using a structured banner object with a 320x50 JPEG creative.  A pixel tracker for the impression rendering event is requested.
 
 
-```
+```json
 {
    "openrtb": {
       "ver": "3.0",
