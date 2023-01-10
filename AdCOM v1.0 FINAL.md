@@ -4337,7 +4337,7 @@ The following table lists the placement positions as a relative measure of visib
 
 ### List:  Placement Subtypes - Video <a name="list_placementsubtypesvideo"></a>
 
-The following table lists the various types of video placements derived largely from the IAB Digital Video Guidelines.
+The following table lists the various types of video placements derived largely from and superceding the IAB Digital Video Guidelines.
 
 <table>
   <tr>
@@ -4346,24 +4346,24 @@ The following table lists the various types of video placements derived largely 
   </tr>
   <tr>
     <td>1</td>
-    <td><strong>In-Stream:</strong> <s> In-Stream video must be set to “sound on” by default at player start. While there may be accompanying text, the video content is the focus of the user’s visit and visible upon page load. It should remain the primary content on the page and the only video player throughout the page visit.
-</s> Deprecated: please use values 6 to 10</td>
+    <td><strong>In-Stream:</strong> <s> Played before, during or after the streaming video content that the consumer has requested (e.g., Pre-roll, Mid-roll, Post-roll).
+</s> Deprecation notice: please migrate to values 6 to 10</td>
   </tr>
   <tr>
     <td>2</td>
-    <td><strong>In-Banner:</strong>  <s>Exists within a web banner that leverages the banner space to deliver a video experience as opposed to another static or rich media format.  The format relies on the existence of display ad inventory on the page for its delivery.</s> Deprecated: please use values 6 to 10</td>
+    <td><strong>In-Banner:</strong>  <s>Exists within a web banner that leverages the banner space to deliver a video experience as opposed to another static or rich media format.  The format relies on the existence of display ad inventory on the page for its delivery.</s> Deprecation notice: please migrate to values 6 to 10</td>
   </tr>
   <tr>
     <td>3</td>
-    <td><strong>In-Article:</strong> <s> Loads and plays dynamically before, between, or after paragraphs of editorial content; existing as a standalone branded message. Valid in-article inventory should be lazy-loaded upon entering viewport.</s> Deprecated: please use values 6 to 10</td>
+    <td><strong>In-Article:</strong> <s> Loads and plays dynamically before, between, or after paragraphs of editorial content; existing as a standalone branded message. Valid in-article inventory should be lazy-loaded upon entering viewport.</s> Deprecation notice: please migrate to values 6 to 10</td>
   </tr>
   <tr>
     <td>4</td>
-    <td><strong>In-Feed:</strong>  <s>Found in content, social, or product feeds.</s> Deprecated: please use values 6 to 10</td>
+    <td><strong>In-Feed:</strong>  <s>Found in content, social, or product feeds.</s> Deprecation notice: please migrate to values 6 to 10</td>
   </tr>
   <tr>
     <td>5</td>
-    <td><strong>Interstitial/Slider/Floating:</strong>  <s>Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).</s> Deprecated: please use values 6 to 10</td>
+    <td><strong>Interstitial/Slider/Floating:</strong>  <s>Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).</s> Deprecation notice: please migrate to values 6 to 10</td>
   </tr>
         <tr>
     <td>6</td>
