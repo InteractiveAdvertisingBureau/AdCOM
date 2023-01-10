@@ -4365,39 +4365,29 @@ The following table lists the various types of video placements derived largely 
     <td>5</td>
     <td><strong>Interstitial/Slider/Floating:</strong>  <s>Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).</s></td>
   </tr>
-  
         <tr>
     <td>6</td>
     <td><strong>Instream:</strong>  Pre-roll, mid-roll, and post-roll ads that are played before, during or after the streaming video content that the consumer has requested). Instream video must be set to “sound on” by default at player start, or have explicitly clear user intent to watch the video content. While there may be other accompanying content, the video content is the focus of the user’s visit. It should remain the primary content on the page and the only video player in-view when playing. The media player must not be muted and volume must be set at or above 10%.</td>
   </tr>
-  
     <tr>
     <td>7</td>
     <td><strong>In-content, matched content:</strong> Pre-roll, mid-roll, and post-roll ads that are played before, during, or after streaming video content. The video player loads and plays before, between, or after paragraphs of text or graphical content, and starts playing only when it enters the viewport. The video player contains content that is exactly matched to the text/graphical content of the page. Valid in-content inventory should only start playback upon entering viewport. It may convert to a floating/sticky player as it scrolls off the page.</td>
   </tr>
-  
       <tr>
     <td>8</td>
     <td><strong>In-content, unmatched content:</strong> Pre-roll, mid-roll, and post-roll ads that are played before, during, or after streaming video content. The video player loads and plays before, between, or after paragraphs of text or graphical content, and starts playing only when it enters the viewport. The video player contains content that does not exactly match the text content of the page. Valid in-content inventory should only start playback upon entering viewport. It may convert to a floating/sticky player as it scrolls off the page.
-
 </td>
   </tr>
-
       <tr>
     <td>9</td>
     <td><strong>Interstitial:</strong> Video ads that are played without video content in a sound-on environment. This can be in placements like in-app video or interstitials. Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).
-
 </td>
   </tr>
-
       <tr>
     <td>10</td>
     <td><strong>Outstream:</strong>  Video ads that are played without video content in a sound-off environment. This can be in placements like injected into content slideshows, native feeds, in-content or sticky/floating. 
 </td>
   </tr>
-
-
-
 </table>
 
 
