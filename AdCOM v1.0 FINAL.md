@@ -3949,24 +3949,53 @@ The following table lists the directions in which an expandable ad may expand, g
 
 ### List:  Feed Types <a name="list_feedtypes"></a>
 
-The following table lists the types of feeds, typically for audio.
+The following table lists the types of feeds for audio.
 
 <table>
   <tr>
     <td><strong>Value</strong></td>
+    <td><strong>Class</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
-    <td>Music Service</td>
+    <td>AOD</td>
+    <td>Music streaming service</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>FM/AM Broadcast</td>
+    <td>LIVE</td>
+    <td>FM/AM broadcast (live content broadcast over the air but also avaialble via online streaming)</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>Podcast</td>
+    <td>AOD</td>
+    <td>Podcast (original, pre-recorded content distributed as episodes in a series)</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>AOD</td>
+    <td>Catch-up radio (recorded segment of a radio show that was originally broadcast live)</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>LIVE</td>
+    <td>Web radio (live content only available via online streaming, not as AM/FM broadcast)</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>MISC</td>
+    <td>Video game (background audio in video games)</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>MISC</td>
+    <td>Text to speech (audio books, website plugin that can read article)</td>
+  </tr>
+  <tr>
+    <td>500+</td>
+    <td>MISC</td>
+    <td>Vendor-specific codes.</td>
   </tr>
 </table>
 
