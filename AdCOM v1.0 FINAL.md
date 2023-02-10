@@ -3024,7 +3024,7 @@ The following table lists the options for taxonomies that can be used to describ
   </tr>
   <tr>
     <td>1</td>
-    <td>IAB Tech Lab Content Category Taxonomy 1.0. - Deprecated, and recommend NOT be used since it does not have SCD flags. </td>
+    <td>IAB Tech Lab Content Category Taxonomy 1.0: Deprecated, and recommend NOT be used since it does not have SCD flags. </td>
   </tr>
   <tr>
     <td>2</td>
@@ -3046,7 +3046,11 @@ The following table lists the options for taxonomies that can be used to describ
     <td>6</td>
     <td><a href="https://iabtechlab.com/standards/content-taxonomy/">IAB Tech Lab Content Taxonomy 2.2</a></td>
   </tr>
-
+  </tr>
+    <tr>
+    <td>7</td>
+    <td><a href="https://iabtechlab.com/standards/content-taxonomy/">IAB Tech Lab Content Taxonomy 3.0</a></td>
+  </tr>
   <tr>
     <td>500+</td>
     <td>Vendor-specific codes.</td>
