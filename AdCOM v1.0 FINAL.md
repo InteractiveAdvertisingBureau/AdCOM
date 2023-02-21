@@ -4370,7 +4370,7 @@ The following table lists the placement positions as a relative measure of visib
 
 ### List:  Placement Subtypes - Video <a name="list_placementsubtypesvideo"></a>
 
-The following table lists the various types of video placements derived largely from the IAB Digital Video Guidelines.
+The following table lists the various types of video placements derived largely from and superceding the IAB Digital Video Guidelines.
 
 <table>
   <tr>
@@ -4379,23 +4379,47 @@ The following table lists the various types of video placements derived largely 
   </tr>
   <tr>
     <td>1</td>
-    <td><strong>In-Stream:</strong>  Played before, during or after the streaming video content that the consumer has requested (e.g., Pre-roll, Mid-roll, Post-roll).</td>
+    <td><strong>In-Stream:</strong> <s> Played before, during or after the streaming video content that the consumer has requested (e.g., Pre-roll, Mid-roll, Post-roll).
+</s> Deprecation notice: please migrate to values 6 to 10</td>
   </tr>
   <tr>
     <td>2</td>
-    <td><strong>In-Banner:</strong>  Exists within a web banner that leverages the banner space to deliver a video experience as opposed to another static or rich media format.  The format relies on the existence of display ad inventory on the page for its delivery.</td>
+    <td><strong>In-Banner:</strong>  <s>Exists within a web banner that leverages the banner space to deliver a video experience as opposed to another static or rich media format.  The format relies on the existence of display ad inventory on the page for its delivery.</s> Deprecation notice: please migrate to values 6 to 10</td>
   </tr>
   <tr>
     <td>3</td>
-    <td><strong>In-Article:</strong>  Loads and plays dynamically between paragraphs of editorial content; existing as a standalone branded message.</td>
+    <td><strong>In-Article:</strong> <s> Loads and plays dynamically before, between, or after paragraphs of editorial content; existing as a standalone branded message. Valid in-article inventory should be lazy-loaded upon entering viewport.</s> Deprecation notice: please migrate to values 6 to 10</td>
   </tr>
   <tr>
     <td>4</td>
-    <td><strong>In-Feed:</strong>  Found in content, social, or product feeds.</td>
+    <td><strong>In-Feed:</strong>  <s>Found in content, social, or product feeds.</s> Deprecation notice: please migrate to values 6 to 10</td>
   </tr>
   <tr>
     <td>5</td>
-    <td><strong>Interstitial/Slider/Floating:</strong>  Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).</td>
+    <td><strong>Interstitial/Slider/Floating:</strong>  <s>Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).</s> Deprecation notice: please migrate to values 6 to 10</td>
+  </tr>
+        <tr>
+    <td>6</td>
+    <td><strong>Instream:</strong>  Pre-roll, mid-roll, and post-roll ads that are played before, during or after the streaming video content that the consumer has requested). Instream video must be set to “sound on” by default at player start, or have explicitly clear user intent to watch the video content. While there may be other accompanying content, the video content is the focus of the user’s visit. It should remain the primary content on the page and the only video player in-view when playing. The media player must not be muted and volume must be set at or above 10%.</td>
+  </tr>
+    <tr>
+    <td>7</td>
+    <td><strong>In-content, matched content:</strong> Pre-roll, mid-roll, and post-roll ads that are played before, during, or after streaming video content. The video player loads and plays before, between, or after paragraphs of text or graphical content, and starts playing only when it enters the viewport. The video player contains content that is exactly matched to the text/graphical content of the page. Valid in-content inventory should only start playback upon entering viewport. It may convert to a floating/sticky player as it scrolls off the page.</td>
+  </tr>
+      <tr>
+    <td>8</td>
+    <td><strong>In-content, unmatched content:</strong> Pre-roll, mid-roll, and post-roll ads that are played before, during, or after streaming video content. The video player loads and plays before, between, or after paragraphs of text or graphical content, and starts playing only when it enters the viewport. The video player contains content that does not exactly match the text content of the page. Valid in-content inventory should only start playback upon entering viewport. It may convert to a floating/sticky player as it scrolls off the page.
+</td>
+  </tr>
+      <tr>
+    <td>9</td>
+    <td><strong>Interstitial:</strong> Video ads that are played without video content in a sound-on environment. This can be in placements like in-app video or interstitials. Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).
+</td>
+  </tr>
+      <tr>
+    <td>10</td>
+    <td><strong>Outstream:</strong>  Video ads that are played without video content in a sound-off environment. This can be in placements like injected into content slideshows, native feeds, in-content or sticky/floating. 
+</td>
   </tr>
 </table>
 
