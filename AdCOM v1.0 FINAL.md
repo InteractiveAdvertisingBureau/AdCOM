@@ -111,6 +111,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Operating Systems](#list_operatingsystems)
     - [List:  Placement Positions](#list_placementpositions)
     - [List:  Placement Subtypes - Video](#list_placementsubtypesvideo)
+    - [List:  Plcmnt Subtypes - Video](#list_plcmntsubtypesvideo)
     - [List:  Playback Cessation Modes](#list_playbackcessationmodes)
     - [List:  Playback Methods](#list_playbackmethods)
     - [List:  Pod Sequence](#list_podsequence)
@@ -4397,7 +4398,7 @@ The following table lists the placement positions as a relative measure of visib
 
 ### List:  Placement Subtypes - Video <a name="list_placementsubtypesvideo"></a>
 
-The following table lists the various types of video placements derived largely from the IAB Digital Video Guidelines.
+The following table lists the various types of video placements derived largely from the IAB Digital Video Guidelines. To be sent using <code>placement</code> attribute in <strong>Object:Video</strong>. Proposed deprication of this list and associated attribute in 2024.
 
 <table>
   <tr>
@@ -4425,20 +4426,30 @@ The following table lists the various types of video placements derived largely 
     <td><strong>Interstitial/Slider/Floating:</strong>  Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).</td>
   </tr>
    <tr>
-    <td>6</td>
-    <td><strong>Instream:</strong>Pre-roll, mid-roll, and post-roll ads that are played before, during or after the streaming video content that the consumer has requested. Instream video must be set to “sound on” by default at player start, or have explicitly clear user intent to watch the video content. While there may be other accompanying content, the video content must be the focus of the user’s visit. It should remain the primary content on the page and the only video player in-view when playing. If the player converts to floating/sticky subsequent ad calls should accurately convey the updated player size.</td>
+     </table>
+ 
+ ### List:  Plcmnt Subtypes - Video <a name="list_plcmntsubtypesvideo"></a>
+ The following table lists the various types of video placements in accordance with updated IAB Digital Video Guidelines. To be sent using <code>plcmnt</code> attribute in <strong>Object:Video</strong> 
+ <table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
   </tr>
   <tr>
-    <td>7</td>
-    <td><strong>Accompanying Content:</strong>Pre-roll, mid-roll, and post-roll ads that are played before, during, or after streaming video content. The video player loads and plays before, between, or after paragraphs of text or graphical content, and starts playing only when it enters the viewport. Accompanying content should only start playback upon entering the viewport. It may convert to a floating/sticky player as it scrolls off the page.</td>
+    <td>1</td>
+    <td><strong>Instream:</strong> Pre-roll, mid-roll, and post-roll ads that are played before, during or after the streaming video content that the consumer has requested. Instream video must be set to “sound on” by default at player start, or have explicitly clear user intent to watch the video content. While there may be other content surrounding the player, the video content must be the focus of the user’s visit. It should remain the primary content on the page and the only video player in-view when playing. If the player converts to floating/sticky subsequent ad calls should accurately convey the updated player size.</td>
   </tr>
   <tr>
-    <td>8</td>
+    <td>2</td>
+    <td><strong>Accompanying Content:</strong> Pre-roll, mid-roll, and post-roll ads that are played before, during, or after streaming video content. The video player loads and plays before, between, or after paragraphs of text or graphical content, and starts playing only when it enters the viewport. Accompanying content should only start playback upon entering the viewport. It may convert to a floating/sticky player as it scrolls off the page.</td>
+  </tr>
+  <tr>
+    <td>3</td>
     <td><strong>Interstitial:</strong>Video ads that are played without video content. During playback, it must be the primary focus of the page and take up the majority of the viewport and cannot be scrolled out of view. This can be in placements like in-app video or slideshows. </td>
   </tr>
   <tr>
-    <td>9</td>
-    <td><strong>No Content/Standalone:</strong>Video ads that are played without streaming video content. This can be in placements like slideshows, native feeds, in-content or sticky/floating.</td>
+    <td>4</td>
+    <td><strong>No Content/Standalone:</strong> Video ads that are played without streaming video content. This can be in placements like slideshows, native feeds, in-content or sticky/floating.</td>
   </tr>
 </table>
 
