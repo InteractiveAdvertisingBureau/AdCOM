@@ -3997,7 +3997,7 @@ The following table lists the types of feeds for audio.
   <tr>
     <td>2</td>
     <td>LIVE</td>
-    <td>FM/AM broadcast (live content broadcast over the air but also avaialble via online streaming)</td>
+    <td>FM/AM broadcast (live content broadcast over the air but also available via online streaming)</td>
   </tr>
   <tr>
     <td>3</td>
@@ -4398,7 +4398,7 @@ The following table lists the placement positions as a relative measure of visib
 
 ### List:  Placement Subtypes - Video <a name="list_placementsubtypesvideo"></a>
 
-The following table lists the various types of video placements derived largely from the IAB Digital Video Guidelines. To be sent using <code>placement</code> attribute in <strong>Object:Video</strong>. Proposed deprication of this list and associated attribute in 2024.
+The following table lists the various types of video placements derived largely from the IAB Digital Video Guidelines. To be sent using <code>placement</code> attribute in <strong>Object:Video</strong>. Proposed deprecation of this list and associated attribute in 2024.
 
 <table>
   <tr>
