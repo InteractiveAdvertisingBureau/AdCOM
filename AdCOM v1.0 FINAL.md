@@ -3016,7 +3016,7 @@ The following table lists the codes used in `Audit` objects to reflect status or
 
 ### List: Auto Refresh Triggers <a name="list_autorefreshtriggers"></a>
 
-The following table is a list of API frameworks either supported by a placement or required by an ad.
+The following table is a list of triggers that result in an ad slot refreshing.
 
 <table>
   <tr>
