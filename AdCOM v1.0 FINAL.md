@@ -4437,7 +4437,7 @@ The following table lists the various types of video placements derived largely 
   </tr>
   <tr>
     <td>1</td>
-    <td><strong>Instream:</strong> Pre-roll, mid-roll, and post-roll ads that are played before, during or after the streaming video content that the consumer has requested. Instream video must be set to “sound on” by default at player start, or have explicitly clear user intent to watch the video content. While there may be other content surrounding the player, the video content must be the focus of the user’s visit. It should remain the primary content on the page and the only video player in-view when playing. If the player converts to floating/sticky subsequent ad calls should accurately convey the updated player size.</td>
+    <td><strong>Instream:</strong> Pre-roll, mid-roll, and post-roll ads that are played before, during or after the streaming video content that the consumer has requested. Instream video must be set to “sound on” by default at player start, or have explicitly clear user intent to watch the video content. While there may be other content surrounding the player, the video content must be the focus of the user’s visit. It should remain the primary content on the page and the only video player in-view capable of audio when playing. If the player converts to floating/sticky subsequent ad calls should accurately convey the updated player size.</td>
   </tr>
   <tr>
     <td>2</td>
