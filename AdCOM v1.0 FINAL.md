@@ -1371,7 +1371,7 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td><code>ptype</code></td>
     <td>integer</td>
-    <td>Placement subtype.  Refer to <a href="#list_placementsubtypesvideo">List: Placement Subtypes - Video</a>.</td>
+    <td>Placement subtype. Refer to <a href="#list_placementsubtypesvideo">List: Placement Subtypes - Video</a>.</td>
   </tr>
   <tr>
     <td><code>pos</code></td>
@@ -4429,7 +4429,7 @@ The following table lists the various types of video placements derived largely 
      </table>
  
  ### List:  Plcmt Subtypes - Video <a name="list_plcmtsubtypesvideo"></a>
- The following table lists the various types of video placements in accordance with updated IAB Digital Video Guidelines. To be sent using <code>plcmt</code> attribute in <strong>Object:Video</strong> 
+ The following table lists the various types of video placements in accordance with updated IAB Digital Video Guidelines. To be sent using <code>plcmt</code> attribute in <strong>Object:Video</strong>. Please refer to the <a href=https://github.com/InteractiveAdvertisingBureau/openrtb2.x/blob/develop/implementation.md#710---updated-in-stream-values>implementation guide</a> for examples and information on how to use the updated signals. 
  <table>
   <tr>
     <td><strong>Value</strong></td>
