@@ -111,7 +111,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Operating Systems](#list_operatingsystems)
     - [List:  Placement Positions](#list_placementpositions)
     - [List:  Placement Subtypes - Video](#list_placementsubtypesvideo)
-    - [List:  Plcmnt Subtypes - Video](#list_plcmntsubtypesvideo)
+    - [List:  Plcmt Subtypes - Video](#list_plcmtsubtypesvideo)
     - [List:  Playback Cessation Modes](#list_playbackcessationmodes)
     - [List:  Playback Methods](#list_playbackmethods)
     - [List:  Pod Sequence](#list_podsequence)
@@ -4428,8 +4428,8 @@ The following table lists the various types of video placements derived largely 
    <tr>
      </table>
  
- ### List:  Plcmnt Subtypes - Video <a name="list_plcmntsubtypesvideo"></a>
- The following table lists the various types of video placements in accordance with updated IAB Digital Video Guidelines. To be sent using <code>plcmnt</code> attribute in <strong>Object:Video</strong> 
+ ### List:  Plcmt Subtypes - Video <a name="list_plcmtsubtypesvideo"></a>
+ The following table lists the various types of video placements in accordance with updated IAB Digital Video Guidelines. To be sent using <code>plcmt</code> attribute in <strong>Object:Video</strong> 
  <table>
   <tr>
     <td><strong>Value</strong></td>
