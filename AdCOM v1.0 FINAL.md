@@ -4398,7 +4398,7 @@ The following table lists the placement positions as a relative measure of visib
 
 ### List:  Placement Subtypes - Video <a name="list_placementsubtypesvideo"></a>
 
-The following table lists the various types of video placements derived largely from the IAB Digital Video Guidelines. To be sent using <code>placement</code> attribute in <strong>Object:Video</strong>. Proposed deprecation of this list and associated attribute in 2024.
+The following table lists the various types of video placements derived largely from the IAB Digital Video Guidelines. To be sent using <code>placement</code> attribute in <strong>Object:Video</strong>. DEPRECATED AS OF 2.6-202303 RELEASE. Proposed removal of this list and associated attribute in 2024.
 
 <table>
   <tr>
