@@ -1371,7 +1371,7 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td><code>ptype</code></td>
     <td>integer</td>
-    <td>Placement subtype. Refer to <a href="#list_placementsubtypesvideo">List: Placement Subtypes - Video</a>.</td>
+    <td>Placement subtype. Refer to <a href="#list_plcmtsubtypesvideo">List: Plcmt Subtypes - Video</a>.</td>
   </tr>
   <tr>
     <td><code>pos</code></td>
