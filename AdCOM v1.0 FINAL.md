@@ -4429,7 +4429,7 @@ The following table lists the various types of video placements derived largely 
      </table>
  
  ### List:  Plcmt Subtypes - Video <a name="list_plcmtsubtypesvideo"></a>
- The following table lists the various types of video placements in accordance with updated IAB Digital Video Guidelines. To be sent using <code>plcmt</code> attribute in <strong>Object:Video</strong>. Please refer to the <a href=https://github.com/InteractiveAdvertisingBureau/openrtb2.x/blob/develop/implementation.md#710---updated-in-stream-values>implementation guide</a> for examples and information on how to use the updated signals. 
+ The following table lists the various types of video placements in accordance with updated IAB Digital Video Guidelines. To be sent using <code>plcmt</code> attribute in <strong>Object:Video</strong>. Please refer to the <a href=https://github.com/InteractiveAdvertisingBureau/openrtb2.x/blob/main/implementation.md#710---updated-video-signals>implementation guide</a> for examples and information on how to use the updated signals. 
  <table>
   <tr>
     <td><strong>Value</strong></td>
