@@ -82,6 +82,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Agent Types](#list_agenttypes)
     - [List:  API Frameworks](#list_apiframeworks)
     - [List:  Audit Status Codes](#list_auditstatuscodes)
+    - [List:  Auto Refresh Triggers](#list_autorefreshtriggers)
     - [List:  Category Taxonomies](#list_categorytaxonomies)
     - [List:  Click Types](#list_clicktypes)
     - [List:  Companion Types](#list_companiontypes)
@@ -95,7 +96,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Display Context Types](#list_displaycontexttypes)
     - [List:  Display Placement Types](#list_displayplacementtypes)
     - [List:  DOOH Multiplier Measurement Source Types](#list_doohmultipliermeasurementmourcetypes)
-    - [List:  DOOH Venue Taxonomies](#list_venuetaxonomies)
+    - [List:  DOOH Venue Taxonomies](#list_doohvenuetaxonomies)
     - [List:  DOOH Venue Types (deprecated)](#list_doohvenuetypes)
     - [List:  Event Tracking Methods](#list_eventtrackingmethods)
     - [List:  Event Types](#list_eventtypes)
@@ -110,15 +111,16 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Operating Systems](#list_operatingsystems)
     - [List:  Placement Positions](#list_placementpositions)
     - [List:  Placement Subtypes - Video](#list_placementsubtypesvideo)
+    - [List:  Plcmt Subtypes - Video](#list_plcmtsubtypesvideo)
     - [List:  Playback Cessation Modes](#list_playbackcessationmodes)
     - [List:  Playback Methods](#list_playbackmethods)
+    - [List:  Pod Sequence](#list_podsequence)
     - [List:  Production Qualities](#list_productionqualities)
     - [List:  Size Units](#list_sizeunits)
+    - [List:  Slot Position in Pod](#list_slotpositioninpod)
     - [List:  Start Delay Modes](#list_startdelaymodes)
     - [List:  User-Agent Source](#user-agent_source)
     - [List:  Volume Normalization Modes](#list_volumenormalizationmodes)
-    - [List:  Slot Position in Pod](#list_slotpositioninpod)
-    - [List:  Pod Sequence](#list_podsequence)
 - [Appendix A:  Additional Resources](#appendixa_additionalresources)
 - [Appendix B:  Change Log](#appendixb_changelog)
 - [Appendix C:  OpenRTB Interfaces](#appendixc_openrtbinterfaces)
@@ -1369,7 +1371,7 @@ This object signals that the placement may be a video placement and provides add
   <tr>
     <td><code>ptype</code></td>
     <td>integer</td>
-    <td>Placement subtype.  Refer to <a href="#list_placementsubtypesvideo">List: Placement Subtypes - Video</a>.</td>
+    <td>Placement subtype. Refer to <a href="#list_plcmtsubtypesvideo">List: Plcmt Subtypes - Video</a>.</td>
   </tr>
   <tr>
     <td><code>pos</code></td>
@@ -2973,7 +2975,6 @@ The following table is a list of API frameworks either supported by a placement 
   </tr>
 </table>
 
-
 ### List:  Audit Status Codes <a name="list_auditstatuscodes"></a>
 
 The following table lists the codes used in `Audit` objects to reflect status or workflow state.
@@ -3013,6 +3014,33 @@ The following table lists the codes used in `Audit` objects to reflect status or
   </tr>
 </table>
 
+### List: Auto Refresh Triggers <a name="list_autorefreshtriggers"></a>
+
+The following table is a list of triggers that result in an ad slot refreshing.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>UNKNOWN</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><strong>User Action:</strong> Refresh triggered by user-initiated action such as scrolling.
+</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><strong>Event:</strong> Event-driven content change. For example, ads refresh when the football game score changes on the page.</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><strong>Time:</strong>Time-based refresh. Ads refresh on a predefined time interval even without user activity.</td>
+  </tr>
+</table>
 
 ### List:  Category Taxonomies <a name="list_categorytaxonomies"></a>
 
@@ -3026,7 +3054,7 @@ The following table lists the options for taxonomies that can be used to describ
   </tr>
   <tr>
     <td>1</td>
-    <td>IAB Tech Lab Content Category Taxonomy 1.0. - Deprecated, and recommend NOT be used since it does not have SCD flags. </td>
+    <td>IAB Tech Lab Content Category Taxonomy 1.0: Deprecated, and recommend NOT be used since it does not have SCD flags. </td>
   </tr>
   <tr>
     <td>2</td>
@@ -3048,7 +3076,11 @@ The following table lists the options for taxonomies that can be used to describ
     <td>6</td>
     <td><a href="https://iabtechlab.com/standards/content-taxonomy/">IAB Tech Lab Content Taxonomy 2.2</a></td>
   </tr>
-
+  </tr>
+    <tr>
+    <td>7</td>
+    <td><a href="https://iabtechlab.com/standards/content-taxonomy/">IAB Tech Lab Content Taxonomy 3.0</a></td>
+  </tr>
   <tr>
     <td>500+</td>
     <td>Vendor-specific codes.</td>
@@ -3949,24 +3981,53 @@ The following table lists the directions in which an expandable ad may expand, g
 
 ### List:  Feed Types <a name="list_feedtypes"></a>
 
-The following table lists the types of feeds, typically for audio.
+The following table lists the types of feeds for audio.
 
 <table>
   <tr>
     <td><strong>Value</strong></td>
+    <td><strong>Class</strong></td>
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
     <td>1</td>
-    <td>Music Service</td>
+    <td>AOD</td>
+    <td>Music streaming service</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>FM/AM Broadcast</td>
+    <td>LIVE</td>
+    <td>FM/AM broadcast (live content broadcast over the air but also available via online streaming)</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>Podcast</td>
+    <td>AOD</td>
+    <td>Podcast (original, pre-recorded content distributed as episodes in a series)</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>AOD</td>
+    <td>Catch-up radio (recorded segment of a radio show that was originally broadcast live)</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>LIVE</td>
+    <td>Web radio (live content only available via online streaming, not as AM/FM broadcast)</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>MISC</td>
+    <td>Video game (background audio in video games)</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>MISC</td>
+    <td>Text to speech (audio books, website plugin that can read article)</td>
+  </tr>
+  <tr>
+    <td>500+</td>
+    <td>MISC</td>
+    <td>Vendor-specific codes.</td>
   </tr>
 </table>
 
@@ -4337,7 +4398,7 @@ The following table lists the placement positions as a relative measure of visib
 
 ### List:  Placement Subtypes - Video <a name="list_placementsubtypesvideo"></a>
 
-The following table lists the various types of video placements derived largely from the IAB Digital Video Guidelines.
+The following table lists the various types of video placements derived largely from the IAB Digital Video Guidelines. To be sent using <code>placement</code> attribute in <strong>Object:Video</strong>. DEPRECATED AS OF 2.6-202303 RELEASE. Proposed removal of this list and associated attribute in 2024.
 
 <table>
   <tr>
@@ -4363,6 +4424,32 @@ The following table lists the various types of video placements derived largely 
   <tr>
     <td>5</td>
     <td><strong>Interstitial/Slider/Floating:</strong>  Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).</td>
+  </tr>
+   <tr>
+     </table>
+ 
+ ### List:  Plcmt Subtypes - Video <a name="list_plcmtsubtypesvideo"></a>
+ The following table lists the various types of video placements in accordance with updated IAB Digital Video Guidelines. To be sent using <code>plcmt</code> attribute in <strong>Object:Video</strong>. Please refer to the <a href=https://github.com/InteractiveAdvertisingBureau/openrtb2.x/blob/develop/implementation.md#710---updated-in-stream-values>implementation guide</a> for examples and information on how to use the updated signals. 
+ <table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><strong>Instream:</strong> Pre-roll, mid-roll, and post-roll ads that are played before, during or after the streaming video content that the consumer has requested. Instream video must be set to “sound on” by default at player start, or have explicitly clear user intent to watch the video content. While there may be other content surrounding the player, the video content must be the focus of the user’s visit. It should remain the primary content on the page and the only video player in-view capable of audio when playing. If the player converts to floating/sticky subsequent ad calls should accurately convey the updated player size.</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><strong>Accompanying Content:</strong> Pre-roll, mid-roll, and post-roll ads that are played before, during, or after streaming video content. The video player loads and plays before, between, or after paragraphs of text or graphical content, and starts playing only when it enters the viewport. Accompanying content should only start playback upon entering the viewport. It may convert to a floating/sticky player as it scrolls off the page.</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><strong>Interstitial:</strong>Video ads that are played without video content. During playback, it must be the primary focus of the page and take up the majority of the viewport and cannot be scrolled out of view. This can be in placements like in-app video or slideshows. </td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><strong>No Content/Standalone:</strong> Video ads that are played without streaming video content. This can be in placements like slideshows, native feeds, in-content or sticky/floating.</td>
   </tr>
 </table>
 
@@ -4430,6 +4517,28 @@ The following table lists the various media playback methods.
   </tr>
 </table>
 
+### List:  Pod Sequence <a name="list_podsequence"></a>
+
+The following table lists the values for the pod sequence field, for use in audio and video content streams with one or more ad pods.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>-1</td>
+    <td>Last pod in the content stream</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>Any pod in the content stream</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>First pod in the content stream</td>
+  </tr>
+</table>
 
 ### List:  Production Qualities <a name="list_productionqualities"></a>
 
@@ -4479,6 +4588,33 @@ The following table lists the units of height and width used by creatives, asset
   <tr>
     <td>3</td>
     <td>Centimeters</td>
+  </tr>
+</table>
+
+### List:  Slot Position in Pod <a name="list_slotpositioninpod"></a>
+
+The following table lists the values for the slot position in pod field, for use in audio and video ad pods.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>-1</td>
+    <td>Last ad in the pod</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>Any ad in the pod</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>First ad in the pod</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>First or Last ad in the pod</td>
   </tr>
 </table>
 
@@ -4566,58 +4702,6 @@ The following table lists the types of volume normalization modes, typically for
   <tr>
     <td>4</td>
     <td>Custom Volume Normalization</td>
-  </tr>
-</table>
-
-
-### List:  Slot Position in Pod <a name="list_slotpositioninpod"></a>
-
-The following table lists the values for the slot position in pod field, for use in audio and video ad pods.
-
-<table>
-  <tr>
-    <td><strong>Value</strong></td>
-    <td><strong>Definition</strong></td>
-  </tr>
-  <tr>
-    <td>-1</td>
-    <td>Last ad in the pod</td>
-  </tr>
-  <tr>
-    <td>0</td>
-    <td>Any ad in the pod</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>First ad in the pod</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>First or Last ad in the pod</td>
-  </tr>
-</table>
-
-
-### List:  Pod Sequence <a name="list_podsequence"></a>
-
-The following table lists the values for the pod sequence field, for use in audio and video content streams with one or more ad pods.
-
-<table>
-  <tr>
-    <td><strong>Value</strong></td>
-    <td><strong>Definition</strong></td>
-  </tr>
-  <tr>
-    <td>-1</td>
-    <td>Last pod in the content stream</td>
-  </tr>
-  <tr>
-    <td>0</td>
-    <td>Any pod in the content stream</td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>First pod in the content stream</td>
   </tr>
 </table>
 
