@@ -4210,8 +4210,8 @@ Maximum height at least 50 device independent pixels (DIPS); aspect ratio 1:1.</
     <td>3</td>
     <td><strong>Main:</strong>  Large image preview for the ad.
 At least one of 2 size variants required:<br/><br/>
-<em>Small:</em>  Maximum height at least 627 DIPS; maximum width at least 627, 836, or 1198 DIPS (i.e., aspect ratios of 1:1, 4:3, or 1.91:1, respectively).<br/><br/>
-<em>Large:</em> Maximum height at least 200 DIPS; maximum width at least 200, 267, or 382 DIPS (i.e., aspect ratios of 1:1, 4:3, or 1.91:1, respectively).</td>
+<em>Small:</em> Maximum height at least 200 DIPS; maximum width at least 200, 267, or 382 DIPS (i.e., aspect ratios of 1:1, 4:3, or 1.91:1, respectively).<br/><br/>
+<em>Large:</em> Maximum height at least 627 DIPS; maximum width at least 627, 836, or 1198 DIPS (i.e., aspect ratios of 1:1, 4:3, or 1.91:1, respectively).</td>
   </tr>
   <tr>
     <td>500+</td>
