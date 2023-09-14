@@ -102,6 +102,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Event Types](#list_eventtypes)
     - [List:  Expandable Directions](#list_expandabledirections)
     - [List:  Feed Types](#list_feedtypes)
+    - [List:  IFA Types](#list_ifa_types)
     - [List:  IP Location Services](#list_iplocationservices)
     - [List:  Linearity Modes](#list_linearitymodes)
     - [List:  Location Types](#list_locationtypes)
@@ -4030,6 +4031,35 @@ The following table lists the types of feeds for audio.
     <td>Vendor-specific codes.</td>
   </tr>
 </table>
+
+
+### List:  IFA Types <a name="list_ifa_types"></a>
+
+The following table lists the source types of the device IFA.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>dpid</td>
+    <td>Device provided ID</td>
+  </tr>
+  <tr>
+    <td>ppid</td>
+    <td>Publisher provided ID</td>
+  </tr>
+  <tr>
+    <td>sspid</td>
+    <td>SSP provided ID</td>
+  </tr>
+  <tr>
+    <td>sessionid<sup>1</sup></td>
+    <td>Session ID / Synthetic ID</td>
+  </tr>
+</table>
+*<sup>1</sup>sessionids are defined as IFAs with a more limited life span than standard user/device identifiers - and are intended for use within shorter time intervals.*
 
 
 ### List:  IP Location Services <a name="list_iplocationservices"></a>
