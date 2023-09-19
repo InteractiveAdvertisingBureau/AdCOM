@@ -4043,23 +4043,23 @@ The following table lists the source types of the device IFA.
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
-    <td>dpid</td>
-    <td>Device provided ID</td>
+    <td>1</td>
+    <td>Device provided ID (dpid)</td>
   </tr>
   <tr>
-    <td>ppid</td>
-    <td>Publisher provided ID</td>
+    <td>2</td>
+    <td>Publisher provided ID (ppid)</td>
   </tr>
   <tr>
-    <td>sspid</td>
-    <td>SSP provided ID</td>
+    <td>3</td>
+    <td>SSP provided ID (sspid)</td>
   </tr>
   <tr>
-    <td>sessionid<sup>1</sup></td>
-    <td>Session ID / Synthetic ID</td>
+    <td>4<sup>1</sup></td>
+    <td>Session ID / Synthetic ID (sessionid)</td>
   </tr>
 </table>
-*<sup>1</sup>sessionids are defined as IFAs with a more limited life span than standard user/device identifiers - and are intended for use within shorter time intervals.*
+*<sup>1</sup>Session IDs are defined as IFAs with a more limited life span than standard user/device identifiers - and are intended for use within shorter time intervals.*
 
 
 ### List:  IP Location Services <a name="list_iplocationservices"></a>
