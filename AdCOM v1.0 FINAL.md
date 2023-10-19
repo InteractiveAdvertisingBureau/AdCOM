@@ -2017,7 +2017,7 @@ This object describes the publisher of the media in which ads will be displayed.
   <tr>
     <td><code>cattax</code></td>
     <td>integer</td>
-    <td>The taxonomy in use for the <code>cat</code> attribute.  Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
+    <td>The taxonomy in use for the <code>cat</code> attribute.  Refer to <a href="#list_categorytaxonomies">![image](https://github.com/InteractiveAdvertisingBureau/AdCOM/assets/114763292/e80e72e1-e099-4aff-b466-a5e91eb9f62f)</a>.</td>
   </tr>
   <tr>
     <td><code>ext</code></td>
@@ -3062,24 +3062,28 @@ The following table lists the options for taxonomies that can be used to describ
   </tr>
   <tr>
     <td>3</td>
-    <td> <a href="https://iabtechlab.com/wp-content/uploads/2020/10/IABTL-Ad-Product-Taxonomy-1.0-Final.xlsx">IAB Tech Lab Ad Product Taxonomy 1.0.</A> </td>
+    <td> <a href="https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Ad%20Product%20Taxonomies/Ad%20Product%20Taxonomy%201.0.tsv">IAB Tech Lab Ad Product Taxonomy 1.0.</A> </td>
   </tr>
   <tr>
     <td>4</td>
-    <td><a href="https://iabtechlab.com/standards/audience-taxonomy/">IAB Tech Lab Audience Taxonomy 1.1</a></td>
+    <td><a href="https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Audience%20Taxonomies/Audience%20Taxonomy%201.1.tsv">IAB Tech Lab Audience Taxonomy 1.1</a></td>
   </tr>
   <tr>
     <td>5</td>
-    <td><a href="https://iabtechlab.com/standards/content-taxonomy/">IAB Tech Lab Content Taxonomy 2.1</a></td>
+    <td><a href="https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Content%20Taxonomies/Content%20Taxonomy%202.1.tsv">IAB Tech Lab Content Taxonomy 2.1</a></td>
   </tr>
     <tr>
     <td>6</td>
-    <td><a href="https://iabtechlab.com/standards/content-taxonomy/">IAB Tech Lab Content Taxonomy 2.2</a></td>
+    <td><a href="https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Content%20Taxonomies/Content%20Taxonomy%202.2.tsv">IAB Tech Lab Content Taxonomy 2.2</a></td>
   </tr>
   </tr>
     <tr>
     <td>7</td>
-    <td><a href="https://iabtechlab.com/standards/content-taxonomy/">IAB Tech Lab Content Taxonomy 3.0</a></td>
+    <td><a href="https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Content%20Taxonomies/Content%20Taxonomy%203.0.tsv">IAB Tech Lab Content Taxonomy 3.0</a></td>
+  </tr>
+   <tr>
+    <td>8</td>
+    <td><a href="https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Ad%20Product%20Taxonomies/Ad%20Product%20Taxonomy%202.0.tsv">IAB Tech Lab Ad Product Taxonomy 2.0</a></td>
   </tr>
   <tr>
     <td>500+</td>
