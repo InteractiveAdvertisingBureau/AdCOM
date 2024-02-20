@@ -114,6 +114,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Plcmt Subtypes - Video](#list_plcmtsubtypesvideo)
     - [List:  Playback Cessation Modes](#list_playbackcessationmodes)
     - [List:  Playback Methods](#list_playbackmethods)
+    - [List:  Pod Deduplication](#list_poddedupe)
     - [List:  Pod Sequence](#list_podsequence)
     - [List:  Production Qualities](#list_productionqualities)
     - [List:  Size Units](#list_sizeunits)
@@ -4035,7 +4036,6 @@ The following table lists the types of feeds for audio.
   </tr>
 </table>
 
-
 ### List:  IP Location Services <a name="list_iplocationservices"></a>
 
 The following table lists the services and/or vendors used for resolving IP addresses to geolocations.
@@ -4518,6 +4518,33 @@ The following table lists the various media playback methods.
   <tr>
     <td>7</td>
     <td>Continuous Playback - Media playback is set to play additional media automatically without user interaction. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening.</td>
+  </tr>
+</table>
+
+### List:  Pod Deduplication Settings <a name="list_poddedupe"></a>
+
+The following table lists the various pod deduplication settings.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Deduplicated on adomain</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Deduplicated on IAB category</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Deduplicated on creative ID</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Deduplicated on mediafile URL</td>
   </tr>
 </table>
 
