@@ -102,8 +102,6 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Event Types](#list_eventtypes)
     - [List:  Expandable Directions](#list_expandabledirections)
     - [List:  Feed Types](#list_feedtypes)
-    - [List:  IFA Types](#list_ifa_types)
-    - [List:  Interaction Types](#list_int_types)
     - [List:  IP Location Services](#list_iplocationservices)
     - [List:  Linearity Modes](#list_linearitymodes)
     - [List:  Location Types](#list_locationtypes)
@@ -4035,65 +4033,6 @@ The following table lists the types of feeds for audio.
     <td>500+</td>
     <td>MISC</td>
     <td>Vendor-specific codes.</td>
-  </tr>
-</table>
-
-
-### List:  IFA Types <a name="list_ifa_types"></a>
-
-The following table lists the source types of the device IFA.
-
-<table>
-  <tr>
-    <td><strong>Value</strong></td>
-    <td><strong>Definition</strong></td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Device provided ID (dpid)</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Publisher provided ID (ppid)</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>SSP provided ID (sspid)</td>
-  </tr>
-  <tr>
-    <td>4<sup>1</sup></td>
-    <td>Session ID / Synthetic ID (sessionid)</td>
-  </tr>
-</table>
-*<sup>1</sup>Session IDs are defined as IFAs with a more limited life span than standard user/device identifiers - and are intended for use within shorter time intervals.*
-
-### List: Interaction Types <a name="list_int_types"></a>
-
-The following table lists methods of ad interactions applicable to `aint`.
-
-<table>
-  <tr>
-    <td><strong>Value</strong></td>
-    <td><strong>Definition</strong></td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Click to open a website</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Click to download an App</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Click to redirect to an App</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Click to redirect to a QuickApp</td>
-  </tr> <tr>
-    <td>5</td>
-    <td>Click to redirect to a MiniApp</td>
   </tr>
 </table>
 
