@@ -4036,6 +4036,49 @@ The following table lists the types of feeds for audio.
   </tr>
 </table>
 
+### List: ID Match Methods <a name="list_idmatchmethod"></a>
+
+The following table contains enumerations for various kinds of ID matching. It should be used on conjunction with the <code>mm</code> attribute in [Object: EID]
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>Unknown</td>
+  </tr>
+   <tr>
+    <td>1</td>
+    <td><b>No Match</b> The associated ID came directly from a 3rd-party cookie or OS-provided resettable device ID for advertising (IFA). No matching has occurred.</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><b>Browser Cookie Sync</b> Real time cookie sync as described in [Appendix: Cookie Based ID Syncing]</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><b>Cross-Domain/-Device Authentication</b> ID was derived from linkage based on user authentication across multiple browsers, applications and/or devices (e.g. email or hashed PII)</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><b>Cross-Domain/-Device Inference</b> ID is inferred from linkage based on non-authenticated features across multiple browsers or devices (e.g. IP address and/or UserAgent)</td>
+  </tr>
+    <tr>
+    <td>5</td>
+    <td><b>Property-Specific Authentication</b> ID pertaining to a user on a single web property (e.g. GUID, SharedID, user login or other hashed PII) or application (this may include session IDs) on a single device</td>
+  </tr>
+      <tr>
+    <td>6</td>
+    <td><b>Property-Specific Inference</b> ID that was derived from a linkage based on non-authenticated features or provided by any party that is NOT the device OS or application, pertaining to a user on a single web property or device (this may include session IDs)</td>
+  </tr>
+   <tr>
+    <td>500+</td>
+    <td>Vendor Specific</td>
+  </tr>
+</table>
+
 ### List:  IP Location Services <a name="list_iplocationservices"></a>
 
 The following table lists the services and/or vendors used for resolving IP addresses to geolocations.
