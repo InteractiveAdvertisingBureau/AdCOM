@@ -4038,7 +4038,7 @@ The following table lists the types of feeds for audio.
 
 ### List: ID Match Methods <a name="list_idmatchmethod"></a>
 
-The following table contains enumerations for various kinds of ID matching. It should be used on conjunction with the <code>mm</code> attribute in [Object: EID]
+The following table contains enumerations for various ways an ID could be matched to an ad request, and if they pertain to a single property or . It should be used on conjunction with the <code>mm</code> attribute in [Object: EID]
 
 <table>
   <tr>
@@ -4059,19 +4059,19 @@ The following table contains enumerations for various kinds of ID matching. It s
   </tr>
   <tr>
     <td>3</td>
-    <td><b>Cross-Domain/-Device Authentication</b> ID was derived from linkage based on user authentication across multiple browsers, applications and/or devices (e.g. email or hashed PII)</td>
+    <td><b>Cross-Domain/-Device Authentication</b> ID match was derived from linkage based on user authentication across multiple browsers, applications and/or devices (e.g. email or hashed PII)</td>
   </tr>
   <tr>
     <td>4</td>
-    <td><b>Cross-Domain/-Device Inference</b> ID is inferred from linkage based on non-authenticated features across multiple browsers or devices (e.g. IP address and/or UserAgent)</td>
+    <td><b>Cross-Domain/-Device Inference</b> ID match was inferred from linkage based on non-authenticated features across multiple browsers or devices (e.g. IP address and/or UserAgent)</td>
   </tr>
     <tr>
     <td>5</td>
-    <td><b>Property-Specific Authentication</b> ID pertaining to a user on a single web property (e.g. GUID, SharedID, user login or other hashed PII) or application (this may include session IDs) on a single device</td>
+    <td><b>Property-Specific Authentication</b> ID match pertaining to a user on a single web property (e.g. GUID, SharedID, user login or other hashed PII) or application (this may include session IDs) on a single device</td>
   </tr>
       <tr>
     <td>6</td>
-    <td><b>Property-Specific Inference</b> ID that was derived from a linkage based on non-authenticated features or provided by any party that is NOT the device OS or application, pertaining to a user on a single web property or device (this may include session IDs)</td>
+    <td><b>Property-Specific Inference</b> ID match that was derived from a linkage based on non-authenticated features or provided by any party that is NOT the device OS or application, pertaining to a user on a single web property or device (this may include session IDs)</td>
   </tr>
    <tr>
     <td>500+</td>
