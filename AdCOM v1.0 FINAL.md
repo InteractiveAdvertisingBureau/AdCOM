@@ -4038,7 +4038,7 @@ The following table lists the types of feeds for audio.
 
 ### List: ID Match Methods <a name="list_idmatchmethod"></a>
 
-The following table contains enumerations for various ways an ID could be matched to an ad request, and if they pertain to a single property or . It should be used on conjunction with the <code>mm</code> attribute in [Object: EID]
+The following table contains enumerations for various ways an ID could be matched to an ad request, and if they pertain to a single property or app. It should be used on conjunction with the <code>mm</code> attribute in [Object: EID]
 
 <table>
   <tr>
