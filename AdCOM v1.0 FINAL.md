@@ -102,6 +102,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Event Types](#list_eventtypes)
     - [List:  Expandable Directions](#list_expandabledirections)
     - [List:  Feed Types](#list_feedtypes)
+    - [List:  ID Match Methods](#list_idmatchmethod)
     - [List:  IP Location Services](#list_iplocationservices)
     - [List:  Linearity Modes](#list_linearitymodes)
     - [List:  Location Types](#list_locationtypes)
