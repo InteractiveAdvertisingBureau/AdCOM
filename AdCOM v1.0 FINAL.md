@@ -4052,7 +4052,7 @@ The following table contains enumerations for various ways an ID could be matche
   </tr>
    <tr>
     <td>1</td>
-    <td><b>No Match</b> The associated ID came directly from a 3rd-party cookie or OS-provided resettable device ID for advertising (IFA). No matching has occurred.</td>
+    <td><b>No Match</b> No matching has occurred. The associated ID came directly from a 3rd-party cookie or OS-provided resettable device ID for advertising (IFA). </td>
   </tr>
   <tr>
     <td>2</td>
@@ -4060,19 +4060,15 @@ The following table contains enumerations for various ways an ID could be matche
   </tr>
   <tr>
     <td>3</td>
-    <td><b>Cross-Domain/-Device Authentication</b> ID match was derived from linkage based on user authentication across multiple browsers, applications and/or devices (e.g. email or hashed PII)</td>
+    <td><b>Authenticated</b> ID match was based on user authentication such as an email login or hashed PII </td>
   </tr>
   <tr>
     <td>4</td>
-    <td><b>Cross-Domain/-Device Inference</b> ID match was inferred from linkage based on non-authenticated features across multiple browsers or devices (e.g. IP address and/or UserAgent)</td>
+    <td><b>Observed</b> ID match was based on a 1st party observation, but without user authentication (e.g. GUID, SharedID, Session IDs, CHIPS or other 1st party cookies contained in localStorage)</td>
   </tr>
     <tr>
     <td>5</td>
-    <td><b>Property-Specific Authentication</b> ID match pertaining to a user on a single web property (e.g. GUID, SharedID, user login or other hashed PII) or application (this may include session IDs) on a single device</td>
-  </tr>
-      <tr>
-    <td>6</td>
-    <td><b>Property-Specific Inference</b> ID match that was derived from a linkage based on non-authenticated features or provided by any party that is NOT the device OS or application, pertaining to a user on a single web property or device (this may include session IDs)</td>
+    <td><b>Inference</b> ID match was inferred from linkage based on non-authenticated features across multiple browsers or devices (e.g. IP address and/or UserAgent)</td>
   </tr>
    <tr>
     <td>500+</td>
