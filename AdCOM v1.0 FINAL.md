@@ -4445,7 +4445,7 @@ The following table lists the various types of video placements derived largely 
   </tr>
   <tr>
     <td>2</td>
-    <td><strong>Accompanying Content:</strong> Pre-roll, mid-roll, and post-roll ads that are played before, during, or after streaming video content. The video player loads and plays before, between, or after paragraphs of text or graphical content, and starts playing only when it enters the viewport. Video pre-roll, mid-roll, and post-roll ad placements on pages that include other non-video content surrounding the player that are autoplay are always accompanying content, yet click-to-play may not be. Accompanying content should only start playback upon entering the viewport. It may convert to a floating/sticky player as it scrolls off the page.</td>
+    <td><strong>Accompanying Content:</strong> Pre-roll, mid-roll, and post-roll ads that are played before, during, or after streaming video content. The video player loads and plays before, between, or after paragraphs of text or graphical content, and starts playing only when it enters the viewport. Video pre-roll, mid-roll, and post-roll ad placements on pages that include other non-video content taking less than 50% of the total page layout that are autoplay are always accompanying content, yet click-to-play may not be. Accompanying content should only start playback upon entering the viewport. It may convert to a floating/sticky player as it scrolls off the page.</td>
   </tr>
   <tr>
     <td>3</td>
