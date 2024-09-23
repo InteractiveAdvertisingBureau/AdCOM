@@ -102,6 +102,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Event Types](#list_eventtypes)
     - [List:  Expandable Directions](#list_expandabledirections)
     - [List:  Feed Types](#list_feedtypes)
+    - [List:  ID Match Methods](#list_idmatchmethod)
     - [List:  IP Location Services](#list_iplocationservices)
     - [List:  Linearity Modes](#list_linearitymodes)
     - [List:  Location Types](#list_locationtypes)
@@ -4033,6 +4034,52 @@ The following table lists the types of feeds for audio.
     <td>500+</td>
     <td>MISC</td>
     <td>Vendor-specific codes.</td>
+  </tr>
+</table>
+
+### List: ID Match Methods <a name="list_idmatchmethod"></a>
+
+The following table contains enumerations for various ways an ID could be matched to an ad request, and if they pertain to a single property or app. It should be used on conjunction with the <code>mm</code> attribute in <a href=https://github.com/InteractiveAdvertisingBureau/openrtb2.x/blob/main/2.6.md#3227---object-eid->Object: EID</a> of OpenRTB 2.x.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Name</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td><b>Unknown</b></td>
+     <td> </td>
+  </tr>
+   <tr>
+    <td>1</td>
+    <td><b>No Match</b></td> <td>No matching has occurred. The associated ID came directly from a 3rd-party cookie or OS-provided resettable device ID for advertising (IFA). </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><b>Browser Cookie Sync</b></td> 
+    <td>Real time cookie sync as described in <a href=https://github.com/InteractiveAdvertisingBureau/openrtb2.x/blob/main/2.6.md#appendix-c-cookie-based-id-syncing->Appendix: Cookie Based ID Syncing</a> of OpenRTB 2.x </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><b>Authenticated</b></td> 
+    <td>ID match was based on user authentication such as an email login or hashed PII </td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><b>Observed</b></td> 
+    <td>ID match was based on a 1st party observation, but without user authentication (e.g. GUID, SharedID, Session IDs, CHIPS or other 1st party cookies contained in localStorage)</td>
+  </tr>
+    <tr>
+    <td>5</td>
+    <td><b>Inference</b></td> 
+    <td>ID match was inferred from linkage based on non-authenticated features across multiple browsers or devices (e.g. IP address and/or UserAgent)</td>
+  </tr>
+   <tr>
+    <td>500+</td>
+    <td>Vendor Specific</td>
+     <td></td>
   </tr>
 </table>
 
