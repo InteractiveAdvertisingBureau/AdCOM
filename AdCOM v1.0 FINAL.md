@@ -8,9 +8,9 @@
 **About the IAB Technology Lab**
 
 
-Established in 2014, the IAB Technology Laboratory (Tech Lab) is a non-profit consortium that engages a member community globally to develop foundational technology and standards that enable growth and trust in the digital media ecosystem. Comprised of digital publishers, ad technology firms, agencies, marketers, and other member companies, IAB Tech Lab focuses on solutions for brand safety and ad fraud; identity, data, and consumer privacy; ad experiences and measurement; and programmatic effectiveness. Its work includes the OpenRTB real-time bidding protocol, ads.txt anti-fraud specification, Open Measurement SDK for viewability and verification, VAST video specification and Project Rearc for identity addressability, data accountability and consumer privacy. Board members/companies are listed at [www.iabtechlab.com/about-the-iab-tech-lab/tech-lab-leadership](https://iabtechlab.com/about-the-iab-tech-lab/tech-lab-leadership) . 
+Established in 2014, the IAB Technology Laboratory (Tech Lab) is a non-profit consortium that engages a member community globally to develop foundational technology and standards that enable growth and trust in the digital media ecosystem. Comprised of digital publishers, ad technology firms, agencies, marketers, and other member companies, IAB Tech Lab focuses on solutions for brand safety and ad fraud; identity, data, and consumer privacy; ad experiences and measurement; and programmatic effectiveness. Its work includes the OpenRTB real-time bidding protocol, ads.txt anti-fraud specification, Open Measurement SDK for viewability and verification, VAST video specification and Project Rearc for identity addressability, data accountability and consumer privacy. Board members/companies are listed at [www.iabtechlab.com/about-the-iab-tech-lab/tech-lab-leadership](https://iabtechlab.com/about-the-iab-tech-lab/tech-lab-leadership) .
 
-Learn more about IAB Tech Lab here: [www.iabtechlab.com](https://www.iabtechlab.com) 
+Learn more about IAB Tech Lab here: [www.iabtechlab.com](https://www.iabtechlab.com)
 
 **License**
 
@@ -103,6 +103,7 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [List:  Expandable Directions](#list_expandabledirections)
     - [List:  Feed Types](#list_feedtypes)
     - [List:  ID Match Methods](#list_idmatchmethod)
+    - [List:  Interaction Types](#list_interactiontypes)
     - [List:  IP Location Services](#list_iplocationservices)
     - [List:  Linearity Modes](#list_linearitymodes)
     - [List:  Location Types](#list_locationtypes)
@@ -2092,7 +2093,7 @@ This object describes the content in which an impression can appear, which may b
     <td><code>url</code></td>
     <td>string</td>
     <td>A single URL of the content, for buy-side contextualization or review.</td>
-  </tr>  
+  </tr>
   <tr>
     <td><code>cat</code></td>
     <td>string&nbsp;array</td>
@@ -4076,6 +4077,37 @@ The following table contains enumerations for various ways an ID could be matche
   </tr>
 </table>
 
+### List:  Interaction Types <a name="list_interactiontypes"></a>
+
+The following table lists the various outcomes a user interacting can have.
+
+<table>
+  <tr>
+    <td><strong>Value</strong></td>
+    <td><strong>Definition</strong></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Click to OPEN a website</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <tdClick to DOWNLOAD an app</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Click to REDIRECT to an app</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Click to REDIRECT to a <a href="https://web.dev/articles/mini-apps/mini-app-what-are-h5-and-quickapp">QuickApp</a></td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Click to REDIRECT to a <a href="https://web.dev/articles/mini-apps/mini-app-about">MiniApp</a></td>
+  </tr>
+</table>
+
 ### List:  IP Location Services <a name="list_iplocationservices"></a>
 
 The following table lists the services and/or vendors used for resolving IP addresses to geolocations.
@@ -4471,9 +4503,9 @@ The following table lists the various types of video placements derived largely 
   </tr>
    <tr>
      </table>
- 
+
  ### List:  Plcmt Subtypes - Video <a name="list_plcmtsubtypesvideo"></a>
- The following table lists the various types of video placements in accordance with updated IAB Digital Video Guidelines. To be sent using <code>plcmt</code> attribute in <strong>Object:Video</strong>. Please refer to the <a href=https://github.com/InteractiveAdvertisingBureau/openrtb2.x/blob/main/implementation.md#710---updated-video-signals>implementation guide</a> for examples and information on how to use the updated signals. 
+ The following table lists the various types of video placements in accordance with updated IAB Digital Video Guidelines. To be sent using <code>plcmt</code> attribute in <strong>Object:Video</strong>. Please refer to the <a href=https://github.com/InteractiveAdvertisingBureau/openrtb2.x/blob/main/implementation.md#710---updated-video-signals>implementation guide</a> for examples and information on how to use the updated signals.
  <table>
   <tr>
     <td><strong>Value</strong></td>
@@ -4619,7 +4651,7 @@ The following table lists the options for content quality.  These values are def
   <tr>
     <td><strong>Value</strong></td>
     <td><strong>Definition</strong></td>
-  </tr>  
+  </tr>
   <tr>
     <td>0</td>
     <td>Unknown</td>
@@ -4779,38 +4811,38 @@ The following table lists the types of volume normalization modes, typically for
 
 # Appendix A:  Additional Resources <a name="appendixa_additionalresources"></a>
 
-Interactive Advertising Bureau Technology Laboratory (IAB Tech Lab)  
+Interactive Advertising Bureau Technology Laboratory (IAB Tech Lab)
 [www.iabtechlab.com](https://www.iabtechlab.com)
 
-Creative Commons / Attribution License  
+Creative Commons / Attribution License
 [creativecommons.org/licenses/by/3.0](https://creativecommons.org/licenses/by/3.0)
 
-AdCOM Project on Github  
+AdCOM Project on Github
 [https://github.com/InteractiveAdvertisingBureau/AdCOM](https://github.com/InteractiveAdvertisingBureau/AdCOM)
 
-OpenRTB v3.0 Specification  
+OpenRTB v3.0 Specification
 [https://github.com/InteractiveAdvertisingBureau/openrtb](https://github.com/InteractiveAdvertisingBureau/openrtb)
 
-IAB Resources & TAG Inventory Quality Guidelines (IQG)  
+IAB Resources & TAG Inventory Quality Guidelines (IQG)
 [www.iab.com/guidelines/taxonomy](https://www.iab.com/guidelines/taxonomy)<br/>
 [www.iab.com/guidelines/digital-video-suite](https://www.iab.com/guidelines/digital-video-suite)<br/>
 [www.iab.com/wp-content/uploads/2015/03/long-form-video-final.pdf](https://www.iab.com/wp-content/uploads/2015/03/long-form-video-final.pdf)<br/>
 [www.tagtoday.net/iqg/guidelines](https://www.tagtoday.net/iqg/guidelines)<br/>
 [github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework)
 
-Digital Place-Based Advertising Association (DPAA)  
+Digital Place-Based Advertising Association (DPAA)
 [dp-aa.org](https://dp-aa.org)
 
-United Nations Code for Trade & Transport Locations - UN/LOCODE"  
-[www.unece.org/cefact/locode/service/location](https://www.unece.org/cefact/locode/service/location) 
+United Nations Code for Trade & Transport Locations - UN/LOCODE"
+[www.unece.org/cefact/locode/service/location](https://www.unece.org/cefact/locode/service/location)
 
-IP Flow Anonymization Support / Truncation, Internet Engineering Task Force (IETF)  
-[tools.ietf.org/html/rfc6235#section-4.1.1](https://tools.ietf.org/html/rfc6235#section-4.1.1) 
+IP Flow Anonymization Support / Truncation, Internet Engineering Task Force (IETF)
+[tools.ietf.org/html/rfc6235#section-4.1.1](https://tools.ietf.org/html/rfc6235#section-4.1.1)
 
-MCC-MNC Codes for Mobile Carriers, Wikipedia  
-[en.wikipedia.org/wiki/Mobile_country_code](https://en.wikipedia.org/wiki/Mobile_country_code) 
+MCC-MNC Codes for Mobile Carriers, Wikipedia
+[en.wikipedia.org/wiki/Mobile_country_code](https://en.wikipedia.org/wiki/Mobile_country_code)
 
-JavaScript Object Notation (JSON)  
+JavaScript Object Notation (JSON)
 [www.json.org](http://www.json.org)
 
 
@@ -5084,7 +5116,7 @@ Only minor fixes, such as clarifications or corrections to descriptions, may be 
 Granular details of the changes can be seen by reviewing the commit history of the document.
 
 **Clarification:** mccmnc description and rwdd description for clarity. (2022/03/25)
-      
+
 **Change of terminology:** References to "whitelist" have been changed to "allow list" consistent with industry norms. (2021/05/11)
 
 **Language improvements:** Word choice has been improved in places for clarity. (2020/02/14)
@@ -5095,9 +5127,8 @@ Granular details of the changes can be seen by reviewing the commit history of t
 
 # Appendix E:  Versioning Policy <a name="appendixe_versioning"></a>
 
-The current version of the AdCOM specification is updated approximately once a month if there are non-breaking improvements to be released such as new fields, objects, or values in enumerated lists. Errata, such as clarifications or corrections to descriptions not materially impacting the specification itself, are also addressed during monthly updates. See [Errata](#appendixd_errata). 
+The current version of the AdCOM specification is updated approximately once a month if there are non-breaking improvements to be released such as new fields, objects, or values in enumerated lists. Errata, such as clarifications or corrections to descriptions not materially impacting the specification itself, are also addressed during monthly updates. See [Errata](#appendixd_errata).
 
-AdCOM's version number is only incremented on breaking changes. In other words, AdCOM 1.1 should be considered a distinct version from AdCOM 1.0 where there is a need for distinguishing versions; for example, when parsing an OpenRTB bid request and interpreting the "domainver" field. See [AdCOM Principles](#adcomprinciples). 
+AdCOM's version number is only incremented on breaking changes. In other words, AdCOM 1.1 should be considered a distinct version from AdCOM 1.0 where there is a need for distinguishing versions; for example, when parsing an OpenRTB bid request and interpreting the "domainver" field. See [AdCOM Principles](#adcomprinciples).
 
-Release branches are created for each monthly release and the history of these can be reviewed on GitHub. The master branch for the repository will always reflect the most recent release, whereas ongoing development work occurs in the 'develop' branch. 
-
+Release branches are created for each monthly release and the history of these can be reviewed on GitHub. The master branch for the repository will always reflect the most recent release, whereas ongoing development work occurs in the 'develop' branch.
