@@ -4933,8 +4933,6 @@ This example is indicating a mobile optimized website and some basic details abo
             "user": {
                "id": "a0af45c77890045deec100acb8443baff57c",
                "buyeruid": "fcd4282456238256034abcdef220d9aa5892",
-               "yob": 1990,
-               "gender": "F"
             },
             "device": {
                "type": 4,
