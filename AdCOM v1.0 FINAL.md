@@ -3383,6 +3383,14 @@ The following table lists the various subtypes of audio and video ad creatives.
     <td>14</td>
     <td>VAST 4.2 Wrapper</td>
   </tr>
+  <tr>
+    <td>15</td>
+    <td>VAST 4.3</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>VAST 4.3 Wrapper</td>
+  </tr>
 </table>
 
 
