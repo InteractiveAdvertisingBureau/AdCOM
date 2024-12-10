@@ -3087,6 +3087,10 @@ The following table lists the options for taxonomies that can be used to describ
     <td>8</td>
     <td><a href="https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Ad%20Product%20Taxonomies/Ad%20Product%20Taxonomy%202.0.tsv">IAB Tech Lab Ad Product Taxonomy 2.0</a></td>
   </tr>
+   <tr>
+    <td>9</td>
+    <td><a href="https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/develop/Content%20Taxonomies/Content%20Taxonomy%203.1.tsv">IAB Tech Lab Content Taxonomy 3.1</a></td>
+  </tr>
   <tr>
     <td>500+</td>
     <td>Vendor-specific codes.</td>
