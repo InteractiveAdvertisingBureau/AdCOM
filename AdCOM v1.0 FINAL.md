@@ -44,9 +44,9 @@ OpenRTB Specification the IAB Tech Lab is licensed under a Creative Commons Attr
     - [Object:  Video](#object_video)
     - [Object:  Audio](#object_audio)
     - [Object:  Audit](#object_audit)
-  - [Placement Objects](#placementobjects)
-    - [Object:  Placement](#object_placement)
-    - [Object:  DisplayPlacement](#object_displayplacement)
+  - [ Objects](#objects)
+    - [Object:  ](#object_)
+    - [Object:  Display](#object_display)
     - [Object:  DisplayFormat](#object_displayformat)
     - [Object:  NativeFormat](#object_nativeformat)
     - [Object:  AssetFormat](#object_assetformat)
@@ -4461,35 +4461,7 @@ The following table lists the placement positions as a relative measure of visib
 
 ### List:  Placement Subtypes - Video <a name="list_placementsubtypesvideo"></a>
 
-The following table lists the various types of video placements derived largely from the IAB Digital Video Guidelines. To be sent using <code>placement</code> attribute in <strong>Object:Video</strong>. DEPRECATED AS OF 2.6-202303 RELEASE. Proposed removal of this list and associated attribute in 2024.
-
-<table>
-  <tr>
-    <td><strong>Value</strong></td>
-    <td><strong>Definition</strong></td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td><strong>In-Stream:</strong>  Played before, during or after the streaming video content that the consumer has requested (e.g., Pre-roll, Mid-roll, Post-roll).</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td><strong>In-Banner:</strong>  Exists within a web banner that leverages the banner space to deliver a video experience as opposed to another static or rich media format.  The format relies on the existence of display ad inventory on the page for its delivery.</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td><strong>In-Article:</strong>  Loads and plays dynamically between paragraphs of editorial content; existing as a standalone branded message.</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td><strong>In-Feed:</strong>  Found in content, social, or product feeds.</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td><strong>Interstitial/Slider/Floating:</strong>  Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).</td>
-  </tr>
-   <tr>
-     </table>
+DEPRECATED AS OF [2.6-202303 RELEASE](https://github.com/InteractiveAdvertisingBureau/openrtb2.x/releases/tag/2.6-202303). Use [List: Plcmt Subtypes - Video](#list_plcmtsubtypesvideo)
  
  ### List:  Plcmt Subtypes - Video <a name="list_plcmtsubtypesvideo"></a>
  The following table lists the various types of video placements in accordance with updated IAB Digital Video Guidelines. To be sent using <code>plcmt</code> attribute in <strong>Object:Video</strong>. Please refer to the <a href=https://github.com/InteractiveAdvertisingBureau/openrtb2.x/blob/main/implementation.md#710---updated-video-signals>implementation guide</a> for examples and information on how to use the updated signals. 
