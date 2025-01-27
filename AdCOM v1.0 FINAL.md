@@ -1821,7 +1821,7 @@ This object is used to define an ad supported website, in contrast to a non-brow
   <tr>
     <td><code>keywords</code></td>
     <td>string</td>
-    <td>Comma-separated list of keywords about the site. Only one of 'keywords' or 'kwarray' may be present. NOTE: this field is deprecated, use 'kwarray' instead.</td>
+    <td>This field is deprecated, use 'kwarray' instead.</td>
   </tr>
   <tr>
     <td><code>kwarray</code></td>
@@ -1906,7 +1906,7 @@ This object is used to define an ad supported non-browser application, in contra
   <tr>
     <td><code>keywords</code></td>
     <td>string</td>
-    <td>Comma-separated list of keywords about the app. Only one of 'keywords' or 'kwarray' may be present. NOTE: this field is deprecated, use 'kwarray' instead.</td>
+    <td>This field is deprecated, use 'kwarray' instead.</td>
   </tr>
   <tr>
     <td><code>kwarray</code></td>
@@ -2131,7 +2131,7 @@ This object describes the content in which an impression can appear, which may b
   <tr>
     <td><code>keywords</code></td>
     <td>string</td>
-    <td>Comma-separated list of keywords describing the content. Only one of 'keywords' or 'kwarray' may be present. NOTE: this field is deprecated, use 'kwarray' instead.</td>
+    <td>This field is deprecated, use 'kwarray' instead.</td>
   </tr>
   <tr>
     <td><code>kwarray</code></td>
@@ -2328,17 +2328,17 @@ Implementer should ensure compliance with regional legislation around data usage
   <tr>
     <td><code>yob</code></td>
     <td>integer, DEPRECATED</td>
-    <td>Year of birth as a 4-digit integer.</td>
+    <td>Deprecated as of OpenRTB 2.6</td>
   </tr>
   <tr>
     <td><code>gender</code></td>
     <td>string, DEPRECATED</td>
-    <td>Gender, where “M” = male, “F” = female, “O” = known to be other (i.e., omitted is unknown).</td>
+    <td>Deprecated as of OpenRTB 2.6</td>
   </tr>
   <tr>
     <td><code>keywords</code></td>
     <td>string</td>
-    <td>Comma-separated list of keywords, interests, or intent. Only one of 'keywords' or 'kwarray' may be present. NOTE: this field is deprecated, use 'kwarray' instead.</td>
+    <td>This field is deprecated, use 'kwarray' instead.</td>
   </tr>
   <tr>
     <td><code>kwarray</code></td>
@@ -3659,246 +3659,7 @@ The specifics of how to serialize values for a given taxonomy are expected to be
 
 ### List:  DOOH Venue Types <a name="list_doohvenuetypes"> (deprecated)</a>
 
-This list presents the digital out-of-home venue types and is derived from [DPAA Programmatic Standards](https://dp-aa.org/dpaa-programmatic-standards/).
-
-<table>
-  <tr>
-    <td><strong>Value</strong></td>
-    <td><strong>Definition</strong></td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Airborne</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Airports - General</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Airports - Baggage Claim</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Airports - Terminal</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Airports - Lounges</td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>ATMs</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>Backlights</td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>Bars</td>
-  </tr>
-  <tr>
-    <td>9</td>
-    <td>Benches</td>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>Bike Racks</td>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>Bulletins</td>
-  </tr>
-  <tr>
-    <td>12</td>
-    <td>Buses</td>
-  </tr>
-  <tr>
-    <td>13</td>
-    <td>Cafes</td>
-  </tr>
-  <tr>
-    <td>14</td>
-    <td>Casual Dining Restaurants</td>
-  </tr>
-  <tr>
-    <td>15</td>
-    <td>Child Care</td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>Cinema</td>
-  </tr>
-  <tr>
-    <td>17</td>
-    <td>City Information Panels</td>
-  </tr>
-  <tr>
-    <td>18</td>
-    <td>Convenience Stores</td>
-  </tr>
-  <tr>
-    <td>19</td>
-    <td>Dedicated Wild Posting</td>
-  </tr>
-  <tr>
-    <td>20</td>
-    <td>Doctors Offices - General</td>
-  </tr>
-  <tr>
-    <td>21</td>
-    <td>Doctors Offices - Obstetrics</td>
-  </tr>
-  <tr>
-    <td>22</td>
-    <td>Doctors Offices - Pediatrics</td>
-  </tr>
-  <tr>
-    <td>23</td>
-    <td>Family entertainment</td>
-  </tr>
-  <tr>
-    <td>24</td>
-    <td>Ferries</td>
-  </tr>
-  <tr>
-    <td>25</td>
-    <td>Financial Services</td>
-  </tr>
-  <tr>
-    <td>26</td>
-    <td>Gas Stations</td>
-  </tr>
-  <tr>
-    <td>27</td>
-    <td>Golf Courses</td>
-  </tr>
-  <tr>
-    <td>28</td>
-    <td>Gyms</td>
-  </tr>
-  <tr>
-    <td>29</td>
-    <td>Hospitals</td>
-  </tr>
-  <tr>
-    <td>30</td>
-    <td>Hotels</td>
-  </tr>
-  <tr>
-    <td>31</td>
-    <td>Junior Posters</td>
-  </tr>
-  <tr>
-    <td>32</td>
-    <td>Kiosks</td>
-  </tr>
-  <tr>
-    <td>33</td>
-    <td>Malls - General</td>
-  </tr>
-  <tr>
-    <td>34</td>
-    <td>Malls - Food Courts</td>
-  </tr>
-  <tr>
-    <td>35</td>
-    <td>Marine</td>
-  </tr>
-  <tr>
-    <td>36</td>
-    <td>Mobile Billboards</td>
-  </tr>
-  <tr>
-    <td>37</td>
-    <td>Movie Theater Lobbies</td>
-  </tr>
-  <tr>
-    <td>38</td>
-    <td>Newsstands</td>
-  </tr>
-  <tr>
-    <td>39</td>
-    <td>Office Buildings</td>
-  </tr>
-  <tr>
-    <td>40</td>
-    <td>Phone Kiosks</td>
-  </tr>
-  <tr>
-    <td>41</td>
-    <td>Posters</td>
-  </tr>
-  <tr>
-    <td>42</td>
-    <td>QSR</td>
-  </tr>
-  <tr>
-    <td>43</td>
-    <td>Rail</td>
-  </tr>
-  <tr>
-    <td>44</td>
-    <td>Receptacles</td>
-  </tr>
-  <tr>
-    <td>45</td>
-    <td>Resorts / Leisure</td>
-  </tr>
-  <tr>
-    <td>46</td>
-    <td>Retail</td>
-  </tr>
-  <tr>
-    <td>47</td>
-    <td>Salons</td>
-  </tr>
-  <tr>
-    <td>48</td>
-    <td>Shelters</td>
-  </tr>
-  <tr>
-    <td>49</td>
-    <td>Sports Arenas</td>
-  </tr>
-  <tr>
-    <td>50</td>
-    <td>Subway</td>
-  </tr>
-  <tr>
-    <td>51</td>
-    <td>Taxis / Wrapped vehicles</td>
-  </tr>
-  <tr>
-    <td>52</td>
-    <td>Truckside</td>
-  </tr>
-  <tr>
-    <td>53</td>
-    <td>Universities</td>
-  </tr>
-  <tr>
-    <td>54</td>
-    <td>Urban Panels</td>
-  </tr>
-  <tr>
-    <td>55</td>
-    <td>Veterinarian Offices</td>
-  </tr>
-  <tr>
-    <td>56</td>
-    <td>Walls / Spectaculars</td>
-  </tr>
-  <tr>
-    <td>57</td>
-    <td>Other</td>
-  </tr>
-  <tr>
-    <td>500+</td>
-    <td>Vendor-specific codes.</td>
-  </tr>
-</table>
+Deprecated as of AdCOM 1.1. Use List: DOOH Venue Taxonomies instead.
 
 
 ### List:  Event Tracking Methods <a name="list_eventtrackingmethods"></a>
@@ -4460,36 +4221,7 @@ The following table lists the placement positions as a relative measure of visib
 
 
 ### List:  Placement Subtypes - Video <a name="list_placementsubtypesvideo"></a>
-
-The following table lists the various types of video placements derived largely from the IAB Digital Video Guidelines. To be sent using <code>placement</code> attribute in <strong>Object:Video</strong>. DEPRECATED AS OF 2.6-202303 RELEASE. Proposed removal of this list and associated attribute in 2024.
-
-<table>
-  <tr>
-    <td><strong>Value</strong></td>
-    <td><strong>Definition</strong></td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td><strong>In-Stream:</strong>  Played before, during or after the streaming video content that the consumer has requested (e.g., Pre-roll, Mid-roll, Post-roll).</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td><strong>In-Banner:</strong>  Exists within a web banner that leverages the banner space to deliver a video experience as opposed to another static or rich media format.  The format relies on the existence of display ad inventory on the page for its delivery.</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td><strong>In-Article:</strong>  Loads and plays dynamically between paragraphs of editorial content; existing as a standalone branded message.</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td><strong>In-Feed:</strong>  Found in content, social, or product feeds.</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td><strong>Interstitial/Slider/Floating:</strong>  Covers the entire or a portion of screen area, but is always on screen while displayed (i.e. cannot be scrolled out of view).</td>
-  </tr>
-   <tr>
-     </table>
+DEPRECATED AS OF [2.6-202303 RELEASE](https://github.com/InteractiveAdvertisingBureau/openrtb2.x/releases/tag/2.6-202303). Use [List: Plcmt Subtypes - Video](#list_plcmtsubtypesvideo)
  
  ### List:  Plcmt Subtypes - Video <a name="list_plcmtsubtypesvideo"></a>
  The following table lists the various types of video placements in accordance with updated IAB Digital Video Guidelines. To be sent using <code>plcmt</code> attribute in <strong>Object:Video</strong>. Please refer to the <a href=https://github.com/InteractiveAdvertisingBureau/openrtb2.x/blob/main/implementation.md#710---updated-video-signals>implementation guide</a> for examples and information on how to use the updated signals. 
