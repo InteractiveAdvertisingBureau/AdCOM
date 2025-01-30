@@ -2861,9 +2861,14 @@ This object allows lists of restrictions on ad responses to be specified includi
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
+    <td><code>acat</code></td>
+    <td>string&nbsp;array</td>
+    <td>Allowed content categories using IDs from the taxonomy indicated in <code>cattax</code>. Only one of <code>acat</code> or <code>bcat</code> should be present.</td>
+  </tr>
+  <tr>
     <td><code>bcat</code></td>
     <td>string&nbsp;array</td>
-    <td>Block list of content categories using IDs from the taxonomy indicated in <code>cattax</code>.</td>
+    <td>Block list of content categories using IDs from the taxonomy indicated in <code>cattax</code>. Only one of <code>acat</code> or <code>bcat</code> should be present. </td>
   </tr>
   <tr>
     <td><code>cattax</code></td>
