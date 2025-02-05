@@ -1492,7 +1492,7 @@ This object signals that the placement may be a video placement and provides add
   </tr>
   <tr>
   <td><code>podid</code></td>
-    <td>integer</td>
+    <td>string</td>
     <td>Unique identifier indicating that an impression opportunity belongs to a video ad pod. If multiple impression opportunities within a bid request share the same podid, this indicates that those impression opportunities belong to the same video ad pod.</td>
   </tr>
   <tr>
@@ -1659,7 +1659,7 @@ This object signals that the placement may be an audio placement and provides ad
   </tr>
   <tr>
   <td><code>podid</code></td>
-    <td>integer</td>
+    <td>string</td>
     <td>Unique identifier indicating that an impression opportunity belongs to a video ad pod. If multiple impression opportunities within a bid request share the same podid, this indicates that those impression opportunities belong to the same video ad pod.</td>
   </tr>
   <tr>
