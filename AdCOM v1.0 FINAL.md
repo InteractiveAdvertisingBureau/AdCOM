@@ -4344,7 +4344,7 @@ The following table lists the various pod deduplication settings.
   </tr>
   <tr>
     <td>5</td>
-    <td>No dedeuplication</td>
+    <td>No deduplication</td>
   </tr>
 </table>
 
