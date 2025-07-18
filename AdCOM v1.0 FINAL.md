@@ -4342,6 +4342,10 @@ The following table lists the various pod deduplication settings.
     <td>4</td>
     <td>Deduplicated on mediafile URL</td>
   </tr>
+  <tr>
+    <td>5</td>
+    <td>No dedeuplication</td>
+  </tr>
 </table>
 
 ### List:  Pod Sequence <a name="list_podsequence"></a>
