@@ -2042,7 +2042,7 @@ This object describes the content in which an impression can appear, which may b
   <tr>
     <td><code>id</code></td>
     <td>string</td>
-    <td>ID uniquely identifying the content.</td>
+    <td>Publisher-provided ID uniquely identifying the content.</td>
   </tr>
   <tr>
     <td><code>episode</code></td>
@@ -2076,8 +2076,18 @@ This object describes the content in which an impression can appear, which may b
   <tr>
     <td><code>genre</code></td>
     <td>string</td>
-    <td>Genre that best describes the content (e.g., rock, pop, etc).</td>
+    <td>Genre that best describes the content (e.g., rock, pop, etc). This field is deprecated, use <code>genres</code> instead.</td>
   </tr>
+  <tr>
+   <td><code>genres</code></td>
+    <td>string&nbsp;array</td>
+    <td>Array of genre IDs that describe the content using IDs from the taxonomy indicated in <code>gtax</code>.</td>
+  </tr>
+  <tr>
+    <td><code>gtax</code></td>
+    <td>integer;<br/>default&nbsp;9</td>
+    <td>The taxonomy in use for the <code>genres</code> attribute. Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
+   </tr>
   <tr>
     <td><code>album</code></td>
     <td>string</td>
@@ -2318,12 +2328,12 @@ Implementer should ensure compliance with regional legislation around data usage
   <tr>
     <td><code>id</code></td>
     <td>string; recommended</td>
-    <td>Vendor-specific ID for the user.  At least one of <code>id</code> or <code>buyeruid</code> is strongly recommended.</td>
+    <td>Exchange-specific ID for the user At least one of <code>id</code> or <code>buyeruid</code> is strongly recommended. Unless prior arrangements have been made between the buyer and the seller directly, the value in this field is expected to be derived from an ID sync. (see [Appendix: Cookie Based ID Syncing)](https://github.com/InteractiveAdvertisingBureau/openrtb2.x/blob/main/2.6.md#appendixc) </td>
   </tr>
   <tr>
     <td><code>buyeruid</code></td>
     <td>string; recommended</td>
-    <td>Buyer-specific ID for the user as mapped by an exchange for the buyer.  At least one of <code>id</code> or <code>buyeruid</code> is strongly recommended.</td>
+    <td>Buyer-specific ID for the user as mapped by an exchange for the buyer.  At least one of <code>id</code> or <code>buyeruid</code> is strongly recommended. Unless prior arrangements have been made between the buyer and the seller directly, the value in this field is expected to be derived from an ID sync. (see [Appendix: Cookie Based ID Syncing)](https://github.com/InteractiveAdvertisingBureau/openrtb2.x/blob/main/2.6.md#appendixc) </td>
   </tr>
   <tr>
     <td><code>yob</code></td>
@@ -2702,7 +2712,7 @@ The `lat` and `lon` attributes should only be passed if they conform to the accu
 
 The data and segment objects together allow additional data about the related object (e.g., user, content) to be specified.  This data may be from multiple sources whether from the exchange itself or third parties as specified by the `id` attribute.  When in use, vendor-specific IDs should be discussed beforehand among the parties.
 
-Implementer should ensure compliance with regional legislation around data usage and sharing.
+Implementer should ensure compliance with regional legislation around data usage and sharing. 
 
 <table>
   <tr>
@@ -2719,6 +2729,11 @@ Implementer should ensure compliance with regional legislation around data usage
     <td><code>name</code></td>
     <td>string</td>
     <td>Vendor-specific displayable name for the data provider.</td>
+  </tr>
+  <tr>
+    <td><code>cids</code></td>
+    <td>string&nbsp;array</td>
+    <td>An array of Extended Content IDs, representing one or more identifiers for the video or audio content from the ID source specified in the <code>name</code> field of the <code>data</code> object.</td>
   </tr>
   <tr>
     <td><code>segment</code></td>
@@ -2779,13 +2794,29 @@ Extended identifiers support in the OpenRTB specification allows buyers to use a
   <tr>
     <td><code>source</code></td>
     <td>string</td>
-    <td>Source or technology provider responsible for the set of included IDs.  Expressed as a top-level domain.</td>
+    <td>Source domain of the UID provider. Should be the root domain name of the provider, not the URL. For example, "liveramp.com" not "https://liveramp.com/connect"</td>
   </tr>
   <tr>
     <td><code>uids</code></td>
     <td>object&nbsp;array</td>
     <td>Array of extended ID UID objects from the given <code>source</code>.  Refer to <a href="#object_eid_uids">Object: Extended Identifier UIDs</a>.</td>
   </tr>
+  <tr>
+    <td><code>inserter</code></td>
+    <td>string</td>
+    <td>The canonical domain name of the entity (publisher, publisher monetization company, SSP, Exchange, Header Wrapper, etc.) that caused the ID array element to be added. This may be the operational domain of the system, if that is different from the parent corporate domain, to facilitate WHOIS and reverse IP lookups to establish clear ownership of the delegate system.<br>This should be the same value as used to identify sellers in an ads.txt file if one exists.<br>For ad tech intermediaries, this would be the domain as used in ads.txt. For publishers, this would match the domain in the `site` or `app` object.</td>
+  </tr>
+  <tr>
+    <td><code>matcher</code></td>
+    <td>string</td>
+    <td>Technology providing the match method as defined in `mm`.<br>In some cases, this may be the same value as inserter.<br>When blank, it is assumed that the `matcher` is equal to the `source`<br>May be omitted when mm=0, 1, or 2.</td>
+  </tr>
+  <tr>
+    <td><code>mm</code></td>
+    <td>integer</td>
+    <td>Match method used by the `matcher`. Refer to <a href="#list_idmatchmethod">List: ID Match Methods</a>.</td>
+  </tr>
+
   <tr>
     <td><code>ext</code></td>
     <td>object</td>
@@ -2841,6 +2872,16 @@ The Children's Online Privacy Protection Act (COPPA) was established by the U.S.
     <td>integer</td>
     <td>Flag indicating if GDPR regulations apply, where 0 = no, 1 = yes.
 The General Data Protection Regulation (GDPR) is a regulation of the European Union.</td>
+  </tr>
+  <tr>
+    <td><code>gpp</code></td>
+    <td>string</td>
+    <td>Contains the Global Privacy Platform’s consent string. See the <a href="https://github.com/InteractiveAdvertisingBureau/Global-Privacy-Platform">Global Privacy Platform specification</a> for more details.</td>
+  </tr>
+  <tr>
+    <td><code>gpp_sid</code></td>
+    <td>integer array</td>
+    <td>Array of the section(s) of the string which should be applied for this transaction. Generally will contain one and only one value, but there are edge cases where more than one may apply. GPP Section 3 (Header) and 4 (Signal Integrity) do not need to be included. See the <a href="https://github.com/InteractiveAdvertisingBureau/Global-Privacy-Platform/blob/main/Sections/Section%20Information.md">GPP Section Information</a> for more details.</td>
   </tr>
   <tr>
     <td><code>ext</code></td>
