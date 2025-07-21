@@ -4332,7 +4332,7 @@ The following table lists the various pod deduplication settings.
   </tr>
   <tr>
     <td>2</td>
-    <td>Deduplicated on IAB category</td>
+    <td>Deduplicated on IAB Tech Lab Content Taxonomy</td>
   </tr>
   <tr>
     <td>3</td>
