@@ -1874,8 +1874,8 @@ This object is used to define an ad supported non-browser application, in contra
     <td><strong>Definition</strong></td>
   </tr>
   <tr>
-    <td>domain</td>
-    <td><code>string</code></td>
+    <td><code>domain</code></td>
+    <td>string</td>
     <td>Domain of the app (e.g., “mygame.foo.com”).</td>
   </tr>
   <tr>
