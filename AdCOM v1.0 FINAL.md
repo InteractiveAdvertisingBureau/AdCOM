@@ -493,7 +493,7 @@ This object is the container for each asset comprising a native ad.  Each asset 
 * Required if no other asset subtype object is specified.</td>
   </tr>
   <tr>
-    <td><code>image</code></td>
+    <td><code>img</code></td>
     <td>object; required&nbsp;*</td>
     <td><strong>Asset Subtype Object</strong> that indicates this is an image asset and provides additional detail as such.  Refer to <a href="#object_imageasset">Object: ImageAsset</a>.<br/>
 * Required if no other asset subtype object is specified.</td>
@@ -4882,8 +4882,10 @@ Only minor fixes, such as clarifications or corrections to descriptions, may be 
 
 Granular details of the changes can be seen by reviewing the commit history of the document.
 
+**Rename "image" property of Asset to "img":** Rename "image" in Asset to "img" to match AssetFormat and the Native Ads Specification.
+
 **Clarification:** mccmnc description and rwdd description for clarity. (2022/03/25)
-      
+
 **Change of terminology:** References to "whitelist" have been changed to "allow list" consistent with industry norms. (2021/05/11)
 
 **Language improvements:** Word choice has been improved in places for clarity. (2020/02/14)
