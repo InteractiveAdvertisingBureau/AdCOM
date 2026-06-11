@@ -2033,177 +2033,42 @@ This object describes the publisher of the media in which ads will be displayed.
 
 This object describes the content in which an impression can appear, which may be syndicated or non-syndicated content. This object may be useful when syndicated content contains impressions and does not necessarily match the publisher's general content. An exchange may or may not have knowledge of the page where the content is running as a result of the syndication method (e.g., a video impression embedded in an iframe on an unknown web property or device).
 
-<table>
-  <tr>
-    <td><strong>Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
-    <td><strong>Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
-    <td><strong>Definition</strong></td>
-  </tr>
-  <tr>
-    <td><code>id</code></td>
-    <td>string</td>
-    <td>Publisher-provided ID uniquely identifying the content.</td>
-  </tr>
-  <tr>
-    <td><code>episode</code></td>
-    <td>integer</td>
-    <td>Episode number.</td>
-  </tr>
-  <tr>
-    <td><code>title</code></td>
-    <td>string</td>
-    <td>Content title.<br/>
-<em>Video Examples:</em> “Search Committee” (television), “Star Wars, A New Hope” (movie), or “Endgame” (made for web).<br/>
-<em>Non-Video Example:</em>  “Why an Antarctic Glacier Is Melting So Quickly” (Time magazine article).</td>
-  </tr>
-  <tr>
-    <td><code>series</code></td>
-    <td>string</td>
-    <td>Content series.<br/>
-<em>Video Examples:</em> “The Office” (television), “Star Wars” (movie), or “Arby 'N' The Chief” (made for web).<br/>
-<em>Non-Video Example:</em>  “Ecocentric” (Time Magazine blog).</td>
-  </tr>
-  <tr>
-    <td><code>season</code></td>
-    <td>string</td>
-    <td>Content season (e.g., “Season 3”).</td>
-  </tr>
-  <tr>
-    <td><code>artist</code></td>
-    <td>string</td>
-    <td>Artist credited with the content.</td>
-  </tr>
-  <tr>
-    <td><code>genre</code></td>
-    <td>string</td>
-    <td>Genre that best describes the content (e.g., rock, pop, etc). This field is deprecated, use <code>genres</code> instead.</td>
-  </tr>
-  <tr>
-   <td><code>genres</code></td>
-    <td>string&nbsp;array</td>
-    <td>Array of genre IDs that describe the content using IDs from the taxonomy indicated in <code>gtax</code>.</td>
-  </tr>
-  <tr>
-    <td><code>gtax</code></td>
-    <td>integer;<br/>default&nbsp;9</td>
-    <td>The taxonomy in use for the <code>genres</code> attribute. Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
-   </tr>
-  <tr>
-    <td><code>album</code></td>
-    <td>string</td>
-    <td>Album to which the content belongs; typically for audio.</td>
-  </tr>
-  <tr>
-    <td><code>isrc</code></td>
-    <td>string</td>
-    <td>International Standard Recording Code conforming to ISO-3901.</td>
-  </tr>
-  <tr>
-    <td><code>url</code></td>
-    <td>string</td>
-    <td>A single URL of the content, for buy-side contextualization or review.</td>
-  </tr>  
-  <tr>
-    <td><code>cat</code></td>
-    <td>string&nbsp;array</td>
-    <td>Array of content categories describing the content using IDs from the taxonomy indicated in <code>cattax</code>. Implementer should ensure compliance with regional legislation around data usage and sharing.</td>
-  </tr>
-  <tr>
-    <td><code>cattax</code></td>
-    <td>integer</td>
-    <td>The taxonomy in use for the <code>cat</code> attribute.  Refer to <a href="#list_categorytaxonomies">List: Category Taxonomies</a>.</td>
-  </tr>
-  <tr>
-    <td><code>prodq</code></td>
-    <td>integer</td>
-    <td>Production quality.  Refer to <a href="#list_productionqualities">List: Production Qualities</a>.</td>
-  </tr>
-  <tr>
-    <td><code>context</code></td>
-    <td>integer</td>
-    <td>Type of content (game, video, text, etc.).  Refer to <a href="#list_contentcontexts">List: Content Contexts</a>.</td>
-  </tr>
-  <tr>
-    <td><code>rating</code></td>
-    <td>string</td>
-    <td>Content rating (e.g., MPAA).</td>
-  </tr>
-  <tr>
-    <td><code>urating</code></td>
-    <td>string</td>
-    <td>User rating of the content (e.g., number of stars, likes, etc.).</td>
-  </tr>
-  <tr>
-    <td><code>mrating</code></td>
-    <td>integer</td>
-    <td>Media rating per IQG guidelines.  Refer to <a href="#list_mediaratings">List: Media Ratings</a>.</td>
-  </tr>
-  <tr>
-    <td><code>keywords</code></td>
-    <td>string</td>
-    <td>This field is deprecated, use 'kwarray' instead.</td>
-  </tr>
-  <tr>
-    <td><code>kwarray</code></td>
-    <td>string array</td>
-    <td>Array of keywords describing the content. Only one of 'keywords' or 'kwarray' may be present.</td>
-  </tr>
-  <tr>
-    <td><code>live</code></td>
-    <td>integer</td>
-    <td>Indication of live content, where 0 = not live, 1 = live (e.g., stream, live blog).</td>
-  </tr>
-  <tr>
-    <td><code>srcrel</code></td>
-    <td>integer</td>
-    <td>Source relationship, where 0 = indirect, 1 = direct.</td>
-  </tr>
-  <tr>
-    <td><code>len</code></td>
-    <td>integer</td>
-    <td>Length of content in seconds; typically for video or audio.</td>
-  </tr>
-  <tr>
-    <td><code>lang</code></td>
-    <td>string</td>
-    <td>Content language using ISO-639-1-alpha-2. Only one of lang or langb should be present.</td>
-  </tr>
-  <tr>
-    <td><code>langb</code></td>
-    <td>string</td>
-    <td>Content language using IETF BCP 47. Only one of lang or langb should be present.</td>
-  </tr>
-  <tr>
-    <td><code>embed</code></td>
-    <td>integer</td>
-    <td>Indicator of whether or not the content is embedded off-site from the the site or app described in those objects (e.g., an embedded video player), where 0 = no, 1 = yes.</td>
-  </tr>
-  <tr>
-    <td><code>producer</code></td>
-    <td>object</td>
-    <td>Details about the content producer.  Refer to <a href="#object_producer">Object: Producer</a>.</td>
-  </tr>
-  <tr>
-    <td><code>network</code></td>
-    <td>object</td>
-    <td>Details about the network.  Refer to <a href="#object_network">Object: Network</a>.</td>
-  </tr>
-  <tr>
-    <td><code>channel</code></td>
-    <td>object</td>
-    <td>Details about the channel.  Refer to <a href="#object_channel">Object: Channel</a>.</td>
-  </tr>
-  <tr>
-    <td><code>data</code></td>
-    <td>object&nbsp;array</td>
-    <td>Additional user data.  Each <code>Data</code> object represents a different data source.  Refer to <a href="#object_data">Object: Data</a>.</td>
-  </tr>
-  <tr>
-    <td><code>ext</code></td>
-    <td>object</td>
-    <td>Optional vendor-specific extensions.</td>
-  </tr>
-</table>
+| Attribute | Type | Description |
+| --- | --- | --- |
+| `id` | string | Publisher-provided ID uniquely identifying the content. |
+| `episode` | integer | Episode number. |
+| `title` | string | Content title.<br>*Video Examples:* “Search Committee” (television), “A New Hope” (movie), or “Endgame” (made for web).<br>*Non-Video Example:* “Why an Antarctic Glacier Is Melting So Quickly” (Time magazine article). |
+| `series` | string | Content series.<br>*Video Examples:* “The Office” (television), “Star Wars” (movie), or “Arby ‘N’ The Chief” (made for web).<br>*Non-Video Example:* “Ecocentric” (Time Magazine blog). |
+| `season` | string | Content season (e.g., “Season 3”). |
+| `artist` | string | Artist credited with the content. |
+| `genre` | string | Genre that best describes the content (e.g., rock, pop, etc). |
+| `gtax` | int; default 9 | The taxonomy in use. Refer to list [List: Category Taxonomies](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list_categorytaxonomies) in AdCOM 1.0 for values.<br><br>If no gtax field is supplied rows listed, Content Category Taxonomy 3.1 is assumed |
+| `genres` | string array | Unique ID(s) for the genre of the content as listed in the taxonomy defined by the gtax field. If no gtax field is supplied, subset of rows listed in [CTV Genre Mapping](https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Taxonomy%20Mappings/CTV%20Genre%20Mapping.tsv) of [Content Category Taxonomy 3.1](https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Content%20Taxonomies/Content%20Taxonomy%203.1.tsv) are assumed.<br><br>See [Section 7.13 of Implementation Guidance](implementation.md#genre) for additional detail. |
+| `album` | string | Album to which the content belongs; typically for audio. |
+| `isrc` | string | International Standard Recording Code conforming to ISO- 3901. |
+| `producer` | object | Details about the content `Producer` (Section 3.2.17). |
+| `url` | string | URL of the content, for buy-side contextualization or review. |
+| `cattax` | integer; default 1 | The taxonomy in use. Refer to list [List: Category Taxonomies](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list_categorytaxonomies) in AdCOM 1.0 for values. |
+| `cat` | string array | Array of IAB Tech Lab content categories that describe the content. The taxonomy to be used is defined by the cattax field. If no cattax field is supplied Content Category Taxonomy 1.0 is assumed. |
+| `prodq` | integer | Production quality. Refer to [List: Production Qualities](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--production-qualities-) in AdCOM 1.0. |
+| `context` | integer | Type of content (game, video, text, etc.). Refer to [List: Content Contexts](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--content-contexts-) in AdCOM 1.0. |
+| `contentrating` | string | Content rating (e.g., MPAA). |
+| `userrating` | string | User rating of the content (e.g., number of stars, likes, etc.). |
+| `qagmediarating` | integer | Media rating per IQG guidelines. Refer to [List: Media Ratings](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--media-ratings-) in AdCOM 1.0. |
+| `keywords` | string | Comma separated list of keywords describing the content. Only one of `keywords` or `kwarray` may be present. |
+| `kwarray` | string array | Array of keywords about the site. Only one of `keywords` or `kwarray` may be present. |
+| `livestream` | int | An enumeration indicating the method of broadcast of the content where: <br><br>0 = the broadcast is not scheduled (e.g. it is VOD or otherwise user initiated). <br>1 = the broadcast is scheduled (also referred to as linear viewing). |
+| `sourcerelationship` | integer | 0 = indirect, 1 = direct. |
+| `len` | integer | Length of content in seconds; appropriate for video or audio. |
+| `language` | string | Content language using ISO-639-1-alpha-2. Only one of `language` or `langb` should be present. |
+| `langb` | string | Content language using IETF BCP 47. Only one of `language` or `langb` should be present. |
+| `embeddable` | integer | Indicator of whether the content is embeddable (e.g., an embeddable video player), where 0 = no, 1 = yes. |
+| `data` | object array | Additional content data. Each `Data` object (Section 3.2.21) represents a different data source. |
+| `network` | object | Details about the network (Section 3.2.23) the content is on. |
+| `channel` | object | Details about the channel (Section 3.2.24) the content is on. |
+| `realtime` | int | An enumeration indicating if the event is happening in real time while it is being watched where: <br><br>0 = not happening in real time (e.g., a replay). <br>1 = yes, happening in real time (e.g., a live sports game). |
+| `firstbroadcast` | int | An enumeration indicating whether this broadcast is the first time the content is available to an audience where: <br><br>0 = not first time being broadcast <br>1 = first time being broadcast |
+| `ext` | object | Placeholder for vendor-specific extensions. |
 
 
 ### Object:  Producer <a name="object_producer"></a>
