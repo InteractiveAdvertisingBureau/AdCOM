@@ -3227,6 +3227,26 @@ The following table specifies a standard list of creative attributes that can de
     <td>Responsive; Sizeless; Fluid (i.e., creatives that dynamically resize to environment)</td>
   </tr>
   <tr>
+    <td>19</td>
+    <td>Contains advertiser QR Code</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>Support alpha channel transparency</td>
+  </tr>
+  <tr>
+    <td>21</td>
+    <td>Static Visual. Creative contains no perceptible motion and renders as a static visual, even if delivered in a video file format (e.g., MP4). No animated elements or time-based visual transitions are present.</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>Limited Motion (Cinemagraph). Creative contains subtle or localized motion within an otherwise static composition. Motion is minimal, looped, and does not constitute full-scene animation or continuous narrative progression.</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>Full-Motion Video. Creative contains continuous or scene-level motion typical of standard video assets, including dynamic visual transitions, camera movement, or narrative progression across frames.</td>
+  </tr>
+  <tr>
     <td>500+</td>
     <td>Vendor-specific codes.</td>
   </tr>
@@ -4135,6 +4155,46 @@ The following table lists the placement positions as a relative measure of visib
     <td>7</td>
     <td>Fullscreen</td>
   </tr>
+  <tr>
+    <td>8</td>
+    <td>Partial Screen</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Top Left</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Top Right</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>Frame the content</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>Double box</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>Double box with background</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>Bottom Left</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>Bottom Right</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>L shape</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>Reversed L shape</td>
+  </tr>
 </table>
 
 
@@ -4163,6 +4223,26 @@ DEPRECATED AS OF [2.6-202303 RELEASE](https://github.com/InteractiveAdvertisingB
   <tr>
     <td>4</td>
     <td><strong>No Content/Standalone:</strong> Video ads that are played without streaming video content. This can be in placements like slideshows, native feeds, in-content or sticky/floating.</td>
+  </tr>
+    <tr>
+    <td>5</td>
+    <td><strong>Pause:</strong> An ad present in streaming video content that the consumer has requested. While there may be other content surrounding the player, the video content must be the focus of the user’s visit. It should remain the primary content on the page and the only video player in-view.</td>
+  </tr>
+    <tr>
+    <td>6</td>
+    <td><strong>Screensaver:</strong> An ad present, when OS/App Screen Saver are initiated.</td>
+  </tr>
+    <tr>
+    <td>7</td>
+    <td><strong>Overlay:</strong> Ads occurring during program content and outside of the traditional ad break. The ad format places ad creatives over top of the program content, often as a banner or picture in picture execution.  While there may be other content surrounding the player with the overlay, the player with the overlay must be the focus of the user’s visit. It should remain the primary content on the page and the primary video player in-view.</td>
+  </tr>
+    <tr>
+    <td>8</td>
+    <td><strong>Squeezeback:</strong> Ads Alongside or Adjacent to Content, also known as L-Shape Ads & Double Box, are ads that occur during program content and outside of the traditional ad break. The program content is resized to allow for placement of an ad on the screen. In a squeezeback, none of the content is covered by the ad, instead it shares screen space with the ad. This is the major distinction between squeezeback and overlay. While there may be other content surrounding the player with the squeezeback, the player with the squeezeback must be the focus of the user’s visit. It should remain the primary content on the page and the primary video player in-view.</td>
+  </tr>
+    <tr>
+    <td>9</td>
+    <td><strong>In-scene:</strong> A form of advertising that integrates branded elements directly within the content itself, rather than appearing as separate pre-roll, mid-roll, overlay, or display formats. In Scene Advertising is composited into the video content and blends the brand naturally into the scene, environment, or storyline, ensuring contextual relevance and viewer immersion without interrupting the user experience. In-scene ads typically consist of product placements or virtual out of A insertions. At this time, the standardization focuses on the out of home insertions in non-live content. While there may be other content surrounding the player with the in-scene ad, the player with the in-scene ad must be the focus of the user’s visit. It should remain the primary content on the page and the primary video player in-view.</td>
   </tr>
 </table>
 
@@ -4202,11 +4282,11 @@ The following table lists the various media playback methods.
   </tr>
   <tr>
     <td>1</td>
-    <td>Initiates on Page Load with Sound On</td>
+    <td>Initiates without any specific user interaction with Sound On</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>Initiates on Page Load with Sound Off by Default</td>
+    <td>Initiates without any specific user interaction Sound Off by Default</td>
   </tr>
   <tr>
     <td>3</td>
@@ -4214,19 +4294,35 @@ The following table lists the various media playback methods.
   </tr>
   <tr>
     <td>4</td>
-    <td>Initiates on Mouse-Over with Sound On</td>
+    <td>Initiates on Mouse-Over or cursor over with Sound On</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>Initiates on Entering Viewport with Sound On</td>
+    <td>Initiates on Entering Viewport or scrolling into view with Sound On</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>Initiates on Entering Viewport with Sound Off by Default</td>
+    <td>Initiates on Entering Viewport or scrolling into view with Sound Off by Default</td>
   </tr>
   <tr>
     <td>7</td>
     <td>Continuous Playback - Media playback is set to play additional media automatically without user interaction. The media player will keep playing additional media (playlist or generated) for the user until the user actively stops this from happening.</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Initiated by user pausing content, Sound on</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Initiated by user pausing content, Sound off</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Initiated by idling (e.g. screensaver), Sound on</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>Initiated by idling (e.g. screensaver), Sound off</td>
   </tr>
 </table>
 
