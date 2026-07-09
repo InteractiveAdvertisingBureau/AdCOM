@@ -3564,6 +3564,10 @@ The specifics of how to serialize values for a given taxonomy are expected to be
     <td>5</td>
     <td>OpenOOH Venue Taxonomy 1.1 https://github.com/openooh/venue-taxonomy/blob/main/specification-1.1.md</td>
   </tr>
+    <tr>
+    <td>6</td>
+    <td>OpenOOH Venue Taxonomy 1.2 https://github.com/openooh/venue-taxonomy/blob/main/specification-1.2.md</td>
+  </tr>
 
 </table>
 
