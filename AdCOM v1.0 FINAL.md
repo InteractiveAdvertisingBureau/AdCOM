@@ -2043,7 +2043,7 @@ This object describes the content in which an impression can appear, which may b
 | `artist` | string | Artist credited with the content. |
 | `genre` | string | Genre that best describes the content (e.g., rock, pop, etc). |
 | `genres` | string array | Unique ID(s) for the genre of the content as listed in the taxonomy defined by the gtax field. If no gtax field is supplied, subset of rows listed in [CTV Genre Mapping](https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Taxonomy%20Mappings/CTV%20Genre%20Mapping.tsv) of [Content Category Taxonomy 3.1](https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Content%20Taxonomies/Content%20Taxonomy%203.1.tsv) are assumed.<br><br>See [Section 7.13 of Implementation Guidance](implementation.md#genre) for additional detail. |
-| `gtax` | int; default 9 | The taxonomy in use. Refer to list [List: Category Taxonomies](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list_categorytaxonomies) in AdCOM 1.0 for values.<br><br>If no gtax field is supplied rows listed, Content Category Taxonomy 3.1 is assumed |
+| `gtax` | integer; default 9 | The taxonomy in use. Refer to list [List: Category Taxonomies](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list_categorytaxonomies) in AdCOM 1.0 for values.<br><br>If no gtax field is supplied rows listed, Content Category Taxonomy 3.1 is assumed |
 | `album` | string | Album to which the content belongs; typically for audio. |
 | `isrc` | string | International Standard Recording Code conforming to ISO- 3901. |
 | `url` | string | URL of the content, for buy-side contextualization or review. |
