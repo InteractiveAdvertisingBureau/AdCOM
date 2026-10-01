@@ -2042,32 +2042,32 @@ This object describes the content in which an impression can appear, which may b
 | `season` | string | Content season (e.g., “Season 3”). |
 | `artist` | string | Artist credited with the content. |
 | `genre` | string | Genre that best describes the content (e.g., rock, pop, etc). |
-| `gtax` | int; default 9 | The taxonomy in use. Refer to list [List: Category Taxonomies](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list_categorytaxonomies) in AdCOM 1.0 for values.<br><br>If no gtax field is supplied rows listed, Content Category Taxonomy 3.1 is assumed |
 | `genres` | string array | Unique ID(s) for the genre of the content as listed in the taxonomy defined by the gtax field. If no gtax field is supplied, subset of rows listed in [CTV Genre Mapping](https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Taxonomy%20Mappings/CTV%20Genre%20Mapping.tsv) of [Content Category Taxonomy 3.1](https://github.com/InteractiveAdvertisingBureau/Taxonomies/blob/main/Content%20Taxonomies/Content%20Taxonomy%203.1.tsv) are assumed.<br><br>See [Section 7.13 of Implementation Guidance](implementation.md#genre) for additional detail. |
+| `gtax` | integer; default 9 | The taxonomy in use. Refer to list [List: Category Taxonomies](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list_categorytaxonomies) in AdCOM 1.0 for values.<br><br>If no gtax field is supplied rows listed, Content Category Taxonomy 3.1 is assumed |
 | `album` | string | Album to which the content belongs; typically for audio. |
 | `isrc` | string | International Standard Recording Code conforming to ISO- 3901. |
-| `producer` | object | Details about the content `Producer` (Section 3.2.17). |
 | `url` | string | URL of the content, for buy-side contextualization or review. |
-| `cattax` | integer; default 1 | The taxonomy in use. Refer to list [List: Category Taxonomies](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list_categorytaxonomies) in AdCOM 1.0 for values. |
 | `cat` | string array | Array of IAB Tech Lab content categories that describe the content. The taxonomy to be used is defined by the cattax field. If no cattax field is supplied Content Category Taxonomy 1.0 is assumed. |
+| `cattax` | integer; default 1 | The taxonomy in use. Refer to list [List: Category Taxonomies](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list_categorytaxonomies) in AdCOM 1.0 for values. |
 | `prodq` | integer | Production quality. Refer to [List: Production Qualities](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--production-qualities-) in AdCOM 1.0. |
 | `context` | integer | Type of content (game, video, text, etc.). Refer to [List: Content Contexts](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--content-contexts-) in AdCOM 1.0. |
-| `contentrating` | string | Content rating (e.g., MPAA). |
-| `userrating` | string | User rating of the content (e.g., number of stars, likes, etc.). |
-| `qagmediarating` | integer | Media rating per IQG guidelines. Refer to [List: Media Ratings](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--media-ratings-) in AdCOM 1.0. |
+| `rating` | string | Content rating (e.g., MPAA). |
+| `urating` | string | User rating of the content (e.g., number of stars, likes, etc.). |
+| `mrating` | integer | Media rating per IQG guidelines. Refer to [List: Media Ratings](https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/master/AdCOM%20v1.0%20FINAL.md#list--media-ratings-) in AdCOM 1.0. |
 | `keywords` | string | Comma separated list of keywords describing the content. Only one of `keywords` or `kwarray` may be present. |
 | `kwarray` | string array | Array of keywords about the site. Only one of `keywords` or `kwarray` may be present. |
-| `livestream` | int | An enumeration indicating the method of broadcast of the content where: <br><br>0 = the broadcast is not scheduled (e.g. it is VOD or otherwise user initiated). <br>1 = the broadcast is scheduled (also referred to as linear viewing). |
-| `sourcerelationship` | integer | 0 = indirect, 1 = direct. |
+| `live` | integer | An enumeration indicating the method of broadcast of the content where: <br><br>0 = the broadcast is not scheduled (e.g. it is VOD or otherwise user initiated). <br>1 = the broadcast is scheduled (also referred to as linear viewing). |
+| `srcrel` | integer | 0 = indirect, 1 = direct. |
 | `len` | integer | Length of content in seconds; appropriate for video or audio. |
-| `language` | string | Content language using ISO-639-1-alpha-2. Only one of `language` or `langb` should be present. |
-| `langb` | string | Content language using IETF BCP 47. Only one of `language` or `langb` should be present. |
-| `embeddable` | integer | Indicator of whether the content is embeddable (e.g., an embeddable video player), where 0 = no, 1 = yes. |
-| `data` | object array | Additional content data. Each `Data` object (Section 3.2.21) represents a different data source. |
+| `lang` | string | Content language using ISO-639-1-alpha-2. Only one of `lang` or `langb` should be present. |
+| `langb` | string | Content language using IETF BCP 47. Only one of `lang` or `langb` should be present. |
+| `embed` | integer | Indicator of whether the content is embeddable (e.g., an embeddable video player), where 0 = no, 1 = yes. |
+| `producer` | object | Details about the content `Producer` (Section 3.2.17). |
 | `network` | object | Details about the network (Section 3.2.23) the content is on. |
 | `channel` | object | Details about the channel (Section 3.2.24) the content is on. |
-| `realtime` | int | An enumeration indicating if the event is happening in real time while it is being watched where: <br><br>0 = not happening in real time (e.g., a replay). <br>1 = yes, happening in real time (e.g., a live sports game). |
-| `firstbroadcast` | int | An enumeration indicating whether this broadcast is the first time the content is available to an audience where: <br><br>0 = not first time being broadcast <br>1 = first time being broadcast |
+| `data` | object array | Additional content data. Each `Data` object (Section 3.2.21) represents a different data source. |
+| `realtime` | integer | An enumeration indicating if the event is happening in real time while it is being watched where: <br><br>0 = not happening in real time (e.g., a replay). <br>1 = yes, happening in real time (e.g., a live sports game). |
+| `firstbroadcast` | integer | An enumeration indicating whether this broadcast is the first time the content is available to an audience where: <br><br>0 = not first time being broadcast <br>1 = first time being broadcast |
 | `ext` | object | Placeholder for vendor-specific extensions. |
 
 
